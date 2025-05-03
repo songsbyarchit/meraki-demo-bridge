@@ -43,6 +43,24 @@ def messages():
             summary = summarise_customer(purchases, vertical)
             send_card(room_id, build_summary_card(text, summary), markdown=summary)
             room_state.pop(room_id, None)
+        elif stage == "awaiting_customer_deep_dive":
+            msg_id = data["data"]["id"]
+            text = requests.get(
+                f"https://webexapis.com/v1/messages/{msg_id}",
+                headers={"Authorization": f"Bearer {WEBEX_TOKEN}"}
+            ).json().get("text", "")
+            room_state.pop(room_id, None)
+            requests.post(
+                "https://webexapis.com/v1/messages",
+                headers={
+                    "Authorization": f"Bearer {WEBEX_TOKEN}",
+                    "Content-Type": "application/json"
+                },
+                json={
+                    "roomId": room_id,
+                    "markdown": f"📊 Deep dive coming soon for **{text}**!"
+                }
+            )
         else:
             room_state.pop(room_id, None)
             send_card(room_id, get_homepage_card(), markdown="Meraki Demo Bridge")
@@ -54,6 +72,19 @@ def messages():
         action = action_detail.get("inputs", {}).get("action")
         if action == "start_demo":
             send_card(room_id, get_options_selector_card(), markdown="Select your options")
+        elif action == "start_customer_dive":
+            room_state[room_id] = {"stage": "awaiting_customer_deep_dive"}
+            requests.post(
+                "https://webexapis.com/v1/messages",
+                headers={
+                    "Authorization": f"Bearer {WEBEX_TOKEN}",
+                    "Content-Type": "application/json"
+                },
+                json={
+                    "roomId": room_id,
+                    "markdown": "Type the customer name you'd like to explore"
+                }
+            )
         elif action == "select_options":
             inputs = action_detail.get("inputs", {})
             audience     = inputs.get("audience")
