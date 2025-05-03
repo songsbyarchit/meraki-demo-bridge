@@ -4,8 +4,6 @@ from cards.homepage import get_homepage_card
 from cards.options_selector import get_options_selector_card
 from cards.summary import build_summary_card
 from utils.webex import send_card
-from utils.salesforce import get_customer_purchases
-from utils.openai_client import summarise_customer
 import os, requests, sys
 
 load_dotenv()
@@ -39,10 +37,6 @@ def messages():
             text = requests.get(f"https://webexapis.com/v1/messages/{msg_id}",
                                 headers={"Authorization": f"Bearer {WEBEX_TOKEN}"}).json().get("text", "")
             vertical = room_state[room_id]["vertical"]
-            purchases = get_customer_purchases(text)
-            summary = summarise_customer(purchases, vertical)
-            send_card(room_id, build_summary_card(text, summary), markdown=summary)
-            room_state.pop(room_id, None)
         elif stage == "awaiting_customer_deep_dive":
             msg_id = data["data"]["id"]
             text = requests.get(
