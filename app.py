@@ -80,6 +80,28 @@ def messages():
                     "product_line": product_line
                 }
                 send_card(room_id, get_demo_length_card(), markdown="Got it! Now, choose how much time you have for the demo.")
+        elif action == "select_demo_length":
+            inputs = action_detail.get("inputs", {})
+            length = inputs.get("duration")
+            state = room_state.get(room_id, {})
+            script = get_demo_flow(
+                state["audience"],
+                state["vertical"],
+                state["product_line"],
+                length
+            )
+            requests.post(
+                "https://webexapis.com/v1/messages",
+                headers={
+                    "Authorization": f"Bearer {WEBEX_TOKEN}",
+                    "Content-Type": "application/json"
+                },
+                json={
+                    "roomId": room_id,
+                    "markdown": script
+                }
+            )
+            send_card(room_id, get_demo_done_card(), markdown="What would you like to do next?")
         elif action == "restart":
             room_state.pop(room_id, None)
             send_card(room_id, get_homepage_card(), markdown="Restarted")
