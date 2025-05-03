@@ -5,6 +5,7 @@ from cards.options_selector import get_options_selector_card
 from cards.summary import build_summary_card
 from utils.webex import send_card
 import os, requests, sys
+from cards.demo_length_selector import get_demo_length_card
 
 load_dotenv()
 WEBEX_TOKEN = os.getenv("WEBEX_BOT_TOKEN")
@@ -31,30 +32,6 @@ def messages():
         sender = data["data"]["personId"]
         if sender == BOT_ID:
             return "OK"
-        stage = room_state.get(room_id, {}).get("stage")
-        if stage == "awaiting_customer":
-            msg_id = data["data"]["id"]
-            text = requests.get(f"https://webexapis.com/v1/messages/{msg_id}",
-                                headers={"Authorization": f"Bearer {WEBEX_TOKEN}"}).json().get("text", "")
-            vertical = room_state[room_id]["vertical"]
-        elif stage == "awaiting_customer_deep_dive":
-            msg_id = data["data"]["id"]
-            text = requests.get(
-                f"https://webexapis.com/v1/messages/{msg_id}",
-                headers={"Authorization": f"Bearer {WEBEX_TOKEN}"}
-            ).json().get("text", "")
-            room_state.pop(room_id, None)
-            requests.post(
-                "https://webexapis.com/v1/messages",
-                headers={
-                    "Authorization": f"Bearer {WEBEX_TOKEN}",
-                    "Content-Type": "application/json"
-                },
-                json={
-                    "roomId": room_id,
-                    "markdown": f"📊 Deep dive coming soon for **{text}**!"
-                }
-            )
         else:
             room_state.pop(room_id, None)
             send_card(room_id, get_homepage_card(), markdown="Meraki Demo Bridge")
@@ -66,19 +43,6 @@ def messages():
         action = action_detail.get("inputs", {}).get("action")
         if action == "start_demo":
             send_card(room_id, get_options_selector_card(), markdown="Select your options")
-        elif action == "start_customer_dive":
-            room_state[room_id] = {"stage": "awaiting_customer_deep_dive"}
-            requests.post(
-                "https://webexapis.com/v1/messages",
-                headers={
-                    "Authorization": f"Bearer {WEBEX_TOKEN}",
-                    "Content-Type": "application/json"
-                },
-                json={
-                    "roomId": room_id,
-                    "markdown": "Type the customer name you'd like to explore"
-                }
-            )
         elif action == "select_options":
             inputs = action_detail.get("inputs", {})
             audience     = inputs.get("audience")
@@ -109,18 +73,12 @@ def messages():
                 )
             else:
                 room_state[room_id] = {
-                    "stage": "awaiting_customer",
+                    "stage": "awaiting_demo_length",
                     "audience": audience,
                     "vertical": vertical,
                     "product_line": product_line
                 }
-                requests.post(
-                    "https://webexapis.com/v1/messages",
-                    headers={"Authorization": f"Bearer {WEBEX_TOKEN}",
-                             "Content-Type": "application/json"},
-                    json={"roomId": room_id,
-                          "markdown": "Type the customer name"}
-                )
+                send_card(room_id, get_demo_length_card(), markdown="Got it! Now, choose how much time you have for the demo.")
         elif action == "restart":
             room_state.pop(room_id, None)
             send_card(room_id, get_homepage_card(), markdown="Restarted")
