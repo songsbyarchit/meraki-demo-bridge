@@ -104,7 +104,7 @@ def messages():
                 },
                 json={
                     "roomId": room_id,
-                    "markdown": f"\n\n⚠️ You still have not selected: {', '.join(missing)}...\n🔁 Please select a value, then press 'Continue' again.\n\n"
+                    "markdown": f"\n\n⚠️ You still have not selected: {', '.join(missing)}.\n🔁 Please select a value, then press 'Continue' again.\n\n"
                 }
                 )
                 # resend the card
