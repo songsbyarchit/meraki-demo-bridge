@@ -2,7 +2,6 @@ from flask import Flask, request
 from dotenv import load_dotenv
 from cards.homepage import get_homepage_card
 from cards.options_selector import get_options_selector_card
-from cards.summary import build_summary_card
 from utils.webex import send_card
 import os, requests, sys
 from cards.demo_length_selector import get_demo_length_card
