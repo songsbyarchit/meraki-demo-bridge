@@ -1,7 +1,7 @@
 from flask import Flask, request
 from dotenv import load_dotenv
 from cards.homepage import get_homepage_card
-from cards.vertical_selector import get_vertical_selector_card
+from cards.options_selector import get_options_selector_card
 from cards.summary import build_summary_card
 from utils.webex import send_card
 from utils.salesforce import get_customer_purchases
@@ -53,15 +53,49 @@ def messages():
                                      headers={"Authorization": f"Bearer {WEBEX_TOKEN}"}).json()
         action = action_detail.get("inputs", {}).get("action")
         if action == "start_demo":
-            send_card(room_id, get_vertical_selector_card(), markdown="Select vertical")
-        elif action == "select_vertical":
-            vertical = action_detail["inputs"]["vertical"]
-            room_state[room_id] = {"stage": "awaiting_customer", "vertical": vertical}
-            requests.post("https://webexapis.com/v1/messages",
-                          headers={"Authorization": f"Bearer {WEBEX_TOKEN}",
-                                   "Content-Type": "application/json"},
-                          json={"roomId": room_id,
-                                "markdown": "Type the customer name"})
+            send_card(room_id, get_options_selector_card(), markdown="Select your options")
+        elif action == "select_options":
+            inputs = action_detail.get("inputs", {})
+            audience     = inputs.get("audience")
+            vertical     = inputs.get("vertical")
+            product_line = inputs.get("product_line")
+            missing = []
+            if audience == "":      missing.append("audience")
+            if vertical == "":      missing.append("vertical")
+            if product_line == "":  missing.append("product line")
+            if missing:
+                # send plain‑text warning
+                requests.post(
+                "https://webexapis.com/v1/messages",
+                headers={
+                    "Authorization": f"Bearer {WEBEX_TOKEN}",
+                    "Content-Type": "application/json"
+                },
+                json={
+                    "roomId": room_id,
+                    "markdown": f"\n\n⚠️ You still have not selected: {', '.join(missing)}...\n🔁 Please select a value, then press 'Continue' again.\n\n"
+                }
+                )
+                # resend the card
+                send_card(
+                room_id,
+                get_options_selector_card(),
+                markdown=""
+                )
+            else:
+                room_state[room_id] = {
+                    "stage": "awaiting_customer",
+                    "audience": audience,
+                    "vertical": vertical,
+                    "product_line": product_line
+                }
+                requests.post(
+                    "https://webexapis.com/v1/messages",
+                    headers={"Authorization": f"Bearer {WEBEX_TOKEN}",
+                             "Content-Type": "application/json"},
+                    json={"roomId": room_id,
+                          "markdown": "Type the customer name"}
+                )
         elif action == "restart":
             room_state.pop(room_id, None)
             send_card(room_id, get_homepage_card(), markdown="Restarted")
