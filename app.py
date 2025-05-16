@@ -140,9 +140,8 @@ def messages():
                 mode = room_state.get(room_id, {}).get("mode", "demo")
 
                 if mode == "case_study":
-                    from utils.case_study_matcher import match_case_studies
-                    query = f"{vertical} {product_line}"
-                    matches = match_case_studies(query, top_k=3)
+                    from utils.static_case_study_lookup import get_static_case_studies
+                    matches = get_static_case_studies(vertical, product_line)
                     send_card(room_id, get_case_study_card(matches), markdown="📚 Here are relevant case studies based on your selection.")
                 else:
                     room_state[room_id] = {

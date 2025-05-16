@@ -1,1176 +1,1428 @@
 {
   "k12|mx": [
     {
+      "title": "Yu Chun Keung Memorial College No 2",
       "url": "https://meraki.cisco.com/customers/yu-chun-keung-memorial-college-no-2/",
       "score": 0.28540360927581787
     },
     {
+      "title": "Congres Hotel Van Der Valk Mons",
       "url": "https://meraki.cisco.com/customers/congres-hotel-van-der-valk-mons/",
       "score": 0.21378938853740692
     },
     {
+      "title": "Mikes Bikes",
       "url": "https://meraki.cisco.com/customers/mikes-bikes/",
       "score": 0.20377936959266663
     }
   ],
   "k12|mr": [
     {
+      "title": "Yu Chun Keung Memorial College No 2",
       "url": "https://meraki.cisco.com/customers/yu-chun-keung-memorial-college-no-2/",
       "score": 0.27084797620773315
     },
     {
+      "title": "United Nations International School Of Hanoi",
       "url": "https://meraki.cisco.com/customers/united-nations-international-school-of-hanoi/",
       "score": 0.189832866191864
     },
     {
+      "title": "Hautes Etudes Dingenieur Hei",
       "url": "https://meraki.cisco.com/customers/hautes-etudes-dingenieur-hei/",
       "score": 0.17870107293128967
     }
   ],
   "k12|ms": [
     {
+      "title": "Yu Chun Keung Memorial College No 2",
       "url": "https://meraki.cisco.com/customers/yu-chun-keung-memorial-college-no-2/",
       "score": 0.26079171895980835
     },
     {
+      "title": "Oakland Unified School District",
       "url": "https://meraki.cisco.com/customers/oakland-unified-school-district/",
       "score": 0.185724675655365
     },
     {
+      "title": "Ottawa University",
       "url": "https://meraki.cisco.com/customers/ottawa-university/",
       "score": 0.18400949239730835
     }
   ],
   "k12|mv": [
     {
+      "title": "Mikes Bikes",
       "url": "https://meraki.cisco.com/customers/mikes-bikes/",
       "score": 0.18171609938144684
     },
     {
+      "title": "S Heeren Loo",
       "url": "https://meraki.cisco.com/customers/s-heeren-loo/",
       "score": 0.17938172817230225
     },
     {
+      "title": "Kafkas Sa",
       "url": "https://meraki.cisco.com/customers/kafkas-sa/",
       "score": 0.1690090298652649
     }
   ],
   "k12|mt": [
     {
+      "title": "Jeffco Public Schools",
       "url": "https://meraki.cisco.com/customers/jeffco-public-schools/",
       "score": 0.27236121892929077
     },
     {
+      "title": "Yu Chun Keung Memorial College No 2",
       "url": "https://meraki.cisco.com/customers/yu-chun-keung-memorial-college-no-2/",
       "score": 0.2394556701183319
     },
     {
+      "title": "University Of Virginia",
       "url": "https://meraki.cisco.com/customers/university-of-virginia/",
       "score": 0.2362622320652008
     }
   ],
   "k12|sm": [
     {
+      "title": "Yu Chun Keung Memorial College No 2",
       "url": "https://meraki.cisco.com/customers/yu-chun-keung-memorial-college-no-2/",
       "score": 0.3385847210884094
     },
     {
+      "title": "Yongsan International School Of Seoul",
       "url": "https://meraki.cisco.com/customers/yongsan-international-school-of-seoul/",
       "score": 0.27245163917541504
     },
     {
+      "title": "Francesco Smalto",
       "url": "https://meraki.cisco.com/customers/francesco-smalto/",
       "score": 0.2661762535572052
     }
   ],
   "k12|mg": [
     {
+      "title": "Yu Chun Keung Memorial College No 2",
       "url": "https://meraki.cisco.com/customers/yu-chun-keung-memorial-college-no-2/",
       "score": 0.15504124760627747
     },
     {
+      "title": "Mad For Garlic",
       "url": "https://meraki.cisco.com/customers/mad-for-garlic/",
       "score": 0.1484682857990265
     },
     {
+      "title": "Kafkas Sa",
       "url": "https://meraki.cisco.com/customers/kafkas-sa/",
       "score": 0.13911312818527222
     }
   ],
   "healthcare|mx": [
     {
+      "title": "Century Care Management",
       "url": "https://meraki.cisco.com/customers/century-care-management/",
       "score": 0.3431661128997803
     },
     {
+      "title": "Sardar Vallabhbhai Patel Svp Institute",
       "url": "https://meraki.cisco.com/customers/sardar-vallabhbhai-patel-svp-institute/",
       "score": 0.33673542737960815
     },
     {
+      "title": "Kindred Healthcare",
       "url": "https://meraki.cisco.com/customers/kindred-healthcare/",
       "score": 0.3351951837539673
     }
   ],
   "healthcare|mr": [
     {
+      "title": "Sardar Vallabhbhai Patel Svp Institute",
       "url": "https://meraki.cisco.com/customers/sardar-vallabhbhai-patel-svp-institute/",
       "score": 0.3123460114002228
     },
     {
+      "title": "Narayana Health",
       "url": "https://meraki.cisco.com/customers/narayana-health/",
       "score": 0.3056938648223877
     },
     {
+      "title": "Kindred Healthcare",
       "url": "https://meraki.cisco.com/customers/kindred-healthcare/",
       "score": 0.29960453510284424
     }
   ],
   "healthcare|ms": [
     {
+      "title": "Kindred Healthcare",
       "url": "https://meraki.cisco.com/customers/kindred-healthcare/",
       "score": 0.38955920934677124
     },
     {
+      "title": "Century Care Management",
       "url": "https://meraki.cisco.com/customers/century-care-management/",
       "score": 0.3620228171348572
     },
     {
+      "title": "Visionworks",
       "url": "https://meraki.cisco.com/customers/visionworks/",
       "score": 0.30943670868873596
     }
   ],
   "healthcare|mv": [
     {
+      "title": "Kindred Healthcare",
       "url": "https://meraki.cisco.com/customers/kindred-healthcare/",
       "score": 0.4397198259830475
     },
     {
+      "title": "Visionworks",
       "url": "https://meraki.cisco.com/customers/visionworks/",
       "score": 0.37897560000419617
     },
     {
+      "title": "Zorg In Oktober",
       "url": "https://meraki.cisco.com/customers/zorg-in-oktober/",
       "score": 0.35274848341941833
     }
   ],
   "healthcare|mt": [
     {
+      "title": "Kindred Healthcare",
       "url": "https://meraki.cisco.com/customers/kindred-healthcare/",
       "score": 0.40799951553344727
     },
     {
+      "title": "Century Care Management",
       "url": "https://meraki.cisco.com/customers/century-care-management/",
       "score": 0.37908077239990234
     },
     {
+      "title": "Sardar Vallabhbhai Patel Svp Institute",
       "url": "https://meraki.cisco.com/customers/sardar-vallabhbhai-patel-svp-institute/",
       "score": 0.3609769940376282
     }
   ],
   "healthcare|sm": [
     {
+      "title": "Kindred Healthcare",
       "url": "https://meraki.cisco.com/customers/kindred-healthcare/",
       "score": 0.49752113223075867
     },
     {
+      "title": "Sardar Vallabhbhai Patel Svp Institute",
       "url": "https://meraki.cisco.com/customers/sardar-vallabhbhai-patel-svp-institute/",
       "score": 0.38266950845718384
     },
     {
+      "title": "Narayana Health",
       "url": "https://meraki.cisco.com/customers/narayana-health/",
       "score": 0.37832772731781006
     }
   ],
   "healthcare|mg": [
     {
+      "title": "Tarrytown Expocare Pharmacy",
       "url": "https://meraki.cisco.com/customers/tarrytown-expocare-pharmacy/",
       "score": 0.276052325963974
     },
     {
+      "title": "Kindred Healthcare",
       "url": "https://meraki.cisco.com/customers/kindred-healthcare/",
       "score": 0.26531973481178284
     },
     {
+      "title": "Century Care Management",
       "url": "https://meraki.cisco.com/customers/century-care-management/",
       "score": 0.25577014684677124
     }
   ],
   "manufacturing|mx": [
     {
+      "title": "Rocky Mountain Chocolate Factory Canada",
       "url": "https://meraki.cisco.com/customers/rocky-mountain-chocolate-factory-canada/",
       "score": 0.32548922300338745
     },
     {
+      "title": "Reebonz",
       "url": "https://meraki.cisco.com/customers/reebonz/",
       "score": 0.2888758182525635
     },
     {
+      "title": "Bossa Nova",
       "url": "https://meraki.cisco.com/customers/bossa-nova/",
       "score": 0.2542608380317688
     }
   ],
   "manufacturing|mr": [
     {
+      "title": "Clint Newell Auto Group",
       "url": "https://meraki.cisco.com/customers/clint-newell-auto-group/",
       "score": 0.2488977611064911
     },
     {
+      "title": "Francesco Smalto",
       "url": "https://meraki.cisco.com/customers/francesco-smalto/",
       "score": 0.24696265161037445
     },
     {
+      "title": "Rocky Mountain Chocolate Factory Canada",
       "url": "https://meraki.cisco.com/customers/rocky-mountain-chocolate-factory-canada/",
       "score": 0.23856058716773987
     }
   ],
   "manufacturing|ms": [
     {
+      "title": "Bossa Nova",
       "url": "https://meraki.cisco.com/customers/bossa-nova/",
       "score": 0.27285534143447876
     },
     {
+      "title": "Rocky Mountain Chocolate Factory Canada",
       "url": "https://meraki.cisco.com/customers/rocky-mountain-chocolate-factory-canada/",
       "score": 0.24575024843215942
     },
     {
+      "title": "Reebonz",
       "url": "https://meraki.cisco.com/customers/reebonz/",
       "score": 0.24359773099422455
     }
   ],
   "manufacturing|mv": [
     {
+      "title": "Visionworks",
       "url": "https://meraki.cisco.com/customers/visionworks/",
       "score": 0.3318367004394531
     },
     {
+      "title": "Clint Newell Auto Group",
       "url": "https://meraki.cisco.com/customers/clint-newell-auto-group/",
       "score": 0.28170114755630493
     },
     {
+      "title": "Mondelez And Couche Tard",
       "url": "https://meraki.cisco.com/customers/mondelez-and-couche-tard/",
       "score": 0.2524130642414093
     }
   ],
   "manufacturing|mt": [
     {
+      "title": "Rocky Mountain Chocolate Factory Canada",
       "url": "https://meraki.cisco.com/customers/rocky-mountain-chocolate-factory-canada/",
       "score": 0.347292423248291
     },
     {
+      "title": "Tarbell Management Group",
       "url": "https://meraki.cisco.com/customers/tarbell-management-group/",
       "score": 0.30566683411598206
     },
     {
+      "title": "Marmot Library Network",
       "url": "https://meraki.cisco.com/customers/marmot-library-network/",
       "score": 0.2947901487350464
     }
   ],
   "manufacturing|sm": [
     {
+      "title": "Francesco Smalto",
       "url": "https://meraki.cisco.com/customers/francesco-smalto/",
       "score": 0.46310797333717346
     },
     {
+      "title": "Mad For Garlic",
       "url": "https://meraki.cisco.com/customers/mad-for-garlic/",
       "score": 0.34515637159347534
     },
     {
+      "title": "Sternpartner Gmbh Co Kg",
       "url": "https://meraki.cisco.com/customers/sternpartner-gmbh-co-kg/",
       "score": 0.3182627260684967
     }
   ],
   "manufacturing|mg": [
     {
+      "title": "Rocky Mountain Chocolate Factory Canada",
       "url": "https://meraki.cisco.com/customers/rocky-mountain-chocolate-factory-canada/",
       "score": 0.2622373402118683
     },
     {
+      "title": "Clint Newell Auto Group",
       "url": "https://meraki.cisco.com/customers/clint-newell-auto-group/",
       "score": 0.19947126507759094
     },
     {
+      "title": "Mad For Garlic",
       "url": "https://meraki.cisco.com/customers/mad-for-garlic/",
       "score": 0.18364962935447693
     }
   ],
   "higher_ed|mx": [
     {
+      "title": "United Nations International School Of Hanoi",
       "url": "https://meraki.cisco.com/customers/united-nations-international-school-of-hanoi/",
       "score": 0.19054988026618958
     },
     {
+      "title": "Trainm",
       "url": "https://meraki.cisco.com/customers/trainm/",
       "score": 0.17600573599338531
     },
     {
+      "title": "S Heeren Loo",
       "url": "https://meraki.cisco.com/customers/s-heeren-loo/",
       "score": 0.1734505444765091
     }
   ],
   "higher_ed|mr": [
     {
+      "title": "United Nations International School Of Hanoi",
       "url": "https://meraki.cisco.com/customers/united-nations-international-school-of-hanoi/",
       "score": 0.23194140195846558
     },
     {
+      "title": "Eastern University",
       "url": "https://meraki.cisco.com/customers/eastern-university/",
       "score": 0.2109367400407791
     },
     {
+      "title": "John Cabot University",
       "url": "https://meraki.cisco.com/customers/john-cabot-university/",
       "score": 0.18103455007076263
     }
   ],
   "higher_ed|ms": [
     {
+      "title": "United Nations International School Of Hanoi",
       "url": "https://meraki.cisco.com/customers/united-nations-international-school-of-hanoi/",
       "score": 0.27192234992980957
     },
     {
+      "title": "Lees Summit R 7 School District",
       "url": "https://meraki.cisco.com/customers/lees-summit-r-7-school-district/",
       "score": 0.2571641206741333
     },
     {
+      "title": "Burton College",
       "url": "https://meraki.cisco.com/customers/burton-college/",
       "score": 0.24225613474845886
     }
   ],
   "higher_ed|mv": [
     {
+      "title": "Socorro Independent School District",
       "url": "https://meraki.cisco.com/customers/socorro-independent-school-district/",
       "score": 0.2001499980688095
     },
     {
+      "title": "De Nassau",
       "url": "https://meraki.cisco.com/customers/de-nassau/",
       "score": 0.19376583397388458
     },
     {
+      "title": "S Heeren Loo",
       "url": "https://meraki.cisco.com/customers/s-heeren-loo/",
       "score": 0.19225189089775085
     }
   ],
   "higher_ed|mt": [
     {
+      "title": "Jeffco Public Schools",
       "url": "https://meraki.cisco.com/customers/jeffco-public-schools/",
       "score": 0.27848318219184875
     },
     {
+      "title": "Lees Summit R 7 School District",
       "url": "https://meraki.cisco.com/customers/lees-summit-r-7-school-district/",
       "score": 0.2572602927684784
     },
     {
+      "title": "University Of Sharjah",
       "url": "https://meraki.cisco.com/customers/university-of-sharjah/",
       "score": 0.23591050505638123
     }
   ],
   "higher_ed|sm": [
     {
+      "title": "United Nations International School Of Hanoi",
       "url": "https://meraki.cisco.com/customers/united-nations-international-school-of-hanoi/",
       "score": 0.3373831510543823
     },
     {
+      "title": "Saigon South International School",
       "url": "https://meraki.cisco.com/customers/saigon-south-international-school/",
       "score": 0.3119836747646332
     },
     {
+      "title": "Lees Summit R 7 School District",
       "url": "https://meraki.cisco.com/customers/lees-summit-r-7-school-district/",
       "score": 0.3048023581504822
     }
   ],
   "higher_ed|mg": [
     {
+      "title": "Eastern University",
       "url": "https://meraki.cisco.com/customers/eastern-university/",
       "score": 0.18628060817718506
     },
     {
+      "title": "Trainm",
       "url": "https://meraki.cisco.com/customers/trainm/",
       "score": 0.1719912588596344
     },
     {
+      "title": "Boulder Valley School District",
       "url": "https://meraki.cisco.com/customers/boulder-valley-school-district/",
       "score": 0.15292340517044067
     }
   ],
   "hospitality|mx": [
     {
+      "title": "Archipelago International",
       "url": "https://meraki.cisco.com/customers/archipelago-international/",
       "score": 0.39550817012786865
     },
     {
+      "title": "Van Der Valk",
       "url": "https://meraki.cisco.com/customers/van-der-valk/",
       "score": 0.3935258388519287
     },
     {
+      "title": "Excelsior Palace Hotel",
       "url": "https://meraki.cisco.com/customers/excelsior-palace-hotel/",
       "score": 0.3368295133113861
     }
   ],
   "hospitality|mr": [
     {
+      "title": "Van Der Valk",
       "url": "https://meraki.cisco.com/customers/van-der-valk/",
       "score": 0.33629435300827026
     },
     {
+      "title": "Excelsior Palace Hotel",
       "url": "https://meraki.cisco.com/customers/excelsior-palace-hotel/",
       "score": 0.33163928985595703
     },
     {
+      "title": "Congres Hotel Van Der Valk Mons",
       "url": "https://meraki.cisco.com/customers/congres-hotel-van-der-valk-mons/",
       "score": 0.2799685597419739
     }
   ],
   "hospitality|ms": [
     {
+      "title": "Excelsior Palace Hotel",
       "url": "https://meraki.cisco.com/customers/excelsior-palace-hotel/",
       "score": 0.3820817470550537
     },
     {
+      "title": "Bluegr Hotels And Resorts",
       "url": "https://meraki.cisco.com/customers/bluegr-hotels-and-resorts/",
       "score": 0.3607442080974579
     },
     {
+      "title": "Archipelago International",
       "url": "https://meraki.cisco.com/customers/archipelago-international/",
       "score": 0.32715314626693726
     }
   ],
   "hospitality|mv": [
     {
+      "title": "Excelsior Palace Hotel",
       "url": "https://meraki.cisco.com/customers/excelsior-palace-hotel/",
       "score": 0.4089512228965759
     },
     {
+      "title": "Van Der Valk",
       "url": "https://meraki.cisco.com/customers/van-der-valk/",
       "score": 0.4086752235889435
     },
     {
+      "title": "Hoteles Center",
       "url": "https://meraki.cisco.com/customers/hoteles-center/",
       "score": 0.3917354941368103
     }
   ],
   "hospitality|mt": [
     {
+      "title": "Congres Hotel Van Der Valk Mons",
       "url": "https://meraki.cisco.com/customers/congres-hotel-van-der-valk-mons/",
       "score": 0.4082092344760895
     },
     {
+      "title": "Excelsior Palace Hotel",
       "url": "https://meraki.cisco.com/customers/excelsior-palace-hotel/",
       "score": 0.3710917830467224
     },
     {
+      "title": "Boutique Hotel Collection The Cliffs Hotel And Spa",
       "url": "https://meraki.cisco.com/customers/boutique-hotel-collection-the-cliffs-hotel-and-spa/",
       "score": 0.36895328760147095
     }
   ],
   "hospitality|sm": [
     {
+      "title": "Excelsior Palace Hotel",
       "url": "https://meraki.cisco.com/customers/excelsior-palace-hotel/",
       "score": 0.43933895230293274
     },
     {
+      "title": "Hoteles Center",
       "url": "https://meraki.cisco.com/customers/hoteles-center/",
       "score": 0.4261687994003296
     },
     {
+      "title": "Francesco Smalto",
       "url": "https://meraki.cisco.com/customers/francesco-smalto/",
       "score": 0.4076917767524719
     }
   ],
   "hospitality|mg": [
     {
+      "title": "Excelsior Palace Hotel",
       "url": "https://meraki.cisco.com/customers/excelsior-palace-hotel/",
       "score": 0.33697959780693054
     },
     {
+      "title": "Bluegr Hotels And Resorts",
       "url": "https://meraki.cisco.com/customers/bluegr-hotels-and-resorts/",
       "score": 0.3276403248310089
     },
     {
+      "title": "Congres Hotel Van Der Valk Mons",
       "url": "https://meraki.cisco.com/customers/congres-hotel-van-der-valk-mons/",
       "score": 0.32753652334213257
     }
   ],
   "retail|mx": [
     {
+      "title": "Reebonz",
       "url": "https://meraki.cisco.com/customers/reebonz/",
       "score": 0.3712993264198303
     },
     {
+      "title": "Rocky Mountain Chocolate Factory Canada",
       "url": "https://meraki.cisco.com/customers/rocky-mountain-chocolate-factory-canada/",
       "score": 0.33565405011177063
     },
     {
+      "title": "Samsoe Samsoe",
       "url": "https://meraki.cisco.com/customers/samsoe-samsoe/",
       "score": 0.32824093103408813
     }
   ],
   "retail|mr": [
     {
+      "title": "Samsoe Samsoe",
       "url": "https://meraki.cisco.com/customers/samsoe-samsoe/",
       "score": 0.3452591001987457
     },
     {
+      "title": "Cafepress",
       "url": "https://meraki.cisco.com/customers/cafepress/",
       "score": 0.34482061862945557
     },
     {
+      "title": "Mondelez And Couche Tard",
       "url": "https://meraki.cisco.com/customers/mondelez-and-couche-tard/",
       "score": 0.2725478708744049
     }
   ],
   "retail|ms": [
     {
+      "title": "Samsoe Samsoe",
       "url": "https://meraki.cisco.com/customers/samsoe-samsoe/",
       "score": 0.4107847809791565
     },
     {
+      "title": "Cafepress",
       "url": "https://meraki.cisco.com/customers/cafepress/",
       "score": 0.3481923043727875
     },
     {
+      "title": "Reebonz",
       "url": "https://meraki.cisco.com/customers/reebonz/",
       "score": 0.32491496205329895
     }
   ],
   "retail|mv": [
     {
+      "title": "Mondelez And Couche Tard",
       "url": "https://meraki.cisco.com/customers/mondelez-and-couche-tard/",
       "score": 0.4241887331008911
     },
     {
+      "title": "Samsoe Samsoe",
       "url": "https://meraki.cisco.com/customers/samsoe-samsoe/",
       "score": 0.383596271276474
     },
     {
+      "title": "Mikes Bikes",
       "url": "https://meraki.cisco.com/customers/mikes-bikes/",
       "score": 0.32576197385787964
     }
   ],
   "retail|mt": [
     {
+      "title": "Samsoe Samsoe",
       "url": "https://meraki.cisco.com/customers/samsoe-samsoe/",
       "score": 0.3630247116088867
     },
     {
+      "title": "Mikes Bikes",
       "url": "https://meraki.cisco.com/customers/mikes-bikes/",
       "score": 0.3459545075893402
     },
     {
+      "title": "Rocky Mountain Chocolate Factory Canada",
       "url": "https://meraki.cisco.com/customers/rocky-mountain-chocolate-factory-canada/",
       "score": 0.3364759385585785
     }
   ],
   "retail|sm": [
     {
+      "title": "Samsoe Samsoe",
       "url": "https://meraki.cisco.com/customers/samsoe-samsoe/",
       "score": 0.4575974941253662
     },
     {
+      "title": "Francesco Smalto",
       "url": "https://meraki.cisco.com/customers/francesco-smalto/",
       "score": 0.42760026454925537
     },
     {
+      "title": "Mondelez And Couche Tard",
       "url": "https://meraki.cisco.com/customers/mondelez-and-couche-tard/",
       "score": 0.38928547501564026
     }
   ],
   "retail|mg": [
     {
+      "title": "Samsoe Samsoe",
       "url": "https://meraki.cisco.com/customers/samsoe-samsoe/",
       "score": 0.3168543875217438
     },
     {
+      "title": "Cafepress",
       "url": "https://meraki.cisco.com/customers/cafepress/",
       "score": 0.31304147839546204
     },
     {
+      "title": "Mondelez And Couche Tard",
       "url": "https://meraki.cisco.com/customers/mondelez-and-couche-tard/",
       "score": 0.29253798723220825
     }
   ],
   "federal_gov|mx": [
     {
+      "title": "Arbor Park School District",
       "url": "https://meraki.cisco.com/customers/arbor-park-school-district/",
       "score": 0.2637059688568115
     },
     {
+      "title": "Rocky Mountain Chocolate Factory Canada",
       "url": "https://meraki.cisco.com/customers/rocky-mountain-chocolate-factory-canada/",
       "score": 0.2234940081834793
     },
     {
+      "title": "Penn Mutual",
       "url": "https://meraki.cisco.com/customers/penn-mutual/",
       "score": 0.2186252623796463
     }
   ],
   "federal_gov|mr": [
     {
+      "title": "New Castle County",
       "url": "https://meraki.cisco.com/customers/new-castle-county/",
       "score": 0.24151137471199036
     },
     {
+      "title": "Arbor Park School District",
       "url": "https://meraki.cisco.com/customers/arbor-park-school-district/",
       "score": 0.2034565806388855
     },
     {
+      "title": "Florida Department Of Environmental Protection",
       "url": "https://meraki.cisco.com/customers/florida-department-of-environmental-protection/",
       "score": 0.17958395183086395
     }
   ],
   "federal_gov|ms": [
     {
+      "title": "New Castle County",
       "url": "https://meraki.cisco.com/customers/new-castle-county/",
       "score": 0.22301043570041656
     },
     {
+      "title": "Taxware",
       "url": "https://meraki.cisco.com/customers/taxware/",
       "score": 0.2225928008556366
     },
     {
+      "title": "Arbor Park School District",
       "url": "https://meraki.cisco.com/customers/arbor-park-school-district/",
       "score": 0.21242156624794006
     }
   ],
   "federal_gov|mv": [
     {
+      "title": "New Castle County",
       "url": "https://meraki.cisco.com/customers/new-castle-county/",
       "score": 0.2138873040676117
     },
     {
+      "title": "Jeffco Public Schools",
       "url": "https://meraki.cisco.com/customers/jeffco-public-schools/",
       "score": 0.1704624593257904
     },
     {
+      "title": "Taxware",
       "url": "https://meraki.cisco.com/customers/taxware/",
       "score": 0.1694939285516739
     }
   ],
   "federal_gov|mt": [
     {
+      "title": "Jeffco Public Schools",
       "url": "https://meraki.cisco.com/customers/jeffco-public-schools/",
       "score": 0.26030999422073364
     },
     {
+      "title": "New Castle County",
       "url": "https://meraki.cisco.com/customers/new-castle-county/",
       "score": 0.25889283418655396
     },
     {
+      "title": "Marmot Library Network",
       "url": "https://meraki.cisco.com/customers/marmot-library-network/",
       "score": 0.2249971479177475
     }
   ],
   "federal_gov|sm": [
     {
+      "title": "Taxware",
       "url": "https://meraki.cisco.com/customers/taxware/",
       "score": 0.28366145491600037
     },
     {
+      "title": "New Castle County",
       "url": "https://meraki.cisco.com/customers/new-castle-county/",
       "score": 0.283535897731781
     },
     {
+      "title": "Francesco Smalto",
       "url": "https://meraki.cisco.com/customers/francesco-smalto/",
       "score": 0.245073139667511
     }
   ],
   "federal_gov|mg": [
     {
+      "title": "New Castle County",
       "url": "https://meraki.cisco.com/customers/new-castle-county/",
       "score": 0.19337253272533417
     },
     {
+      "title": "Taxware",
       "url": "https://meraki.cisco.com/customers/taxware/",
       "score": 0.18966475129127502
     },
     {
+      "title": "Arbor Park School District",
       "url": "https://meraki.cisco.com/customers/arbor-park-school-district/",
       "score": 0.1827232539653778
     }
   ],
   "service_provider|mx": [
     {
+      "title": "Penn Mutual",
       "url": "https://meraki.cisco.com/customers/penn-mutual/",
       "score": 0.2787739038467407
     },
     {
+      "title": "Reebonz",
       "url": "https://meraki.cisco.com/customers/reebonz/",
       "score": 0.25947239995002747
     },
     {
+      "title": "Cbts",
       "url": "https://meraki.cisco.com/customers/cbts/",
       "score": 0.25567561388015747
     }
   ],
   "service_provider|mr": [
     {
+      "title": "Cbts",
       "url": "https://meraki.cisco.com/customers/cbts/",
       "score": 0.38722339272499084
     },
     {
+      "title": "Penn Mutual",
       "url": "https://meraki.cisco.com/customers/penn-mutual/",
       "score": 0.3322798013687134
     },
     {
+      "title": "Myrepublic",
       "url": "https://meraki.cisco.com/customers/myrepublic/",
       "score": 0.30904024839401245
     }
   ],
   "service_provider|ms": [
     {
+      "title": "Cbts",
       "url": "https://meraki.cisco.com/customers/cbts/",
       "score": 0.3830118179321289
     },
     {
+      "title": "Catena And Smart Soft Power",
       "url": "https://meraki.cisco.com/customers/catena-and-smart-soft-power/",
       "score": 0.27965855598449707
     },
     {
+      "title": "Shaw Business Smartwifi",
       "url": "https://meraki.cisco.com/customers/shaw-business-smartwifi/",
       "score": 0.2761068046092987
     }
   ],
   "service_provider|mv": [
     {
+      "title": "Cbts",
       "url": "https://meraki.cisco.com/customers/cbts/",
       "score": 0.29129552841186523
     },
     {
+      "title": "Lone Star Texas Grill",
       "url": "https://meraki.cisco.com/customers/lone-star-texas-grill/",
       "score": 0.2605960965156555
     },
     {
+      "title": "Phuket Smartcity Wifi",
       "url": "https://meraki.cisco.com/customers/phuket-smartcity-wifi/",
       "score": 0.23864418268203735
     }
   ],
   "service_provider|mt": [
     {
+      "title": "Cbts",
       "url": "https://meraki.cisco.com/customers/cbts/",
       "score": 0.3419853448867798
     },
     {
+      "title": "Congres Hotel Van Der Valk Mons",
       "url": "https://meraki.cisco.com/customers/congres-hotel-van-der-valk-mons/",
       "score": 0.28293246030807495
     },
     {
+      "title": "Catena And Smart Soft Power",
       "url": "https://meraki.cisco.com/customers/catena-and-smart-soft-power/",
       "score": 0.28236424922943115
     }
   ],
   "service_provider|sm": [
     {
+      "title": "Cbts",
       "url": "https://meraki.cisco.com/customers/cbts/",
       "score": 0.43158259987831116
     },
     {
+      "title": "Shaw Business Smartwifi",
       "url": "https://meraki.cisco.com/customers/shaw-business-smartwifi/",
       "score": 0.38485103845596313
     },
     {
+      "title": "Francesco Smalto",
       "url": "https://meraki.cisco.com/customers/francesco-smalto/",
       "score": 0.3729601502418518
     }
   ],
   "service_provider|mg": [
     {
+      "title": "Cbts",
       "url": "https://meraki.cisco.com/customers/cbts/",
       "score": 0.3972513675689697
     },
     {
+      "title": "Catena And Smart Soft Power",
       "url": "https://meraki.cisco.com/customers/catena-and-smart-soft-power/",
       "score": 0.3135843575000763
     },
     {
+      "title": "Toz",
       "url": "https://meraki.cisco.com/customers/toz/",
       "score": 0.303346186876297
     }
   ],
   "finance|mx": [
     {
+      "title": "Archipelago International",
       "url": "https://meraki.cisco.com/customers/archipelago-international/",
       "score": 0.2751586437225342
     },
     {
+      "title": "D4 Business Village Luzern",
       "url": "https://meraki.cisco.com/customers/d4-business-village-luzern/",
       "score": 0.2739332616329193
     },
     {
+      "title": "Reebonz",
       "url": "https://meraki.cisco.com/customers/reebonz/",
       "score": 0.2709798812866211
     }
   ],
   "finance|mr": [
     {
+      "title": "D4 Business Village Luzern",
       "url": "https://meraki.cisco.com/customers/d4-business-village-luzern/",
       "score": 0.3010479807853699
     },
     {
+      "title": "John Cabot University",
       "url": "https://meraki.cisco.com/customers/john-cabot-university/",
       "score": 0.24087345600128174
     },
     {
+      "title": "Burton College",
       "url": "https://meraki.cisco.com/customers/burton-college/",
       "score": 0.2076771855354309
     }
   ],
   "finance|ms": [
     {
+      "title": "D4 Business Village Luzern",
       "url": "https://meraki.cisco.com/customers/d4-business-village-luzern/",
       "score": 0.3222833275794983
     },
     {
+      "title": "Burton College",
       "url": "https://meraki.cisco.com/customers/burton-college/",
       "score": 0.2664458155632019
     },
     {
+      "title": "Cbts",
       "url": "https://meraki.cisco.com/customers/cbts/",
       "score": 0.25494107604026794
     }
   ],
   "finance|mv": [
     {
+      "title": "Visionworks",
       "url": "https://meraki.cisco.com/customers/visionworks/",
       "score": 0.2661515474319458
     },
     {
+      "title": "D4 Business Village Luzern",
       "url": "https://meraki.cisco.com/customers/d4-business-village-luzern/",
       "score": 0.22527754306793213
     },
     {
+      "title": "Clint Newell Auto Group",
       "url": "https://meraki.cisco.com/customers/clint-newell-auto-group/",
       "score": 0.2001848816871643
     }
   ],
   "finance|mt": [
     {
+      "title": "D4 Business Village Luzern",
       "url": "https://meraki.cisco.com/customers/d4-business-village-luzern/",
       "score": 0.3354566991329193
     },
     {
+      "title": "John Cabot University",
       "url": "https://meraki.cisco.com/customers/john-cabot-university/",
       "score": 0.26178234815597534
     },
     {
+      "title": "Cape May County Library",
       "url": "https://meraki.cisco.com/customers/cape-may-county-library/",
       "score": 0.2585361897945404
     }
   ],
   "finance|sm": [
     {
+      "title": "D4 Business Village Luzern",
       "url": "https://meraki.cisco.com/customers/d4-business-village-luzern/",
       "score": 0.37874096632003784
     },
     {
+      "title": "Francesco Smalto",
       "url": "https://meraki.cisco.com/customers/francesco-smalto/",
       "score": 0.34651416540145874
     },
     {
+      "title": "Shaw Business Smartwifi",
       "url": "https://meraki.cisco.com/customers/shaw-business-smartwifi/",
       "score": 0.32432496547698975
     }
   ],
   "finance|mg": [
     {
+      "title": "D4 Business Village Luzern",
       "url": "https://meraki.cisco.com/customers/d4-business-village-luzern/",
       "score": 0.24151012301445007
     },
     {
+      "title": "Cbts",
       "url": "https://meraki.cisco.com/customers/cbts/",
       "score": 0.21239574253559113
     },
     {
+      "title": "Clint Newell Auto Group",
       "url": "https://meraki.cisco.com/customers/clint-newell-auto-group/",
       "score": 0.18956075608730316
     }
   ],
   "small_business|mx": [
     {
+      "title": "D4 Business Village Luzern",
       "url": "https://meraki.cisco.com/customers/d4-business-village-luzern/",
       "score": 0.41585785150527954
     },
     {
+      "title": "Reebonz",
       "url": "https://meraki.cisco.com/customers/reebonz/",
       "score": 0.3507257103919983
     },
     {
+      "title": "Rocky Mountain Chocolate Factory Canada",
       "url": "https://meraki.cisco.com/customers/rocky-mountain-chocolate-factory-canada/",
       "score": 0.3145267963409424
     }
   ],
   "small_business|mr": [
     {
+      "title": "D4 Business Village Luzern",
       "url": "https://meraki.cisco.com/customers/d4-business-village-luzern/",
       "score": 0.4474393129348755
     },
     {
+      "title": "Cafepress",
       "url": "https://meraki.cisco.com/customers/cafepress/",
       "score": 0.3444531559944153
     },
     {
+      "title": "Clint Newell Auto Group",
       "url": "https://meraki.cisco.com/customers/clint-newell-auto-group/",
       "score": 0.29676908254623413
     }
   ],
   "small_business|ms": [
     {
+      "title": "D4 Business Village Luzern",
       "url": "https://meraki.cisco.com/customers/d4-business-village-luzern/",
       "score": 0.46953290700912476
     },
     {
+      "title": "Cafepress",
       "url": "https://meraki.cisco.com/customers/cafepress/",
       "score": 0.3435487449169159
     },
     {
+      "title": "Reebonz",
       "url": "https://meraki.cisco.com/customers/reebonz/",
       "score": 0.3335915505886078
     }
   ],
   "small_business|mv": [
     {
+      "title": "D4 Business Village Luzern",
       "url": "https://meraki.cisco.com/customers/d4-business-village-luzern/",
       "score": 0.40946537256240845
     },
     {
+      "title": "Lone Star Texas Grill",
       "url": "https://meraki.cisco.com/customers/lone-star-texas-grill/",
       "score": 0.287040650844574
     },
     {
+      "title": "Mondelez And Couche Tard",
       "url": "https://meraki.cisco.com/customers/mondelez-and-couche-tard/",
       "score": 0.28675344586372375
     }
   ],
   "small_business|mt": [
     {
+      "title": "D4 Business Village Luzern",
       "url": "https://meraki.cisco.com/customers/d4-business-village-luzern/",
       "score": 0.5118955373764038
     },
     {
+      "title": "Tarbell Management Group",
       "url": "https://meraki.cisco.com/customers/tarbell-management-group/",
       "score": 0.35485097765922546
     },
     {
+      "title": "Cafepress",
       "url": "https://meraki.cisco.com/customers/cafepress/",
       "score": 0.35365185141563416
     }
   ],
   "small_business|sm": [
     {
+      "title": "D4 Business Village Luzern",
       "url": "https://meraki.cisco.com/customers/d4-business-village-luzern/",
       "score": 0.5001049041748047
     },
     {
+      "title": "Francesco Smalto",
       "url": "https://meraki.cisco.com/customers/francesco-smalto/",
       "score": 0.43396034836769104
     },
     {
+      "title": "Kafkas Sa",
       "url": "https://meraki.cisco.com/customers/kafkas-sa/",
       "score": 0.4245740473270416
     }
   ],
   "small_business|mg": [
     {
+      "title": "D4 Business Village Luzern",
       "url": "https://meraki.cisco.com/customers/d4-business-village-luzern/",
       "score": 0.42718178033828735
     },
     {
+      "title": "Cafepress",
       "url": "https://meraki.cisco.com/customers/cafepress/",
       "score": 0.3450719714164734
     },
     {
+      "title": "Reebonz",
       "url": "https://meraki.cisco.com/customers/reebonz/",
       "score": 0.3163413405418396
     }
   ],
   "state_local_gov|mx": [
     {
+      "title": "Rocky Mountain Chocolate Factory Canada",
       "url": "https://meraki.cisco.com/customers/rocky-mountain-chocolate-factory-canada/",
       "score": 0.25042587518692017
     },
     {
+      "title": "Govt Of South Australia Department For Education",
       "url": "https://meraki.cisco.com/customers/govt-of-south-australia-department-for-education/",
       "score": 0.22093701362609863
     },
     {
+      "title": "Arbor Park School District",
       "url": "https://meraki.cisco.com/customers/arbor-park-school-district/",
       "score": 0.19313770532608032
     }
   ],
   "state_local_gov|mr": [
     {
+      "title": "Govt Of South Australia Department For Education",
       "url": "https://meraki.cisco.com/customers/govt-of-south-australia-department-for-education/",
       "score": 0.25668206810951233
     },
     {
+      "title": "New Castle County",
       "url": "https://meraki.cisco.com/customers/new-castle-county/",
       "score": 0.21921879053115845
     },
     {
+      "title": "Myrepublic",
       "url": "https://meraki.cisco.com/customers/myrepublic/",
       "score": 0.18404269218444824
     }
   ],
   "state_local_gov|ms": [
     {
+      "title": "Govt Of South Australia Department For Education",
       "url": "https://meraki.cisco.com/customers/govt-of-south-australia-department-for-education/",
       "score": 0.25162625312805176
     },
     {
+      "title": "The City Of Opelika",
       "url": "https://meraki.cisco.com/customers/the-city-of-opelika/",
       "score": 0.22036245465278625
     },
     {
+      "title": "New Castle County",
       "url": "https://meraki.cisco.com/customers/new-castle-county/",
       "score": 0.20072384178638458
     }
   ],
   "state_local_gov|mv": [
     {
+      "title": "Phuket Smartcity Wifi",
       "url": "https://meraki.cisco.com/customers/phuket-smartcity-wifi/",
       "score": 0.19463229179382324
     },
     {
+      "title": "Jeffco Public Schools",
       "url": "https://meraki.cisco.com/customers/jeffco-public-schools/",
       "score": 0.1805623322725296
     },
     {
+      "title": "New Castle County",
       "url": "https://meraki.cisco.com/customers/new-castle-county/",
       "score": 0.1795503944158554
     }
   ],
   "state_local_gov|mt": [
     {
+      "title": "Jeffco Public Schools",
       "url": "https://meraki.cisco.com/customers/jeffco-public-schools/",
       "score": 0.2690003216266632
     },
     {
+      "title": "Govt Of South Australia Department For Education",
       "url": "https://meraki.cisco.com/customers/govt-of-south-australia-department-for-education/",
       "score": 0.2625357508659363
     },
     {
+      "title": "New Castle County",
       "url": "https://meraki.cisco.com/customers/new-castle-county/",
       "score": 0.22740119695663452
     }
   ],
   "state_local_gov|sm": [
     {
+      "title": "Francesco Smalto",
       "url": "https://meraki.cisco.com/customers/francesco-smalto/",
       "score": 0.2935637831687927
     },
     {
+      "title": "Govt Of South Australia Department For Education",
       "url": "https://meraki.cisco.com/customers/govt-of-south-australia-department-for-education/",
       "score": 0.29112061858177185
     },
     {
+      "title": "New Castle County",
       "url": "https://meraki.cisco.com/customers/new-castle-county/",
       "score": 0.25869718194007874
     }
   ],
   "state_local_gov|mg": [
     {
+      "title": "Govt Of South Australia Department For Education",
       "url": "https://meraki.cisco.com/customers/govt-of-south-australia-department-for-education/",
       "score": 0.22726191580295563
     },
     {
+      "title": "New Castle County",
       "url": "https://meraki.cisco.com/customers/new-castle-county/",
       "score": 0.2031579315662384
     },
     {
+      "title": "Jeffco Public Schools",
       "url": "https://meraki.cisco.com/customers/jeffco-public-schools/",
       "score": 0.1744450330734253
     }
   ],
   "professional_services|mx": [
     {
+      "title": "Dekra Expert Services Nv",
       "url": "https://meraki.cisco.com/customers/dekra-expert-services-nv/",
       "score": 0.30081361532211304
     },
     {
+      "title": "Tarrytown Expocare Pharmacy",
       "url": "https://meraki.cisco.com/customers/tarrytown-expocare-pharmacy/",
       "score": 0.28762954473495483
     },
     {
+      "title": "Penn Mutual",
       "url": "https://meraki.cisco.com/customers/penn-mutual/",
       "score": 0.2834842801094055
     }
   ],
   "professional_services|mr": [
     {
+      "title": "Dekra Expert Services Nv",
       "url": "https://meraki.cisco.com/customers/dekra-expert-services-nv/",
       "score": 0.32135453820228577
     },
     {
+      "title": "S Heeren Loo",
       "url": "https://meraki.cisco.com/customers/s-heeren-loo/",
       "score": 0.3160649538040161
     },
     {
+      "title": "Actic Fitness",
       "url": "https://meraki.cisco.com/customers/actic-fitness/",
       "score": 0.2735975384712219
     }
   ],
   "professional_services|ms": [
     {
+      "title": "Dekra Expert Services Nv",
       "url": "https://meraki.cisco.com/customers/dekra-expert-services-nv/",
       "score": 0.32543694972991943
     },
     {
+      "title": "Actic Fitness",
       "url": "https://meraki.cisco.com/customers/actic-fitness/",
       "score": 0.32118815183639526
     },
     {
+      "title": "Century Care Management",
       "url": "https://meraki.cisco.com/customers/century-care-management/",
       "score": 0.31544026732444763
     }
   ],
   "professional_services|mv": [
     {
+      "title": "S Heeren Loo",
       "url": "https://meraki.cisco.com/customers/s-heeren-loo/",
       "score": 0.33182454109191895
     },
     {
+      "title": "Tarrytown Expocare Pharmacy",
       "url": "https://meraki.cisco.com/customers/tarrytown-expocare-pharmacy/",
       "score": 0.31930971145629883
     },
     {
+      "title": "Dekra Expert Services Nv",
       "url": "https://meraki.cisco.com/customers/dekra-expert-services-nv/",
       "score": 0.29911333322525024
     }
   ],
   "professional_services|mt": [
     {
+      "title": "Dekra Expert Services Nv",
       "url": "https://meraki.cisco.com/customers/dekra-expert-services-nv/",
       "score": 0.38394439220428467
     },
     {
+      "title": "S Heeren Loo",
       "url": "https://meraki.cisco.com/customers/s-heeren-loo/",
       "score": 0.3498550057411194
     },
     {
+      "title": "Tarrytown Expocare Pharmacy",
       "url": "https://meraki.cisco.com/customers/tarrytown-expocare-pharmacy/",
       "score": 0.3318246006965637
     }
   ],
   "professional_services|sm": [
     {
+      "title": "Dekra Expert Services Nv",
       "url": "https://meraki.cisco.com/customers/dekra-expert-services-nv/",
       "score": 0.4108419120311737
     },
     {
+      "title": "Francesco Smalto",
       "url": "https://meraki.cisco.com/customers/francesco-smalto/",
       "score": 0.40016430616378784
     },
     {
+      "title": "Actic Fitness",
       "url": "https://meraki.cisco.com/customers/actic-fitness/",
       "score": 0.39847373962402344
     }
   ],
   "professional_services|mg": [
     {
+      "title": "Dekra Expert Services Nv",
       "url": "https://meraki.cisco.com/customers/dekra-expert-services-nv/",
       "score": 0.3276391923427582
     },
     {
+      "title": "Tarrytown Expocare Pharmacy",
       "url": "https://meraki.cisco.com/customers/tarrytown-expocare-pharmacy/",
       "score": 0.32032638788223267
     },
     {
+      "title": "S Heeren Loo",
       "url": "https://meraki.cisco.com/customers/s-heeren-loo/",
       "score": 0.3102269470691681
     }

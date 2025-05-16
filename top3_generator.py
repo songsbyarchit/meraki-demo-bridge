@@ -38,11 +38,14 @@ for vertical, product in product(VERTICALS, PRODUCT_LINES):
 
     for i in top_indices:
         case = case_studies[i]
+        url = case.get("url", "")
+        title = url.rstrip("/").split("/")[-1].replace("-", " ").title()
         top_case_studies[key].append({
-            "url": case.get("url", ""),
+            "title": title,
+            "url": url,
             "score": float(similarities[i])
         })
-    
+
     print(f"🔹 Matched top 3 for: {key}")
     combo_count += 1
 
