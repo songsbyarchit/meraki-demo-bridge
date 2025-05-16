@@ -119,6 +119,14 @@ written = 0
 
 for audience in audiences_to_run:
     for vertical in verticals_to_run:
+        if audience == "customer" and vertical not in [
+            "federal_gov", "finance", "healthcare", "higher_ed", "hospitality",
+            "k12", "manufacturing", "professional_services", "retail", "service_provider",
+            "small_business", "state_local_gov"
+        ]:
+            continue
+        if audience != "customer":
+            continue
         for product in products_to_run:
             for length in lengths_to_run:
                 if written >= MAX_WRITES_PER_RUN:

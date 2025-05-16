@@ -1,7 +1,3 @@
-Great, let's dive into the demo script:
-
----
-
 **Intro:**
 Hello and thank you for joining us today. I'm excited to show you how Cisco Meraki's MG can transform your network operations in the Federal Government sector. Whether you're an IT admin or a financial decision maker, this demo will focus on the operational impact and cost justification of our solution.
 
