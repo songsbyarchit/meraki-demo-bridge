@@ -8,6 +8,7 @@ def get_homepage_card():
         ],
     "actions": [
         {"type": "Action.Submit", "title": "Start demo flow", "data": {"action": "start_demo"}},
+        {"type": "Action.Submit", "title": "View case studies", "data": {"action": "case_study"}},
         {"type": "Action.Submit", "title": "Give feedback", "data": {"action": "give_feedback"}}
     ]
     }

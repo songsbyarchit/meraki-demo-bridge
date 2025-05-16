@@ -2,6 +2,7 @@ from flask import Flask, request
 from dotenv import load_dotenv
 from cards.homepage import get_homepage_card
 from cards.options_selector import get_options_selector_card_with_defaults
+from cards.case_study_card import get_case_study_card
 from utils.webex import send_card
 import os, requests, sys
 from cards.demo_length_selector import get_demo_length_card
@@ -53,6 +54,7 @@ def messages():
                                      headers={"Authorization": f"Bearer {WEBEX_TOKEN}"}).json()
         action = action_detail.get("inputs", {}).get("action")
         if action == "start_demo":
+            room_state[room_id] = {"mode": "demo"}
             context = get_user_context(room_id)
             if context.get("audience") and context.get("vertical") and context.get("product_line"):
                 msg = f"""You last selected:
@@ -131,16 +133,26 @@ def messages():
                     markdown=""
                 )
             else:
-                room_state[room_id] = {
-                    "stage": "awaiting_demo_length",
-                    "audience": audience,
-                    "vertical": vertical,
-                    "product_line": product_line
-                }
                 set_user_context(room_id, "audience", audience)
                 set_user_context(room_id, "vertical", vertical)
                 set_user_context(room_id, "product_line", product_line)
-                send_card(room_id, get_demo_length_card(), markdown="Got it! Now, choose how much time you have for the demo.")
+
+                mode = room_state.get(room_id, {}).get("mode", "demo")
+
+                if mode == "case_study":
+                    from utils.case_study_matcher import match_case_studies
+                    query = f"{vertical} {product_line}"
+                    matches = match_case_studies(query, top_k=3)
+                    send_card(room_id, get_case_study_card(matches), markdown="📚 Here are relevant case studies based on your selection.")
+                else:
+                    room_state[room_id] = {
+                        "stage": "awaiting_demo_length",
+                        "audience": audience,
+                        "vertical": vertical,
+                        "product_line": product_line
+                    }
+                    send_card(room_id, get_demo_length_card(), markdown="Got it! Now, choose how much time you have for the demo.")
+
         elif action == "select_demo_length":
             inputs = action_detail.get("inputs", {})
             length = inputs.get("duration")
@@ -166,7 +178,32 @@ def messages():
         elif action == "restart":
             room_state.pop(room_id, None)
             send_card(room_id, get_homepage_card(), markdown="Restarted")
-    return "OK"
+        elif action == "case_study":
+            room_state[room_id] = {"mode": "case_study"}
+            context = get_user_context(room_id)
+            if context.get("audience") and context.get("vertical") and context.get("product_line"):
+                msg = f"""You last selected:
 
+                **• Audience:** {audience_map.get(context['audience'], context['audience'])}  
+                **• Vertical:** {vertical_map.get(context['vertical'], context['vertical'])}  
+                **• Product Line:** {product_map.get(context['product_line'], context['product_line'])}
+
+                Would you like to change these?"""
+                send_card(room_id, {
+                    "type": "AdaptiveCard",
+                    "version": "1.3",
+                    "body": [{"type": "TextBlock", "text": msg, "wrap": True}],
+                    "actions": [
+                        {"type": "Action.Submit", "title": "Change", "data": {"action": "change_options"}},
+                        {"type": "Action.Submit", "title": "Continue", "data": {"action": "use_previous_case_study_options"}}
+                    ]
+                }, markdown="Previous selections found.")
+            else:
+                send_card(
+                    room_id,
+                    get_options_selector_card_with_defaults(audience="", vertical="", product_line=""),
+                    markdown="Select your options"
+                )
+    return "OK"
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5099)
