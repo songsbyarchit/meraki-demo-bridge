@@ -1,12 +1,13 @@
 from flask import Flask, request
 from dotenv import load_dotenv
 from cards.homepage import get_homepage_card
-from cards.options_selector import get_options_selector_card
+from cards.options_selector import get_options_selector_card_with_defaults
 from utils.webex import send_card
 import os, requests, sys
 from cards.demo_length_selector import get_demo_length_card
 from cards.demo_done_selector     import get_demo_done_card
 from utils.demo_loader            import get_demo_flow
+from utils.label_maps import audience_map, vertical_map, product_map
 
 load_dotenv()
 WEBEX_TOKEN = os.getenv("WEBEX_BOT_TOKEN")
@@ -56,12 +57,11 @@ def messages():
             if context.get("audience") and context.get("vertical") and context.get("product_line"):
                 msg = f"""You last selected:
 
-        - Audience: **{context['audience']}**
-        - Vertical: **{context['vertical']}**
-        - Product Line: **{context['product_line']}**
+                **• Audience:** {audience_map.get(context['audience'], context['audience'])}  
+                **• Vertical:** {vertical_map.get(context['vertical'], context['vertical'])}  
+                **• Product Line:** {product_map.get(context['product_line'], context['product_line'])}
 
-        Would you like to change these?
-        """
+                Would you like to change these?"""
                 send_card(room_id, {
                     "type": "AdaptiveCard",
                     "version": "1.3",
@@ -72,7 +72,11 @@ def messages():
                     ]
                 }, markdown="Previous selections found.")
             else:
-                send_card(room_id, get_options_selector_card(), markdown="Select your options")
+                send_card(
+                    room_id,
+                    get_options_selector_card_with_defaults(audience="", vertical="", product_line=""),
+                    markdown="Select your options"
+                )
         elif action == "use_previous_options":
             context = get_user_context(room_id)
             room_state[room_id] = {
@@ -84,7 +88,16 @@ def messages():
             send_card(room_id, get_demo_length_card(), markdown="Using your last selections. How much time do you have for the demo?")
 
         elif action == "change_options":
-            send_card(room_id, get_options_selector_card(), markdown="No problem! Let’s pick new options.")
+            context = get_user_context(room_id)
+            send_card(
+                room_id,
+                get_options_selector_card_with_defaults(
+                    audience=context.get("audience"),
+                    vertical=context.get("vertical"),
+                    product_line=context.get("product_line")
+                ),
+                markdown="No problem! Let’s pick new options."
+            )
         elif action == "select_options":
             inputs = action_detail.get("inputs", {})
             audience     = inputs.get("audience")
@@ -109,9 +122,13 @@ def messages():
                 )
                 # resend the card
                 send_card(
-                room_id,
-                get_options_selector_card(),
-                markdown=""
+                    room_id,
+                    get_options_selector_card_with_defaults(
+                        audience=audience or "",
+                        vertical=vertical or "",
+                        product_line=product_line or ""
+                    ),
+                    markdown=""
                 )
             else:
                 room_state[room_id] = {
