@@ -1,3 +1,13 @@
+VERTICAL_CHOICES = [
+    "k12", "healthcare", "manufacturing", "higher_ed", "hospitality", "retail",
+    "federal_gov", "service_provider", "finance", "small_business",
+    "state_local_gov", "professional_services"
+]
+
+PRODUCT_LINE_CHOICES = [
+    "mx", "mr", "ms", "mv", "mt", "sm", "mg"
+]
+
 def get_options_selector_card_with_defaults(audience=None, vertical=None, product_line=None):
     return {
         "type": "AdaptiveCard",
