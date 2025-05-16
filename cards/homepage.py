@@ -8,6 +8,6 @@ def get_homepage_card():
         ],
     "actions": [
         {"type": "Action.Submit", "title": "Start demo flow", "data": {"action": "start_demo"}},
-        {"type": "Action.Submit", "title": "Customer deep dive", "data": {"action": "start_customer_dive"}}
+        {"type": "Action.Submit", "title": "Give feedback", "data": {"action": "give_feedback"}}
     ]
     }

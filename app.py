@@ -22,6 +22,15 @@ BOT_ID = bot_info["id"]
 
 app = Flask(__name__)
 room_state = {}
+user_contexts = {}
+
+def get_user_context(user_id):
+    return user_contexts.get(user_id, {})
+
+def set_user_context(user_id, key, value):
+    if user_id not in user_contexts:
+        user_contexts[user_id] = {}
+    user_contexts[user_id][key] = value
 
 @app.route("/messages", methods=["POST"])
 def messages():
@@ -43,7 +52,39 @@ def messages():
                                      headers={"Authorization": f"Bearer {WEBEX_TOKEN}"}).json()
         action = action_detail.get("inputs", {}).get("action")
         if action == "start_demo":
-            send_card(room_id, get_options_selector_card(), markdown="Select your options")
+            context = get_user_context(room_id)
+            if context.get("audience") and context.get("vertical") and context.get("product_line"):
+                msg = f"""You last selected:
+
+        - Audience: **{context['audience']}**
+        - Vertical: **{context['vertical']}**
+        - Product Line: **{context['product_line']}**
+
+        Would you like to change these?
+        """
+                send_card(room_id, {
+                    "type": "AdaptiveCard",
+                    "version": "1.3",
+                    "body": [{"type": "TextBlock", "text": msg, "wrap": True}],
+                    "actions": [
+                        {"type": "Action.Submit", "title": "Change", "data": {"action": "change_options"}},
+                        {"type": "Action.Submit", "title": "Continue", "data": {"action": "use_previous_options"}}
+                    ]
+                }, markdown="Previous selections found.")
+            else:
+                send_card(room_id, get_options_selector_card(), markdown="Select your options")
+        elif action == "use_previous_options":
+            context = get_user_context(room_id)
+            room_state[room_id] = {
+                "stage": "awaiting_demo_length",
+                "audience": context["audience"],
+                "vertical": context["vertical"],
+                "product_line": context["product_line"]
+            }
+            send_card(room_id, get_demo_length_card(), markdown="Using your last selections. How much time do you have for the demo?")
+
+        elif action == "change_options":
+            send_card(room_id, get_options_selector_card(), markdown="No problem! Let’s pick new options.")
         elif action == "select_options":
             inputs = action_detail.get("inputs", {})
             audience     = inputs.get("audience")
@@ -79,6 +120,9 @@ def messages():
                     "vertical": vertical,
                     "product_line": product_line
                 }
+                set_user_context(room_id, "audience", audience)
+                set_user_context(room_id, "vertical", vertical)
+                set_user_context(room_id, "product_line", product_line)
                 send_card(room_id, get_demo_length_card(), markdown="Got it! Now, choose how much time you have for the demo.")
         elif action == "select_demo_length":
             inputs = action_detail.get("inputs", {})
