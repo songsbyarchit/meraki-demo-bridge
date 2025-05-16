@@ -1,27 +1,26 @@
-[Opening]
+Hey there! Thanks for joining me today. I'm excited to walk you through a demo of Cisco Meraki's MS product, specifically tailored for the Higher Education sector. Before we dive in, I'd love to hear from you:
 
-Welcome everyone to our Meraki MS demo for the Higher Ed sector. Today, we will showcase how Meraki can help address the pain points that Higher Ed institutions face and how you can position Meraki to your customers. Let's jump right in.
+- For partners: What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-[Use Case 1: Simplified Network Management]
+Let's get started with a use case that higher education institutions often face. Imagine a scenario where a university has multiple campuses spread across a city. With **Meraki Dashboard**, you can easily manage all these sites from a single pane of glass. **Click 'Networks > All networks'** to see how effortless it is to monitor and troubleshoot any issues across different locations.
 
-One of the biggest pain points for Higher Ed institutions is managing a complex network infrastructure. With Meraki MS, you can **click 'Configure > Switch ports'** to easily configure and monitor all your network switches from a single dashboard. This simplifies network management and reduces the need for specialized IT staff.
+Another common pain point in higher education is the need for secure and reliable Wi-Fi access for students and faculty. By **clicking 'Wireless > Access points'**, you can quickly configure and ensure seamless connectivity throughout the campus, all from one centralized dashboard.
 
-[Use Case 2: Enhanced Security]
+Next, let's consider the challenge of network segmentation within a university setting. With **Meraki MS**, you can easily create different VLANs for students, staff, and guests. **Click 'Switch > Switch ports'** to see how simple it is to set up and manage these network segments, ensuring security and compliance.
 
-Security is a top concern for Higher Ed institutions, especially when dealing with sensitive student and faculty data. With Meraki MS, you can **click 'Security > Access control'** to set up granular access control policies and monitor network activity in real-time. This helps protect against cyber threats and ensures compliance with data regulations.
+Another crucial aspect for higher education institutions is ensuring a smooth onboarding process for new devices. **Click 'Systems manager > Devices'** to witness how easy it is to enroll and manage devices, whether it's laptops for students or IoT devices for research labs.
 
-[Use Case 3: Improved User Experience]
+Moving on, let's explore a scenario where a university wants to provide seamless video conferencing capabilities for remote learning. By **clicking 'Security & SD-WAN > SD-WAN'**, you can prioritize traffic and optimize network performance, ensuring high-quality video calls without any interruptions.
 
-Students and faculty expect seamless connectivity and fast internet speeds on campus. With Meraki MS, you can **click 'Wireless > RF spectrum analysis'** to optimize Wi-Fi performance and troubleshoot connectivity issues quickly. This improves the overall user experience and enhances productivity.
+Last but not least, let's address the need for seamless integration with existing IT infrastructure. With **Meraki APIs**, you can easily integrate MS switches with other systems and applications, streamlining workflows and enhancing overall efficiency. **Click 'Organization > Settings > Dashboard API access'** to see how straightforward it is to enable API access.
 
-[Use Case 4: Cost Savings]
+Now, let's wrap up with some common questions you might encounter when pitching MS in the Higher Education space:
 
-Budget constraints are a common challenge for Higher Ed institutions. With Meraki MS, you can **click 'Monitor > Traffic analysis'** to identify bandwidth bottlenecks and optimize network resources. This helps reduce operational costs and maximize ROI on IT investments.
+Q: What are the top higher education pain points this addresses?  
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-[Smart Questions]
+Q: How do we best position MS during the pitch?  
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-1. How are you currently managing your network infrastructure, and what pain points do you experience?
-2. Have you considered implementing granular access control policies to enhance security on your campus network?
-3. How do you see Meraki MS fitting into your long-term IT strategy for your Higher Ed institution?
-
-Thank you for joining our Meraki MS demo today. We hope this session has provided valuable insights into how you can pitch Meraki to your Higher Ed customers. If you have any further questions or would like to schedule a follow-up discussion, please feel free to reach out to us. Have a great day!
+Q: What installation or deployment concerns should we be ready for?  
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.

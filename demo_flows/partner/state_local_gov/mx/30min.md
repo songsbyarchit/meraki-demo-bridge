@@ -1,33 +1,28 @@
-[Opening]
+Hey there, thanks for joining me today for this demo! I know we're all busy, so let's dive right in.
 
-Welcome everyone to our Meraki MX demo focused on the State Local Gov sector. Today, we'll be exploring how Meraki can help address the pain points that customers in this sector care about. Let's dive in.
+What trends or challenges are you seeing with customers in the State And Local Government sector? What do you find unique or tricky about positioning solutions in this space?
 
-[Pain Points]
+Great, let's talk about the specific needs of the State And Local Government sector and how Meraki MX can address them.
 
-State Local Gov agencies often face challenges with managing multiple locations, ensuring network security, and optimizing limited IT resources. Traditional networking solutions can be complex, costly, and difficult to scale, which can hinder their ability to deliver efficient services to their constituents.
+Imagine a state agency struggling with network security across multiple locations. With Meraki MX, they can easily set up site-to-site VPNs for secure communication and have centralized visibility and control over all their networks through the Meraki Dashboard. Let's take a look at how this works.
 
-[Meraki Positioning]
+**click 'Security & SD-WAN > VPN > Site-to-site VPN'**
 
-Meraki offers a cloud-managed networking solution that is simple to deploy, easy to manage, and provides centralized visibility and control across all locations. With features like zero-touch provisioning, automatic firmware updates, and built-in security, Meraki empowers State Local Gov agencies to streamline their network operations and focus on delivering better services to their communities.
+Now, picture a local government office dealing with slow troubleshooting due to a complex network setup. Meraki MX simplifies troubleshooting with real-time network insights and alerts, allowing IT teams to quickly identify and resolve issues. Let's see this in action.
 
-[Use Case 1: Network Security]
+**click 'Monitor > Appliance status'**
 
-Let's look at a use case where a State Local Gov agency needs to ensure the security of their network infrastructure. With Meraki MX, partners can **click 'Security & SD-WAN > Threat Protection'** to set up firewall rules, intrusion prevention, and content filtering to protect against cyber threats. Meraki's integrated security features help agencies safeguard sensitive data and prevent unauthorized access.
+Lastly, consider a public library looking to streamline network management across multiple branches. Meraki MX offers unified management through the Dashboard, enabling IT admins to easily configure and monitor all devices from a single pane of glass. Let's explore this further.
 
-[Use Case 2: Remote Connectivity]
+**click 'Configure > Addressing & VLANs'**
 
-Another common pain point for State Local Gov agencies is providing secure remote connectivity for employees working in the field or from home. Partners can **click 'Security & SD-WAN > VPN'** to easily configure VPN tunnels using Meraki MX, ensuring encrypted communication and secure access to internal resources from anywhere. This enables agencies to support remote work initiatives without compromising network security.
+Q: What are the top state and local government pain points this addresses?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-[Use Case 3: Traffic Optimization]
+Q: How do we best position MX during the pitch?
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-Lastly, let's consider a scenario where a State Local Gov agency needs to prioritize network traffic for critical applications such as emergency services or public safety communications. Partners can **click 'SD-WAN & traffic shaping > Traffic shaping'** in the Meraki dashboard to allocate bandwidth and prioritize traffic based on application requirements. This ensures that essential services receive the necessary network resources, improving overall efficiency and user experience.
+Q: What installation or deployment concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
 
-[Smart Questions]
-
-To prompt discussion with attendees, here are two smart questions the presenter can ask:
-1. How are you currently managing network security across your agency's multiple locations, and what challenges have you faced in ensuring consistent protection?
-2. Can you tell us more about your organization's remote work initiatives and how you are supporting secure connectivity for employees working outside traditional office settings?
-
-[Closing]
-
-Thank you for joining our Meraki MX demo today. We hope this session has provided valuable insights into how Meraki can address the unique needs of State Local Gov agencies. If you have any further questions or would like to explore a customized solution for your organization, please reach out to our team. We look forward to helping you unlock the full potential of your network infrastructure with Meraki.
+Thank you for exploring Meraki MX with me today. If you have any more questions or need further information, feel free to reach out. Have a great day!

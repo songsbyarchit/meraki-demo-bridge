@@ -1,36 +1,26 @@
-Title: Meraki MT Demo for Hospitality Sector
+Hey there, thank you for joining us today for this demo on Cisco Meraki tailored for the Hospitality sector. Whether you're a partner reseller, customer IT admin, or internal SE, we're excited to show you how Meraki can help meet the unique needs of this industry.
 
-Introduction (5 mins):
-- Welcome everyone to the Meraki MT demo for the Hospitality sector.
-- Today, we will be focusing on partner enablement and supporting you in pitching to customers effectively.
-- Our goal is to showcase the key features and benefits of Meraki MT in a real-world scenario.
+Let's kick things off with a couple of warm-up questions:
+- For partners: What trends or challenges are you seeing with customers in the Hospitality sector? What do you find unique or tricky about positioning solutions in this space?
+- For customers: What does your current network setup look like? Where are your biggest IT headaches today?
+- For internal: What common questions do our customers ask in the Hospitality sector? What objections or misconceptions do we frequently encounter?
 
-Use Case 1: Guest Wi-Fi Management (15 mins)
-- Imagine you're a hotel owner and want to provide seamless Wi-Fi experience for your guests.
-- **click 'Configure > Wireless > SSID'** to set up a dedicated guest network with splash page and bandwidth limits.
-- Show how easy it is to customize the splash page and monitor network usage in real-time.
+Now, let's dive into some specific use cases for the Hospitality sector using the Meraki Dashboard as our central platform.
 
-Use Case 2: Location Analytics (10 mins)
-- Let's explore how Meraki MT can help hotels understand guest behavior.
-- **click 'Monitor > Location analytics'** to view heat maps and foot traffic patterns in different areas of the hotel.
-- Discuss how this data can be used to optimize layout, promotions, and staffing.
+1. **Setting up Guest Wi-Fi**: **click 'Wireless > SSIDs'** to create a new SSID specifically for guest access.
+2. **Network Segmentation**: **click 'Security & SD-WAN > Addressing & VLANs'** to segment networks for different areas of the hotel.
+3. **Location Analytics**: **click 'Wireless > Access Points'** to view real-time location data of guests within the hotel.
+4. **Captive Portal Customization**: **click 'Wireless > Splash Page'** to customize the captive portal with hotel branding.
 
-Use Case 3: IoT Device Management (10 mins)
-- Many hotels are adopting IoT devices for automation and energy efficiency.
-- **click 'Configure > IoT devices'** to see how Meraki MT can easily onboard and manage these devices.
-- Highlight the benefits of centralized control and security for IoT deployments.
+Moving on to some FAQs to help partners sell MT effectively in the Hospitality space:
 
-Use Case 4: Security Camera Integration (10 mins)
-- Security is a top priority for hotels. Let's see how Meraki MT can enhance surveillance.
-- **click 'Configure > Cameras'** to demonstrate seamless integration with Meraki MV cameras.
-- Discuss the advantages of cloud-managed cameras for remote monitoring and analytics.
+Q: What objections might the partner hear in hospitality?
+A: Cost vs legacy vendors, and skepticism over cloud-managed security — arm them with TCO comparisons.
 
-Smart Questions for Discussion:
-1. How do you see Meraki MT addressing the unique challenges faced by the Hospitality sector in terms of network management and security?
-2. In what ways can partners leverage the insights from location analytics to offer personalized services to hotel guests?
-3. How important is it for hotels to have a unified platform like Meraki MT for managing various smart devices and applications in their environment?
+Q: What enablement do we provide for partners?
+A: Access to demo kits, dashboards, playbooks, and partner-exclusive webinars.
 
-Conclusion (5 mins):
-- Thank you for participating in today's Meraki MT demo. We hope you gained valuable insights on how to effectively pitch Meraki MT to customers in the Hospitality sector.
-- If you have any further questions or need assistance, feel free to reach out to our team for support.
-- Stay tuned for more partner enablement sessions and updates on Meraki MT.
+Q: How do we support onboarding post-sale?
+A: We offer co-delivery workshops, pre-built config templates, and Meraki support handles escalations fast.
+
+Thank you for your time today, and we hope this demo has equipped you with the knowledge and tools to effectively pitch Cisco Meraki in the Hospitality sector.

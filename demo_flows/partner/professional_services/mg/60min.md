@@ -1,31 +1,34 @@
-[Opening]
+Hey there, thanks for joining us today. I know you're a partner in the Professional Services sector, so I'm excited to show you how Cisco Meraki MG can help you address the unique challenges your customers face. What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-Presenter: Hello everyone, thank you for joining us today for this Meraki MG demo targeting the Professional Services sector. As partners, you play a crucial role in helping customers find the right solutions for their networking needs. Today, we'll be focusing on the Meraki MG and how it can address common pain points in this industry.
+Let's dive into the demo now. **Click 'Dashboard'** to get started.
 
-[Pain Points]
+**Use Case 1: Secure Remote Access**
+In the Professional Services sector, remote access is crucial. With MG, you can easily set up secure VPN connections for remote workers. **Click 'Security & SD-WAN > Site-to-site VPN'** to see how simple it is to configure.
 
-Presenter: In the Professional Services sector, customers often face challenges with managing a large number of remote sites, ensuring reliable connectivity for their teams, and maintaining security across their network. These pain points can lead to downtime, loss of productivity, and security breaches. With the Meraki MG, we can help address these challenges and provide a seamless networking experience for your customers.
+**Use Case 2: Application Optimization**
+Professional Services rely on various applications to operate efficiently. With MG, you can prioritize critical applications over less important ones, ensuring optimal performance. **Click 'SD-WAN & Traffic Shaping > Application Quality'** to see how it's done.
 
-[Use Case 1: Remote Site Management]
+**Use Case 3: Network Segmentation**
+Segmenting your network is essential for maintaining security and compliance. With MG, you can create different network segments for departments or functions. **Click 'Addressing & VLANs > VLANs'** to explore this feature.
 
-Presenter: One use case for the Meraki MG is remote site management. With the centralized dashboard, partners can easily monitor and manage all their customers' remote sites from one location. **Click 'Dashboard > Manage > Devices'**. This simplifies network management and reduces the need for onsite visits, saving time and resources for both partners and customers.
+**Use Case 4: Centralized Management**
+Managing multiple sites can be challenging. With Meraki Dashboard, you have a single pane of glass to monitor and troubleshoot all your networks. **Click 'Monitor > Clients'** to see how easy it is to get insights into your network.
 
-[Use Case 2: Reliable Connectivity]
+**Use Case 5: Automated Security Updates**
+Keeping up with security updates can be time-consuming. MG automates this process, ensuring your network is always protected. **Click 'Security & SD-WAN > Updates'** to see how seamless it is.
 
-Presenter: Another use case is ensuring reliable connectivity for teams working remotely or in the field. The Meraki MG offers built-in 4G LTE failover, so even if the primary connection goes down, users can seamlessly switch to the cellular network without any interruptions. This ensures business continuity and keeps teams productive no matter where they are located.
+**Use Case 6: Analytics and Reporting**
+Understanding network performance is key in the Professional Services sector. With MG, you get detailed analytics and reporting to make informed decisions. **Click 'Monitor > Performance'** to explore this feature.
 
-[Use Case 3: Security]
+As you can see, MG offers a comprehensive solution tailored to the needs of the Professional Services sector. Now, let's address some common questions partners might have:
 
-Presenter: Security is always a top concern for customers in the Professional Services sector. With the Meraki MG, partners can easily set up VPN tunnels to secure communication between remote sites and headquarters. **Click 'Configure > Security & SD-WAN > Site-to-site VPN'**. This helps protect sensitive data and ensures that confidential information stays secure.
+Q: What are the top professional services pain points this addresses?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-[Use Case 4: Scalability]
+Q: How do we best position MG during the pitch?
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-Presenter: Lastly, scalability is key for customers with growing networks. The Meraki MG is designed to scale effortlessly as the network expands. Partners can easily add new devices, sites, and users to the network without any disruptions. This flexibility allows customers to adapt to changing business needs without any hassle.
+Q: What installation or deployment concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
 
-[Discussion Questions]
-
-Presenter: Now, before we wrap up, I'd like to ask a couple of questions to prompt some discussion. How do your customers currently manage their remote sites, and what challenges do they face in ensuring reliable connectivity for their teams? How important is network security to your customers, and what measures do they currently have in place to protect their data?
-
-[Closing]
-
-Presenter: Thank you all for attending today's demo. I hope you found it informative and valuable for your customer pitches. If you have any further questions or would like to learn more about the Meraki MG, please don't hesitate to reach out. Have a great day!
+That's it for today's demo. I hope you found it insightful and are excited to help your customers in the Professional Services sector with Cisco Meraki MG. Thanks for joining us!

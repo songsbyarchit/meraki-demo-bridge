@@ -1,26 +1,22 @@
-[Start of Demo Script]
+Hey there, thank you for joining me today. I know you're a partner reseller working in the Hospitality sector, and our goal today is to equip you with the tools and knowledge to effectively pitch Cisco Meraki's MG solution to your customers.
 
-[Opening]
-Presenter: Hello and welcome to our Meraki MG demo! Today, I'll be showing you how the Meraki MG can revolutionize communication and connectivity in the hospitality sector. Let's dive in.
+To kick things off, I'd love to hear from you about any trends or challenges you've been noticing with customers in the Hospitality sector. What do you find unique or tricky about positioning solutions in this space?
 
-[Pain Points]
-Presenter: Now, let's talk about some pain points that customers in the hospitality sector often face. Slow and unreliable Wi-Fi, difficulty managing multiple networks, and high maintenance costs are common issues. Meraki MG addresses these concerns with its cloud-based management and seamless integration.
+Great, now let's dive into the demo. Imagine you're meeting with a hotel owner who is struggling with network management across multiple properties. With Meraki's MG solution, you can offer them centralized visibility and control through the Meraki Dashboard.
 
-[Use Case 1: Guest Wi-Fi]
-Presenter: One key use case for the Meraki MG in the hospitality sector is providing reliable and secure guest Wi-Fi. With Meraki, you can easily set up a separate guest network with a custom splash page for login. **Click 'Wireless > Configure > Guest Access'** to see how simple it is to customize the guest Wi-Fi experience.
+Let's explore a few key use cases:
+1. **Centralized Management**: **Navigate to 'Monitor > Clients'** to see real-time client activity across all sites.
+2. **Secure Guest Wi-Fi**: **Click 'Wireless > SSIDs'** to easily create a separate network for guests with custom splash pages and access controls.
+3. **Network Troubleshooting**: **Go to 'Tools > Ping'** to troubleshoot connectivity issues remotely without needing to be on-site.
 
-[Use Case 2: Voice and Video Calls]
-Presenter: Another use case is ensuring high-quality voice and video calls for guests and staff. The Meraki MG prioritizes voice and video traffic, ensuring a seamless communication experience. **Click 'Traffic Shaping > Voice and Video'** to see how easy it is to prioritize these types of traffic.
+Now, let's address some common questions partners might have when positioning MG in the Hospitality space:
+Q: What are the top hospitality pain points this addresses?  
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-[Use Case 3: Network Monitoring]
-Presenter: Lastly, network monitoring is crucial in the hospitality sector to ensure everything is running smoothly. With Meraki MG, you can easily monitor network performance and troubleshoot any issues in real-time. **Click 'Monitor > Live Tools'** to see the live network performance dashboard.
+Q: How do we best position MG during the pitch?  
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-[Smart Questions]
-Presenter: Now, let's end with a couple of smart questions you can ask your customers to prompt discussion:
-1. How important is reliable Wi-Fi to your guests' overall experience?
-2. How do you currently manage and monitor your network? Are there any pain points you would like to address?
+Q: What installation or deployment concerns should we be ready for?  
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
 
-[Closing]
-Presenter: Thank you for joining our Meraki MG demo today. We hope you can see the value it can bring to your customers in the hospitality sector. If you have any further questions or would like to explore how Meraki MG can benefit your business, feel free to reach out to us. Have a great day!
-
-[End of Demo Script]
+Thanks for your time today. I hope this demo has given you a clear understanding of how Cisco Meraki's MG solution can meet the unique needs of customers in the Hospitality sector. Let's go out there and make some impactful pitches!

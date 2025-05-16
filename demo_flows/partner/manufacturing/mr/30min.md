@@ -1,30 +1,20 @@
-[Opening]
+Hey there! Thanks for joining me today. I know you're a partner reseller, so I'm excited to dive into how Cisco Meraki's MR can help address the unique challenges faced by customers in the Manufacturing sector. Before we get started, could you share what trends or challenges you're seeing with customers in this space?
 
-Hello, and thank you for joining us today for this Meraki MR demo focused on the Manufacturing sector. Today, we will be discussing how Meraki can help address the pain points that manufacturing customers care about. As a partner, it is crucial to understand these pain points and position Meraki as the solution to their challenges.
+Great, let's begin by looking at the Meraki Dashboard, our central platform for visibility and management. **Click 'Dashboard'** to see how easy it is to navigate and monitor your network in real-time.
 
-[Pain Points]
+Now, let's explore a specific use case in Manufacturing. Imagine a factory with multiple buildings. With Meraki MR, you can easily manage all the access points across different sites from one dashboard. **Click 'Wireless > Access points'** to see how simple it is to configure and troubleshoot.
 
-Manufacturing customers often face challenges such as maintaining a reliable and secure network across their facilities, ensuring seamless connectivity for their IoT devices, and managing multiple sites efficiently. These pain points can lead to downtime, security breaches, and inefficiencies in their operations.
+Another pain point in Manufacturing is ensuring secure connections for IoT devices. Meraki MR offers advanced security features like integrated firewall and deep packet inspection to protect your network. **Click 'Security > Firewall & traffic shaping'** to see how you can set up policies to secure your IoT devices.
 
-[Use Case 1: Network Management]
+One more use case to highlight is the importance of reliable connectivity in Manufacturing. Meraki MR's auto-optimization feature ensures seamless roaming for devices, even in challenging environments like warehouses or production floors. **Click 'Wireless > RF spectrum'** to see how you can optimize your network performance.
 
-Let's explore a use case where a manufacturing customer has multiple sites that need to be managed centrally. With Meraki's cloud-managed networking solution, partners can **login to the Meraki dashboard** and easily configure, monitor, and troubleshoot all their customer's sites from one centralized location. This not only saves time and resources but also ensures consistent network performance across all sites.
+Now, let's address some common questions partners might have when positioning MR in the Manufacturing space:
 
-[Use Case 2: IoT Device Connectivity]
+Q: What are the top manufacturing pain points this addresses?  
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-Another common pain point for manufacturing customers is ensuring seamless connectivity for their IoT devices. With Meraki MR access points, partners can **click 'Configure > Wireless settings'** and easily set up a dedicated IoT network that prioritizes IoT traffic and ensures reliable connectivity for these devices. This helps improve operational efficiency and productivity in the manufacturing environment.
+Q: How do we best position MR during the pitch?  
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-[Use Case 3: Security]
-
-Security is always a top concern for manufacturing customers, especially with the rise of cyber threats targeting industrial networks. With Meraki's built-in security features such as integrated firewall, intrusion prevention, and content filtering, partners can **navigate to 'Security & SD-WAN > Firewall'** and easily configure robust security policies to protect their customer's network from cyber threats. This not only provides peace of mind for the customer but also helps maintain compliance with industry regulations.
-
-[Smart Questions]
-
-To prompt discussion with the attendees, here are two smart questions that the presenter can ask:
-
-1. How are you currently managing network security across your manufacturing facilities?
-2. What are the biggest challenges you face when it comes to connecting and managing IoT devices in your manufacturing environment?
-
-[Closing]
-
-In conclusion, Meraki MR offers a comprehensive solution for addressing the pain points that manufacturing customers care about. By understanding these pain points and positioning Meraki as the answer, partners can effectively pitch Meraki to their customers and help them overcome their network challenges. Thank you for attending this demo, and we look forward to helping you succeed with Meraki in the Manufacturing sector.
+Q: What installation or deployment concerns should we be ready for?  
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.

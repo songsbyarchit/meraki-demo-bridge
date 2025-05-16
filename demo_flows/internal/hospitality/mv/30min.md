@@ -1,31 +1,21 @@
-[Opening]
+Hey there! Thanks for joining me today. Whether you're a partner reseller, customer IT admin, or an internal SE, I'm excited to walk you through our demo of Cisco Meraki MV tailored for the Hospitality sector.
 
-Hello everyone, thank you for joining today's Meraki MV demo focused on the Hospitality sector. We're here to help you, our partners, effectively pitch this solution to potential customers. Let's dive right in.
+To kick things off, I'd love to hear from our partners: What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-[Use Case 1: Security]
+Now, let's dive into the demo. Imagine you're a hotel manager looking to enhance guest safety and optimize operations. With Meraki MV, you can easily monitor common areas, parking lots, and back-of-house spaces through high-definition video feeds. **Navigate to the Meraki Dashboard and click 'Cameras > Live Video'** to see it in action.
 
-So, one key use case for the Meraki MV in the hospitality sector is security. With the MV cameras, hotels can monitor key areas like lobbies, parking lots, and hallways in real-time. This provides an added layer of security for guests and staff. 
+Next, picture a resort wanting to streamline check-in processes. By integrating MV cameras with a custom app, staff can receive alerts when guests arrive and greet them promptly. **Go to the Dashboard and click 'Cameras > Motion Alerts'** to set this up.
 
-To demonstrate this, let's **click 'Cameras > Live View'** to show how easy it is to check on different areas of a hotel from a single dashboard. This feature can be a game-changer for hotels looking to enhance their security measures.
+Lastly, let's consider a restaurant chain aiming to improve customer service. MV's advanced analytics can track customer flow, wait times, and table turnover rates to optimize staffing and seating arrangements. **Click 'Cameras > Analytics' on the Dashboard** to explore these insights.
 
-[Use Case 2: Guest Experience]
+Now, let's address some common FAQs:
+Q: What objections might the partner hear in hospitality?
+A: Cost vs legacy vendors, and skepticism over cloud-managed security — arm them with TCO comparisons.
 
-Another use case is enhancing the guest experience. By using the MV cameras, hotels can gather valuable insights on guest behavior and preferences. For example, by tracking traffic flow in the lobby or monitoring wait times at the front desk, hotels can optimize their operations to provide a seamless experience for guests.
+Q: What enablement do we provide for partners?
+A: Access to demo kits, dashboards, playbooks, and partner-exclusive webinars.
 
-Let's **click 'Analytics > Heat Maps'** to see how this data can be visualized and used to make informed decisions. This kind of data-driven approach can help hotels tailor their services to meet the needs of their guests more effectively.
+Q: How do we support onboarding post-sale?
+A: We offer co-delivery workshops, pre-built config templates, and Meraki support handles escalations fast.
 
-[Use Case 3: Operational Efficiency]
-
-Lastly, the Meraki MV can also improve operational efficiency for hotels. By using the cameras to monitor housekeeping schedules, track inventory levels, or even manage energy usage, hotels can streamline their processes and reduce costs.
-
-Let's **click 'Alerts > Motion Alerts'** to see how the MV cameras can send notifications when there is unexpected activity in a restricted area. This feature can help hotels proactively address issues and ensure smooth operations.
-
-[Smart Questions for Discussion]
-
-Now, I'd like to end with a couple of smart questions for you to consider when pitching the Meraki MV to potential customers:
-
-1. How do you currently address security concerns in your hotel, and do you see value in having real-time monitoring capabilities with the Meraki MV cameras?
-2. In what ways do you think data insights from the MV cameras could improve the guest experience at your hotel, and how would you leverage this information to enhance your services?
-3. Can you identify any specific operational challenges in your hotel that could be addressed by the Meraki MV solution, and how do you see it benefiting your overall efficiency?
-
-Thank you for your time today, and we look forward to supporting you in showcasing the value of the Meraki MV in the Hospitality sector. If you have any questions or need further assistance, please don't hesitate to reach out.
+Thanks for joining me today. I hope you feel more equipped to pitch MV effectively in the Hospitality sector. Let's go out there and make a difference together!

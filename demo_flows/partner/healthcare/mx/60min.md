@@ -1,31 +1,36 @@
-[Opening]
+Hey there! Today, we're diving into a demo of Cisco Meraki's MX for the Healthcare sector. Whether you're a partner looking to pitch to healthcare customers or an internal team member wanting to learn more, this demo is tailored just for you.
 
-Hello and welcome to our Meraki MX demo for the Healthcare sector. Today, we'll be discussing how Meraki can help healthcare organizations improve their network security, simplify management, and increase efficiency. Let's dive in.
+Let's start by discussing the trends and challenges you're seeing with customers in the healthcare sector. What do you find unique or tricky about positioning solutions in this space?
 
-[Pain Points]
+Now, let's explore how Meraki's MX can address these pain points in the healthcare industry through a series of use cases.
 
-Healthcare organizations often face challenges such as securing sensitive patient data, ensuring compliance with industry regulations like HIPAA, and managing a large number of network devices spread across multiple locations. These pain points can lead to inefficiencies, security vulnerabilities, and compliance risks.
+**Use Case 1: Secure Patient Data**
+- **click 'Security > SD-WAN'** to ensure secure connections between healthcare facilities.
+- **click 'Security > Firewall'** to set up policies for patient data protection.
 
-[Positioning Meraki]
+**Use Case 2: Guest Wi-Fi Access**
+- **click 'Wireless > SSIDs'** to create a separate network for guest access.
+- **click 'Wireless > Splash Page'** to customize the login experience for visitors.
 
-Meraki offers a cloud-managed solution that is easy to deploy, secure, and scalable. With Meraki, healthcare organizations can centrally manage their network infrastructure, easily enforce security policies, and gain valuable insights into their network performance.
+**Use Case 3: Remote Site Management**
+- **click 'Organization > Inventory'** to view all MX devices across multiple sites.
+- **click 'Organization > Configuration Templates'** to apply consistent settings to all sites.
 
-[Use Cases]
+**Use Case 4: Application Performance Monitoring**
+- **click 'Appliance Status > Performance'** to monitor application performance in real-time.
+- **click 'Appliance Status > Traffic Shaper'** to prioritize critical healthcare applications.
 
-1. Secure Remote Access: With Meraki MX, healthcare staff can securely access patient records and applications from anywhere, ensuring continuity of care even when working remotely. **click 'Configure > Client VPN'**
+In the healthcare sector, visibility, troubleshooting, and unified management are crucial. With the Meraki Dashboard as your central platform, you can easily address these needs, ensuring a seamless network experience for healthcare providers.
 
-2. Application Visibility and Control: Meraki MX provides detailed insights into network traffic, allowing healthcare organizations to prioritize mission-critical applications and detect and block suspicious activity. **click 'Security & SD-WAN > Applications'**
+Now, let's address some common questions partners might have when positioning MX in the Healthcare space:
 
-3. SD-WAN for Multi-site Clinics: Meraki MX's SD-WAN capabilities enable healthcare organizations to easily connect multiple clinic locations and prioritize traffic for critical applications like telemedicine and electronic health records. **click 'Security & SD-WAN > SD-WAN & Traffic Shaping'**
+Q: What are the top healthcare pain points this addresses?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-4. Guest WiFi Access: Meraki MX allows healthcare organizations to provide secure guest WiFi access for patients and visitors, separate from the internal network to ensure data privacy and compliance. **click 'Wireless > SSID'**
+Q: How do we best position MX during the pitch?
+A: Emphasize Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-[Smart Questions]
+Q: What installation or deployment concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
 
-1. How are you currently managing network security and compliance in your healthcare organization?
-2. What challenges do you face when it comes to network management and scalability across multiple locations?
-3. Have you considered implementing a cloud-managed solution like Meraki MX to simplify your network infrastructure?
-
-[Closing]
-
-Thank you for joining our Meraki MX demo today. We hope you have gained valuable insights into how Meraki can help healthcare organizations improve network security, simplify management, and increase efficiency. If you have any further questions or would like to discuss how Meraki can benefit your organization, please feel free to reach out to us.
+That wraps up our demo! Thank you for joining us today, and we hope you feel more confident in pitching Cisco Meraki's MX to healthcare customers.

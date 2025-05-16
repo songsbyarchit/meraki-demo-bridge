@@ -1,31 +1,25 @@
-[Opening]
+Hey there! Today we're going to dive into how Cisco Meraki's SM solution can revolutionize network management in the Healthcare sector. Whether you're a partner reseller, a customer IT admin, or an internal SE, this demo is tailored to help you understand the unique benefits of Meraki in healthcare settings.
 
-Hello everyone, thank you for joining this Meraki SM demo focused on the Healthcare sector. Today, we will be discussing how Meraki SM can support healthcare organizations in managing their devices effectively and securely. 
+Let's kick things off with a couple of questions:
+- For partners: What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
+- For customers: What does your current network setup look like? Where are your biggest IT headaches today?
+- For internal: What common questions do our customers ask in the Healthcare sector? What objections or misconceptions do we frequently encounter?
 
-Let's start by talking about partner enablement. As partners, it's crucial to understand the unique needs of healthcare organizations and how Meraki SM can address those needs. By effectively pitching the benefits of Meraki SM to healthcare customers, you can help them streamline their device management and improve security.
+Now, let's explore how Meraki SM can address the specific needs of healthcare organizations. Imagine having real-time visibility into every device on your network, simplified troubleshooting with just a few clicks, and unified management of all your network infrastructure through a single pane of glass — the Meraki Dashboard.
 
-[Use Case 1: Device Management]
+Let's **click 'Monitor > Clients'** on the dashboard to see all the devices connected to the network in real-time. From patient monitoring devices to staff laptops, you can easily identify any connectivity issues and ensure smooth operations.
 
-Imagine a hospital with hundreds of medical devices spread across multiple locations. With Meraki SM, partners can easily enroll these devices, apply policies, and monitor their health status from a centralized dashboard. This simplifies the management process and ensures that all devices are up-to-date and secure.
+Next, let's **navigate to 'Security > Firewall'**. Here, you can set up granular security policies to protect patient data and ensure compliance with healthcare regulations. With Meraki, you can secure your network with just a few simple configurations.
 
-To demonstrate this, let's **click 'Systems Manager > Devices'** in the Meraki dashboard. From here, partners can see a list of all enrolled devices, their status, and any policies that have been applied.
+Lastly, let's **click 'Systems Manager > Settings'**. This feature allows you to manage all your organization's devices, from tablets to medical equipment, ensuring that they are secure and up-to-date at all times.
 
-[Use Case 2: Security Compliance]
+Now, let's address some common FAQs to support partners selling SM in the Healthcare space:
 
-Healthcare organizations are under strict regulations when it comes to data security. With Meraki SM, partners can ensure that all devices comply with security policies and receive real-time alerts if any device falls out of compliance. This helps healthcare organizations maintain a secure environment and avoid potential breaches.
+Q: What objections might the partner hear in healthcare?
+A: Cost vs legacy vendors, and skepticism over cloud-managed security — arm them with TCO comparisons.
 
-Let's **click 'Systems Manager > Security Policies'** to see how partners can set up custom security policies for healthcare devices. Partners can define rules for encryption, password requirements, and more to ensure compliance with industry regulations.
+Q: What enablement do we provide for partners?
+A: Access to demo kits, dashboards, playbooks, and partner-exclusive webinars.
 
-[Use Case 3: Remote Troubleshooting]
-
-In a healthcare setting, downtime can have serious consequences. With Meraki SM, partners can remotely troubleshoot devices, push updates, and resolve issues without the need for onsite visits. This saves time and resources for healthcare organizations while ensuring that devices stay operational.
-
-Let's **click 'Systems Manager > Remote Tools'** to see how partners can remotely access and troubleshoot devices. This feature allows partners to quickly diagnose and resolve issues, keeping healthcare operations running smoothly.
-
-[Discussion Questions]
-
-1. How do you currently manage device security and compliance in your healthcare organization?
-2. What challenges have you faced in device management and troubleshooting in a healthcare setting?
-3. How important is remote access and troubleshooting for your organization's operations?
-
-Thank you for attending this Meraki SM demo. We hope you found it informative and valuable for your work with healthcare customers. If you have any further questions or would like to explore Meraki SM in more detail, please don't hesitate to reach out to us.
+Q: How do we support onboarding post-sale?
+A: We offer co-delivery workshops, pre-built config templates, and Meraki support handles escalations fast.

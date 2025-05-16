@@ -1,30 +1,24 @@
-[Opening]
+Hey there! Today, we're going to dive into a demo of Cisco Meraki's **MS** product, tailored specifically for the Hospitality sector. Whether you're a partner reseller looking to pitch to customers or a customer IT admin seeking solutions to your network challenges, this demo is for you.
 
-Hello and welcome to our Meraki MS demo for the Hospitality sector. Today, we will be showcasing how Meraki can help hotels and other hospitality businesses improve their network management and provide a better guest experience. 
+Let's kick things off with a couple of warm-up questions:
+- For partners: What trends or challenges are you seeing with customers in the Hospitality sector? What do you find unique or tricky about positioning solutions in this space?
+- For customers: What does your current network setup look like? Where are your biggest IT headaches today?
 
-[Pain Points]
+Now, let's explore how Meraki's **MS** can address the pain points in the Hospitality sector with a few use cases:
 
-Now, let's talk about some pain points that customers in the Hospitality sector often face. One common issue is the need for a reliable and secure network that can handle a large number of users and devices, especially during peak times. Another pain point is the complexity of managing multiple locations and ensuring consistent network performance across all of them. 
+1. **Guest Wi-Fi Management**: With Meraki's intuitive Dashboard, you can easily set up a secure and seamless guest Wi-Fi network. **Click 'Wireless > SSIDs'** to customize access for guests while ensuring network security.
 
-[Positioning Meraki]
+2. **Location Analytics**: Gain valuable insights into guest behavior and preferences using Meraki's built-in analytics tools. **Navigate to 'Insights > Location Analytics'** to see real-time data on visitor traffic and engagement.
 
-This is where Meraki comes in. Meraki offers a cloud-managed networking solution that is easy to deploy, manage, and scale. With Meraki, hospitality businesses can have a centralized view of their network, making it easier to troubleshoot issues and ensure a seamless guest experience. 
+3. **Centralized Management**: Manage multiple sites from a single pane of glass with Meraki's Dashboard. **Click 'Monitor > Overview'** to get a holistic view of your network health and performance.
 
-[Use Case 1: Simplified Network Management]
+Now, let's address some common questions partners might have when positioning Meraki **MS** in the Hospitality space:
 
-Let's dive into a use case to demonstrate how Meraki can help simplify network management for hospitality businesses. **Click 'Configure > Switch ports'** to see how easy it is to configure and monitor switch ports across multiple locations from a single dashboard. This level of visibility and control can help ensure that guests have a seamless and secure network experience.
+Q: What are the top hospitality pain points this addresses?  
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-[Use Case 2: Guest Wi-Fi Access]
+Q: How do we best position **MS** during the pitch?  
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-Another key use case for the Hospitality sector is providing secure and reliable Wi-Fi access for guests. **Click 'Wireless > SSIDs'** to see how easy it is to set up guest Wi-Fi networks with Meraki. With features like guest isolation and customizable splash pages, hotels can offer a seamless and secure Wi-Fi experience for their guests.
-
-[Smart Questions]
-
-Now, here are a few smart questions you can ask customers in the Hospitality sector to prompt discussion:
-1. How are you currently managing your network across multiple locations, and what challenges are you facing?
-2. How important is guest Wi-Fi access to your business, and what features do you look for in a guest Wi-Fi solution?
-3. How do you currently monitor and troubleshoot network issues, and how much time does it typically take to resolve them?
-
-[Closing]
-
-Thank you for joining our Meraki MS demo today. We hope you can see the value that Meraki can bring to hospitality businesses in improving network management and enhancing the guest experience. If you have any further questions or would like to learn more about how Meraki can benefit your business, please feel free to reach out to us.
+Q: What installation or deployment concerns should we be ready for?  
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.

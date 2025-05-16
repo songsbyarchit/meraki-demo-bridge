@@ -1,48 +1,36 @@
-[Opening]
+Hey there! Thanks for joining us today for this demo of Cisco Meraki, tailored specifically for partners in the Financial Services sector. I'm excited to show you how our Meraki **MT** solution can address the unique challenges faced by your customers in this industry.
 
-Hello everyone, thank you for joining this Meraki MT demo targeted towards the Finance sector. Today, we'll be focusing on how Meraki can address the pain points that customers in this industry care about. 
+Before we dive in, I'd love to hear from you about the trends or challenges you're seeing with customers in Financial Services. What do you find unique or tricky about positioning solutions in this space?
 
-[Slide 1: Introduction to Meraki]
-- Introduce Meraki as a cloud-managed IT company known for its simple and secure networking solutions.
-- Mention that Meraki is part of Cisco and has a strong presence in various sectors including Finance.
-- Highlight the benefits of Meraki's centralized dashboard and easy deployment.
+Great, thanks for sharing that insight. Let's jump into the demo and explore how Meraki can help. 
 
-[Slide 2: Pain Points in the Finance Sector]
-- Discuss the common pain points that finance customers face such as stringent security requirements, complex network configurations, and limited IT resources.
-- Explain how Meraki can help alleviate these pain points with its simple and scalable solutions.
+**Use Case 1: Centralized Management**
+Let's start by logging into the Meraki Dashboard. **Click 'Login' and enter your credentials**. Once inside, you'll see how the Meraki Dashboard provides a single pane of glass for managing all your network devices across different branches or offices, making it easy to monitor and troubleshoot issues in real-time.
 
-[Slide 3: Use Case 1 - Secure Network Access]
-- **click 'Configure > Switch ports'**
-- Demonstrate how Meraki's access control features allow finance companies to restrict network access based on user roles and device types.
-- Highlight how this helps in ensuring data security and compliance with regulations.
+**Use Case 2: Network Segmentation**
+Now, let's set up different network segments for your financial departments. **Click 'Configure > VLANs'** to create separate networks for accounting, HR, and IT. This segmentation enhances security and compliance by restricting access to sensitive data.
 
-[Slide 4: Use Case 2 - Remote Work Enablement]
-- **click 'Configure > VPN'**
-- Show how Meraki's VPN capabilities enable secure remote access for finance employees working from home or on the go.
-- Emphasize the ease of setting up and managing VPN connections through the Meraki dashboard.
+**Use Case 3: Security & Compliance**
+Next, let's ensure compliance by configuring firewall rules to restrict access to certain websites or applications. **Click 'Security & SD-WAN > Firewall'** to create policies that align with regulatory requirements and protect your network from cyber threats.
 
-[Slide 5: Use Case 3 - Network Monitoring and Analytics]
-- **click 'Monitor > Overview'**
-- Illustrate how Meraki provides real-time visibility into network performance and security incidents.
-- Explain how finance companies can use this data to identify and resolve issues quickly, ensuring uninterrupted operations.
+**Use Case 4: Remote Workforce Support**
+Given the current remote work trend, let's set up a VPN for secure access to the network from anywhere. **Click 'Security & SD-WAN > VPN'** to configure a VPN connection for your employees working from home or on the go.
 
-[Slide 6: Use Case 4 - Cloud-based Security Solutions]
-- **click 'Security > Threat protection'**
-- Showcase Meraki's integrated security features such as threat protection, content filtering, and intrusion prevention.
-- Highlight how these solutions help finance companies defend against cyber threats and safeguard sensitive data.
+**Use Case 5: Guest Wi-Fi**
+Lastly, let's enable a guest Wi-Fi network for visitors to your branches. **Click 'Wireless > SSIDs'** to create a separate network with limited access to your internal resources, ensuring a seamless and secure experience for your guests.
 
-[Slide 7: Use Case 5 - Guest Wi-Fi Management]
-- **click 'Configure > Wireless > SSIDs'**
-- Demonstrate how Meraki allows finance companies to set up secure guest Wi-Fi networks with custom login portals and access controls.
-- Explain the benefits of separating guest traffic from the internal network to enhance security.
+**Use Case 6: Analytics & Reporting**
+Before we wrap up, let's take a quick look at the analytics and reporting capabilities of the Meraki Dashboard. **Click 'Monitor > Analytics'** to gain insights into network performance, user activity, and application usage, helping you make data-driven decisions for your business.
 
-[Closing]
+Now, let's address some common questions partners might have when positioning MT in the Financial Services space:
 
-Now that we've covered some key use cases for the Finance sector, I encourage you to think about how Meraki can address your customers' pain points and help differentiate your offerings in the market. 
+Q: What are the top financial services pain points this addresses?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-[Smart Questions]
-1. How are your customers currently managing network security and compliance in their finance organizations?
-2. What challenges do you face when it comes to ensuring seamless connectivity for remote employees in the finance sector?
-3. Have you encountered any specific network performance issues or security incidents that could have been mitigated with a solution like Meraki?
+Q: How do we best position MT during the pitch?
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-Thank you for your time and attention. Please feel free to reach out with any further questions or to discuss how Meraki can support your business goals in the Finance sector.
+Q: What installation or deployment concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
+
+Thank you for joining this demo today. I hope you can see the value that Cisco Meraki **MT** can bring to your customers in the Financial Services sector. Feel free to reach out if you have any further questions or need assistance in positioning Meraki for your clients.

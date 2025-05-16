@@ -1,30 +1,24 @@
-[Opening]
+Hey there! Thanks for joining us today. I know you're a partner reseller focused on the Retail sector, and I'm excited to show you how Cisco Meraki's MG can help address some of the challenges your customers are facing. Before we dive in, can you share what trends or challenges you're seeing with customers in this sector? And what do you find unique or tricky about positioning solutions in this space?
 
-Presenter: Hello and welcome, everyone! Today, we're going to walk through a demo of the Meraki MG, specifically tailored for the Retail sector. As partners, we understand the unique challenges that retailers face, and we believe that Meraki can provide the solutions needed to address these pain points. Let's dive in!
+Great, let's get started. In the Retail sector, one common pain point is the need for seamless connectivity across multiple locations. With Meraki MG, you can easily manage and monitor all your retail sites from one central platform, the Meraki Dashboard.
 
-[Pain Points]
+Imagine being able to **view real-time network performance**, **troubleshoot connectivity issues**, and **push out configuration changes** across all your stores with just a few clicks. That's the power of Meraki's single pane of glass interface.
 
-Presenter: One of the biggest pain points for retailers is ensuring a seamless and secure network connectivity for their customers and employees. With the increasing number of devices connecting to the network, it's crucial to have a solution that can handle this demand without compromising on performance or security. Additionally, retailers are constantly looking for ways to improve their customer experience and drive sales through innovative technology.
+Let's take a look at a few specific use cases tailored to Retail:
 
-[Use Case 1: Guest Wi-Fi]
+1. **Monitoring POS System Connectivity** - Retailers rely heavily on their POS systems to process transactions. With Meraki MG, you can **set up alerts for offline POS devices**, **identify connectivity issues**, and **remotely troubleshoot network problems** to keep your sales running smoothly.
 
-Presenter: Let's start with a common use case - setting up a guest Wi-Fi network. With Meraki MG, you can easily create a secure and customizable guest network that provides seamless connectivity for customers while keeping your internal network secure. **click 'Configure > Wireless > SSIDs'**
+2. **Guest Wi-Fi Management** - Providing secure guest Wi-Fi is crucial for enhancing the customer experience. With Meraki, you can **create custom splash pages**, **limit bandwidth usage**, and **capture customer data** for marketing purposes, all through the intuitive Dashboard.
 
-[Use Case 2: Video Surveillance]
+Now, let's navigate to the Dashboard and **click 'Wireless > Access Points'** to see an overview of all your retail locations. From here, you can easily **monitor client connections**, **configure SSIDs**, and **run network-wide speed tests**.
 
-Presenter: Another key use case for retailers is video surveillance. Meraki MG allows you to easily set up and manage high-quality video cameras across your store, providing real-time monitoring and security. **click 'Configure > Cameras'**
+As a partner reseller pitching MG in the Retail space, you might encounter these common questions:
 
-[Use Case 3: Inventory Management]
+Q: What are the top retail pain points this addresses?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-Presenter: Lastly, let's talk about inventory management. With the Meraki MG, retailers can track inventory levels in real-time, monitor stock movements, and receive alerts for low stock levels. This ensures that retailers can efficiently manage their inventory and avoid stockouts. **click 'Monitor > Inventory'**
+Q: How do we best position MG during the pitch?
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-[Smart Questions]
-
-Presenter: Now, I'd like to ask you a few questions to prompt discussion:
-1. How are you currently managing your guest Wi-Fi network, and what challenges have you faced?
-2. What are your current security measures for video surveillance, and how do you ensure the safety of your store?
-3. How do you currently track and manage your inventory, and what improvements would you like to see in this process?
-
-[Closing]
-
-Presenter: Thank you for joining us today for this demo of the Meraki MG for the Retail sector. We believe that Meraki can provide the solutions you need to address your pain points and drive your business forward. If you have any further questions or would like to discuss how Meraki can benefit your retail business, please don't hesitate to reach out. Thank you!
+Q: What installation or deployment concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.

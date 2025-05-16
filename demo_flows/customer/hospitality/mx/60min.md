@@ -1,29 +1,31 @@
-[Opening]
+Hey there! Thanks for joining us today for this demo of Cisco Meraki MX tailored specifically for the Hospitality sector. Whether you're an IT admin, financial decision maker, or partner reseller, we've got some great insights to share with you.
 
-Hello and welcome to our Meraki MX demo for the Hospitality sector. Today, we'll be showcasing how the Meraki MX can streamline your network operations and provide cost savings for your organization. Whether you're an IT admin or a financial decision maker, this demo will show you the operational impact and cost justification of implementing the Meraki MX in your hospitality environment.
+Let's kick things off with a couple of warm-up questions:
+- For partners: What trends or challenges are you seeing with customers in the Hospitality sector? What do you find unique or tricky about positioning solutions in this space?
+- For customers: What does your current network setup look like? Where are your biggest IT headaches today?
+- For internal: What common questions do our customers ask in the Hospitality sector? What objections or misconceptions do we frequently encounter?
 
-[Use Case 1: Network Security]
+Now, let's dive into the demo with a focus on the Hospitality sector. The Meraki Dashboard is your single pane of glass for visibility, troubleshooting, and unified management.
 
-Let's start with one of the most critical aspects for any hospitality business - network security. With the Meraki MX, you can easily set up firewall rules to protect your network from cyber threats. **Click 'Security & SD-WAN > Firewall'** to see how you can create rules to block malicious traffic and prevent data breaches.
+First, let's **click 'Security & SD-WAN > Addressing & VLANs'** to see how easy it is to segment guest and employee traffic.
 
-[Use Case 2: Guest Wi-Fi Management]
+Next, **click 'Configure > SD-WAN & Traffic shaping'** to ensure a smooth experience for guests using bandwidth-intensive applications.
 
-Next, let's talk about guest Wi-Fi management. The Meraki MX allows you to create a separate SSID for guests and set bandwidth limits to ensure a smooth experience for your customers. **Click 'Wireless > SSID'** to see how you can configure a guest network with just a few clicks.
+Now, let's **click 'Monitor > Appliance status'** to quickly identify any connectivity issues and proactively address them.
 
-[Use Case 3: VPN Configuration]
+Moving on, **click 'Security & SD-WAN > Threat protection'** to see how Meraki protects your network from cyber threats without adding complexity.
 
-For hospitality businesses with multiple locations, setting up a VPN can be a complex and time-consuming task. With the Meraki MX, you can easily create site-to-site VPNs to securely connect your different locations. **Click 'Security & SD-WAN > Site-to-Site VPN'** to see how simple it is to establish a secure connection between your properties.
+And don't forget to **click 'Wireless > Wireless health'** to ensure optimal Wi-Fi performance for your guests and staff.
 
-[Use Case 4: Application Visibility]
+Wrapping up, let's answer a few common questions you might have about Meraki MX in the Hospitality sector:
 
-Understanding your network traffic is key to optimizing performance and ensuring a seamless experience for your guests. With the Meraki MX, you can easily view application usage and prioritize mission-critical applications. **Click 'Security & SD-WAN > Performance'** to see real-time insights into your network traffic.
+Q: How does this solution reduce IT workload in our hospitality environment?  
+A: Meraki simplifies management through one dashboard and automates many tasks like updates and troubleshooting.
 
-[Closing]
+Q: What kind of ROI or cost reduction can we expect?  
+A: Customers often report major time savings and reduced downtime, especially for remote sites.
 
-Before we wrap up, I'd like to leave you with a few questions to think about:
+Q: Can we integrate this with our existing systems and security policies?  
+A: Yes — Meraki supports APIs, SAML, and integration with existing firewalls, Active Directory, and SIEM tools.
 
-1. How much time and resources are currently being spent on managing your network security?
-2. What cost savings could your organization achieve by streamlining network operations with the Meraki MX?
-3. How could improved network performance impact the overall guest experience at your properties?
-
-Thank you for joining us for this Meraki MX demo. If you have any further questions or would like to discuss how the Meraki MX can benefit your hospitality business, please feel free to reach out to us.
+Thanks for joining us today! We hope this demo has given you a clear picture of how Cisco Meraki MX can transform your network operations in the Hospitality sector.

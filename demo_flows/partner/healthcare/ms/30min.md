@@ -1,37 +1,29 @@
-[Opening]
+Hey there, thanks for joining us today! I know we're all busy, so let's jump right in. As a partner in the healthcare sector, I'm sure you're well aware of the unique challenges and opportunities in this space. What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-Hello everyone, welcome to our Meraki MS demo tailored for the Healthcare sector. Today, we will be exploring how Meraki's cloud-managed switches can help healthcare organizations overcome their networking challenges and improve efficiency. Let's dive in.
+Let's dive into how Cisco Meraki's MS can address some of these pain points and help you better serve your healthcare customers.
 
-[Pain Points]
+**Use Case 1:**
+Imagine a hospital with multiple buildings and departments all requiring secure and reliable network connectivity. With Meraki MS, you can easily manage all the switches from a single dashboard, ensuring consistent policies and security protocols across the entire network.
 
-Healthcare facilities often have complex network infrastructure with numerous devices and high data transfer requirements. Traditional network setups can be cumbersome to manage and prone to vulnerabilities. Customers in the healthcare industry are looking for solutions that offer simplicity, scalability, and security.
+**Use Case 2:**
+In a busy clinic where every second counts, network downtime can be disastrous. With Meraki MS, you can quickly identify and troubleshoot issues with real-time visibility into network performance, minimizing downtime and keeping operations running smoothly.
 
-[Positioning]
+**Use Case 3:**
+For healthcare providers with strict compliance requirements, Meraki MS offers built-in security features such as integrated firewall and intrusion prevention, ensuring that sensitive patient data remains secure at all times.
 
-Meraki MS switches provide a centralized dashboard for easy management and monitoring of the network. With features like automatic updates, real-time alerts, and seamless integration with other Meraki products, healthcare organizations can ensure a reliable and secure network infrastructure.
+Let's take a look at the Meraki Dashboard now. **Click 'Switches' on the left-hand menu** to see an overview of all the switches in your network. From here, you can **click on a specific switch** to view detailed information such as port status, traffic analytics, and device connectivity.
 
-[Use Case 1: Network Segmentation]
+**Click 'Create a new VLAN'** to see how easy it is to segment your network for different departments or applications. With Meraki MS, you can quickly create and manage VLANs without the need for complex configuration.
 
-Let's start with a common pain point in the healthcare sector - network segmentation. Hospitals need to separate traffic from different departments, such as patient records, administrative functions, and guest Wi-Fi. With Meraki MS switches, you can easily create VLANs and apply access control policies to ensure data privacy and compliance.
+Now, let's address some common questions partners might have when positioning Meraki MS in the healthcare space:
 
-**Demo: click 'Configure > Switch ports' to set up VLANs for different departments**
+Q: What are the top healthcare pain points this addresses?  
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-[Use Case 2: Quality of Service (QoS)]
+Q: How do we best position MS during the pitch?  
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-Another critical aspect in healthcare networking is ensuring high-quality service for real-time applications like video conferencing and telemedicine. Meraki MS switches support Quality of Service (QoS) settings to prioritize traffic and minimize latency, ensuring a seamless experience for healthcare professionals and patients.
+Q: What installation or deployment concerns should we be ready for?  
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
 
-**Demo: click 'Configure > QoS' to prioritize VoIP traffic for telemedicine applications**
-
-[Use Case 3: Guest Access]
-
-Lastly, healthcare facilities often have visitors and guests who require internet access while on-site. Meraki MS switches allow you to create a separate guest network with customizable splash pages and access controls, ensuring a secure and user-friendly experience for guests without compromising the main network's security.
-
-**Demo: click 'Configure > Wireless > Guest Access' to set up a guest network with a custom splash page**
-
-[Smart Questions]
-
-1. How does your current network infrastructure handle the increasing demand for telemedicine services?
-2. What challenges have you faced in maintaining network security and compliance with patient data regulations?
-3. Have you explored cloud-managed networking solutions like Meraki to simplify network management and improve scalability?
-
-Thank you for joining our Meraki MS demo today. We hope this session has provided you with valuable insights on how Meraki switches can address the unique needs of the healthcare sector. If you have any further questions or would like to explore a customized solution for your organization, please feel free to reach out to us.
+And that's a wrap! Thank you for exploring Meraki MS with us today. If you have any further questions or would like to discuss how Meraki can benefit your healthcare customers, feel free to reach out.

@@ -1,33 +1,19 @@
-[Opening]
+Hey there! Thanks for joining me today for this demo. I know you're a partner in the Manufacturing sector, so I'm excited to show you how Cisco Meraki's MT can help address some of the challenges you might be facing. Before we dive in, can you share with me any trends or challenges you're seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-Hello and welcome to our Meraki MT demo for the Manufacturing sector. Today, we'll be focusing on how Meraki can help address the pain points that customers in this industry care about. As partners, it's important to understand these pain points and position Meraki as the solution that can address them effectively.
+Great, let's get started. One common pain point in Manufacturing is the need for visibility and simplified troubleshooting across multiple sites. With Meraki's single dashboard, you can easily manage all your network devices in one place. Let's take a look at a few specific use cases to see how this can benefit you:
 
-[Pain Points]
+1. **Monitor production line performance in real-time**
+2. **Track inventory movement with location analytics**
+3. **Secure sensitive data with network segmentation**
+4. **Automate guest Wi-Fi access for visitors**
 
-Manufacturing customers often face challenges such as maintaining uptime, ensuring network security, and managing a large number of connected devices. They also need visibility and control over their network infrastructure to optimize operations and ensure smooth production processes.
+Now, let's dive into the Meraki Dashboard and see how it can help you achieve these use cases.
 
-[Positioning Meraki]
+**click 'Monitor > Production Line' to view real-time performance metrics**
+**navigate to 'Analytics > Location' to track inventory movement**
+**configure network segmentation by clicking 'Security > Firewall rules'**
+**set up guest Wi-Fi access by clicking 'Wireless > Access Control'**
 
-Meraki offers a cloud-managed networking solution that is easy to deploy, manage, and scale. With features like centralized dashboard, automatic updates, and AI-driven insights, Meraki provides the visibility and control that manufacturing customers need to streamline their operations and improve efficiency.
+When positioning MT in the Manufacturing space, partners often ask about the top pain points this solution addresses. Usually, it's lack of visibility, slow troubleshooting, and complexity managing multiple sites. To best position MT during the pitch, emphasize Meraki’s ease of use, single dashboard, and fast deployment with built-in security. As for installation or deployment concerns, it's typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
 
-[Use Cases]
-
-1. **Network Segmentation**: Show how easy it is to segment the network for different departments within a manufacturing facility, ensuring that sensitive data remains secure.
-
-2. **Device Management**: Demonstrate how to easily onboard and manage a large number of IoT devices on the network, ensuring smooth connectivity and control.
-
-3. **Security Camera Integration**: Showcase how Meraki can seamlessly integrate with security cameras to provide real-time monitoring and alerts for manufacturing facilities.
-
-4. **Quality Control Automation**: Illustrate how Meraki can be used to automate quality control processes by integrating sensors and cameras to monitor production lines.
-
-5. **Inventory Management**: Show how Meraki can be used to track inventory levels and optimize supply chain processes in real-time.
-
-[Smart Questions]
-
-1. How are you currently managing your network infrastructure in your manufacturing facility?
-2. What are the biggest challenges you face in terms of network security and device management?
-3. How do you see Meraki helping you streamline your operations and improve efficiency in your manufacturing processes?
-
-[Closing]
-
-By understanding the pain points of manufacturing customers and positioning Meraki as the solution that can address them effectively, partners can pitch Meraki with confidence and provide value to their customers. Thank you for joining us today, and we look forward to helping you succeed with Meraki in the manufacturing sector.
+I hope this demo has given you a good overview of how Cisco Meraki can help meet the unique needs of the Manufacturing sector. Let me know if you have any more questions or if there's anything else you'd like to see in action.

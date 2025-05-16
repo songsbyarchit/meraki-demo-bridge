@@ -1,31 +1,17 @@
-[Opening]
+Hello and welcome, partners! Today's demo will focus on how Cisco Meraki's MS products can benefit healthcare organizations. Before we dive in, I'd love to hear from you: What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-Welcome everyone to today's Meraki MS demo! Today, we'll be focusing on how our Meraki MS switches can benefit healthcare organizations. This demo is tailored to help our partners effectively pitch Meraki MS to healthcare customers. Let's dive in!
+Let's kick things off with a look at the Meraki Dashboard. **Click 'Dashboard'** to access the centralized platform that provides visibility, simplified troubleshooting, and unified management for healthcare networks.
 
-[Use Case 1: Network Security]
+One key use case in healthcare is ensuring secure and reliable connectivity for critical medical devices. **Navigate to 'Switch > Access Control'** to set up policies that prioritize traffic for life-saving equipment.
 
-Let's start with network security, a crucial aspect for healthcare organizations. With Meraki MS, partners can offer healthcare customers a simple and effective way to secure their network. Through the intuitive dashboard, partners can easily **set up access control policies** to ensure only authorized devices have access to sensitive patient data.
+Another important feature is the ability to monitor network performance in real-time. **Click 'Monitor > Performance'** to view detailed analytics and ensure optimal network performance for patient care applications.
 
-[Use Case 2: Remote Monitoring]
+For healthcare organizations with multiple locations, **click 'Configure > Templates'** to easily deploy network configurations across different sites, saving time and ensuring consistency.
 
-Another use case is remote monitoring. Healthcare organizations often have multiple locations that need to be monitored. With Meraki MS, partners can **remotely monitor and troubleshoot network issues** across all locations from a single dashboard. This not only saves time but also ensures minimal downtime for critical systems.
+Lastly, let's address the need for robust security measures in healthcare. **Navigate to 'Security & SD-WAN > Content Filtering'** to set up policies that protect patient data and comply with industry regulations.
 
-[Use Case 3: Quality of Service]
+As partners selling MS in healthcare, you may encounter objections related to cost compared to legacy vendors and skepticism over cloud-managed security. Arm yourself with TCO comparisons to address these concerns effectively.
 
-Quality of service is essential in healthcare, where real-time communication is crucial. Partners can leverage Meraki MS to **prioritize traffic** such as VoIP calls or telemedicine sessions to ensure a seamless experience for healthcare professionals and patients.
+Additionally, we provide partners with access to demo kits, dashboards, playbooks, and partner-exclusive webinars to support your sales efforts in the healthcare space.
 
-[Use Case 4: Device Management]
-
-In the healthcare sector, there are numerous IoT devices and medical equipment connected to the network. With Meraki MS, partners can easily **manage and monitor these devices** to ensure they are functioning properly and securely.
-
-[Smart Questions]
-
-Now, let's wrap up with a few smart questions our partners can ask healthcare customers:
-
-1. How are you currently managing network security across your healthcare facilities?
-2. What challenges do you face in monitoring and managing network infrastructure across multiple locations?
-3. How important is real-time communication and quality of service for your healthcare organization?
-
-[Closing]
-
-Thank you for joining today's demo! We hope this session has equipped you with the knowledge and tools to effectively pitch Meraki MS to healthcare customers. If you have any further questions or need support, feel free to reach out to our team. Have a great day!
+Post-sale, we offer onboarding support through co-delivery workshops, pre-built config templates, and fast escalations handled by Meraki support. We are committed to helping you succeed in selling MS to healthcare organizations.

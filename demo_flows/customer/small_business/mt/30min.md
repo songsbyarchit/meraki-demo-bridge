@@ -1,19 +1,25 @@
-[Start of Demo]
+Hello and welcome to our Cisco Meraki demo! Today, we're going to explore how our Meraki Dashboard can revolutionize network management for Small Business environments. Whether you're an IT admin or a financial decision maker, this demo is tailored to showcase the operational impact and cost justification of our Meraki solutions.
 
-Presenter: Hello and thank you for joining us today for a demo of the Meraki MT solution tailored for small businesses. Whether you're an IT admin looking to simplify network management or a financial decision maker interested in cost-effective solutions, we're here to show you how Meraki MT can help streamline your operations and justify its cost.
+Let's start by discussing your current network setup. What are the biggest IT headaches you're facing today in your Small Business environment?
 
-Let's start by looking at a common use case for small businesses: setting up a secure and reliable network. With Meraki MT, you can easily **click 'Configure > Switch ports'** to assign VLANs and prioritize traffic, ensuring that critical applications have the bandwidth they need to run smoothly. This not only enhances your network performance but also increases your team's productivity.
+**Navigate to 'Monitor > Clients'**  
+Here, you can see all the devices connected to your network in real-time. This level of visibility can help you identify and troubleshoot any issues quickly.
 
-Another use case that we often see in small businesses is remote monitoring and troubleshooting. With Meraki MT's cloud-managed platform, you can **click 'Dashboard > Live Tools'** to remotely access and troubleshoot network devices from anywhere. This saves you time and resources by eliminating the need for on-site visits and reducing downtime.
+**Click 'Configure > Wireless settings'**  
+With Meraki, you can easily manage your wireless network settings from one centralized platform, making it simple to deploy new access points or adjust configurations.
 
-Now, let's talk about cost justification. Meraki MT offers a subscription-based pricing model that includes all software updates, support, and security features. By investing in a Meraki MT solution, you can significantly reduce your IT maintenance costs and free up your budget for other strategic initiatives.
+**Click 'Security & SD-WAN > Threat protection'**  
+Meraki offers built-in security features to protect your network from threats, ensuring your data and operations are secure at all times.
 
-[End of Demo]
+Now, let's address some common questions you might have about Meraki for Small Business:
 
-Presenter: Now that you've seen how Meraki MT can benefit your small business, I'd like to ask you a few questions to prompt discussion:
+Q: How does this solution reduce IT workload in our small business environment?  
+A: Meraki simplifies management through one dashboard and automates many tasks like updates and troubleshooting.
 
-1. How much time and resources does your team currently spend on network management and troubleshooting?
-2. Have you considered the potential cost savings of transitioning to a cloud-managed network solution like Meraki MT?
-3. What are your top priorities when it comes to improving your network infrastructure and operations?
+Q: What kind of ROI or cost reduction can we expect?  
+A: Customers often report major time savings and reduced downtime, especially for remote sites.
 
-Thank you for your time, and please feel free to reach out if you have any further questions or would like to explore Meraki MT further.
+Q: Can we integrate this with our existing systems and security policies?  
+A: Yes — Meraki supports APIs, SAML, and integration with existing firewalls, Active Directory, and SIEM tools.
+
+Thank you for joining us today. We hope this demo has given you a glimpse of the powerful capabilities and benefits that Cisco Meraki can bring to your Small Business network.

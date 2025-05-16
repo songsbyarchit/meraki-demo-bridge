@@ -1,36 +1,26 @@
-[Opening]
+Hey there! Thanks for joining me today. Whether you're a partner reseller, customer IT admin, or internal SE, I'm excited to walk you through our demo of Cisco Meraki's MG for the Healthcare sector.
 
-Hello everyone, thank you for joining today's Meraki MG demo specifically tailored for the Healthcare sector. Today, we will focus on partner enablement and supporting you in effectively pitching the Meraki MG solution to customers in the healthcare industry.
+Let's kick things off with a couple of warm-up questions:
+- For partners: What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
+- For customers: What does your current network setup look like? Where are your biggest IT headaches today?
+- For internal: What common questions do our customers ask in the Healthcare sector? What objections or misconceptions do we frequently encounter?
 
-Let's dive right in with a quick overview of the Meraki MG and its key features that are particularly beneficial for healthcare organizations.
+Now, let's dive into the demo. In Healthcare, network reliability and security are critical. With Meraki MG, you have a powerful solution that offers seamless connectivity and robust security features.
 
-[Overview of Meraki MG]
+One key use case is ensuring patient data privacy. With Meraki's centralized dashboard, **click 'Security & SD-WAN > Addressing > Group Policies'**, you can easily configure policies to restrict access to sensitive information.
 
-The Meraki MG is a cloud-managed voice gateway that provides secure, reliable connectivity for voice communication. It offers features such as automatic failover, Quality of Service (QoS) prioritization, and SIP ALG for seamless voice communication.
+Another use case is optimizing network performance for medical devices. By **clicking 'Wireless > Air Marshal'** on the dashboard, you can proactively monitor and mitigate any interference that might affect the performance of these devices.
 
-[Use Case 1: Telemedicine]
+Lastly, let's talk about guest access management. With Meraki, you can set up secure guest networks with just a few **clicks on 'Wireless > Configure > Guest Access'**. This feature is essential in healthcare settings where visitors need internet access without compromising network security.
 
-One key use case for the Meraki MG in the healthcare sector is telemedicine. With the rise of virtual healthcare services, healthcare organizations need a reliable voice gateway to ensure clear, uninterrupted communication between patients and healthcare providers. The Meraki MG's automatic failover feature ensures that communication is always available, even in the event of a network outage.
+Now, let's address some FAQs to support partners selling MG in the Healthcare space:
+- Q: What objections might the partner hear in healthcare?
+  A: Cost vs legacy vendors, and skepticism over cloud-managed security — arm them with TCO comparisons.
 
-To set up QoS prioritization for telemedicine calls, **click 'Configure > Voice and video'** and adjust the QoS settings to prioritize voice traffic.
+- Q: What enablement do we provide for partners?
+  A: Access to demo kits, dashboards, playbooks, and partner-exclusive webinars.
 
-[Use Case 2: Remote Clinics]
+- Q: How do we support onboarding post-sale?
+  A: We offer co-delivery workshops, pre-built config templates, and Meraki support handles escalations fast.
 
-Another use case for the Meraki MG is in remote clinics or satellite locations. Healthcare organizations with multiple locations can benefit from the Meraki MG's centralized management and monitoring capabilities. Partners can pitch the Meraki MG as a cost-effective solution for connecting remote clinics to the main network securely and reliably.
-
-To set up remote clinic connectivity, **click 'Configure > VPN'** and configure site-to-site VPNs to connect the remote clinic to the main network.
-
-[Use Case 3: Secure Guest Wi-Fi]
-
-Lastly, the Meraki MG can also be used to provide secure guest Wi-Fi access in healthcare facilities. Partners can pitch the Meraki MG as a way to offer patients and visitors secure, reliable Wi-Fi access while ensuring that sensitive healthcare data remains protected.
-
-To set up secure guest Wi-Fi, **click 'Configure > Wireless settings'** and enable the guest network with appropriate security settings.
-
-[Prompt Questions]
-
-To wrap up, here are two smart questions you can ask healthcare organizations to prompt discussion:
-
-1. How are you currently managing voice communication in your telemedicine services, and are you facing any challenges with reliability or security?
-2. How do you ensure secure connectivity between your main facility and remote clinics, and what solutions are you currently using for this purpose?
-
-Thank you for attending today's Meraki MG demo. We hope this session has equipped you with the knowledge and tools to effectively pitch the Meraki MG to healthcare organizations. If you have any further questions or need assistance, please don't hesitate to reach out.
+Thank you for joining me today. I hope this demo has equipped you with the knowledge and tools to effectively pitch Meraki MG to healthcare customers. Let's empower healthcare organizations with reliable and secure networking solutions.

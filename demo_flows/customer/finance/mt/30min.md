@@ -1,19 +1,31 @@
-[Start of Demo]
+---
+Great, let's dive into the demo for Cisco Meraki tailored for the Financial Services sector.
 
-Presenter: Hello and welcome to our Meraki MT demo targeted towards the Finance sector. Today, we'll be discussing how Meraki MT can help streamline your network operations and provide cost-effective solutions for your organization. 
+**Warm-up Question:** What does your current network setup look like? Where are your biggest IT headaches today?
 
-Let's start with a common use case in the Finance sector - ensuring network security and compliance. With Meraki MT, you can easily set up security policies and monitor network activity in real-time. **Click 'Security & SD-WAN > Security policies'**. This allows you to quickly identify and mitigate any security threats, ensuring the safety of your sensitive financial data.
+---
 
-Another key use case for Meraki MT in the Finance sector is network scalability. As your organization grows, you need a network solution that can scale with you. **Click 'Configure > Switch ports'**. With Meraki MT, you can easily add new devices to your network, without the need for complex configurations or additional hardware. This not only saves you time and resources but also ensures seamless network operations.
+**Demo Script:**
 
-Now, let's talk about cost justification. Meraki MT offers a cloud-based management platform that eliminates the need for expensive on-premise hardware and IT resources. **Click 'Dashboard > Licensing'**. By moving to a cloud-based solution, you can significantly reduce your operational costs while still maintaining a high level of network performance and security.
+Hey there, thanks for joining me today. I know as IT admins or financial decision makers in the Financial Services sector, you're always looking for solutions that can streamline operations and justify costs. Today, we'll be exploring how Cisco Meraki's MT can help address your specific needs.
 
-[End of Demo]
+Let's start by taking a look at the Meraki Dashboard, our central platform that provides a single pane of glass for visibility, troubleshooting, and management. **Click 'Dashboard'** to see how all your devices are connected and performing.
 
-Presenter: Now that we've seen how Meraki MT can benefit your organization in the Finance sector, I'd like to ask you a few questions to prompt discussion:
+One of the key benefits of MT for Financial Services is the ability to monitor and manage multiple branches or offices from one place. **Click 'Organizations > Sites'** to see how you can easily navigate between different locations.
 
-1. How are you currently managing network security and compliance within your organization?
-2. Have you experienced any challenges with network scalability as your organization grows?
-3. What cost-saving measures are you currently exploring in terms of network management?
+Now, let's talk about some specific use cases. For example, with MT, you can set up secure VPN connections between branches to ensure data privacy and compliance. **Click 'Security & SD-WAN > VPN'** to see how easy it is to configure and manage VPN connections.
 
-Feel free to share your thoughts and insights on how Meraki MT can help address these challenges. Thank you for attending our demo today.
+Another use case is ensuring network reliability and performance for financial transactions. **Click 'Switching > Quality of Service'** to prioritize traffic for critical applications like online banking.
+
+Now, let's address some common questions that Financial Services customers often have about MT:
+
+**Q:** How does this solution reduce IT workload in our financial services environment?  
+**A:** Meraki simplifies management through one dashboard and automates many tasks like updates and troubleshooting.
+
+**Q:** What kind of ROI or cost reduction can we expect?  
+**A:** Customers often report major time savings and reduced downtime, especially for remote sites.
+
+**Q:** Can we integrate this with our existing systems and security policies?  
+**A:** Yes — Meraki supports APIs, SAML, and integration with existing firewalls, Active Directory, and SIEM tools.
+
+That's a wrap for our demo today. I hope you can see how Cisco Meraki's MT can make a significant impact on your operations in the Financial Services sector. If you have any more questions or would like to discuss further, feel free to reach out.

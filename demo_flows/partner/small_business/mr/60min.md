@@ -1,36 +1,26 @@
-[Opening]
+Hey there! Thanks for joining us today to learn more about Cisco Meraki and how it can benefit small businesses. As a partner, you're in a unique position to understand the challenges and trends in this sector. What are some trends or challenges you're currently seeing with customers in the small business space? And what do you find unique or tricky about positioning solutions in this sector?
 
-1. Start by introducing yourself and thanking the partners for attending the Meraki MR demo. Briefly explain the agenda for the demo – focusing on how Meraki can solve pain points for small businesses.
+Let's dive into the demo and explore how Meraki can address these pain points for small businesses.
 
-2. **Share your screen and navigate to the Meraki dashboard** to show partners the interface and highlight key features.
+**Use Case 1: Network Visibility**
+Let's **click 'Network-wide > Monitor > Clients'** on the Meraki Dashboard. Here, you can see all the connected clients across your network in real-time. This visibility helps you quickly identify any issues and proactively troubleshoot them.
 
-[Pain Points]
+**Use Case 2: Guest Wi-Fi Management**
+Navigate to **'Wireless > SSIDs'**. With Meraki, you can easily create a separate guest network with custom login pages and access controls. This simplifies guest Wi-Fi management without compromising security.
 
-3. Talk about common pain points small businesses face with their current networking solutions, such as complicated setups, lack of visibility, and high maintenance costs.
+**Use Case 3: Application Control**
+Click on **'Security & SD-WAN > Application Control'**. Meraki allows you to prioritize critical applications and block unwanted traffic, ensuring a seamless user experience and increased productivity.
 
-4. Explain how Meraki addresses these pain points with its cloud-managed networking solution, offering ease of deployment, centralized management, and cost-effectiveness.
+**Use Case 4: Remote Site Management**
+Explore **'Organization > Overview > Remote Sites'**. Meraki's centralized dashboard enables you to manage multiple sites from one place, saving time and resources on IT administration.
 
-[Use Cases]
+**Common Question 1: What are the top small business pain points this addresses?**
+Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-5. Use Case 1: **Demonstrate how easy it is to set up a new network with Meraki**. Walk partners through the process of adding a new MR access point and configuring it in the dashboard.
+**Common Question 2: How do we best position MR during the pitch?**
+Emphasize Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-6. Use Case 2: **Show partners how to create a guest network with limited access**. Highlight the flexibility of Meraki in setting up different network policies for guests.
+**Common Question 3: What installation or deployment concerns should we be ready for?**
+It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
 
-7. Use Case 3: **Illustrate how to troubleshoot network issues with Meraki's monitoring tools**. Show partners how to view real-time data on network performance and identify potential issues.
-
-8. Use Case 4: **Highlight the security features of Meraki**. Walk partners through setting up firewall rules and intrusion detection to protect the network from threats.
-
-[Smart Questions]
-
-9. Ask partners:
-   - "What are some pain points your customers have shared with you regarding their current networking solutions?"
-   - "How important is ease of management and visibility in a networking solution for your customers?"
-   - "Have you encountered any security incidents with your customers' networks? How did they handle it?"
-
-[Closing]
-
-10. Conclude the demo by summarizing the key benefits of Meraki for small businesses and emphasizing how partners can use this information to pitch to their customers.
-
-11. Open the floor for questions from partners and encourage them to reach out for further information or support.
-
-12. Thank partners for their time and participation in the demo.
+I hope this demo gave you a good overview of how Cisco Meraki can benefit small businesses. Feel free to reach out if you have any more questions or need further clarification. Thanks for joining us today!

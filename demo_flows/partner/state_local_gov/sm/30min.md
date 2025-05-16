@@ -1,29 +1,26 @@
-[INTRO]
+Hey there! Thanks for joining me today. I'm excited to walk you through a demo of Cisco Meraki's SM solution tailored for the State And Local Government sector. Before we dive in, could you share what trends or challenges you're seeing with customers in this space?
 
-Welcome everyone, thank you for joining us today for this Meraki SM demo tailored for the State and Local Government sector. Today, we'll be focusing on how Meraki can help address the unique pain points that customers in this sector care about. Let's dive in.
+Great, let's get started. In the State And Local Government sector, one common pain point is the complexity of managing multiple sites with limited resources. With Meraki's centralized dashboard, you can easily oversee all your network operations in one place. Let's take a look at the dashboard now.
 
-[PAIN POINTS]
+**Navigate to the Meraki Dashboard and click 'Monitor > Overview'.**
 
-State and Local Government agencies often face challenges when it comes to managing a large number of devices and ensuring network security. These agencies need a solution that is easy to deploy, manage, and scale, while also providing robust security features to protect sensitive data.
+Another challenge is the lack of visibility into network performance, which can lead to slow troubleshooting. With Meraki, you have real-time insights and alerts to quickly identify and resolve issues. Let's see this in action.
 
-[POSITIONING MERAKI]
+**Click on a specific network device and then click 'Tools > Ping' to test connectivity.**
 
-Meraki is a cloud-managed solution that offers centralized management for all network devices, including switches, access points, and security appliances. With Meraki, State and Local Government agencies can easily deploy and manage their network infrastructure from a single dashboard, saving time and resources.
+Lastly, the need for unified management across different locations can be tricky. Meraki simplifies this by offering templates for consistent configurations across sites. Let's explore this feature.
 
-[USE CASE 1: DEVICE DEPLOYMENT]
+**Click 'Configure > Templates' to view and apply pre-configured settings.**
 
-Let's say a State agency needs to deploy new devices across multiple locations. With Meraki SM, partners can easily provision and configure devices remotely, ensuring a smooth and efficient deployment process. **Click 'Devices > Add new device'** to see how easy it is to add a new device to the network.
+When positioning SM to State And Local Government customers, remember to emphasize the ease of use with the single dashboard, fast deployment, and built-in security features. Now, let's address some common questions you might encounter:
 
-[USE CASE 2: SECURITY MANAGEMENT]
+Q: What are the top state and local government pain points this addresses?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-Network security is a top priority for State and Local Government agencies. With Meraki, partners can easily enforce security policies, monitor network activity, and quickly respond to security threats. **Click 'Security > Firewall rules'** to see how simple it is to set up and manage firewall rules to protect the network.
+Q: How do we best position SM during the pitch?
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-[SMART QUESTIONS]
+Q: What installation or deployment concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
 
-1. How are you currently managing network devices and ensuring network security within your agency?
-2. What are the biggest challenges you face when it comes to deploying and managing network infrastructure?
-3. How do you see a solution like Meraki benefiting your agency in terms of efficiency and security?
-
-[CONCLUSION]
-
-Thank you for attending this Meraki SM demo tailored for the State and Local Government sector. We hope you found the information valuable and can see how Meraki can address the unique pain points that agencies in this sector face. If you have any further questions or would like to discuss how Meraki can benefit your agency, please feel free to reach out to us. Thank you.
+Thanks for joining me today. I hope this demo has given you valuable insights into how Meraki's SM solution can address the unique needs of State And Local Government customers. Let me know if you have any further questions!

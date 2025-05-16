@@ -1,30 +1,27 @@
-[Opening]
+Hey there! Thanks for joining us today. I'm excited to walk you through a demo of Cisco Meraki's MG, especially tailored for the State And Local Government sector.
 
-Presenter: Hello everyone, thank you for joining us today for this Meraki MG demo specifically tailored for the State Local Gov sector. Today, we'll be focusing on how Meraki can address some of the key pain points that customers in this sector care about. 
+Before we dive in, let me ask you: What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-[Pain Points]
+Great, now let's explore how Meraki MG can address some of the pain points in the State And Local Government sector. 
 
-Presenter: Now, let's talk about some of the pain points that customers in the State Local Gov sector might be facing. One common pain point is the need for reliable and secure communication networks, especially in remote locations or during emergencies. Another pain point is the complexity and cost of managing multiple network devices across different locations. 
+**Use Case 1: Remote Access**
+Let's say you have multiple offices across different locations. With Meraki MG, you can easily set up secure, high-performance VPN connections to ensure seamless communication between sites. **Click 'Network-wide > VPN'**.
 
-[Positioning Meraki]
+**Use Case 2: Application Performance**
+In a government setting, it's crucial to prioritize certain applications for optimal performance. With Meraki MG, you can easily configure Quality of Service (QoS) policies to ensure critical applications always get the bandwidth they need. **Click 'SD-WAN & Traffic Shaping > Traffic shaping'**.
 
-Presenter: This is where Meraki comes in. Meraki offers a cloud-managed networking solution that is easy to deploy, manage, and scale. With Meraki, customers can have a centralized view of their entire network, making it easier to monitor and troubleshoot issues. Additionally, Meraki's security features help protect sensitive data and ensure compliance with government regulations.
+**Use Case 3: Security**
+Security is a top priority in government networks. With Meraki MG, you can quickly deploy security policies and monitor threats in real-time through the dashboard. **Click 'Security > Threat protection'**.
 
-[Use Case 1: Remote Office Connectivity]
+Now, let's address some common questions partners might have when pitching Meraki MG in the State And Local Government sector:
 
-Presenter: Let's dive into a use case. Imagine a State Local Gov agency that has multiple remote offices spread across a large geographic area. With Meraki MG, they can easily set up secure communication links between their main office and remote locations, ensuring reliable connectivity for their employees. **Click 'Configure > Site-to-site VPN'** to see how easy it is to set up.
+**Q: What are the top state and local government pain points this addresses?**  
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-[Use Case 2: Emergency Response Communication]
+**Q: How do we best position MG during the pitch?**  
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-Presenter: Another use case could be during emergency response situations, where quick and reliable communication is crucial. With Meraki MG, agencies can quickly deploy temporary communication networks in affected areas, ensuring first responders can coordinate effectively. **Click 'Configure > Wireless settings'** to see how easy it is to set up a temporary network.
+**Q: What installation or deployment concerns should we be ready for?**  
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
 
-[Smart Questions]
-
-Presenter: Now, before we wrap up, here are a few smart questions you can ask your customers to prompt discussion:
-1. How do you currently manage your network across different locations, and what are some pain points you face in doing so?
-2. What are your security concerns when it comes to your communication networks, and how do you ensure compliance with government regulations?
-3. How do you handle communication during emergency situations, and what are some challenges you face in ensuring reliable connectivity for first responders?
-
-[Closing]
-
-Presenter: Thank you for attending this demo today. I hope you now have a better understanding of how Meraki MG can address the pain points faced by customers in the State Local Gov sector. If you have any further questions or would like to learn more, please don't hesitate to reach out. Thank you and have a great day!
+That's a wrap! Meraki MG is designed to simplify network management and enhance security for State And Local Government entities. Let's chat more about how we can tailor this solution to meet your specific needs.

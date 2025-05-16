@@ -1,29 +1,40 @@
-[Opening]
+Good afternoon and thank you for joining us today for this demo of Cisco Meraki's MR solution. I understand that you are a customer in the Financial Services sector, and we are here to show you how MR can address your specific needs and challenges in network management. 
 
-Hello and welcome to our Meraki MR demo specifically tailored for the Finance sector. Today, we will be exploring the operational impact and cost justification of implementing Meraki MR in your organization. Whether you are an IT admin or a financial decision maker, this demo will showcase how Meraki MR can revolutionize your wireless networking infrastructure.
+Let's start by taking a look at your current network setup. What are some of the biggest IT headaches you are facing today in your organization?
 
-[Use Case 1: Network Security]
+---
 
-Let's start with network security, a top priority for any organization, especially in the Finance sector. With Meraki MR, you can easily **set up firewall rules** to restrict access to sensitive financial data. You can also **enable integrated malware protection** to safeguard against cyber threats. This not only ensures the security of your network but also protects your organization from potential breaches and data leaks.
+**Use Case 1: Secure Guest Wi-Fi**
+- **Navigate to the Wireless section of the Dashboard**
+- **Click on 'SSID Settings'**
+- **Enable the Guest SSID and set up a secure password**
+- **Explain how this feature allows for secure guest access without compromising network security**
 
-[Use Case 2: Remote Workforce]
+**Use Case 2: Application Visibility**
+- **Navigate to the Security & SD-WAN section**
+- **Click on 'Application Visibility'**
+- **Show how the Dashboard provides insights into application usage and performance**
+- **Discuss how this visibility can help in optimizing network resources**
 
-In today's business landscape, many organizations have remote employees who need to access the network securely. With Meraki MR, you can **easily configure VPN connections** for remote workers, ensuring secure access to your network from anywhere in the world. This flexibility not only boosts productivity but also reduces the risk of unauthorized access to sensitive financial information.
+**Use Case 3: Automated RF Optimization**
+- **Navigate to the Wireless section of the Dashboard**
+- **Click on 'RF Profiles'**
+- **Explain how MR automatically optimizes radio frequency settings for better performance**
+- **Highlight how this feature can reduce interference and improve connectivity**
 
-[Use Case 3: Network Monitoring]
+**Use Case 4: Seamless Roaming**
+- **Navigate to the Wireless section of the Dashboard**
+- **Click on 'Wireless Health'**
+- **Demonstrate how MR ensures seamless roaming between access points**
+- **Discuss how this feature can enhance user experience, especially in a fast-paced financial services environment**
 
-As a financial decision maker, you understand the importance of monitoring network performance to ensure operational efficiency. With Meraki MR, you can **access real-time network analytics** to identify and troubleshoot any issues before they impact your business operations. This proactive approach not only minimizes downtime but also enhances the overall performance of your network.
+---
 
-[Use Case 4: Guest Access]
+**Q: How does this solution reduce IT workload in our financial services environment?**  
+**A:** Meraki simplifies management through one dashboard and automates many tasks like updates and troubleshooting.
 
-In the Finance sector, it's crucial to provide secure guest access for clients and partners visiting your office. With Meraki MR, you can **easily create guest SSIDs** with customized access controls to ensure a seamless and secure experience for your guests. This feature not only enhances customer satisfaction but also strengthens your organization's reputation for prioritizing security.
+**Q: What kind of ROI or cost reduction can we expect?**  
+**A:** Customers often report major time savings and reduced downtime, especially for remote sites.
 
-[Smart Questions to Prompt Discussion]
-
-1. How do you currently manage network security within your organization, and what challenges do you face in ensuring data protection?
-2. Have you experienced any network downtime or performance issues that have impacted your business operations, and how do you currently address these issues?
-3. What are your key considerations when evaluating wireless networking solutions for your organization, and how does cost factor into your decision-making process?
-
-[Closing]
-
-Thank you for joining us today for this Meraki MR demo tailored for the Finance sector. We hope you have gained valuable insights into the operational impact and cost justification of implementing Meraki MR in your organization. If you have any further questions or would like to discuss how Meraki MR can benefit your specific business needs, please don't hesitate to reach out to us. We look forward to partnering with you to revolutionize your wireless networking infrastructure.
+**Q: Can we integrate this with our existing systems and security policies?**  
+**A:** Yes — Meraki supports APIs, SAML, and integration with existing firewalls, Active Directory, and SIEM tools.

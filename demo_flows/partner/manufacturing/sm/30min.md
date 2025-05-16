@@ -1,35 +1,25 @@
-[Opening]
+Hey there, partner! Today, we're diving into a demo of Cisco Meraki's **SM** solution tailored specifically for the Manufacturing sector. Before we get started, I'd love to hear from you: what trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-Hello everyone, thank you for joining us today for this Meraki SM demo tailored for the Manufacturing sector. I know many of you are partners looking to pitch Meraki to customers in this industry, so today we're going to cover some key pain points that manufacturing customers care about and how Meraki can address them.
+Let's jump right in and explore how Meraki can address some of the key pain points in Manufacturing. Picture this: a seamless network management experience with the Meraki Dashboard as your central platform, offering visibility, simplified troubleshooting, and unified management in a single pane of glass.
 
-[Pain Points]
+**Use Case 1: Real-time Monitoring**
+Imagine having the ability to monitor your entire network in real-time, ensuring optimal performance across all your manufacturing facilities. With Meraki, you can **click 'Monitor > Live Tools'** to see this in action.
 
-Let's start with some common pain points in the manufacturing sector. Manufacturers often struggle with managing a large number of devices across multiple locations, ensuring network security and compliance, and maintaining uptime for critical operations. Traditional solutions can be complex, expensive, and time-consuming to manage.
+**Use Case 2: Remote Troubleshooting**
+Dealing with IT issues at multiple manufacturing sites can be a headache. But with Meraki, you can **click 'Tools > Remote Desktop'** to troubleshoot and resolve issues remotely, saving time and resources.
 
-[Positioning Meraki]
+**Use Case 3: Secure Access Control**
+Security is a top concern in Manufacturing. Meraki's **SM** solution offers secure access control policies that you can easily manage through the Dashboard. **Click 'Security > Access Control'** to see how simple it can be.
 
-This is where Meraki comes in. With our cloud-managed solution, partners can offer manufacturing customers a simple, centralized way to manage all their devices from a single dashboard. This not only simplifies network management but also improves security and compliance with built-in features like automated patching and network segmentation.
+Now, let's anticipate some questions you might encounter when pitching Meraki's **SM** in the Manufacturing space:
 
-[Use Case 1: Device Management]
+Q: What are the top manufacturing pain points this addresses?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-One key use case for manufacturing customers is device management. With Meraki SM, partners can easily onboard new devices, push software updates, and troubleshoot issues remotely. **Let me show you how simple it is to onboard a new device. Just click 'Systems Manager > Add Devices' and follow the prompts to enroll a new device.**
+Q: How do we best position SM during the pitch?
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-[Use Case 2: Network Security]
+Q: What installation or deployment concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
 
-Another critical use case is network security. Manufacturing customers need to protect their sensitive data and ensure compliance with industry regulations. With Meraki, partners can set up role-based access control, monitor device compliance, and enforce security policies across all devices. **To configure security policies, just click 'Systems Manager > Security Policies' and set your desired rules.**
-
-[Use Case 3: Remote Troubleshooting]
-
-Lastly, remote troubleshooting is essential for manufacturing customers who may have devices spread across multiple locations. With Meraki SM, partners can remotely diagnose and fix issues without the need for on-site visits, saving time and reducing downtime. **To troubleshoot a device, click 'Systems Manager > Device List' and select the device you want to troubleshoot.**
-
-[Discussion Questions]
-
-Now that we've covered some key use cases, here are a few smart questions you can ask your customers to prompt discussion:
-
-1. How do you currently manage and secure your devices across multiple locations?
-2. What are the biggest challenges you face when it comes to network security and compliance?
-3. How much time and resources are currently spent on troubleshooting and maintaining your devices?
-
-[Closing]
-
-I hope this demo has given you a better understanding of how Meraki can address the pain points of manufacturing customers. Remember, with Meraki SM, partners can offer a simple, secure, and centralized solution that meets the unique needs of the manufacturing sector. Thank you for joining us today, and please feel free to reach out if you have any further questions.
+And that's a wrap! With Meraki's **SM** solution, you can offer your customers in the Manufacturing sector a network management experience like never before. Thank you for joining me on this demo today.

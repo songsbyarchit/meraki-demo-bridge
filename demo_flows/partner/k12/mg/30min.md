@@ -1,26 +1,22 @@
-[Start of Demo]
+Hey there, thanks for joining me today! I'm excited to walk you through a demo of Cisco Meraki's MG product tailored specifically for the K-12 Education/Primary Education sector. Before we dive in, I'd love to hear your thoughts on the challenges you're facing with customers in this space. What trends or unique aspects do you find when positioning solutions here?
 
-Good morning/afternoon, everyone. Thank you for joining us for this Meraki MG demo targeted towards the K12 sector. I'm excited to show you how Meraki can help address some of the pain points that schools face when it comes to managing their network infrastructure.
+Great, let's get started with a quick overview of the Meraki Dashboard. This single pane of glass provides visibility, simplified troubleshooting, and unified management across all your sites. **Click 'Dashboard'** to see it in action.
 
-Let's start by addressing some common pain points that K12 customers care about. 
+Now, let's explore a use case tailored for K-12 Education/Primary Education. Imagine a school district with multiple campuses spread out across the region. With Meraki MG, you can easily manage all these sites from one central location. **Navigate to 'Networks > Sites'** to see how easy it is to monitor and control each location.
 
-First, many schools struggle with limited IT resources and budget constraints. This often leads to network downtime and security vulnerabilities. Additionally, managing a network spread across multiple buildings and campuses can be challenging and time-consuming.
+Another key use case is ensuring a safe and secure online environment for students. With MG's built-in security features, you can easily set up content filtering and application control to protect students from harmful content. **Navigate to 'Security & SD-WAN > Content filtering'** to see how simple it is to configure these settings.
 
-This is where Meraki comes in. Meraki offers a cloud-managed solution that is easy to deploy and manage, even for organizations with limited IT expertise. The centralized dashboard provides a unified view of the entire network, making it easy to monitor and troubleshoot issues in real-time.
+Let's wrap up with another common scenario in education - bandwidth management. Schools often struggle with limited bandwidth and the need to prioritize traffic for critical applications. With Meraki MG, you can easily set up traffic shaping rules to ensure important applications always have the necessary bandwidth. **Click 'Configure > Traffic shaping'** to see how this works.
 
-Now, let's dive into a couple of use cases to demonstrate how Meraki can address these pain points.
+Now, let's address some common questions partners might have when positioning MG in the K-12 Education/Primary Education space:
 
-Use Case 1: Simplified Network Management
-Imagine you're an IT administrator at a K12 school with multiple buildings. With Meraki, you can easily configure and monitor all your devices from a single dashboard. **Click 'Configure > Switch ports'** to see how you can quickly set up VLANs and access controls across all your switches.
+Q: What are the top pain points this addresses?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-Use Case 2: Enhanced Security
-Security is a top priority for schools, especially when it comes to protecting sensitive student data. With Meraki, you can easily enforce security policies and monitor network activity to detect and prevent potential threats. **Click 'Security > Threat Protection'** to see how you can set up firewall rules and intrusion detection to keep your network secure.
+Q: How do we best position MG during the pitch?
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-Now, let's wrap up with a couple of smart questions you can use to engage your customers during the pitch:
+Q: What installation concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
 
-1. How are you currently managing your network infrastructure, and what challenges have you faced?
-2. What security measures do you have in place to protect your students' data and ensure network reliability?
-
-Thank you for joining me for this demo. I hope you found it helpful in understanding how Meraki can help address the unique needs of K12 schools. If you have any further questions or would like to explore a customized solution for your organization, please feel free to reach out to us.
-
-[End of Demo]
+Thanks for joining me today! I hope this demo has given you a clear understanding of how Meraki MG can address the unique needs of the K-12 Education/Primary Education sector. Let me know if you have any further questions or if you'd like to explore more features.

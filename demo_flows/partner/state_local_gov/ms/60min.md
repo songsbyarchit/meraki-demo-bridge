@@ -1,27 +1,24 @@
-[Opening]
+Hey there! Today, we're going to dive into how Cisco Meraki's MS solution can revolutionize network management for State and Local Government agencies. As a partner in this space, you're likely familiar with the unique challenges faced by these organizations. What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-Hello everyone and thank you for joining us today for this Meraki MS demo. Today, we will be focusing on how Meraki can address the pain points faced by State Local Government organizations. As partners, it's important to understand the unique challenges that these customers face and how Meraki can help solve them.
+Let's kick things off by taking a look at the current network setup for a typical State and Local Government agency. Where are the biggest IT headaches you're dealing with today?
 
-[Pain Points]
+Now, let's explore some key use cases where Cisco Meraki's MS can make a significant impact in the State and Local Government sector. 
 
-State Local Government organizations often struggle with managing a large number of dispersed locations, limited IT resources, and the need for secure and reliable network connectivity. They also face the challenge of ensuring compliance with regulations and protecting sensitive data.
+1. **Centralized Management**: **click 'Dashboard > Network-wide > Overview'**. Here, you can see all your network devices in a single pane of glass, allowing for easy monitoring and troubleshooting.
 
-[Positioning Meraki]
+2. **Remote Site Deployment**: **click 'Configure > Sites'**. With Meraki, setting up and managing remote sites is a breeze, ensuring consistent network policies across all locations.
 
-Meraki offers a simple, centralized cloud-managed solution that provides visibility and control over the entire network infrastructure. With Meraki, State Local Government organizations can easily manage their network, ensure compliance, and improve security without the need for dedicated IT staff at each location.
+3. **Traffic Analysis**: **click 'Monitor > Traffic Analytics'**. Gain valuable insights into network traffic patterns to optimize performance and ensure compliance with regulations.
 
-[Use Cases]
+4. **Security Compliance**: **click 'Security > Security Appliance'**. Meraki's built-in security features help ensure compliance with government regulations and protect sensitive data.
 
-1. **Network Visibility**: Showcasing how partners can easily monitor and troubleshoot network issues using the Meraki dashboard.
-2. **Security and Compliance**: Demonstrating how partners can set up and enforce security policies across all locations using Meraki's security features.
-3. **Remote Management**: Highlighting how partners can remotely configure and manage network devices across multiple locations.
-4. **Guest Access**: Showing how partners can set up secure guest networks for visitors at government facilities.
+Now, let's address some common questions partners might have when positioning MS in the State and Local Government space.
 
-[Smart Questions]
+Q: What are the top state and local government pain points this addresses?  
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-1. How important is network security and compliance for your organization, and how do you currently address these challenges?
-2. What level of visibility do you have into your network infrastructure, and how does this impact your day-to-day operations?
+Q: How do we best position MS during the pitch?  
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-[Closing]
-
-Thank you for attending this demo today. We hope that you now have a better understanding of how Meraki can address the pain points faced by State Local Government organizations. Please feel free to reach out to us with any further questions or to discuss how we can help you pitch Meraki to your customers.
+Q: What installation or deployment concerns should we be ready for?  
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.

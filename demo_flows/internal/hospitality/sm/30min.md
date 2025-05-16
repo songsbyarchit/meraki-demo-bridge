@@ -1,27 +1,24 @@
-[Opening]
+Hey there! Thanks for joining us today. Whether you're a partner reseller, customer IT admin, or internal SE, we're excited to show you how Cisco Meraki's SM solution can revolutionize networking in the Hospitality sector.
 
-Presenter: Welcome everyone! Today, we're going to dive into a demo of Meraki SM specifically tailored for the Hospitality sector. Our goal is to equip our partners with the knowledge and tools they need to effectively pitch Meraki SM to customers in this industry.
+Let's kick things off with a couple of warm-up questions:
+- What trends or challenges are you seeing with customers in the Hospitality sector? What do you find unique or tricky about positioning solutions in this space?
 
-[Use Case 1: Guest Wi-Fi Management]
+Now, let's dive into the demo. Imagine you're managing a hotel network with multiple locations. With Meraki's SM, you get a single pane of glass view of all your network devices. **Click 'Network-wide > Monitor > Clients'** to see real-time client activity across all sites. Isn't that convenient?
 
-Presenter: One of the key pain points in the Hospitality sector is managing guest Wi-Fi access. With Meraki SM, partners can easily set up customizable splash pages, limit bandwidth usage, and even track guest usage patterns. Let's **click 'Configure > Wireless settings'** to see how easy it is to set up a guest network and apply different policies for guest users.
+Next, let's talk about security. In the Hospitality sector, guest Wi-Fi security is crucial. With Meraki, you can easily create secure guest networks with different access policies. **Click 'Wireless > SSIDs'** to set up a new guest network in just a few clicks.
 
-[Use Case 2: Device Monitoring and Security]
+Now, let's explore how Meraki simplifies troubleshooting. Say a guest reports slow Wi-Fi in their room. **Click 'Wireless > Air Marshal'** to identify any rogue devices causing interference and quickly resolve the issue.
 
-Presenter: In the Hospitality sector, keeping track of all the devices connected to the network and ensuring their security is crucial. With Meraki SM, partners can remotely monitor devices, push security updates, and even locate lost devices. Let's **click 'Monitor > Devices'** to see how partners can quickly identify and troubleshoot any issues with connected devices.
+And that's just scratching the surface! With Meraki's SM, you can streamline network management, enhance security, and provide a seamless guest experience in the Hospitality sector.
 
-[Use Case 3: Remote Troubleshooting]
+Before we wrap up, here are a couple of FAQs to empower you in selling SM to Hospitality clients:
+- **Q: What objections might the partner hear in hospitality?**  
+  A: Cost vs legacy vendors, and skepticism over cloud-managed security — arm them with TCO comparisons.
 
-Presenter: Lastly, another common challenge in the Hospitality sector is the need for quick and efficient troubleshooting. With Meraki SM, partners can remotely access devices, run diagnostics, and even push configuration changes without being on-site. Let's **click 'Monitor > Remote desktop'** to see how partners can easily troubleshoot issues and provide support to customers from anywhere.
+- **Q: What enablement do we provide for partners?**  
+  A: Access to demo kits, dashboards, playbooks, and partner-exclusive webinars.
 
-[Smart Questions]
+- **Q: How do we support onboarding post-sale?**  
+  A: We offer co-delivery workshops, pre-built config templates, and Meraki support handles escalations fast.
 
-Presenter: Now, I'd like to ask you all a couple of questions to prompt discussion:
-
-1. How do you currently handle guest Wi-Fi management in your Hospitality clients?
-2. What are the biggest security concerns you've encountered when it comes to device management in this sector?
-3. How do you currently handle remote troubleshooting and support for your Hospitality clients?
-
-[Closing]
-
-Presenter: Thank you for joining us today for this Meraki SM demo focused on the Hospitality sector. We hope this has given you valuable insights into how Meraki SM can address the unique challenges faced by our partners and customers in this industry. If you have any further questions or would like to explore Meraki SM in more detail, please don't hesitate to reach out. Let's continue working together to deliver innovative solutions to our Hospitality clients. Thank you!
+Thanks for tuning in! We hope you're as excited as we are about the possibilities with Cisco Meraki's SM in the Hospitality sector. Let's make networking a breeze for your clients together.

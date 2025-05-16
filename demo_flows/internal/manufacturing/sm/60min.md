@@ -1,22 +1,23 @@
-[Opening]
-Hello everyone, thank you for joining today's Meraki SM demo focusing on the Manufacturing sector. Our goal today is to enable our partners to effectively pitch Meraki solutions to manufacturing customers. Let's dive right in.
+Hey there! Thanks for joining us today. Whether you're a partner reseller, customer IT admin, or internal SE, we're excited to dive into how Cisco Meraki's SM solution can revolutionize networking in the Manufacturing sector. 
 
-[Use Case 1: Secure Device Management]
-Let's start with a common use case in manufacturing - managing a large number of IoT devices securely. With Meraki SM, partners can easily enroll, monitor, and secure these devices from a centralized dashboard. **Click 'Systems Manager > Add new device'** to see how simple it is to onboard a new device.
+To kick things off, let's chat about the trends and challenges you're seeing in this space. What unique aspects or tricky situations have you encountered when positioning solutions to your customers?
 
-[Use Case 2: Remote Troubleshooting]
-In manufacturing, downtime is costly. With Meraki SM, partners can remotely troubleshoot devices, saving time and money. **Click 'Systems Manager > Remote desktop'** to see how you can quickly access and troubleshoot a device from anywhere.
+Now, let's explore some key use cases tailored to Manufacturing:
 
-[Use Case 3: Compliance Management]
-Compliance is crucial in the manufacturing sector. With Meraki SM, partners can easily enforce security policies and ensure devices are compliant. **Click 'Systems Manager > Security policies'** to see how you can set up policies to meet regulatory requirements.
+1. **Real-time Production Monitoring**: Imagine having instant visibility into your production line's network health, enabling proactive maintenance and minimizing downtime.
+   
+2. **Secure Access Control**: Easily manage user access permissions across different manufacturing areas, ensuring data security and compliance.
+   
+3. **Asset Tracking**: Track the location and status of valuable equipment in real-time, optimizing resource allocation and preventing theft.
+   
+4. **Guest Wi-Fi Management**: Provide secure guest Wi-Fi access for visitors without compromising your network's integrity.
 
-[Use Case 4: Asset Tracking]
-Tracking assets in a manufacturing facility can be challenging. With Meraki SM, partners can easily track and manage assets using geolocation data. **Click 'Systems Manager > Location tracking'** to see how you can track assets in real-time.
+Now, let's take a look at the Meraki Dashboard, our central platform for unified network management. **Click 'Dashboard'** to see how it provides a single pane of glass view for all your network devices.
 
-[Prompt for Discussion]
-Now that we've gone through some key use cases, I'd like to ask you all a couple of questions:
-1. How do you currently manage device security in your manufacturing environment?
-2. What challenges do you face in remote troubleshooting of devices?
+With the Dashboard, you can **click 'Clients'** to quickly troubleshoot connectivity issues, **navigate to 'Wireless > SSIDs'** to set up secure Wi-Fi networks, and **go to 'Security & SD-WAN > Adaptive Policy'** to enforce granular security policies based on user roles.
 
-[Closing]
-Thank you for participating in today's demo. I hope you found it valuable in understanding how Meraki SM can benefit manufacturing customers. Remember, as partners, you have the opportunity to leverage these solutions to drive success for your customers. If you have any further questions or need support in pitching Meraki to manufacturing clients, please don't hesitate to reach out.
+As you engage with customers in Manufacturing, you may encounter objections like cost comparisons with legacy vendors and skepticism towards cloud-managed security. To address these concerns, provide them with TCO comparisons and case studies showcasing successful deployments in similar environments.
+
+For partner enablement, we offer access to demo kits, dashboards, playbooks, and partner-exclusive webinars to enhance your pitching skills and product knowledge. And post-sale, we provide co-delivery workshops, pre-built config templates, and fast escalation handling through Meraki support.
+
+Let's empower your partners to thrive in the Manufacturing sector with Cisco Meraki's SM solution. Thanks for tuning in!

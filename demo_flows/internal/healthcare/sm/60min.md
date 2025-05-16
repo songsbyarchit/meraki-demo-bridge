@@ -1,29 +1,23 @@
-[Opening]
+Hey there! Thanks for joining me today. Whether you're a partner reseller, customer IT admin, or internal SE, I'm excited to show you how Cisco Meraki's SM solution can revolutionize networking in the healthcare sector.
 
-Hello everyone, thank you for joining today's Meraki SM demo focused on the Healthcare sector. Our goal is to equip our partners with the knowledge and tools they need to effectively pitch Meraki SM to healthcare customers. Let's dive in.
+Let's kick things off with a couple of warm-up questions tailored to your role:
+- For partners: What trends or challenges are you seeing with customers in the healthcare sector? What do you find unique or tricky about positioning solutions in this space?
+- For customers: What does your current network setup look like? Where are your biggest IT headaches today?
+- For internal: What common questions do our customers ask in the healthcare sector? What objections or misconceptions do we frequently encounter?
 
-[Use Case 1: Device Management]
-Let's start with device management. With Meraki SM, you can easily deploy and manage devices across multiple healthcare facilities from one centralized dashboard. **Click 'Systems Manager > Add devices'** to see how simple it is to enroll new devices and push out updates remotely.
+Now, let's dive into some specific use cases for healthcare:
 
-[Use Case 2: Security Compliance]
-In the healthcare sector, security compliance is crucial. Meraki SM helps ensure that all devices meet industry standards by enforcing security policies and monitoring for any potential threats. **Click 'Systems Manager > Security policies'** to set up compliance rules and monitor device security.
+1. **IoT Device Management**: Monitor and control medical devices seamlessly.
+2. **Guest WiFi Access**: Provide secure, reliable WiFi for patients and visitors.
+3. **HIPAA Compliance**: Ensure data security and compliance with healthcare regulations.
+4. **Location Analytics**: Track asset and patient movement for improved efficiency.
+5. **Remote Site Connectivity**: Connect branch offices and clinics effortlessly.
+6. **Network Segmentation**: Isolate sensitive data for enhanced security.
 
-[Use Case 3: Location Tracking]
-For healthcare facilities with a large number of mobile devices, location tracking is essential for asset management and patient care. With Meraki SM, you can track the real-time location of devices and even set up geofences for restricted areas. **Click 'Systems Manager > Location tracking'** to see how easy it is to monitor device movements.
+Throughout these use cases, you'll see how the Meraki Dashboard serves as a central platform for visibility, troubleshooting, and management. Let's **click 'Monitor > Clients'** to see real-time device connections and **click 'Configure > Firewall rules'** to set up HIPAA compliance measures.
 
-[Use Case 4: App Management]
-Managing healthcare-specific applications on devices can be a challenge. Meraki SM simplifies this process by allowing you to push out updates, control access to apps, and even remotely wipe data if a device is lost or stolen. **Click 'Systems Manager > App management'** to explore these features.
+As you pitch SM to healthcare customers, anticipate objections like cost vs legacy vendors and skepticism over cloud-managed security. Arm yourself with TCO comparisons to address these concerns effectively.
 
-[Use Case 5: Remote Troubleshooting]
-In a healthcare setting, downtime is not an option. With Meraki SM, IT teams can remotely troubleshoot device issues, push out fixes, and ensure that healthcare professionals have uninterrupted access to critical systems. **Click 'Systems Manager > Remote troubleshooting'** to see how this feature works in action.
+We provide partners with access to demo kits, dashboards, playbooks, and partner-exclusive webinars to support your sales efforts. Post-sale, we offer co-delivery workshops, pre-built config templates, and fast escalations for any support needs.
 
-[Use Case 6: Guest Access Management]
-Healthcare facilities often have visitors who need temporary access to Wi-Fi networks. Meraki SM allows you to set up secure guest access policies, monitor guest activity, and ensure that your network remains secure at all times. **Click 'Systems Manager > Guest access'** to learn more about this feature.
-
-[Smart Questions to Prompt Discussion]
-1. How do you currently manage device security and compliance in your healthcare facility?
-2. What challenges do you face when it comes to tracking the location of mobile devices in your organization?
-3. How important is remote troubleshooting capability in ensuring uninterrupted access to critical systems in your healthcare facility?
-
-[Closing]
-Thank you for attending today's demo. We hope you now have a better understanding of how Meraki SM can benefit healthcare organizations. Please reach out if you have any further questions or would like to explore Meraki SM further. Have a great day!
+Thanks for joining me on this journey through Cisco Meraki's SM solution for healthcare. Let's empower healthcare organizations with seamless, secure, and scalable networking solutions.

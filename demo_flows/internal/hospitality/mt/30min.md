@@ -1,37 +1,26 @@
-[Opening]
+Hey there! Thanks for joining me today. Whether you're a partner reseller, a customer IT admin, or an internal SE, I'm excited to show you how Cisco Meraki's MT can transform networking in the Hospitality sector.
 
-Hello everyone, thank you for joining us today for this Meraki MT demo focused on the Hospitality sector. Our goal is to equip you with the knowledge and resources to effectively pitch Meraki MT solutions to our customers in the hospitality industry.
+Let's dive in with a couple of warm-up questions:
+For partners: What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-[Slide - Agenda]
+Now, let's explore a few use cases tailored to the Hospitality sector:
+1. **Guest Wi-Fi Management**: With Meraki Dashboard, you can easily create secure, branded guest Wi-Fi networks that keep your guests connected without compromising security.
+2. **Location Analytics**: Gain valuable insights into guest behavior and foot traffic patterns to optimize operations and enhance guest experiences.
+3. **Mobile Device Management**: Simplify the management of devices used by staff and guests alike, ensuring a seamless and secure connectivity experience.
 
-1. Introduction to Meraki MT
-2. Use Case 1: Guest Wi-Fi Network
-3. Use Case 2: Smart Room Control
-4. Use Case 3: Network Security
-5. Smart Questions for Discussion
+Let's take a look at the Meraki Dashboard now:
+1. **Navigate to 'Wireless > SSIDs' to configure guest Wi-Fi settings**
+2. **Click 'Monitor > Location Analytics' to view real-time data**
+3. **Check 'Systems Manager > Devices' for mobile device management options**
 
-[Slide - Introduction to Meraki MT]
+Here are a couple of internal enablement FAQs to support partners selling MT in the Hospitality space:
+Q: What objections might the partner hear in hospitality?
+A: Cost vs legacy vendors, and skepticism over cloud-managed security — arm them with TCO comparisons.
 
-Meraki MT is a cloud-managed networking solution designed to meet the unique needs of the hospitality sector. With its intuitive dashboard and centralized management, Meraki MT enables hotels to provide seamless connectivity for guests, streamline operations, and enhance network security.
+Q: What enablement do we provide for partners?
+A: Access to demo kits, dashboards, playbooks, and partner-exclusive webinars.
 
-[Use Case 1: Guest Wi-Fi Network]
+Q: How do we support onboarding post-sale?
+A: We offer co-delivery workshops, pre-built config templates, and Meraki support handles escalations fast.
 
-Imagine a hotel guest arrives and wants to connect to the Wi-Fi. With Meraki MT, hotels can easily set up a separate guest network that provides secure and reliable connectivity. **Click 'Configure > Wireless > SSIDs'** to create a new guest network with a customized login page. This not only enhances the guest experience but also ensures network security by isolating guest traffic from the hotel's internal network.
-
-[Use Case 2: Smart Room Control]
-
-In the era of smart technology, hotels can leverage Meraki MT to offer guests a unique experience with smart room controls. **Click 'Configure > Switch ports'** to configure smart devices in each room, allowing guests to control lighting, temperature, and entertainment systems from their smartphones. This not only enhances guest comfort but also improves operational efficiency for hotel staff.
-
-[Use Case 3: Network Security]
-
-Network security is a top priority for hotels, especially when handling sensitive guest data. With Meraki MT, hotels can implement advanced security features such as firewall rules, content filtering, and intrusion detection. **Click 'Security & SD-WAN > Firewall'** to set up firewall rules to protect the network from cyber threats and ensure compliance with data privacy regulations.
-
-[Smart Questions for Discussion]
-
-1. How can Meraki MT help hotels differentiate themselves in a competitive market?
-2. What are the key factors that hotels should consider when implementing a smart room control system?
-3. How can Meraki MT help hotels address the growing cybersecurity challenges in the hospitality sector?
-
-[Closing]
-
-Thank you for participating in this Meraki MT demo. We hope you feel more confident in pitching Meraki MT solutions to our customers in the hospitality sector. If you have any further questions or would like to schedule a follow-up training session, please feel free to reach out to us. Have a great day!
+That's a wrap! Thanks for exploring Cisco Meraki's MT with me today. Let's empower our partners to revolutionize networking in the Hospitality sector.

@@ -1,31 +1,21 @@
-[Opening]
+Hey there, partners! Thanks for joining us today for this demo on Cisco Meraki's MR product. Before we dive in, I'd love to hear from you: what trends or challenges are you seeing with customers in the Service Provider sector? What do you find unique or tricky about positioning solutions in this space?
 
-Hello and welcome, everyone! Today, I'm excited to show you how Meraki MR can revolutionize your service provider offerings. Let's dive right in.
+**Use Case 1: Multi-site Management**  
+Imagine you're a service provider with multiple client locations. With Meraki's Dashboard, you can easily manage all these sites from one central platform. **Navigate to 'Monitor > Overview'** to see a snapshot of all your network locations at a glance.
 
-[Pain Points]
+**Use Case 2: Guest Wi-Fi Provisioning**  
+Service providers often need to set up secure guest networks for their clients. With Meraki, **click 'Wireless > SSIDs'** to quickly create a separate guest network with custom access controls. It's that easy!
 
-Now, let's talk about the pain points that service provider customers care about. They want reliable and secure Wi-Fi connectivity for their clients, without the hassle of complex setups and maintenance. They also want visibility and control over their network, so they can quickly identify and resolve issues. Lastly, customers want scalability, so they can easily expand their network as their business grows.
+**Use Case 3: Troubleshooting Made Simple**  
+When issues arise, time is of the essence. With Meraki's intuitive Dashboard, **click 'Monitor > Clients'** to identify and troubleshoot network problems in real-time, all from one place.
 
-[Use Case 1: Managed Wi-Fi Services]
+Now, let's address some common questions partners might have when positioning MR in the Service Provider space:
 
-One key use case for Meraki MR in the service provider sector is offering managed Wi-Fi services to your customers. With Meraki's cloud-managed solution, you can easily deploy and manage multiple networks from a single dashboard. **Click 'Wireless > Access points'** to see real-time status and performance metrics for each access point. This level of visibility allows you to proactively monitor and troubleshoot any issues that may arise, ensuring a seamless Wi-Fi experience for your clients.
+Q: What are the top service provider pain points this addresses?  
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-[Use Case 2: Guest Wi-Fi Services]
+Q: How do we best position MR during the pitch?  
+A: Emphasize Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-Another use case is providing secure and customizable guest Wi-Fi services to your customers. **Click 'Wireless > SSIDs'** to set up separate guest networks with custom splash pages and access controls. This feature not only enhances the guest experience but also allows you to collect valuable data and insights on user behavior. With Meraki MR, you can offer a differentiated service that adds value for your customers.
-
-[Use Case 3: Network Expansion]
-
-Lastly, let's talk about network expansion. As your customers' businesses grow, they will need to expand their network infrastructure quickly and efficiently. With Meraki MR, adding new access points is as simple as **click 'Wireless > Access points > Add new AP'**. The plug-and-play deployment and centralized management make scaling up a breeze, saving you time and resources.
-
-[Smart Questions]
-
-Now, here are a few smart questions you can ask your customers to prompt discussion:
-
-1. How important is network visibility and control to your business operations?
-2. Have you experienced any challenges with managing multiple Wi-Fi networks for your clients?
-3. What are your plans for network expansion in the near future, and how can Meraki MR support those goals?
-
-[Closing]
-
-In conclusion, Meraki MR offers a comprehensive solution for service providers looking to deliver reliable, secure, and scalable Wi-Fi services to their customers. By addressing key pain points and showcasing the versatility of the platform through use cases, you can effectively position Meraki as a game-changer in the service provider sector. Thank you for joining us today, and feel free to reach out with any questions or to schedule a personalized demo.
+Q: What installation or deployment concerns should we be ready for?  
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.

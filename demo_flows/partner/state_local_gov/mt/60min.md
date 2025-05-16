@@ -1,42 +1,24 @@
-[Opening]
+Hello and welcome to our Cisco Meraki demo for State And Local Government partners. Today, we will be focusing on showcasing the features and benefits of Meraki **MT** for this specific sector.
 
-Hello and welcome to our Meraki MT demo! Today, we'll be focusing on how Meraki can address the pain points faced by State Local Gov customers. As a partner, it's important to understand these pain points and position Meraki as the solution to their challenges.
+To start off, what trends or challenges are you seeing with customers in the State And Local Government sector? What do you find unique or tricky about positioning solutions in this space?
 
-[Slide 1: Introduction to Meraki MT]
-- Provide an overview of Meraki MT and its key features
-- Highlight the benefits of Meraki for State Local Gov customers, such as easy deployment, centralized management, and enhanced security
+Great, let's dive into the demo. Imagine you are working with a local government agency looking to improve their network infrastructure. With Meraki **MT**, you can address various pain points they may have, such as outdated technology, lack of visibility, and complex network management.
 
-[Slide 2: Pain Points in State Local Gov]
-- Discuss the common pain points faced by State Local Gov customers, such as limited IT resources, budget constraints, and the need for secure and reliable network infrastructure
-- Explain how Meraki can help address these pain points with its cloud-based management and security features
+Let's explore some key use cases:
+1. **Centralized Management**: **click 'Dashboard > Overview'** to see how you can monitor and manage all network devices from a single pane of glass.
+2. **Network Segmentation**: **click 'Security & SD-WAN > Addressing'** to easily create and manage different network segments for various departments or services.
+3. **Wireless Connectivity**: **click 'Wireless > Access Points'** to configure and optimize wireless connectivity for different locations within the government premises.
+4. **Security Policies**: **click 'Security & SD-WAN > Firewall'** to set up customized security policies to protect sensitive government data.
 
-[Use Case 1: Network Visibility]
-- Show how Meraki provides real-time visibility into network traffic and performance
-- **Navigate to 'Dashboard > Network-wide > Overview' to show network health and performance metrics**
-- Explain how this feature can help State Local Gov customers monitor and troubleshoot network issues more effectively
+Now, let's address some common questions partners might have when pitching Meraki **MT** in the State And Local Government space:
 
-[Use Case 2: Secure Access Control]
-- Demonstrate how Meraki's access control features can help State Local Gov customers ensure secure access to their network
-- **Click 'Configure > Access Control' to show how access policies can be easily configured and enforced**
-- Emphasize the importance of security in government networks and how Meraki can provide peace of mind in this area
+Q: What are the top state and local government pain points this addresses?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-[Use Case 3: Remote Management]
-- Showcase how Meraki's cloud-based management platform allows State Local Gov customers to remotely manage their network infrastructure
-- **Click 'Dashboard > Devices' to show how devices can be managed and configured from anywhere**
-- Highlight the convenience and flexibility that this feature offers, especially for organizations with limited IT resources
+Q: How do we best position MT during the pitch?
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-[Use Case 4: Scalability]
-- Illustrate how Meraki's scalability can benefit State Local Gov customers as their network grows
-- **Show how new devices can be easily added to the network through 'Configure > Add devices'**
-- Explain how Meraki's cloud-based architecture allows for seamless expansion without the need for additional hardware
+Q: What installation or deployment concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
 
-[Closing]
-
-As we wrap up this demo, remember to position Meraki as the solution to the pain points faced by State Local Gov customers. By highlighting its ease of deployment, centralized management, security features, and scalability, you can show how Meraki can meet their specific needs.
-
-[Smart Questions]
-1. How are you currently managing your network infrastructure, and what pain points are you experiencing in this area?
-2. What are your top priorities when it comes to network security, and how do you currently address these concerns?
-3. In what ways do you see Meraki fitting into your organization's long-term IT strategy?
-
-Thank you for joining us today, and we look forward to helping you pitch Meraki to State Local Gov customers.
+Thank you for attending this demo. We hope this has provided you with valuable insights on how Meraki **MT** can help address the unique needs of State And Local Government customers. Feel free to reach out if you have any further questions or require additional information.

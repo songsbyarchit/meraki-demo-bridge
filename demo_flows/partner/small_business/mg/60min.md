@@ -1,38 +1,36 @@
-Title: Meraki MG Demo for Small Business Partners
+Hey there! Today, we're diving into the world of Cisco Meraki, specifically focusing on the MG product for Small Business. Whether you're a partner reseller, customer IT admin, or internal SE, this demo is tailored to help you pitch Meraki effectively to your customers.
 
-Introduction (5 mins):
-- Welcome partners to the demo
-- Briefly introduce Meraki and the Meraki MG
-- Highlight the benefits of Meraki MG for small businesses such as simplified management, improved network performance, and increased security
+To kick things off, let's start with a couple of warm-up questions:
+- For partners: What trends or challenges are you seeing with customers in the Small Business sector? What do you find unique or tricky about positioning solutions in this space?
+- For customers: What does your current network setup look like? Where are your biggest IT headaches today?
+- For internal: What common questions do our customers ask in the Small Business sector? What objections or misconceptions do we frequently encounter?
 
-Use Case 1: Simplified Network Management (10 mins):
-- Explain how partners can easily **log in to the Meraki dashboard** to view and manage all clients' networks in one place
-- Show how partners can **configure firewall rules, VPN settings, and access policies** with just a few clicks
-- Emphasize the time-saving benefits for small businesses with limited IT resources
+Now, let's delve into some key use cases for Meraki MG in the Small Business sector:
 
-Use Case 2: Enhanced Security Features (10 mins):
-- Discuss the importance of security for small businesses
-- Show partners how they can **set up content filtering, intrusion prevention, and malware protection** with Meraki MG
-- Highlight the **automatic updates and threat intelligence** that Meraki provides to keep networks secure
+1. **Remote Workforce Management**: Easily manage and secure remote workers' connectivity through the Meraki Dashboard.
+2. **Guest Wi-Fi Provisioning**: Quickly set up and manage guest Wi-Fi networks for a seamless customer experience.
+3. **Network Performance Monitoring**: Gain real-time insights into network performance to proactively address any issues.
+4. **Security Compliance**: Ensure compliance with industry regulations by implementing Meraki's security features.
+5. **Automated Network Provisioning**: Simplify network setup and configuration with Meraki's automated tools.
+6. **Centralized Device Management**: Effortlessly manage all network devices from a single, intuitive dashboard.
 
-Use Case 3: Quality of Service (QoS) for VoIP (10 mins):
-- Explain the challenges small businesses face with VoIP quality
-- Demonstrate how partners can **prioritize VoIP traffic** with QoS settings on the Meraki MG
-- Show partners how to **monitor VoIP performance** and troubleshoot issues using the dashboard
+Throughout the demo, we'll be showcasing the power of the Meraki Dashboard as the central platform for all your network management needs. Let's **click 'Dashboard > Network-wide > Clients'** to see a real-time overview of connected clients.
 
-Use Case 4: Remote Workforce Support (10 mins):
-- Discuss the increasing trend of remote work in small businesses
-- Show partners how they can **easily deploy and manage VPN connections** for remote employees using Meraki MG
-- Highlight the **secure and seamless experience** for remote workers accessing company resources
+Now, let's **navigate to 'Wireless > SSIDs'** to set up a secure guest Wi-Fi network in just a few clicks.
 
-Smart Questions to Prompt Discussion:
-1. How are your customers currently managing their network security and performance?
-2. What challenges do your customers face with remote workforce support and VPN connectivity?
-3. How important is network scalability and ease of management for your customers?
+For network performance monitoring, **click 'Monitor > Performance'** to view historical data and identify any potential bottlenecks.
 
-Conclusion (5 mins):
-- Recap the main benefits and use cases of Meraki MG for small businesses
-- Encourage partners to leverage these insights in their customer pitches
-- Offer additional resources and support for partners interested in Meraki MG
+To ensure security compliance, **navigate to 'Security > Firewall'** to configure firewall rules and policies that meet regulatory requirements.
 
-Thank partners for attending the demo and open the floor for any questions or further discussion.
+As we wrap up, here are a couple of common questions partners might ask when positioning Meraki MG in the Small Business space:
+
+Q: What are the top small business pain points this addresses?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
+
+Q: How do we best position MG during the pitch?
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
+
+Q: What installation or deployment concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
+
+And there you have it! With Meraki MG, small businesses can enjoy simplified network management, enhanced security, and improved performance. Thanks for joining us today!

@@ -1,27 +1,29 @@
-[Opening]
+Hey there! Thanks for joining me today for this demo. I know you're a partner in the manufacturing sector, so I'm excited to show you how Cisco Meraki's MX can help address some of the challenges you might be facing with your customers. Before we dive in, could you share with me what trends or challenges you're seeing with customers in the manufacturing sector? And what do you find unique or tricky about positioning solutions in this space?
 
-Hello everyone and thank you for joining us today for this Meraki MX demo, specifically tailored for the Manufacturing sector. As partners, we understand the unique challenges that manufacturing businesses face and how important it is to have a secure and reliable network infrastructure in place. Today, we will be showcasing how Meraki MX can address these pain points and help you pitch to your manufacturing customers effectively.
+Great, let's get started. One common pain point in manufacturing is the need for secure and reliable networking across multiple sites. With Meraki MX, you can easily manage all your sites from a single dashboard. **Let's take a look at the Meraki Dashboard now.**
 
-[Pain Points]
+**Click 'Dashboard' > 'Security & SD-WAN'**  
+**Click on a specific site to view network health and security events**
 
-One of the key pain points in the manufacturing industry is the need for a robust and secure network infrastructure. With the rise of Industry 4.0 and the increasing use of IoT devices, manufacturers need a solution that can handle the high volume of data traffic while ensuring the security of their sensitive information. Additionally, downtime in production can be extremely costly for manufacturers, so having a network that is reliable and easy to manage is crucial.
+Another key use case in manufacturing is ensuring smooth operations on the factory floor. With Meraki MX, you can set up quality of service rules to prioritize critical applications. **Let's navigate to the QoS settings on the dashboard.**
 
-[Use Case 1: Secure Remote Access]
+**Click 'Configure' > 'Traffic shaping'**  
+**Set up QoS rules for critical applications**
 
-Let's dive into our first use case - secure remote access. Many manufacturing businesses have employees who need to access the network remotely, whether they are working from home or on the go. With Meraki MX, you can easily set up VPNs for secure remote access, ensuring that your employees can connect to the network securely from anywhere. **Click 'Security & SD-WAN > Site-to-site VPN'** to see how simple it is to configure.
+Lastly, visibility is crucial in manufacturing to quickly identify and resolve network issues. With Meraki MX, you get real-time alerts and detailed analytics to streamline troubleshooting. **Let's see this in action on the dashboard.**
 
-[Use Case 2: Network Segmentation]
+**Click 'Monitor' > 'Appliance status'**  
+**View real-time alerts and network performance metrics**
 
-Our second use case is network segmentation. In manufacturing environments, it's important to segment the network to prevent unauthorized access to sensitive production data. With Meraki MX, you can easily create VLANs and firewall rules to segment your network and control access to different parts of the network. **Click 'Configure > Addressing & VLANs'** to set up VLANs and firewall rules.
+When pitching Meraki MX to manufacturing customers, you might encounter questions like:
 
-[Use Case 3: Traffic Analytics]
+Q: What are the top manufacturing pain points this addresses?  
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-Lastly, let's talk about traffic analytics. Understanding how your network is being used is crucial for optimizing performance and identifying potential security threats. With Meraki MX, you can easily view detailed traffic analytics to see which applications are consuming the most bandwidth and where potential bottlenecks may occur. **Click 'Security & SD-WAN > Traffic analytics'** to explore this feature.
+Q: How do we best position MX during the pitch?  
+A: Emphasize Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-[Smart Questions]
+Q: What installation or deployment concerns should we be ready for?  
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
 
-To prompt discussion with your manufacturing customers, here are two smart questions you can ask:
-1. How do you currently handle remote access for your employees, and have you experienced any security challenges with this setup?
-2. Can you share any instances where network downtime has impacted your production process, and how quickly were you able to resolve the issue?
-
-Thank you for joining us today for this Meraki MX demo. We hope that you now have a better understanding of how Meraki MX can address the pain points of manufacturing businesses and help you pitch to your customers effectively. If you have any further questions or would like to explore more features, feel free to reach out to us.
+Thanks for exploring Meraki MX with me today. I hope you can see how it can make a real difference for your manufacturing customers. Let me know if you have any more questions or if there's anything else you'd like to see!

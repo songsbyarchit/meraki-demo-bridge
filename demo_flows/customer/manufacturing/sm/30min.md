@@ -1,26 +1,30 @@
-[Opening]
+Hey there! Thanks for joining me today for this demo focused on Cisco Meraki's SM solution tailored for the Manufacturing sector.
 
-Hello and welcome to our Meraki Systems Manager demo for the Manufacturing sector. Today, we'll be discussing how Meraki SM can streamline your IT operations and help you save costs in the long run.
+Let's kick things off with a couple of questions to get a better sense of your current setup and pain points in the manufacturing space:
 
-[Slide 1: Introduction]
-Let's start by talking about the challenges faced by IT admins in the Manufacturing sector. With a large number of devices spread across multiple locations, managing and securing them can be quite a daunting task. This is where Meraki SM comes in.
+- What does your current network setup look like?
+- Where are your biggest IT headaches today?
 
-[Slide 2: Use Case 1 - Device Management]
-One of the key features of Meraki SM is its device management capabilities. With Meraki SM, you can easily enroll, configure, and manage all your devices from a central dashboard. **Click 'Systems Manager > Devices'** to see a list of all your devices and their status. This not only saves time for IT admins but also ensures that all devices are up-to-date and secure.
+Now, let's dive into the demo and explore how Meraki SM can address these challenges in the manufacturing sector.
 
-[Slide 3: Use Case 2 - Security Compliance]
-Security is a top priority for any organization, especially in the Manufacturing sector where sensitive data is involved. Meraki SM helps you ensure that all devices are compliant with security policies and have the latest security patches installed. **Click 'Systems Manager > Security Policies'** to set up policies that enforce security standards across all devices.
+**Use Case 1: Device Management**
+Imagine having all your endpoints, whether they're ruggedized devices on the factory floor or laptops in the office, centrally managed through the Meraki Dashboard. With just a few clicks, you can deploy software updates, monitor device health, and enforce security policies. **Click 'Systems Manager > Devices'** to see this in action.
 
-[Slide 4: Use Case 3 - Remote Troubleshooting]
-In a manufacturing environment, downtime can be costly. With Meraki SM, you can remotely troubleshoot and fix issues on devices without having to physically be present on-site. **Click 'Systems Manager > Remote Desktop'** to see a live demonstration of how you can troubleshoot a device remotely.
+**Use Case 2: Network Security**
+Security is paramount in manufacturing, and Meraki SM offers robust security features like application whitelisting, device posture assessment, and remote wipe capabilities for lost or stolen devices. **Navigate to 'Security > App Control'** on the dashboard to explore these features further.
 
-[Slide 5: Cost Justification]
-Now, let's talk about cost justification. While investing in a solution like Meraki SM may seem like an additional expense, the operational impact it can have on your organization can result in long-term cost savings. By reducing downtime, improving device management efficiency, and ensuring security compliance, Meraki SM can help you save costs in the long run.
+**Use Case 3: Compliance and Reporting**
+Staying compliant with industry regulations is crucial. Meraki SM simplifies compliance by providing detailed reports on device inventory, software usage, and security incidents. **Check out the 'Reports' section** on the dashboard to see how this information is presented.
 
-[Slide 6: Smart Questions]
-To prompt discussion, here are two smart questions you can ask:
-1. How much time do your IT admins currently spend on device management tasks?
-2. Have you faced any security compliance issues in the past, and how did you address them?
+Now, let's address a couple of common questions you might have about Meraki SM in the manufacturing sector:
 
-[Closing]
-Thank you for attending our Meraki Systems Manager demo. We hope you found it informative and valuable for your organization. If you have any further questions or would like to schedule a personalized demo, please feel free to reach out to our team.
+Q: How does this solution reduce IT workload in our manufacturing environment?
+A: Meraki simplifies management through one dashboard and automates many tasks like updates and troubleshooting.
+
+Q: What kind of ROI or cost reduction can we expect?
+A: Customers often report major time savings and reduced downtime, especially for remote sites.
+
+Q: Can we integrate this with our existing systems and security policies?
+A: Yes — Meraki supports APIs, SAML, and integration with existing firewalls, Active Directory, and SIEM tools.
+
+I hope this demo gave you a good overview of how Meraki SM can streamline operations and enhance security in your manufacturing environment. If you have any further questions or would like to explore specific features in more detail, feel free to reach out. Thank you for your time today!

@@ -1,47 +1,22 @@
-[Opening]
+Hey there! Thanks for joining me today. I see you’re a partner reseller, so I’m excited to show you how Cisco Meraki’s MR solution can benefit your retail customers. What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-Welcome everyone! Today, we're going to dive into the world of Meraki MR and how it can revolutionize the retail sector. As partners, it's essential to understand the pain points of our customers and how Meraki can address them effectively. Let's get started!
+Let’s dive into the demo now. Imagine you're working with a retail customer who is struggling with network visibility and management across multiple locations. This is where Meraki shines. With our centralized dashboard, you can easily monitor, troubleshoot, and manage all your retail sites from a single pane of glass.
 
-[Slide: Pain Points in Retail]
+**Use Case 1:** **click 'Wireless > Access Points'** - Here, you can see all your MR devices across different locations, check their status, and quickly identify any connectivity issues.
 
-In the retail sector, one of the most significant pain points is ensuring seamless connectivity for customers and employees. With the increasing demand for online shopping and in-store experiences, retailers need a reliable and secure network to support their operations. Traditional networking solutions can be complex to manage and prone to downtime, leading to lost sales and frustrated customers.
+**Use Case 2:** **click 'Security & SD-WAN > Firewall'** - You can set up firewall rules to secure each store's network and ensure PCI compliance for all payment transactions.
 
-[Slide: Introducing Meraki MR]
+**Use Case 3:** **click 'Clients' > 'Wireless Clients'** - Easily track foot traffic by analyzing the number of unique wireless clients in each store over time.
 
-Meraki MR is a cloud-managed wireless solution that offers simplicity, reliability, and security. With its centralized dashboard, partners can easily deploy, monitor, and troubleshoot networks across multiple locations. This level of visibility and control is crucial for retail businesses looking to provide a seamless and secure experience for their customers.
+**Use Case 4:** **click 'Network-wide > Traffic analytics'** - Understand which applications are consuming the most bandwidth at each location and optimize network performance accordingly.
 
-[Use Case 1: Guest Wi-Fi]
+Now, let’s address some common questions partners like you might encounter when pitching MR to retail customers:
 
-One common use case in retail is providing guest Wi-Fi for customers. With Meraki MR, partners can quickly set up a guest network with customizable splash pages and bandwidth controls. This not only enhances the customer experience but also provides valuable insights into customer behavior and preferences.
+Q: What are the top retail pain points this addresses?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-**Demo: Create a guest Wi-Fi network and customize the splash page to showcase promotional offers.**
+Q: How do we best position MR during the pitch?
+A: Emphasize Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-[Use Case 2: Location Analytics]
-
-Another critical use case in retail is understanding customer behavior and foot traffic within a store. Meraki MR offers location analytics that provide real-time data on customer movements, dwell times, and popular areas. This information can help retailers optimize store layouts, improve product placement, and enhance the overall shopping experience.
-
-**Demo: Access location analytics data to see customer heatmaps and popular areas within a store.**
-
-[Use Case 3: Inventory Management]
-
-Inventory management is a crucial aspect of retail operations. With Meraki MR, partners can integrate wireless RFID technology to track inventory in real-time. This ensures accurate stock levels, reduces shrinkage, and improves overall operational efficiency.
-
-**Demo: Set up wireless RFID tracking for inventory management and track stock levels in real-time.**
-
-[Use Case 4: Mobile Point of Sale]
-
-Mobile point of sale (mPOS) solutions are becoming increasingly popular in retail. With Meraki MR, partners can easily deploy wireless access points to support mPOS devices, ensuring a seamless checkout experience for customers. This flexibility allows retailers to adapt to changing customer preferences and streamline their operations.
-
-**Demo: Configure wireless access points to support mPOS devices and demonstrate a seamless checkout process.**
-
-[Closing]
-
-As partners, it's essential to understand the unique challenges faced by retail customers and position Meraki MR as the solution to their networking needs. By focusing on simplicity, reliability, and security, partners can help retailers enhance their customer experience and drive business growth.
-
-[Smart Questions]
-
-1. How has your current networking solution impacted customer satisfaction and sales in your retail business?
-2. What specific features or capabilities are you looking for in a wireless solution to address your pain points in the retail sector?
-3. How do you envision leveraging location analytics and guest Wi-Fi to enhance the overall shopping experience for your customers?
-
-Thank you for joining us today, and we're excited to see how Meraki MR can transform the retail sector for our customers. Let's continue the discussion and explore the possibilities together.
+Q: What installation or deployment concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.

@@ -1,24 +1,24 @@
-[Start of Demo]
+Good morning everyone, thank you for joining us today. Whether you're a partner reseller, customer IT admin, or internal SE, we're excited to have you here for this demo focused on Cisco Meraki's MS product in the K-12 Education/Primary Education sector.
 
-Welcome everyone to today's Meraki MS demo focused on the K12 sector. Today, we will be highlighting how partners can effectively pitch Meraki MS solutions to K12 customers. Let's dive in.
+Let's kick things off with a couple of warm-up questions:
+- For partners: What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
+- For customers: What does your current network setup look like? Where are your biggest IT headaches today?
+- For internal: What common questions do our customers ask in the K-12 Education/Primary Education sector? What objections or misconceptions do we frequently encounter?
 
-First, let's talk about the key benefits of Meraki MS for the K12 sector. Meraki MS offers simple, centralized management, making it easy for IT staff in schools to monitor and manage their network. This can help schools save time and resources, allowing them to focus on providing a better learning experience for students.
+Now, let's dive into the demo. The Meraki Dashboard is your central platform, offering a single pane of glass for visibility, simplified troubleshooting, and unified management. **Click 'Dashboard'** to get started.
 
-Use Case 1: Network Visibility
-Let's start by showcasing the network visibility feature of Meraki MS. **Click 'Monitor > Clients'** to see a real-time view of all the devices connected to the network. This can be particularly useful for schools to monitor student devices and ensure they are using the network appropriately.
+One key use case for K-12 Education is ensuring secure and reliable connectivity for students and staff. With Meraki MS, you can easily **click 'Switches' > 'Configure' > 'Access Policies'** to set up secure access controls.
 
-Use Case 2: Application Control
-Next, let's explore the application control feature of Meraki MS. **Click 'Configure > Firewall & traffic shaping'** to see how schools can prioritize educational applications over non-educational ones. This can help schools ensure that bandwidth is allocated efficiently, especially during peak usage times.
+Another use case is optimizing network performance in a high-density environment like a school campus. **Click 'Switches' > 'Monitor' > 'Clients'** to see real-time insights into network usage and performance.
 
-Use Case 3: Smart Port Configuration
-Lastly, let's look at the smart port configuration feature of Meraki MS. **Click 'Configure > Switch ports'** to see how partners can easily configure ports based on specific device requirements. This can help schools streamline their network setup and ensure that each device receives the appropriate network settings.
+Lastly, let's address network scalability. **Click 'Switches' > 'Configure' > 'Stacking'** to seamlessly add new switches as your network grows.
 
-Now, let's move on to some key questions that partners can ask K12 customers to prompt discussion:
+Now, let's tackle some internal enablement FAQs:
+- Q: What objections might the partner hear in K-12 Education/Primary Education?
+  A: Cost vs legacy vendors, and skepticism over cloud-managed security — arm them with TCO comparisons.
 
-1. How are you currently managing your network in the school environment? Are there any pain points or challenges you are facing?
-2. What are the key applications or devices that are critical for the learning experience in your school? How are you ensuring that they receive priority on the network?
-3. How important is network visibility and control for you in managing the school network effectively?
+- Q: What enablement do we provide for partners?
+  A: Access to demo kits, dashboards, playbooks, and partner-exclusive webinars.
 
-[End of Demo]
-
-Thank you for attending today's Meraki MS demo focused on the K12 sector. We hope you found the information valuable and are now equipped to effectively pitch Meraki MS solutions to your K12 customers. If you have any further questions or would like to explore a specific use case in more detail, feel free to reach out to our team. Thank you!
+- Q: How do we support onboarding post-sale?
+  A: We offer co-delivery workshops, pre-built config templates, and Meraki support handles escalations fast.

@@ -1,40 +1,34 @@
-[Opening]
+Hey there! Thanks for joining me today for this demo. Whether you're a partner reseller, a customer IT admin, or an internal SE, I'm excited to show you how Cisco Meraki can revolutionize networking in the Manufacturing sector.
 
-Hello everyone, thank you for joining today's Meraki MR demo focusing on the Manufacturing sector. Today, we'll be discussing how Meraki MR can benefit manufacturers and how our partners can effectively pitch this solution to potential customers.
+So, let's kick things off with a couple of warm-up questions tailored to your role:
+- For partners: What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
+- For customers: What does your current network setup look like? Where are your biggest IT headaches today?
+- For internal: What common questions do our customers ask in the Manufacturing sector? What objections or misconceptions do we frequently encounter?
 
-[Slide 1: Introduction to Meraki MR]
+Now, let's dive into some specific use cases for the Manufacturing sector:
+1. **Real-time production monitoring**: See all your devices and equipment in one place for improved efficiency.
+2. **Guest Wi-Fi for visitors**: Easily set up a separate network for visitors without compromising security.
+3. **Inventory tracking with RFID**: Monitor inventory levels and movement with ease.
+4. **Automated quality control**: Implement automated quality checks and alerts for seamless operations.
+5. **Remote troubleshooting**: Quickly identify and resolve network issues without the need for on-site visits.
+6. **Compliance reporting**: Simplify compliance reporting with detailed network insights.
 
-Let's start with a brief overview of Meraki MR. Meraki MR is a cloud-managed wireless solution that provides reliable, high-performance connectivity for businesses of all sizes. With Meraki MR, manufacturers can ensure seamless connectivity for their devices and employees, improving productivity and efficiency.
+Now, let's take a closer look at the Meraki Dashboard, our central platform for unified management:
+- **Click 'Monitor > Clients' to view all connected devices**
+- **Navigate to 'Configure > Wireless settings' to adjust network configurations**
+- **Click 'Security > Firewall' to set up custom security rules**
+- **Explore 'Switch > Port schedules' to manage device access times**
+- **Check 'Systems manager > Device profiles' for endpoint management options**
+- **Finally, click 'Dashboard > Overview' for a comprehensive look at network health**
 
-[Use Case 1: Improved Connectivity]
+And to wrap things up, here are a few FAQs to support partners selling MR in the Manufacturing space:
+Q: What objections might the partner hear in manufacturing?
+A: Cost vs legacy vendors, and skepticism over cloud-managed security — arm them with TCO comparisons.
 
-One key use case for Meraki MR in the manufacturing sector is improving connectivity across the factory floor. With Meraki MR's advanced wireless capabilities, manufacturers can ensure that their devices, such as IoT sensors and handheld devices, stay connected at all times. This leads to better real-time monitoring and data collection, ultimately improving operational efficiency.
+Q: What enablement do we provide for partners?
+A: Access to demo kits, dashboards, playbooks, and partner-exclusive webinars.
 
-**Demo: Show how easy it is to set up and manage wireless networks with Meraki MR.**
+Q: How do we support onboarding post-sale?
+A: We offer co-delivery workshops, pre-built config templates, and Meraki support handles escalations fast.
 
-[Use Case 2: Location Analytics]
-
-Another valuable use case for Meraki MR in manufacturing is location analytics. By leveraging Meraki MR's built-in analytics tools, manufacturers can track the movement of devices and employees throughout the factory floor. This data can be used to optimize workflows, identify bottlenecks, and improve overall efficiency.
-
-**Demo: Show how to access and analyze location analytics data in the Meraki dashboard.**
-
-[Use Case 3: Guest Access]
-
-Manufacturers often have visitors, such as suppliers or customers, who need temporary access to the factory floor. With Meraki MR's guest access feature, manufacturers can easily set up secure guest networks, allowing visitors to connect to the internet without compromising the main network's security.
-
-**Demo: Show how to set up and manage guest access networks in the Meraki dashboard.**
-
-[Use Case 4: Application Visibility]
-
-In the manufacturing sector, it's crucial to prioritize network traffic for mission-critical applications. With Meraki MR's application visibility feature, manufacturers can easily identify and prioritize traffic based on the applications being used, ensuring that important applications receive the necessary bandwidth.
-
-**Demo: Show how to configure application visibility settings in the Meraki dashboard.**
-
-[Prompt Questions]
-
-Now that we've covered some key use cases for Meraki MR in the manufacturing sector, here are two questions to prompt discussion:
-
-1. How do you currently manage wireless connectivity in your manufacturing facility?
-2. What challenges do you face in ensuring reliable connectivity for your devices and employees?
-
-Thank you for attending today's demo. We hope you found it informative and valuable. If you have any further questions or would like to learn more about Meraki MR, please don't hesitate to reach out to us.
+Thanks for joining me today, and I hope this demo has given you a clear picture of how Cisco Meraki can transform networking in the Manufacturing sector.

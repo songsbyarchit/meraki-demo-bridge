@@ -1,25 +1,33 @@
-Welcome everyone to today's Meraki MT demo focused on the Higher Ed sector. Our goal today is to equip you with the knowledge and tools to effectively pitch Meraki MT to our customers in Higher Ed.
+Hey there! Thanks for joining me today. Whether you're a partner reseller, customer IT admin, or internal SE, I'm excited to show you how Cisco Meraki's MT can revolutionize networking in the Higher Education sector.
 
-Let's start with a quick overview of Meraki MT. Meraki MT is a cloud-managed networking solution that provides centralized management and monitoring of switches, access points, and security appliances. It offers scalable and reliable network infrastructure that is easy to deploy and manage.
+Let's kick things off with a warm-up question:
+For partners: What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-Use Case 1: Simplified Network Management
-Imagine a university with multiple buildings and thousands of students and faculty members. With Meraki MT, you can easily manage and monitor the entire network from a single dashboard. **Click 'Dashboard'** to see real-time network status and performance metrics.
+Now, let's dive into the demo and explore some specific use cases tailored to Higher Education:
 
-Use Case 2: Secure Access Control
-In Higher Ed, network security is crucial. With Meraki MT, you can easily set up access control policies to restrict network access based on user roles or device types. **Click 'Access Control'** to see how easy it is to configure policies.
+1. **Enabling Secure BYOD**: **Navigate to 'Wireless > SSIDs'** to set up a dedicated network for student devices, ensuring secure and seamless connectivity.
 
-Use Case 3: Location Analytics
-Meraki MT offers location analytics that can help Higher Ed institutions optimize campus layout, improve student experience, and enhance security. **Click 'Location Analytics'** to see how you can track device locations in real-time.
+2. **Network Segmentation**: **Click 'Security & SD-WAN > Addressing & VLANs'** to easily segment traffic for different departments like faculty, staff, and students.
 
-Use Case 4: Automated Troubleshooting
-In the fast-paced environment of Higher Ed, downtime is not an option. Meraki MT's automated troubleshooting tools can help quickly identify and resolve network issues. **Click 'Troubleshooting'** to see how you can troubleshoot connectivity and performance problems.
+3. **Location Analytics**: **Go to 'Wireless > Monitor > Location analytics'** to gain insights into foot traffic patterns on campus and optimize space utilization.
 
-Now, let's move on to some smart questions that you can ask our customers in Higher Ed to prompt discussion:
+4. **Automated Network Provisioning**: **Navigate to 'Switch > Switch ports'** to automate switch port configurations for new devices, saving time and reducing human error.
 
-1. How do you currently manage and monitor your network infrastructure across multiple campus locations?
-2. What are the biggest network security challenges you face in a Higher Ed environment?
-3. How do you currently handle network troubleshooting and downtime incidents?
+5. **Real-time Troubleshooting**: **Click 'Wireless > Monitor > Clients'** to identify and troubleshoot connectivity issues in real-time, ensuring a seamless experience for users.
 
-By understanding our customers' pain points and needs, we can effectively pitch Meraki MT as the solution that can address their challenges and provide them with a reliable and scalable network infrastructure.
+Let's wrap up with a few more interactions on the Meraki Dashboard:
 
-Thank you for joining today's demo. We hope you feel more confident in pitching Meraki MT to our Higher Ed customers. If you have any questions or need further assistance, feel free to reach out to our team.
+6. **Customized Guest Access**: **Go to 'Wireless > Splash page'** to create a personalized guest portal with branding for campus visitors.
+
+Now, let's address some common FAQs to support our partners selling MT in Higher Education:
+
+Q: What objections might the partner hear in higher education?
+A: Cost vs legacy vendors, and skepticism over cloud-managed security — arm them with TCO comparisons.
+
+Q: What enablement do we provide for partners?
+A: Access to demo kits, dashboards, playbooks, and partner-exclusive webinars.
+
+Q: How do we support onboarding post-sale?
+A: We offer co-delivery workshops, pre-built config templates, and Meraki support handles escalations fast.
+
+Thanks for tuning in, and remember, Cisco Meraki is here to empower you in delivering top-notch networking solutions in the Higher Education sector. Let's make connectivity simple and secure for all!

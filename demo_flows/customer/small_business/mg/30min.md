@@ -1,23 +1,26 @@
-[Opening]
+Hey there! Thanks for joining us today. I'm excited to show you how Cisco Meraki's MG can revolutionize your network infrastructure in the Small Business sector. Let's dive in!
 
-Hello and welcome to our Meraki MG demo for Small Businesses. Today, we'll be exploring how the Meraki MG can revolutionize your network management, saving you time and money in the process.
+**Warm-up questions:**
+- For customers: What does your current network setup look like? Where are your biggest IT headaches today?
+- For internal: What common questions do our customers ask in the Small Business sector? What objections or misconceptions do we frequently encounter?
 
-[Use Case 1: Remote Management]
+**Use Case 1: Simplified Network Management**
+Let's start by looking at how the Meraki Dashboard provides a single pane of glass for managing your entire network. **Click 'Dashboard'** to see real-time insights, troubleshoot issues, and make configuration changes without the hassle of multiple interfaces.
 
-Let's start with one of the key benefits of the Meraki MG - remote management. As an IT admin, you know how time-consuming it can be to troubleshoot network issues on-site. With the Meraki MG, you can easily manage your network from anywhere, saving you valuable time and resources. **Click 'Dashboard' > 'Devices'** to see all your connected devices and **click 'Remote Tools'** to troubleshoot any issues quickly and efficiently.
+**Use Case 2: Secure Remote Access**
+With MG, you can easily set up secure VPN connections for remote workers or branch offices. **Click 'Security & SD-WAN > VPN'** to see how simple it is to establish and monitor these connections, ensuring your data stays safe wherever your team is working.
 
-[Use Case 2: Quality of Service]
+**Use Case 3: Application Visibility and Control**
+Gain granular insights into network traffic with MG's application visibility and control features. **Click 'Monitor > Application'** to see which applications are consuming bandwidth and make informed decisions to optimize performance.
 
-Another use case for the Meraki MG is Quality of Service (QoS) management. As a financial decision maker, you understand the importance of ensuring critical applications have priority on your network. With the Meraki MG, you can easily prioritize traffic based on application type, ensuring that your business-critical applications always have the bandwidth they need. **Click 'Configure' > 'QoS'** to set up custom QoS rules tailored to your business needs.
+**Frequently Asked Questions:**
+Q: How does this solution reduce IT workload in our small business environment?
+A: Meraki simplifies management through one dashboard and automates many tasks like updates and troubleshooting.
 
-[Use Case 3: Analytics and Reporting]
+Q: What kind of ROI or cost reduction can we expect?
+A: Customers often report major time savings and reduced downtime, especially for remote sites.
 
-Lastly, let's talk about analytics and reporting. As an IT admin, you know how valuable data insights can be in optimizing your network performance. With the Meraki MG, you have access to real-time analytics and reporting that can help you identify network trends, troubleshoot issues, and make data-driven decisions. **Click 'Monitor' > 'Analytics'** to see detailed network usage reports and performance metrics.
+Q: Can we integrate this with our existing systems and security policies?
+A: Yes — Meraki supports APIs, SAML, and integration with existing firewalls, Active Directory, and SIEM tools.
 
-[Smart Questions]
-
-1. How much time and resources are currently being spent on managing your network on-site?
-2. What are the key applications or services that require priority on your network, and how do you ensure they have the necessary bandwidth?
-3. How do you currently track and analyze network performance to make informed decisions about network optimization?
-
-Thank you for joining our Meraki MG demo today. We hope you see the potential for how the Meraki MG can transform your network management and drive operational efficiency in your Small Business. If you have any further questions or would like to discuss a tailored solution for your business, please feel free to reach out to our team.
+Thanks for exploring MG with us today! We're confident that this solution will streamline your operations and provide a solid ROI for your Small Business. Let us know how we can help you get started!

@@ -1,36 +1,20 @@
-Title: Meraki MS Demo for Retail Partners
+Hey there! Thanks for joining me today. I know you're a partner reseller, and our goal here is to help you pitch Cisco Meraki to your customers in the Retail sector. Before we dive in, could you share any trends or challenges you're seeing with customers in this space? What do you find unique or tricky about positioning solutions in Retail?
 
-[Opening]
+Great, let's get started. Imagine you're working with a retail customer who is struggling with network visibility, slow troubleshooting, and managing multiple sites. This is where Cisco Meraki MS comes in. With the Meraki Dashboard as the central platform, you get a single pane of glass view that simplifies troubleshooting and unifies management across all locations.
 
-Presenter: Hello everyone, thank you for joining our Meraki MS demo today! Today, we'll be focusing on how Meraki can help retailers improve their network infrastructure and address common pain points in the industry. Let's dive in!
+Let's walk through a couple of specific use cases to showcase the power of Meraki MS in the Retail sector. First, imagine a scenario where a store manager needs to quickly identify and resolve network issues impacting POS systems during peak hours. **Click 'Monitor > Clients'** on the Dashboard to see real-time client connectivity and **click 'Tools > Ping'** to troubleshoot connectivity to specific devices.
 
-[Slide 1: Introduction to Meraki MS]
+Another common pain point in retail is ensuring secure guest Wi-Fi access while protecting sensitive data on the corporate network. With Meraki MS, you can easily segment guest traffic and apply firewall rules to restrict access. **Click 'Configure > Wireless settings'** to set up a guest SSID and **click 'Security & SD-WAN > Firewall'** to create rules for traffic isolation.
 
-Presenter: First, let's talk about the pain points that retailers often face. Slow and unreliable network connections can lead to frustrated customers, lost sales, and decreased productivity for employees. Traditional network management solutions can be complex and time-consuming to configure and troubleshoot.
+Now, let's address some questions partners often have when positioning Meraki MS in the Retail space:
 
-[Slide 2: How Meraki MS solves these pain points]
+Q: What are the top retail pain points this addresses?  
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-Presenter: This is where Meraki MS comes in. With its intuitive cloud-managed platform, retailers can easily monitor, configure, and troubleshoot their network from anywhere. Meraki MS simplifies network management, reduces downtime, and improves overall network performance.
+Q: How do we best position MS during the pitch?  
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-[Use Case 1: Centralized Management]
+Q: What installation or deployment concerns should we be ready for?  
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
 
-Presenter: Let's take a look at a common use case for retailers. With Meraki MS, partners can offer their customers centralized management of all their switches from a single dashboard. This means they can easily configure switch ports, monitor traffic, and troubleshoot issues in real-time. **click 'Configure > Switch ports'**
-
-[Use Case 2: Dynamic VLANs]
-
-Presenter: Another key feature of Meraki MS is the ability to set up dynamic VLANs based on different criteria, such as device type or location. This is particularly useful for retailers who have multiple departments or guest networks. With Meraki MS, partners can easily segment their networks and provide secure access to different user groups.
-
-[Use Case 3: Network Health Monitoring]
-
-Presenter: Lastly, Meraki MS offers advanced network health monitoring capabilities. Partners can proactively identify and resolve network issues before they impact the business. With real-time alerts and historical performance data, retailers can ensure their network is always up and running smoothly.
-
-[Smart Questions to Prompt Discussion]
-
-Presenter: Now, let's wrap up with a few smart questions you can ask your customers to prompt discussion:
-1. How do you currently manage your network infrastructure, and what pain points do you face?
-2. Have you experienced any network downtime or performance issues that have impacted your business?
-3. How important is network security and reliability for your retail operations?
-
-[Closing]
-
-Presenter: Thank you for attending our Meraki MS demo today. We hope you gained valuable insights into how Meraki can help retailers improve their network infrastructure and address common pain points. If you have any further questions or would like to schedule a personalized demo, please don't hesitate to reach out. Have a great day!
+Thanks for going through this demo with me. I hope it gave you a good sense of how Cisco Meraki MS can address the unique challenges faced by retail customers. Let's chat more about how we can tailor this solution to meet the specific needs of your clients.

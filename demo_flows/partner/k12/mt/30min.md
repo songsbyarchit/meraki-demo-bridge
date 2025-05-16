@@ -1,23 +1,27 @@
-[Opening]
-Hello and welcome, everyone! Today, we're going to dive into a demo of Meraki MT, specifically tailored for the K12 sector. As partners, it's important to understand the pain points our customers face in this industry and how Meraki can address them. Let's get started!
+Hey there! Thanks for joining me today. I know you're a partner reseller focused on the K-12 Education sector, and our goal today is to help you pitch Cisco Meraki's MT solution to customers in this space.
 
-[Pain Points]
-In the K12 sector, network reliability and security are top priorities. Schools need a network that can handle a large number of devices, support seamless collaboration between teachers and students, and ensure student data is protected at all times. Additionally, with limited IT resources, schools need a solution that is easy to manage and maintain.
+To kick things off, I'd love to hear from you about any trends or challenges you're seeing with customers in the K-12 Education sector. What do you find unique or tricky about positioning solutions here?
 
-[Use Case 1: Classroom Connectivity]
-Imagine a classroom full of students using their devices for online assignments and research. With Meraki MT, partners can **click 'Configure > Switch ports'** to prioritize bandwidth for educational applications, ensuring a smooth online learning experience for students. The intuitive dashboard allows for easy monitoring of network usage and performance, giving teachers peace of mind.
+Great, thanks for sharing that. Now, let's dive into the demo.
 
-[Use Case 2: Guest Network Management]
-School events often require guest access to the network, which can be a security concern. With Meraki MT, partners can **click 'Configure > Guest access** to set up a separate guest network with limited access and bandwidth. This not only ensures network security but also provides a seamless experience for visitors without impacting the main network.
+**Use Case 1: Network Visibility**
+Let's start by taking a look at the Meraki Dashboard. **Click 'Network-wide > Overview'**. Here, you can see all your network devices in a single pane of glass, giving you complete visibility into your network health and performance.
 
-[Use Case 3: Remote Troubleshooting]
-In a school setting, IT issues need to be resolved quickly to minimize disruption to teaching and learning. With Meraki MT, partners can **click 'Tools > Live tools'** to remotely troubleshoot network issues in real-time. This feature allows for faster resolution of problems, reducing downtime and keeping the network running smoothly.
+**Use Case 2: Simplified Troubleshooting**
+Next, let's troubleshoot an issue together. **Click 'Monitor > Clients'**. From here, you can easily identify any clients experiencing connectivity issues and take quick action to resolve them, all from one centralized platform.
 
-[Smart Questions]
-To prompt discussion with attendees, here are a few smart questions to consider:
-1. How do you currently prioritize bandwidth for different applications in your school network?
-2. What challenges do you face when managing guest access to your network during school events?
-3. How do you currently handle remote troubleshooting of network issues in your school environment?
+**Use Case 3: Unified Management**
+Lastly, let's explore how Meraki simplifies network management. **Click 'Configure > Switch ports'**. Here, you can easily configure and monitor switch ports across all your sites, ensuring consistent network policies and settings.
 
-[Closing]
-Thank you for joining us today for this demo of Meraki MT in the K12 sector. By understanding the pain points of our customers and showcasing the specific use cases and features of Meraki, partners can effectively pitch this solution to schools looking to improve their network infrastructure. If you have any further questions or would like to discuss how Meraki can benefit your customers, please don't hesitate to reach out. Thank you and have a great day!
+Now, let's address some common questions partners might have:
+
+Q: What are the top pain points this addresses in the K-12 Education sector?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
+
+Q: How do we best position MT during the pitch?
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
+
+Q: What installation or deployment concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
+
+That's a wrap for today's demo. I hope this helps you feel more confident in pitching Meraki MT to K-12 Education customers. Let me know if you have any further questions or need additional support.

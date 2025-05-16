@@ -1,38 +1,30 @@
-Title: Meraki MR Demo for Healthcare Sector
+Hey there, welcome to our Cisco Meraki MR demo! Today, we're going to focus on how our MR solution can revolutionize network management in the Healthcare sector. 
 
-Duration: 60 minutes
+Let's start by discussing some trends and challenges you're seeing with customers in this sector. What do you find unique or tricky about positioning solutions in Healthcare?
 
-Introduction (5 minutes)
-- Welcome everyone to the Meraki MR demo focusing on the Healthcare sector
-- Briefly introduce the agenda for the session
-- Emphasize the importance of partner enablement and effective customer pitching
+Great, now let's dive into the demo. Imagine you're a partner pitching to a healthcare organization. Here are some use cases where Meraki MR shines in the Healthcare sector:
 
-Use Case 1: Guest Wi-Fi for Patients and Visitors (10 minutes)
-- Demonstrate how easy it is to set up a separate guest Wi-Fi network for patients and visitors
-- Show **click 'Wireless > SSIDs'** to create a new SSID for guests
-- Highlight the importance of keeping patient and visitor networks separate for security reasons
+1. **Real-time Patient Monitoring**: With Meraki MR, you can ensure seamless connectivity for medical devices and patient monitoring systems, providing real-time data to healthcare professionals.
+   
+2. **Guest Wi-Fi for Patients and Visitors**: Easily set up secure guest networks to provide internet access for patients and visitors without compromising network security.
 
-Use Case 2: Location Analytics for Patient Flow (10 minutes)
-- Showcase the location analytics feature to monitor patient flow within the healthcare facility
-- Show **click 'Wireless > Location Analytics'** to view real-time data on patient movement
-- Discuss how this data can be used to optimize staff allocation and improve patient experience
+3. **Location Analytics for Asset Tracking**: Utilize the location analytics feature to track medical equipment and devices within the facility, improving operational efficiency.
 
-Use Case 3: Remote Monitoring and Troubleshooting (10 minutes)
-- Illustrate how Meraki MR allows for remote monitoring and troubleshooting of network issues
-- Show **click 'Wireless > Clients'** to identify and troubleshoot connectivity issues
-- Explain how this feature saves time and resources for IT staff in healthcare settings
+4. **Enhanced Telemedicine Services**: Enable reliable and secure video conferencing for telemedicine consultations, ensuring a smooth patient experience.
 
-Use Case 4: HIPAA Compliance and Security (10 minutes)
-- Discuss how Meraki MR helps healthcare organizations maintain HIPAA compliance and ensure network security
-- Show **click 'Security & SD-WAN > Firewall'** to set up firewall rules for compliance
-- Highlight the importance of data security in healthcare settings and how Meraki MR can help achieve it
+Now, let's take a look at the Meraki Dashboard. **Click on 'Wireless > Access Points'** to see an overview of all your MR devices and their status. **Navigate to 'Network-wide > Clients'** to view connected devices and troubleshoot any issues quickly.
 
-Smart Questions to Prompt Discussion:
-1. How do you currently handle guest Wi-Fi access for patients and visitors in your healthcare facility?
-2. What challenges do you face in monitoring patient flow and optimizing staff allocation?
-3. How important is network security and HIPAA compliance in your healthcare organization, and how do you currently address these concerns?
+Another powerful feature of Meraki is the centralized management provided by the Dashboard. **Click 'Security & SD-WAN > Addressing & VLANs'** to easily configure VLANs for different departments within the healthcare organization.
 
-Conclusion (5 minutes)
-- Recap the key use cases demonstrated during the session
-- Encourage partners to leverage this knowledge in pitching Meraki MR to healthcare clients
-- Thank everyone for their participation and invite any final questions or comments.
+Now, let's address some common FAQs that partners may encounter when selling MR in the Healthcare sector:
+
+Q: What objections might the partner hear in healthcare?
+A: Cost vs legacy vendors, and skepticism over cloud-managed security — arm them with TCO comparisons.
+
+Q: What enablement do we provide for partners?
+A: Access to demo kits, dashboards, playbooks, and partner-exclusive webinars.
+
+Q: How do we support onboarding post-sale?
+A: We offer co-delivery workshops, pre-built config templates, and Meraki support handles escalations fast.
+
+That's a wrap for our MR demo tailored to the Healthcare sector. Thank you for joining us today!

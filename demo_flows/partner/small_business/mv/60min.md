@@ -1,32 +1,23 @@
-[Opening]
+Hey there, thanks for joining us for this demo today. Whether you're a partner reseller, customer IT admin, or internal SE, we're excited to show you how Cisco Meraki MV can benefit small businesses. Before we dive in, can you share what trends or challenges you're seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-Welcome, everyone! Today, we're going to dive into a demo of Meraki MV, specifically tailored for the Small Business sector. As partners, you play a crucial role in helping your customers navigate the world of technology solutions, and we believe that Meraki MV can be a game-changer for many small businesses out there.
+**Use Case 1: Enhancing Security**
+Let's start by **clicking 'Cameras > Overview'** on the Meraki Dashboard. Small businesses often struggle with security concerns, and MV cameras offer advanced features like motion heat maps and object detection to keep your premises safe.
 
-[Pain Points]
+**Use Case 2: Remote Monitoring**
+Next, **navigate to 'Network-wide > Monitor > Cameras'**. With MV, you can easily monitor multiple locations from a single dashboard, making it ideal for small businesses with limited IT resources and multiple sites to manage.
 
-Now, let's talk about pain points that small businesses often face when it comes to their security and surveillance needs. Traditional CCTV systems can be costly, complex to set up, and difficult to maintain. Small businesses want a solution that is easy to deploy, manage remotely, and provides actionable insights to improve their operations.
+**Use Case 3: Smart Analytics**
+Now, let's **click 'Cameras > Analytics'**. MV cameras provide valuable insights through advanced analytics, helping small businesses make data-driven decisions to improve operations and customer experiences.
 
-[Positioning]
+**Use Case 4: Seamless Integration**
+Moving on to **'Systems Manager > Cameras'**, MV integrates seamlessly with other Meraki products like Systems Manager, providing a comprehensive solution for small businesses looking to streamline their IT infrastructure.
 
-This is where Meraki MV comes in. With its cloud-managed design, simple deployment, and intuitive interface, Meraki MV offers small businesses a cost-effective, hassle-free solution for their security and surveillance needs. Plus, with features like motion search and people detection, businesses can extract valuable data from their video footage to make informed decisions.
+**Common Partner Questions:**
+Q: What are the top small business pain points this addresses?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-[Use Cases]
+Q: How do we best position MV during the pitch?
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-Let's take a look at a few use cases to illustrate the power of Meraki MV:
-
-1. **Retail Store Security**: Show how a retail store can use Meraki MV to monitor customer traffic, prevent theft, and analyze customer behavior to optimize store layout and promotions.
-2. **Office Monitoring**: Demonstrate how an office can use Meraki MV to ensure employee safety, monitor for unauthorized access, and track building occupancy for space planning.
-3. **Restaurant Surveillance**: Showcase how a restaurant can leverage Meraki MV to monitor kitchen operations, track food deliveries, and ensure compliance with health and safety regulations.
-4. **Remote Sites Monitoring**: Highlight how a small business with multiple locations can use Meraki MV to centrally manage and monitor all sites from one dashboard, reducing the need for on-site IT support.
-
-[Smart Questions]
-
-As you pitch Meraki MV to your small business customers, consider asking these smart questions to prompt discussion and uncover their specific needs:
-
-1. How do you currently manage your security and surveillance systems, and what pain points do you encounter?
-2. What are your key priorities when it comes to security and surveillance for your business?
-3. How do you envision leveraging video analytics and insights to improve your business operations?
-
-[Closing]
-
-In conclusion, Meraki MV is a powerful tool that can help small businesses enhance their security, streamline operations, and make data-driven decisions. By understanding your customers' pain points and positioning Meraki MV as the solution to their needs, you can effectively pitch this innovative technology to drive business growth and customer satisfaction. Thank you for joining us today, and we look forward to supporting you in your journey with Meraki MV.
+Q: What installation or deployment concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.

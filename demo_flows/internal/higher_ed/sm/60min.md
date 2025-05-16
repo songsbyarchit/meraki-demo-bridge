@@ -1,33 +1,24 @@
-**Introduction (5 mins):**
-- Introduce the Meraki SM platform and its benefits for Higher Ed institutions.
-- Emphasize the importance of partner enablement in effectively pitching to customers.
+Hey there! Today, we're going to dive into how Cisco Meraki's SM solution can revolutionize network management in the Higher Education sector. Whether you're a partner reseller, customer IT admin, or internal SE, this demo is tailored to show you the power of Meraki in this specific industry.
 
-**Use Case 1: Device Management (10 mins):**
-- Show how easy it is to enroll and manage devices such as laptops and tablets.
-- Demo how to **click 'Systems Manager > Manage > Add devices'** to enroll new devices.
-- Highlight the benefits of having a centralized platform for device management.
+Let's kick things off with a couple of warm-up questions:
+- Partners: What trends or challenges are you seeing with customers in the Higher Education sector? What do you find unique or tricky about positioning solutions in this space?
+- Customers: What does your current network setup look like in your educational institution? Where are your biggest IT headaches today?
+- Internal: What common questions do our customers in the Higher Education sector ask? What objections or misconceptions do we frequently encounter?
 
-**Use Case 2: Security and Compliance (10 mins):**
-- Discuss the importance of security and compliance in Higher Ed institutions.
-- Show how Meraki SM can enforce security policies and ensure devices are compliant.
-- Demo how to **click 'Systems Manager > Security policies > Create new policy'** to set up security policies.
+Now, let's explore some key use cases for Meraki SM in Higher Education:
+1. **Centralized Management**: **click 'Dashboard > Overview'** to see how you can manage all your network devices from a single pane of glass.
+2. **BYOD Support**: **navigate to 'Wireless > SSIDs'** to set up secure networks for students and staff to connect their own devices.
+3. **Content Filtering**: **click 'Security & SD-WAN > Content filtering'** to easily block inappropriate websites and ensure a safe online environment.
+4. **Location Analytics**: **go to 'Wireless > Access points'** to see how Meraki can provide valuable insights into foot traffic and popular areas on campus.
 
-**Use Case 3: Remote Troubleshooting (10 mins):**
-- Highlight the challenges of troubleshooting devices in a large Higher Ed environment.
-- Show how Meraki SM enables remote troubleshooting and support for devices.
-- Demo how to **click 'Systems Manager > Monitor > Troubleshooting tools'** to troubleshoot a device remotely.
+As you can see, the Meraki Dashboard offers unparalleled visibility and control over your network, making troubleshooting and management a breeze.
 
-**Use Case 4: Asset Tracking (10 mins):**
-- Discuss the importance of asset tracking in Higher Ed institutions.
-- Show how Meraki SM can track and manage assets such as projectors and printers.
-- Demo how to **click 'Systems Manager > Assets > Add new asset'** to track a new asset.
-
-**Smart Questions for Discussion:**
-1. How do you see Meraki SM fitting into your existing device management processes?
-2. What are the key security concerns you have in managing devices in a Higher Ed environment?
-3. How do you currently handle remote troubleshooting and support for devices in your institution?
-
-**Conclusion (5 mins):**
-- Recap the key use cases demonstrated and their benefits for Higher Ed institutions.
-- Encourage partners to leverage these use cases in their pitches to customers.
-- Thank attendees for their participation and open the floor for any additional questions or discussion.
+Here are a couple of FAQs to help you better support partners selling SM in Higher Education:
+- Q: What objections might the partner hear in higher education?  
+  A: Cost vs legacy vendors, and skepticism over cloud-managed security — arm them with TCO comparisons.
+  
+- Q: What enablement do we provide for partners?  
+  A: Access to demo kits, dashboards, playbooks, and partner-exclusive webinars.
+  
+- Q: How do we support onboarding post-sale?  
+  A: We offer co-delivery workshops, pre-built config templates, and Meraki support handles escalations fast.

@@ -1,38 +1,35 @@
-Title: Meraki SM Demo for Finance Partners
+Hello and welcome! Today, we're going to explore how Cisco Meraki's **SM** solution can revolutionize network management in the Financial Services sector. 
 
-Introduction (5 mins):
-- Welcome everyone and thank them for joining the demo.
-- Briefly introduce Meraki SM and its benefits for the Finance sector.
-- Share the agenda for the demo.
+Let's start with a couple of warm-up questions:
+- What trends or challenges are you seeing with customers in the Financial Services sector?
+- What do you find unique or tricky about positioning solutions in this space?
 
-Use Case 1: Simplified Device Management (10 mins)
-- Explain how Meraki SM streamlines the management of devices across the network.
-- **Click 'Systems Manager > Overview' to show the dashboard monitoring all devices.**
-- Discuss how this feature reduces IT workload and improves efficiency for finance companies.
+Now, let's dive into the demo.
 
-Use Case 2: Security and Compliance (10 mins)
-- Address the pain point of data security and compliance in the Finance sector.
-- **Click 'Systems Manager > Security policies' to demonstrate setting up security policies.**
-- Emphasize how Meraki SM helps maintain a secure network environment and ensures compliance with industry regulations.
+**Use Case 1: Remote Branch Management**
+- **Click 'Monitor > Clients' to see all connected devices in real-time**
+- **Navigate to 'Network-wide > Clients' to troubleshoot any connectivity issues**
 
-Use Case 3: Remote Troubleshooting (10 mins)
-- Discuss the challenges of remote troubleshooting in the finance industry.
-- **Click 'Systems Manager > Remote desktop' to show how to troubleshoot devices remotely.**
-- Highlight how Meraki SM enables IT teams to resolve issues quickly, even for remote employees.
+**Use Case 2: Compliance Monitoring**
+- **Click 'Security & SD-WAN > Security Center' to view security events**
+- **Check 'Security & SD-WAN > Security Policies' to ensure compliance rules are followed**
 
-Use Case 4: Application Management (10 mins)
-- Talk about the importance of managing applications effectively in finance.
-- **Click 'Systems Manager > Managed apps' to showcase application management capabilities.**
-- Explain how Meraki SM helps control and monitor the usage of applications across devices.
+**Use Case 3: Guest Wi-Fi Provisioning**
+- **Navigate to 'Wireless > Configure > SSIDs' to set up a separate guest network**
+- **Click 'Wireless > Splash page' to customize the guest Wi-Fi login page**
 
-Smart Questions for Discussion:
-1. How do you currently manage device security and compliance in your finance organization?
-2. What are the biggest challenges you face in remote troubleshooting for your IT infrastructure?
-3. How important is application management in ensuring productivity and security for your finance company?
+**Use Case 4: Application Performance Optimization**
+- **Go to 'SD-WAN > Performance' to monitor application performance**
+- **Click 'SD-WAN > Traffic Shaping' to prioritize critical applications**
 
-Conclusion (5 mins):
-- Recap the key benefits and use cases of Meraki SM for the Finance sector.
-- Encourage partners to leverage these insights when pitching to finance customers.
-- Thank everyone for their participation and invite any questions or feedback.
+**Partner Questions:**
+Q: What are the top financial services pain points this addresses?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-Note: Feel free to adapt and customize this demo script based on your audience's level of familiarity with Meraki SM and the finance industry.
+Q: How do we best position SM during the pitch?
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
+
+Q: What installation or deployment concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
+
+Thank you for joining us today! If you have any further questions or need assistance, feel free to reach out.

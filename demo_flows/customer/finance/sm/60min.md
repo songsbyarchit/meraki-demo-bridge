@@ -1,24 +1,35 @@
-Demo Script for Meraki SM targeting the Finance Sector:
+Great, let's dive into the demo!
 
-Introduction:
-- Hello and welcome to our Meraki Systems Manager demo tailored for the finance sector. Today, we will be showcasing how Meraki SM can help streamline IT operations and improve security within your organization.
+**Introduction:**
+Hello and welcome to our Cisco Meraki SM demo. Today, we'll be focusing on how our solution can specifically benefit the Financial Services sector. Whether you're an IT admin or a financial decision maker, we'll show you how Meraki SM can help streamline your operations and justify costs.
 
-Use Case 1: Device Management
-- As IT admins in the finance sector, you understand the importance of managing a large number of devices efficiently. With Meraki SM, you can easily **enroll new devices**, **push software updates**, and **remotely troubleshoot issues**. Let's take a look at the device management dashboard by clicking on 'Systems Manager > Devices'.
+**Warm-up question for customers:**
+What does your current network setup look like? Where are your biggest IT headaches today?
 
-Use Case 2: Security Compliance
-- Security is paramount in the finance sector. With Meraki SM, you can ensure all devices are compliant with your organization's security policies. Let's navigate to the security compliance settings by clicking on 'Systems Manager > Security Policies'.
+**Use Case 1: Compliance Monitoring**
+**UI Interaction:** **Navigate to 'Security & SD-WAN > Security Center'**  
+In the Financial Services sector, compliance is crucial. With Meraki SM, you can easily monitor compliance across all devices from a single dashboard, ensuring your network meets regulatory requirements.
 
-Use Case 3: Application Management
-- Managing applications on employee devices can be a hassle. With Meraki SM, you can **push new applications**, **restrict access to sensitive apps**, and **manage licenses** efficiently. Let's explore the application management feature by clicking on 'Systems Manager > Apps'.
+**Use Case 2: Remote Troubleshooting**
+**UI Interaction:** **Click on a specific device > Troubleshooting > Remote Desktop**  
+Managing remote branches can be challenging. With Meraki SM, troubleshoot issues remotely and quickly resolve them without the need for on-site visits.
 
-Use Case 4: Remote Wipe
-- In the event of a lost or stolen device, quick action is crucial to prevent data breaches. With Meraki SM, you can **remotely wipe a device** to ensure sensitive information remains secure. Let's see how this works by clicking on 'Systems Manager > Devices > Select Device > Remote Wipe'.
+**Use Case 3: Application Visibility**
+**UI Interaction:** **Go to 'Network-wide > Applications'**  
+Efficiently manage your network's bandwidth by gaining visibility into application usage. Identify and prioritize critical applications to ensure optimal performance for financial transactions.
 
-Smart Questions for Discussion:
-1. How do you currently manage device security and compliance within your organization?
-2. What challenges have you faced in managing a large number of devices across different locations?
-3. How do you currently handle lost or stolen devices and ensure data security?
+**Use Case 4: Automated Updates**
+**UI Interaction:** **Navigate to 'Organization > Firmware Upgrades'**  
+Keeping your network up-to-date can be time-consuming. Meraki SM automates firmware updates, ensuring your devices are always running the latest software for enhanced security.
 
-Conclusion:
-- Thank you for joining us for this demo of Meraki Systems Manager in the finance sector. We hope you see the operational impact and cost justification that Meraki SM can bring to your organization. If you have any further questions or would like to discuss a customized solution for your needs, please feel free to reach out to us.
+**Frequently Asked Questions:**
+Q: How does this solution reduce IT workload in our financial services environment?
+A: Meraki simplifies management through one dashboard and automates many tasks like updates and troubleshooting.
+
+Q: What kind of ROI or cost reduction can we expect?
+A: Customers often report major time savings and reduced downtime, especially for remote sites.
+
+Q: Can we integrate this with our existing systems and security policies?
+A: Yes — Meraki supports APIs, SAML, and integration with existing firewalls, Active Directory, and SIEM tools.
+
+Thank you for joining us today. We hope this demo has shown you the value that Cisco Meraki SM can bring to your Financial Services organization. If you have any further questions or would like to discuss implementation, please don't hesitate to reach out.

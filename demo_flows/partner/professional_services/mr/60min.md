@@ -1,36 +1,28 @@
-Title: Meraki MR Demo for Professional Services Sector
+Hey there, thank you for joining me today. I know you're a partner reseller in the Professional Services sector, and the purpose of this demo is to help you pitch Cisco Meraki MR to your customers. Before we dive in, I'd love to hear from you - what trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-Introduction (5 mins)
-- Welcome partners to the Meraki MR demo tailored for the Professional Services sector.
-- Briefly introduce Meraki and its cloud-managed networking solutions.
-- Highlight the key pain points that professional services customers care about such as network security, ease of management, and scalability.
+**Use Case 1: Guest Wi-Fi Access**
+Let's start by looking at how Meraki MR can provide seamless and secure guest Wi-Fi access for your clients. **Click 'Wireless > SSIDs'** on the dashboard to create a separate guest network with custom access policies.
 
-Use Case 1: Secure Guest Wi-Fi Network (10 mins)
-- Demonstrate how partners can easily set up a secure guest Wi-Fi network using Meraki MR.
-- **Click 'Configure > Wireless > SSIDs' to create a separate SSID for guest access with a customizable splash page.**
-- Highlight the ease of managing guest access and setting up time-based restrictions.
+**Use Case 2: Remote Site Management**
+For Professional Services firms with multiple locations, managing network infrastructure can be a headache. With Meraki, you can easily oversee all sites from one central dashboard. **Click 'Organizations > Inventory'** to view and manage devices across different locations.
 
-Use Case 2: Location Analytics for Customer Insights (10 mins)
-- Showcase how Meraki MR provides location analytics to help professional services customers gain insights into customer behavior.
-- **Click 'Monitor > Location analytics' to view heatmaps and visitor trends.**
-- Discuss how this data can be used to optimize store layouts and improve customer experience.
+**Use Case 3: Application Visibility**
+Professional Services firms rely on various cloud-based applications. Meraki MR offers deep visibility into application usage and performance. **Click 'Wireless > Application Visibility'** to see real-time insights into application traffic on your network.
 
-Use Case 3: Seamless Roaming for Mobile Workers (10 mins)
-- Illustrate how Meraki MR enables seamless roaming for mobile workers within a professional services environment.
-- **Click 'Configure > Wireless > Access control' to set up seamless roaming policies between APs.**
-- Emphasize the importance of consistent connectivity for employees on the move.
+**Use Case 4: Automated RF Optimization**
+In an environment where network reliability is crucial, Meraki MR's automated RF optimization ensures optimal performance without manual intervention. **Click 'Wireless > RF Spectrum'** to see how Meraki intelligently adjusts settings for better coverage.
 
-Use Case 4: Application Visibility and Control (10 mins)
-- Showcase how partners can leverage Meraki MR to gain visibility and control over network traffic.
-- **Click 'Monitor > Application visibility' to see real-time insights into application usage.**
-- Discuss the benefits of prioritizing critical applications and ensuring optimal network performance.
+**Use Case 5: Security and Compliance**
+Professional Services firms deal with sensitive client data. With Meraki MR, you can easily enforce security policies and ensure compliance across all network devices. **Click 'Security & SD-WAN > Security policies'** to set up firewall rules and content filtering.
 
-Smart Questions for Discussion:
-1. How do you currently address network security and management challenges within your professional services environment?
-2. What are the key factors that influence your decision-making process when considering a networking solution for your organization?
-3. How do you see Meraki MR fitting into your long-term network infrastructure strategy?
+**Use Case 6: Troubleshooting and Diagnostics**
+When issues arise, Meraki's centralized dashboard simplifies troubleshooting. **Click 'Wireless > Clients'** to quickly identify and resolve connectivity problems for any device on the network.
 
-Conclusion (5 mins)
-- Recap the key use cases demonstrated during the demo and how they address the pain points of professional services customers.
-- Encourage partners to use these use cases to pitch Meraki MR to their customers in the professional services sector.
-- Open the floor for any additional questions or discussion.
+Q: What are the top professional services pain points this addresses?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
+
+Q: How do we best position MR during the pitch?
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
+
+Q: What installation or deployment concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.

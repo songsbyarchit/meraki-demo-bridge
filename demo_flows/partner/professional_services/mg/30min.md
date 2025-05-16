@@ -1,29 +1,22 @@
-[Opening]
+Hey there, thanks for joining me today! I'm excited to show you how Cisco Meraki's MG can help address the unique challenges faced by customers in the Professional Services sector. Before we dive in, I'd love to hear from you: What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-Hello and welcome to our Meraki MG demo session! Today, we'll be focusing on how the Meraki MG can benefit the Professional Services sector and help you pitch it to your customers.
+**Use Case 1: Multi-site Management**
+Let's imagine you have multiple branch offices spread across different locations. With Meraki's MG, you can easily manage all your network deployments from a single pane of glass. **Click 'Network-wide > Monitor > Overview'** to see real-time insights into all your sites at once.
 
-[Pain Points]
+**Use Case 2: Secure Remote Access**
+In the Professional Services sector, remote work is often a necessity. Meraki's MG provides secure VPN connectivity for remote employees, ensuring they can access company resources without compromising security. **Click 'Security & SD-WAN > Teleworker VPN'** to set up remote access policies.
 
-First, let's talk about the pain points that customers in the Professional Services sector care about. One common pain point is the need for reliable and secure connectivity for their remote workers and branch offices. They want a solution that is easy to manage and can scale as their business grows. Another pain point is the increasing demand for high-quality video conferencing and collaboration tools, which require a robust and dependable network infrastructure.
+**Use Case 3: Application Visibility**
+Understanding and optimizing network traffic is crucial for service-oriented businesses. Meraki's MG offers deep application visibility, allowing you to prioritize critical applications and ensure optimal performance. **Click 'Monitor > Application'** to see detailed insights into your network traffic.
 
-[Positioning]
+**Common Partner Questions:**
+Q: What are the top professional services pain points this addresses?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-Now, let's discuss how you can position the Meraki MG to address these pain points. The Meraki MG is a cloud-managed communications gateway that provides secure and reliable connectivity for remote workers and branch offices. With its easy-to-use dashboard and centralized management, it allows IT teams to easily monitor and troubleshoot network issues, saving time and resources. Additionally, the Meraki MG supports high-quality video conferencing and collaboration tools, ensuring a seamless user experience for Professional Services organizations.
+Q: How do we best position MG during the pitch?
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-[Use Case 1: Remote Workers]
+Q: What installation or deployment concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
 
-One use case for the Meraki MG in the Professional Services sector is providing secure connectivity for remote workers. With the Meraki MG, IT teams can easily set up VPN connections for remote workers, ensuring that they can access company resources securely from anywhere. **Click 'Configure > VPN'**. This feature is especially important for Professional Services organizations that have a distributed workforce and need to maintain high levels of security.
-
-[Use Case 2: Branch Offices]
-
-Another use case for the Meraki MG is providing reliable connectivity for branch offices. **Click 'Configure > Switch ports'**. With the Meraki MG, IT teams can easily set up and manage network infrastructure for branch offices, ensuring that employees have fast and reliable access to company resources. This is crucial for Professional Services organizations that have multiple branch offices and need a scalable network solution.
-
-[Smart Questions]
-
-To prompt discussion with your customers, here are two smart questions you can ask:
-1. How are you currently managing and monitoring your remote workers' network connectivity?
-2. What challenges are you facing in ensuring reliable connectivity for your branch offices?
-
-[Closing]
-
-In conclusion, the Meraki MG is a powerful tool for Professional Services organizations looking to improve their network infrastructure and connectivity. By addressing key pain points and providing easy-to-use features, the Meraki MG can help your customers achieve their business goals. Thank you for joining our demo session today!
+I hope this demo has given you a good overview of how Meraki's MG can benefit customers in the Professional Services sector. Feel free to reach out if you have any more questions or need further information. Thanks for your time!

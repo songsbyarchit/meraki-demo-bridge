@@ -1,24 +1,29 @@
-Title: Meraki MG Demo for Higher Ed
+Hey there, thank you for joining us today. I'm excited to show you the power of Cisco Meraki's MG for the Higher Education sector. Before we dive in, could you share what your current network setup looks like and where you're facing the biggest IT challenges in your institution?
 
-Introduction:
-Hello and welcome to our Meraki MG demo tailored for the Higher Ed sector. Today, we will explore how the Meraki MG can enhance your network operations and provide cost-effective solutions for your institution. Let's dive in!
+Let's explore how Meraki MG can transform your network operations in Higher Education. Here are some key use cases tailored to your sector:
 
-Use Case 1: Network Security
-As IT admins, we understand the importance of network security in a Higher Ed environment. With Meraki MG, you can easily set up firewall rules to control traffic flow and prevent unauthorized access. **Navigate to 'Security & SD-WAN > Firewall'** to configure and customize your security settings.
+1. **Network Segmentation**: Easily create separate networks for students, faculty, and guests to ensure security and compliance.
+2. **Application Visibility**: Monitor and control bandwidth usage for different applications to optimize network performance.
+3. **Automated Configuration**: Set up new networks or devices quickly and easily with automated policies.
+4. **Remote Troubleshooting**: Diagnose and resolve issues across multiple sites from one centralized dashboard.
 
-Use Case 2: Bandwidth Management
-In a busy Higher Ed environment, bandwidth management is crucial to ensure smooth operations. With Meraki MG, you can prioritize traffic based on your institution's needs. **Click 'Traffic Shaping'** to create policies that allocate bandwidth efficiently.
+Now, let's take a look at the Meraki Dashboard and see how it simplifies network management for Higher Education.
 
-Use Case 3: Remote Monitoring and Troubleshooting
-As IT admins, we often face the challenge of managing networks remotely. Meraki MG offers real-time monitoring and troubleshooting tools to help you identify and resolve issues quickly. **Visit 'Monitor > Live Tools'** to view network performance and troubleshoot any issues.
+**Click 'Configure > Wireless settings' to customize network access for different user groups.**
 
-Use Case 4: Cost Savings
-Financial decision makers, this one's for you! Meraki MG can help you save costs by simplifying network management and reducing downtime. With centralized management and automated updates, you can minimize the need for on-site support. This can result in significant cost savings in the long run.
+**Navigate to 'Security > Firewall & traffic shaping' to set policies for application-based traffic shaping.**
 
-Smart Questions for Discussion:
-1. How do you currently manage network security in your Higher Ed institution?
-2. What challenges do you face in terms of bandwidth management and network monitoring?
-3. Have you considered the potential cost savings of implementing a solution like Meraki MG in your institution?
+**Click 'Monitor > Clients' to see real-time insights into network usage and performance.**
 
-Conclusion:
-Thank you for joining our Meraki MG demo today. We hope you've gained valuable insights into how Meraki MG can benefit your Higher Ed institution. If you have any further questions or would like to discuss a customized solution for your specific needs, feel free to reach out to our team. Let's work together to elevate your network operations!
+**Explore 'Systems Manager > Device Management' to remotely manage and secure devices across your campus.**
+
+For our Higher Education customers, here are some common questions you might have about Meraki MG:
+
+Q: How does this solution reduce IT workload in our higher education environment?  
+A: Meraki simplifies management through one dashboard and automates many tasks like updates and troubleshooting.
+
+Q: What kind of ROI or cost reduction can we expect?  
+A: Customers often report major time savings and reduced downtime, especially for remote sites.
+
+Q: Can we integrate this with our existing systems and security policies?  
+A: Yes — Meraki supports APIs, SAML, and integration with existing firewalls, Active Directory, and SIEM tools.

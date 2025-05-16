@@ -1,38 +1,30 @@
-Title: Meraki MR Demo for K12 Partners
+Hey there! Today, I'm excited to talk to you about Cisco Meraki and how our **MR** product can revolutionize the way K-12 Education/Primary Education institutions manage their networks. Whether you're a partner reseller, customer IT admin, or internal SE, this demo is tailored to show you the power and simplicity of Meraki in the education sector.
 
-Introduction (5 mins)
-- Introduce yourself and the purpose of the demo
-- Briefly explain Meraki and its benefits for the K12 sector
-- Set expectations for the demo
+To kick things off, let's dive into what trends or challenges you're seeing with customers in this space. What do you find unique or tricky about positioning solutions in the K-12 Education/Primary Education sector?
 
-Use Case 1: Seamless Onboarding (10 mins)
-- Pain Point: Complicated network setup for new devices
-- Show how easy it is to **add a new access point** and **configure SSID settings** in the Meraki dashboard
-- Highlight the auto-provisioning feature for new devices
+Great insights! Now, let's explore how Meraki can address these pain points with our intuitive Dashboard. **Click 'Dashboard'** to get started.
 
-Use Case 2: Content Filtering (10 mins)
-- Pain Point: Inappropriate content access on school devices
-- Demonstrate how to **set up content filtering policies** in the dashboard
-- Show how easily you can block or allow specific categories of websites
+**Use Case 1: Remote Learning**
+Imagine having the ability to easily manage and monitor hundreds of devices across multiple sites from one central location. With Meraki's Dashboard, you can **view all connected devices in real-time** and ensure a seamless remote learning experience for students and teachers alike.
 
-Use Case 3: Guest Access (10 mins)
-- Pain Point: Managing guest access without compromising security
-- Showcase the **guest access feature** in Meraki
-- Explain how partners can easily create temporary guest accounts with limited access
+**Use Case 2: Network Security**
+Security is a top priority in education. With Meraki, you can **set up firewall rules and content filtering policies** to protect students from accessing harmful content and keep sensitive data secure. **Click 'Security & SD-WAN > Firewall'** to see how easy it is to configure.
 
-Use Case 4: Traffic Shaping (10 mins)
-- Pain Point: Network congestion during peak hours
-- Walk through how to **set up traffic shaping rules** to prioritize critical applications like online testing
-- Show how partners can ensure a smooth network experience for students and teachers
+**Use Case 3: Guest Wi-Fi Access**
+Providing secure guest Wi-Fi access for visitors is essential in educational settings. Meraki allows you to **create a separate guest SSID** with customized access controls and restrictions to ensure a safe browsing experience for all users. **Click 'Wireless > SSID'** to set it up.
 
-Smart Questions to Prompt Discussion:
-1. How have you managed network security and performance challenges in your K12 deployments?
-2. What are the key features you look for in a networking solution for K12 institutions?
-3. How do you see Meraki fitting into your current portfolio of solutions for education customers?
+**Use Case 4: Network Usage Monitoring**
+Understanding network usage patterns is crucial for optimizing performance. Meraki's Dashboard provides detailed insights into **bandwidth consumption** and **application usage**, allowing you to make informed decisions to improve network efficiency. **Click 'Monitor > Application'** to explore these metrics.
 
-Conclusion (5 mins)
-- Recap the key benefits and use cases demonstrated
-- Encourage partners to explore further by signing up for a trial or contacting the sales team
-- Offer to answer any questions or provide additional resources
+Now, let's address some common questions partners might have when positioning MR in the K-12 Education/Primary Education space:
 
-Remember to keep the presentation engaging and interactive, and tailor the use cases to the specific needs and pain points of the K12 sector. Good luck with your Meraki MR demo!
+Q: What are the top K-12 Education/Primary Education pain points this addresses?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
+
+Q: How do we best position MR during the pitch?
+A: Emphasize Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
+
+Q: What installation or deployment concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
+
+Thank you for exploring Cisco Meraki with me today. I hope you see the value and potential it brings to K-12 Education/Primary Education environments. Let's revolutionize the way schools manage their networks together!

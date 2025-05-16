@@ -1,27 +1,16 @@
-[Opening slide with agenda]
+Hey there, thanks for joining us today! Whether you're a partner reseller, customer IT admin, or internal SE, we're excited to show you how Cisco Meraki's SM solution can revolutionize networking in the Higher Education sector. 
 
-Hello everyone, thank you for joining today's Meraki SM demo focused on the Higher Ed sector. Today, we'll be diving into the features and use cases that are most relevant to our education partners. 
+To kick things off, let's dive in with a couple of warm-up questions:
+- For partners: What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
+- For customers: What does your current network setup look like? Where are your biggest IT headaches today?
+- For internal: What common questions do our customers ask in the Higher Education sector? What objections or misconceptions do we frequently encounter?
 
-Let's start by talking about the challenges faced by universities and colleges when it comes to managing their IT infrastructure. With a large number of devices spread across campus, it can be a daunting task to keep everything secure and up to date. That's where Meraki SM comes in to make life easier for both IT admins and end-users.
+Now, let's explore how Meraki SM can address the specific needs of the Higher Education sector. Imagine having complete visibility and control over your network through the Meraki Dashboard. **Click 'Network-wide' > 'Clients'** to see real-time insights into device usage and behavior. This level of visibility enables simplified troubleshooting and unified management across all your network devices. 
 
-**Use case 1: Device onboarding for students**
-Imagine a new student arrives on campus with their own device. With Meraki SM, IT admins can easily onboard the device by sending a simple enrollment link. The student can then self-enroll their device, ensuring it meets all the necessary security requirements set by the institution.
+One key use case in Higher Education is ensuring secure connectivity for both students and faculty. **Click 'Security & SD-WAN' > 'Firewall'** to easily configure policies that protect sensitive data and prevent unauthorized access. Another use case is optimizing network performance in lecture halls and common areas. **Click 'Wireless' > 'Access points'** to set up seamless roaming and prioritize bandwidth for critical applications.
 
-**Use case 2: Remote troubleshooting**
-Now, let's say a professor is having trouble connecting to the campus Wi-Fi. With Meraki SM, IT admins can remotely troubleshoot the issue by accessing the device's network settings and making necessary configurations without having to be physically present on campus.
+As partners, you may encounter objections in the Higher Education space. Remember to address concerns around cost compared to legacy vendors and skepticism towards cloud-managed security. Arm yourself with TCO comparisons to showcase the long-term value Meraki SM brings. Additionally, we provide partners with access to demo kits, dashboards, playbooks, and partner-exclusive webinars to enhance your pitch. 
 
-**Use case 3: Application deployment for classrooms**
-In a classroom setting, professors often require specific applications to be installed on student devices for a particular lesson. With Meraki SM, IT admins can easily deploy these applications to all devices in a specific classroom, ensuring that students have access to the necessary tools for their learning experience.
+When it comes to onboarding post-sale, we offer co-delivery workshops, pre-built config templates, and fast escalations through Meraki support. This ensures a smooth transition for customers as they integrate Meraki SM into their network infrastructure. 
 
-Now, let's dive into the demo. **Click 'Dashboard' to see an overview of all managed devices on campus.** From here, you can easily see the status of each device and perform actions like pushing out software updates or setting security policies.
-
-As you can see, Meraki SM provides a centralized platform for managing all devices on campus, making it a valuable tool for Higher Ed institutions. 
-
-[Ending slide with discussion prompts]
-
-To wrap up, here are a few questions you can ask potential customers to prompt discussion:
-1. How are you currently managing devices on campus, and what pain points do you face in this process?
-2. What specific challenges are you facing when it comes to ensuring the security and compliance of devices across your institution?
-3. How do you see Meraki SM fitting into your overall IT strategy for Higher Ed?
-
-Thank you for attending today's demo. We hope you found it informative and valuable for your conversations with Higher Ed customers. If you have any further questions or would like a more in-depth demo, please feel free to reach out to our team.
+Thanks for joining us today, and we look forward to supporting you in effectively pitching Meraki SM to Higher Education institutions.

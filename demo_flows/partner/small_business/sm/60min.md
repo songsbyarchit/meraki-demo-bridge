@@ -1,40 +1,34 @@
-Demo Script for Meraki SM targeting Small Business Partners
+Hey there! Thanks for joining me today for this demo on Cisco Meraki's **SM** solution, specifically tailored for the Small Business sector. I'm excited to show you how our platform can address some of the key pain points in this space. Before we dive in, I'd love to hear from you:
 
-Introduction (5 minutes)
-- Welcome partners and thank them for joining the Meraki SM demo.
-- Briefly introduce Meraki as a cloud-managed networking solution designed for small businesses.
-- Emphasize the ease of use, security features, and centralized management capabilities of Meraki.
+For partners: What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-Pain Points (10 minutes)
-- Discuss common pain points small businesses face with traditional networking solutions, such as complex configurations, limited visibility, and security vulnerabilities.
-- Position Meraki as a solution that addresses these pain points with its simple setup, real-time monitoring, and robust security features.
+Great, thanks for sharing that! Now, let's jump into the demo and see how Meraki can help address those challenges.
 
-Use Case 1: Remote Device Management (10 minutes)
-- **Navigate to 'Systems Manager > Devices'**
-- Show partners how easy it is to enroll, monitor, and manage devices remotely using Meraki SM.
-- Highlight features like remote troubleshooting, device tracking, and automated software updates.
+**Use Case 1: Remote Monitoring and Troubleshooting**
+Let's start by **clicking on 'Monitor > Devices'** in the Meraki Dashboard. Here, you can see all your network devices in one place, allowing for easy troubleshooting and monitoring.
 
-Use Case 2: Network Security (10 minutes)
-- **Click 'Security Center > Security Appliance > Intrusion Detection'**
-- Demonstrate how partners can set up intrusion detection policies to protect small business networks from cyber threats.
-- Show how alerts and threat intelligence can help partners proactively secure their customers' networks.
+**Use Case 2: Guest Wi-Fi Setup**
+Next, let's **navigate to 'Wireless > SSIDs'**. With Meraki, setting up a secure guest Wi-Fi network is a breeze, ensuring a seamless experience for your customers and employees.
 
-Use Case 3: Guest Wi-Fi Access (10 minutes)
-- **Go to 'Wireless > SSIDs'**
-- Showcase how partners can easily set up and manage guest Wi-Fi networks for small businesses.
-- Highlight features like customizable splash pages, bandwidth controls, and guest access policies.
+**Use Case 3: Security Policies**
+Now, let's **click on 'Security & SD-WAN > Firewall'**. Meraki simplifies the process of setting up security policies, ensuring that your network is always protected from threats.
 
-Use Case 4: Application Control (10 minutes)
-- **Navigate to 'Security & SD-WAN > Content Filtering'**
-- Illustrate how partners can enforce application control policies to optimize network performance and security.
-- Show how partners can block or prioritize specific applications based on business needs.
+**Use Case 4: Remote Site Management**
+By **selecting 'Organization > Inventory'**, you can easily manage all your sites from one central location, saving time and effort in managing multiple locations.
 
-Smart Questions (5 minutes)
-1. How do you currently manage and secure your customers' networks?
-2. What are the biggest challenges you face when it comes to network management and security?
-3. How do you see Meraki SM fitting into your current portfolio of solutions for small businesses?
+**Use Case 5: Application Visibility**
+With Meraki, you can **go to 'Monitor > Applications'** to gain valuable insights into the network traffic and applications being used, helping you optimize performance.
 
-Conclusion (5 minutes)
-- Recap key benefits of Meraki SM for small businesses.
-- Encourage partners to reach out to the sales team for more information or to schedule a follow-up demo.
-- Thank partners for their time and interest in Meraki.
+**Use Case 6: Automatic Updates and Maintenance**
+Lastly, let's **check 'Organization > Firmware Upgrades'**. Meraki ensures that your devices are always up to date with automatic firmware upgrades, reducing the risk of vulnerabilities.
+
+In the Small Business sector, customers often struggle with lack of visibility, slow troubleshooting, and complexity managing multiple sites. By leveraging Meraki's single dashboard, ease of use, and fast deployment with built-in security, you can effectively address these pain points during your pitch.
+
+Q: What are the top small business pain points this addresses?  
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
+
+Q: How do we best position SM during the pitch?  
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
+
+Q: What installation or deployment concerns should we be ready for?  
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.

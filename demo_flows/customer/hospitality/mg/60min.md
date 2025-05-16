@@ -1,22 +1,26 @@
-[Opening]
+Hey there! Thanks for joining me today for this demo of Cisco Meraki's MG solution tailored for the Hospitality sector. I'm excited to show you how our platform can transform your network operations while justifying the costs. Let's dive in!
 
-Hello and welcome everyone, thank you for joining us today for our Meraki MG demo tailored for the Hospitality sector. Whether you are an IT admin looking to streamline operations or a financial decision maker seeking cost justification, we have some exciting use cases to share with you.
+**Warm-up Questions:**
+- For customers: What does your current network setup look like? Where are your biggest IT headaches today?
 
-[Use Case 1: Bandwidth Management]
-Imagine a busy hotel lobby with guests streaming videos and using social media. With the Meraki MG, you can easily prioritize bandwidth for critical applications like point-of-sale systems or guest Wi-Fi. This ensures a seamless experience for all guests without impacting your operational efficiency. To set this up, simply **click 'Configure > Traffic shaping'** in the dashboard.
+**Use Case 1: Guest Wi-Fi Management**
+Let's start by **navigating to 'Wireless > SSIDs'** on the Meraki Dashboard. Here, you can easily **configure guest Wi-Fi access** and set up **customized splash pages** for a seamless user experience.
 
-[Use Case 2: Guest Wi-Fi Management]
-Managing guest Wi-Fi can be a headache, especially during peak hours. With the Meraki MG, you can create custom splash pages, limit bandwidth for each user, and even track usage statistics in real-time. This not only enhances the guest experience but also allows you to optimize your network resources efficiently. To access these features, **click 'Configure > Splash pages'** in the dashboard.
+**Use Case 2: Network Security**
+Next, **click 'Security & SD-WAN > Content Filtering'** to see how you can **easily block malicious sites** and ensure **compliance** with industry regulations.
 
-[Use Case 3: Security Monitoring]
-Security is a top priority in the Hospitality sector. The Meraki MG offers advanced security features such as deep packet inspection and threat intelligence, allowing you to detect and mitigate potential threats before they impact your network. With a few **clicks in the dashboard**, you can set up alerts and monitor security incidents in real-time.
+**Use Case 3: Device Management**
+Now, let's **navigate to 'Clients'** on the dashboard. Here, you can **view device details** and **track device usage** to optimize network performance.
 
-[Use Case 4: Network Performance Optimization]
-In a hotel environment, network performance is crucial for delivering a seamless guest experience. With the Meraki MG, you can easily monitor network traffic, identify bottlenecks, and optimize performance with built-in analytics tools. By analyzing data trends and making adjustments in real-time, you can ensure high-speed connectivity for both guests and staff.
+**Use Case 4: Remote Site Management**
+By **clicking 'Network-wide > Monitor > Appliance status'**, you can **remotely troubleshoot issues** and **ensure uptime** across all your locations.
 
-[Closing]
+**Frequently Asked Questions:**
+Q: How does this solution reduce IT workload in our hospitality environment?
+A: Meraki simplifies management through one dashboard and automates many tasks like updates and troubleshooting.
 
-Before we wrap up, I'd like to leave you with a couple of questions to spark some discussion:
-1. How do you currently manage guest Wi-Fi bandwidth allocation in your hotel?
-2. What are your biggest challenges when it comes to network security in the Hospitality sector?
-Feel free to share your thoughts and let's explore how the Meraki MG can help address these issues. Thank you for your time and attention today.
+Q: What kind of ROI or cost reduction can we expect?
+A: Customers often report major time savings and reduced downtime, especially for remote sites.
+
+Q: Can we integrate this with our existing systems and security policies?
+A: Yes — Meraki supports APIs, SAML, and integration with existing firewalls, Active Directory, and SIEM tools.

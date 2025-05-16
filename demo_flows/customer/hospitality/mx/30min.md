@@ -1,25 +1,36 @@
-[Opening]
+---
 
-Hello and welcome, thank you for joining us today for a demo of the Meraki MX solution tailored for the Hospitality sector. Today, we'll be showcasing how our cloud-managed networking and security platform can revolutionize your operations and provide cost-effective solutions for your business.
+**Demo Script**
 
-[Use Case 1: Guest Wi-Fi Management]
+**Intro:**
 
-Let's start with a common use case in the hospitality industry - guest Wi-Fi management. With Meraki MX, you can easily set up a secure guest Wi-Fi network with just a few clicks. **Navigate to 'Wireless > SSIDs'** and you can create a separate SSID for your guests with limited bandwidth and access controls. This not only enhances the guest experience but also ensures the security of your internal network.
+Hi there! Thank you for joining us today. I'm excited to show you how Cisco Meraki's MX can transform your network operations in the hospitality sector. Whether you're an IT admin or a financial decision maker, this demo is tailored to showcase the operational impact and cost justification of our solution.
 
-[Use Case 2: Content Filtering and Security]
+**Warm-up Questions:**
 
-Next, let's talk about content filtering and security. With Meraki MX, you can easily set up web filtering policies to block malicious websites and ensure compliance with industry regulations. **Navigate to 'Security & SD-WAN > Content Filtering'** and you can create custom policies based on categories or specific URLs to protect your network from threats. This not only enhances security but also improves operational efficiency by reducing the risk of cyber attacks.
+- For customers: What does your current network setup look like? Where are your biggest IT headaches today?
 
-[Use Case 3: VPN and Remote Access]
+**Use Case 1: Guest Wi-Fi Management**
 
-Lastly, let's discuss VPN and remote access capabilities. With Meraki MX, you can easily set up secure VPN tunnels for remote employees or branch offices. **Navigate to 'Security & SD-WAN > VPN'** and you can configure site-to-site VPNs or client VPNs with just a few simple steps. This not only enables seamless collaboration but also reduces the need for expensive dedicated connections, saving costs for your business.
+Let's start by **logging into the Meraki Dashboard**. Here, you can easily **set up a secure guest Wi-Fi network** in just a few clicks. With Meraki, you can **customize splash pages**, **set bandwidth limits**, and **monitor guest usage** in real-time.
 
-[Smart Questions]
+**Use Case 2: Network Security and Compliance**
 
-1. How are you currently managing guest Wi-Fi access and ensuring security for your network?
-2. Have you experienced any challenges with content filtering and web security in the past?
-3. How do you currently provide remote access for your employees or branch offices, and are you looking for a more cost-effective solution?
+Next, let's **navigate to the Security & SD-WAN section**. With Meraki MX, you can **implement firewall rules**, **VPN configurations**, and **content filtering** to ensure compliance with industry regulations. The centralized dashboard makes it easy to **monitor security events** and **enforce policies** across all locations.
 
-[Closing]
+**Use Case 3: WAN Optimization for Remote Sites**
 
-Thank you for taking the time to explore the Meraki MX solution with us today. We believe that our cloud-managed networking and security platform can greatly benefit your operations in the hospitality sector. If you have any further questions or would like to discuss a personalized solution for your business, please feel free to reach out to us. Thank you and have a great day!
+Now, let's focus on **WAN optimization for remote sites**. By **clicking on the SD-WAN tab**, you can **prioritize traffic**, **utilize multiple uplinks**, and **leverage built-in traffic shaping** to ensure optimal performance for critical applications.
+
+**Frequently Asked Questions:**
+
+Q: How does this solution reduce IT workload in our hospitality environment?  
+A: Meraki simplifies management through one dashboard and automates many tasks like updates and troubleshooting.
+
+Q: What kind of ROI or cost reduction can we expect?  
+A: Customers often report major time savings and reduced downtime, especially for remote sites.
+
+Q: Can we integrate this with our existing systems and security policies?  
+A: Yes — Meraki supports APIs, SAML, and integration with existing firewalls, Active Directory, and SIEM tools.
+
+That concludes our demo. If you have any more questions or would like to see a specific feature in more detail, feel free to reach out. Thank you for your time!

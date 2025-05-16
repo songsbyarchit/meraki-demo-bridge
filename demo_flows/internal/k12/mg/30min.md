@@ -1,25 +1,21 @@
-[Opening]
+Hey there! Today, we're going to dive into how Cisco Meraki's MG can revolutionize the way K-12 Education/Primary Education institutions manage their networks. Whether you're a partner reseller looking to pitch to customers in this sector or an internal team member wanting to better support our partners, this demo is tailored just for you.
 
-Hello everyone, thank you for joining this Meraki MG demo session today. Our focus today is on partner enablement, specifically targeting the K12 sector. We want to equip you with the knowledge and tools to effectively pitch the Meraki MG to your customers in the education industry. Let's dive right in.
+Let's kick things off by discussing some trends and challenges you're encountering with customers in the K-12 Education/Primary Education sector. What do you find unique or tricky about positioning solutions in this space?
 
-[Use Case 1: Remote Learning]
+In the K-12 Education/Primary Education sector, network reliability is crucial. With Meraki MG, you can ensure seamless connectivity for students and teachers alike. Let's explore a few use cases where MG shines:
 
-Imagine a scenario where a school district needs to provide reliable and secure internet connectivity for remote learning. With the Meraki MG, partners can easily set up a secure VPN connection to ensure students and teachers can access online resources without any interruptions. **Click 'Configure > Site-to-Site VPN'** to see how simple it is to configure.
+1. **Remote Learning Support**: With the rise of remote learning, MG provides secure and reliable connectivity for students and staff accessing online resources.
+   
+2. **BYOD Management**: Easily manage a multitude of devices brought in by students and faculty members, ensuring network security and performance.
 
-[Use Case 2: Guest Wi-Fi for Events]
+Now, let's take a look at the Meraki Dashboard, your central platform for network management. **Click 'Dashboard'** to access the single pane of glass view that provides visibility into your entire network. From here, you can **click 'Network-wide > Clients'** to see all connected devices in real-time.
 
-Now let's consider a use case where a school is hosting a large event and needs to provide guest Wi-Fi access. With the Meraki MG, partners can set up a separate guest network with bandwidth limits to ensure a smooth experience for all attendees. **Click 'Configure > Wireless > SSIDs'** to see how easy it is to create a guest network.
+One of the key benefits of the Meraki Dashboard is simplified troubleshooting. **Click 'Monitor > Event Log'** to quickly identify and resolve network issues. Additionally, unified management allows you to **click 'Systems Manager > Devices'** to easily deploy and manage software and apps across all devices.
 
-[Use Case 3: Network Monitoring and Troubleshooting]
+As you engage with customers in the K-12 Education/Primary Education space, you may encounter objections such as cost vs legacy vendors and skepticism over cloud-managed security. Arm yourself with TCO comparisons to address these concerns effectively.
 
-Lastly, let's talk about network monitoring and troubleshooting. The Meraki MG provides partners with real-time visibility into network performance, allowing them to proactively identify and resolve issues before they impact users. **Click 'Monitor > Clients'** to see how partners can easily monitor network activity.
+In terms of enablement, we provide partners with access to demo kits, dashboards, playbooks, and partner-exclusive webinars to enhance their selling capabilities in this sector.
 
-[Discussion Questions]
+Post-sale, we support onboarding through co-delivery workshops, pre-built config templates, and fast escalations handling from Meraki support. This ensures a smooth transition for customers adopting Meraki MG in their educational institutions.
 
-Now, let's open up the floor for discussion. Here are a few smart questions you can ask your potential customers:
-
-1. How important is network security for your school district, especially with the rise of remote learning?
-2. Have you experienced any challenges with providing reliable Wi-Fi access during events or large gatherings?
-3. How do you currently monitor and troubleshoot network issues, and what improvements would you like to see in this area?
-
-Thank you for attending this demo session. We hope you feel more confident in pitching the Meraki MG to your customers in the K12 sector. If you have any further questions or need assistance, please don't hesitate to reach out.
+Let's empower our partners to drive success in the K-12 Education/Primary Education sector with Cisco Meraki MG. Thank you for joining us today!

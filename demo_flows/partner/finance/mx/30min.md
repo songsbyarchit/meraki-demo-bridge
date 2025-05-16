@@ -1,30 +1,20 @@
-Title: Meraki MX Demo for the Finance Sector
+Hey there, thanks for joining me today! I know we have a lot to cover, so let's dive right in. As a partner in the Financial Services sector, I'm sure you're familiar with the unique challenges and trends in this industry. What are some of the pain points you're seeing with your customers, and what do you find tricky about positioning solutions in this space?
 
-Introduction:
-- Welcome everyone to the Meraki MX demo specifically tailored for the Finance sector. Today, we will explore how Meraki MX can address the pain points that finance customers care about and how you can position Meraki to meet their needs.
+Let's talk about how Meraki MX can address these challenges. One of the key use cases in the Financial Services sector is secure branch connectivity. With **click 'Security & SD-WAN > VPN > Add a VPN'**, you can easily set up secure connections between branches and headquarters, ensuring data privacy and compliance.
 
-Pain Points in the Finance Sector:
-- Security is a top concern for finance customers due to the sensitive nature of their data and the increasing number of cyber threats.
-- Network performance and reliability are crucial for financial institutions to ensure seamless transactions and client communication.
-- Compliance with regulations such as GDPR and PCI DSS is a major challenge for finance organizations.
+Another common use case is network segmentation for compliance. By **click 'Security & SD-WAN > Addressing & VLANs'**, you can create isolated network segments for different departments or functions, helping you meet regulatory requirements while maintaining network performance.
 
-How Meraki MX Addresses These Pain Points:
-- Meraki MX offers robust security features such as advanced threat protection, content filtering, and intrusion prevention to safeguard sensitive financial data.
-- The auto VPN feature ensures secure connections between branches and headquarters, guaranteeing network reliability and performance.
-- Meraki MX simplifies compliance with built-in reporting tools that track network activity and assist in meeting regulatory requirements.
+Lastly, let's not forget about cloud-managed security. With **click 'Security & SD-WAN > Content filtering'**, you can easily enforce web filtering policies across all your branches from a single dashboard. This not only improves security but also simplifies management and troubleshooting.
 
-Use Case 1: Secure Remote Access for Finance Employees
-- Show how to set up a client VPN on Meraki MX to provide secure remote access for finance employees working from home or on the go.
-- **Navigate to 'Security & SD-WAN > Client VPN' to configure settings for secure remote access.**
+Now, let's address some common questions partners might have when pitching Meraki MX in the Financial Services space:
 
-Use Case 2: Branch Office Connectivity for Financial Institutions
-- Demonstrate how to set up site-to-site VPNs between branch offices using Meraki MX to ensure secure and reliable connectivity.
-- **Click 'Security & SD-WAN > Site-to-site VPN' to configure VPN tunnels between branch offices.**
+Q: What are the top financial services pain points this addresses?  
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-Smart Questions for Discussion:
-1. How do your current network security solutions address the specific compliance requirements in the finance sector?
-2. What are the biggest challenges you face in ensuring network performance and reliability for your financial organization?
-3. How important is it for your finance customers to have secure remote access for their employees?
+Q: How do we best position MX during the pitch?  
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-Conclusion:
-- Thank you for joining us in this Meraki MX demo for the Finance sector. We hope you now have a better understanding of how Meraki MX can address the unique needs of finance customers. Remember to leverage these use cases and smart questions when pitching Meraki to your finance clients. If you have any further questions or would like to explore more features, feel free to reach out to us.
+Q: What installation or deployment concerns should we be ready for?  
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
+
+Thanks for your time today, and I hope this demo has given you a better understanding of how Meraki MX can help address the specific needs of the Financial Services sector. Let me know if you have any other questions or if there's anything else I can assist you with.

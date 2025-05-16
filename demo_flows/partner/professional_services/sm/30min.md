@@ -1,24 +1,22 @@
-Demo Script:
+Hey there, thanks for joining us today! I'm excited to dive into how Cisco Meraki's SM solution can revolutionize the way you manage networks in the Professional Services sector. Before we get started, can you share what trends or challenges you're seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-Introduction:
-- Welcome everyone! Today, we're going to talk about how Meraki SM can benefit your Professional Services sector customers. Let's dive right in.
+Great, let's jump right in. Imagine you're a Professional Services firm looking to streamline network management across multiple locations. With Meraki's SM solution, you can achieve just that. Let's take a look at a few use cases tailored to your needs.
 
-Pain Points:
-- So, what are the pain points that your customers in the Professional Services sector care about? Well, they want a solution that is easy to deploy and manage, secure, and provides visibility into their network. They also want to ensure that their employees can work remotely without any hiccups. This is where Meraki SM comes in.
+First up, **click 'Clients' to see a comprehensive list of devices connected to your network**. This visibility allows you to quickly identify any unauthorized devices or potential security risks.
 
-Use Case 1 - Remote Work:
-- Imagine one of your customers has employees who need to work remotely. With Meraki SM, they can easily set up VPN access for these employees by simply **click 'Configure > VPN'**. This way, their employees can securely access company resources from anywhere.
+Next, **navigate to 'Security & SD-WAN > Security Center' to view real-time threat alerts and security events**. With Meraki, you can proactively protect your network against cyber threats, ensuring business continuity for your clients.
 
-Use Case 2 - Network Visibility:
-- Another common pain point for Professional Services customers is the need for network visibility. With Meraki SM, your customers can easily monitor their network and see detailed information about connected devices, bandwidth usage, and security threats. This can be done by **click 'Monitor > Clients'**.
+Lastly, **click 'Monitor > Event Log' to troubleshoot any network issues in real-time**. Meraki's intuitive dashboard simplifies the troubleshooting process, saving you time and resources.
 
-Use Case 3 - Device Management:
-- Lastly, your customers in the Professional Services sector often have a mix of company-owned and personal devices. With Meraki SM, they can easily manage and secure all these devices from a single dashboard. They can push out software updates, enforce security policies, and even remotely wipe a lost device. Just **click 'Systems Manager > Devices'** to see all connected devices.
+Now, let's address some common questions partners might have when positioning SM in the Professional Services space:
 
-Smart Questions:
-1. How are your customers currently managing their remote workforce? Are they facing any challenges in terms of security or visibility?
-2. What kind of devices are your customers using in their network? Do they have a mix of company-owned and personal devices?
-3. What are the biggest concerns your customers have when it comes to network security and management?
+Q: What are the top professional services pain points this addresses?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-Conclusion:
-- In conclusion, Meraki SM offers a simple, secure, and scalable solution for your customers in the Professional Services sector. By addressing their pain points and providing clear use cases, you can confidently pitch Meraki SM to them. Thank you for joining us today, and feel free to reach out if you have any further questions or need assistance in pitching Meraki to your customers.
+Q: How do we best position SM during the pitch?
+A: Emphasize Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
+
+Q: What installation or deployment concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
+
+Thank you for exploring Meraki's SM solution with us today. We're excited to see how it transforms network management for Professional Services firms like yours.

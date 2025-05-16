@@ -1,42 +1,34 @@
-Title: Meraki MX Demo for the Hospitality Sector
+Hey there! Thanks for joining us today for this demo on Cisco Meraki MX specifically tailored for the Hospitality sector. Whether you're a partner reseller, customer IT admin, or internal SE, we're excited to show you how Meraki can address the unique challenges faced in this industry.
 
-Duration: 60 minutes
+Let's kick things off with a couple of warm-up questions:
+- For partners: What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
+- For customers: What does your current network setup look like? Where are your biggest IT headaches today?
+- For internal: What common questions do our customers ask in the Hospitality sector? What objections or misconceptions do we frequently encounter?
 
-Introduction (5 minutes)
-- Introduce yourself and your company
-- Explain the purpose of the demo: to showcase the benefits of Meraki MX in the Hospitality sector
-- Briefly discuss the pain points that customers in the Hospitality sector face
+Now, let's dive into some key use cases for the Hospitality sector:
+1. **Guest Wi-Fi Management**: Easily create secure guest networks with custom splash pages.
+2. **Location Analytics**: Track foot traffic and customer behavior for better marketing insights.
+3. **Security Cameras Integration**: Monitor premises with seamless integration of security cameras.
+4. **Voice and Video Conferencing**: Ensure high-quality communication for staff and guests alike.
+5. **Centralized Management**: Control all network devices from a single, intuitive dashboard.
+6. **Automated VLANs**: Simplify network segmentation for different areas within the hotel.
 
-Use Case 1: Network Security (10 minutes)
-- Discuss the importance of network security in the Hospitality sector
-- Show how easy it is to set up firewall rules and content filtering on the Meraki MX
-- **click 'Security & SD-WAN > Firewall'** to demonstrate setting up rules
-- Highlight how Meraki's cloud-based architecture allows for real-time threat intelligence updates
+Let's showcase how the Meraki Dashboard streamlines network management:
+1. **Log in to the Meraki Dashboard**
+2. **Navigate to 'Wireless > SSIDs' to create a new guest network**
+3. **Click 'Security Cameras > Cameras' to view live feeds**
+4. **Monitor location analytics under 'Wireless > Bluetooth & Beacon'**
+5. **Set up automated VLANs via 'Switch > VLANs'**
+6. **Troubleshoot network issues using the 'Tools > Ping' feature**
 
-Use Case 2: Guest Wi-Fi (10 minutes)
-- Explain the need for secure and reliable guest Wi-Fi in hotels
-- Show how to set up a guest Wi-Fi network with customized splash pages and time limits
-- **click 'Wireless > SSIDs'** to create a new SSID for guests
-- Emphasize the scalability of Meraki MX for handling multiple guest connections
+As you pitch MX in the Hospitality space, here are some common questions partners might ask:
+- Q: What are the top hospitality pain points this addresses?
+  A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
+  
+- Q: How do we best position MX during the pitch?
+  A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
+  
+- Q: What installation or deployment concerns should we be ready for?
+  A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
 
-Use Case 3: VPN for Remote Workers (10 minutes)
-- Discuss the growing trend of remote work in the Hospitality sector
-- Demonstrate how easy it is to set up VPN tunnels for remote workers using Meraki MX
-- **click 'Security & SD-WAN > Site-to-site VPN'** to configure a VPN tunnel
-- Highlight the seamless integration with Meraki's other products for a complete remote work solution
-
-Use Case 4: Network Monitoring and Troubleshooting (10 minutes)
-- Explain the importance of proactive network monitoring in hotels
-- Show how Meraki MX provides real-time visibility into network performance
-- **click 'Monitor > Appliance status'** to view network health metrics
-- Discuss how Meraki's centralized dashboard simplifies troubleshooting and maintenance tasks
-
-Smart Questions for Discussion:
-1. How do you currently handle network security and compliance in your hospitality establishment?
-2. What challenges have you faced in providing reliable and secure guest Wi-Fi access?
-3. How do you support remote workers in your organization, and what tools do you currently use for VPN connectivity?
-
-Conclusion (5 minutes)
-- Summarize the key benefits of Meraki MX for the Hospitality sector
-- Encourage partners to position Meraki as a comprehensive network solution for hotels and resorts
-- Offer to address any additional questions or concerns from the audience
+That wraps up our demo today. We hope you see the value that Cisco Meraki MX can bring to the Hospitality sector. Feel free to reach out with any further questions or for a more in-depth discussion. Thanks for joining us!

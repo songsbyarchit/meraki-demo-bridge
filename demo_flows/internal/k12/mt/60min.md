@@ -1,29 +1,28 @@
-[Opening]
-Hello everyone, thank you for joining today's Meraki MT demo focused on the K12 sector. Our goal is to equip you with the knowledge and tools to effectively pitch Meraki solutions to K12 customers. Let's get started!
+Hey there, thanks for joining us today for this demo of Cisco Meraki for K-12 Education/Primary Education. Whether you're a partner reseller, customer IT admin, or internal SE, we're excited to show you how Meraki can benefit your organization in this specific sector.
 
-[Use Case 1: Network Visibility]
-One of the key features of Meraki MT is its ability to provide comprehensive network visibility. With just a few clicks, you can **navigate to the dashboard and view real-time network activity**. This is crucial for K12 institutions to monitor student and staff device usage, identify potential security threats, and ensure smooth network performance. 
+Let's kick things off with a quick warm-up question:
+For partners: What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-[Use Case 2: Remote Management]
-Meraki MT allows for seamless remote management of network devices. **Click 'Devices > Select a device > Remote Tools'** to troubleshoot issues or make configuration changes without the need for on-site visits. This is especially helpful for K12 schools with limited IT resources and dispersed campuses.
+Great insights! Now, let's dive into the demo and explore some key use cases tailored for K-12 Education/Primary Education:
 
-[Use Case 3: Content Filtering]
-Content filtering is essential for K12 institutions to protect students from accessing inappropriate content online. With Meraki MT, you can easily **set up content filtering policies by clicking 'Security & SD-WAN > Content Filtering'**. This ensures a safe and secure browsing experience for students while they are on the school network.
+1. **Network Security**: Showcasing how Meraki's integrated security features keep students and staff safe online.
+2. **Device Management**: Demonstrating how the Meraki Dashboard simplifies the management of multiple devices across various locations.
+3. **Bandwidth Management**: Highlighting how Meraki enables IT admins to prioritize critical applications and ensure smooth online learning experiences.
+4. **Location Analytics**: Illustrating how Meraki provides valuable insights into foot traffic and student behavior on campus.
 
-[Use Case 4: Application Prioritization]
-In a K12 environment, it's important to prioritize educational applications to ensure seamless access for students and teachers. **Navigate to 'Wireless > Application Visibility'** to identify and prioritize critical applications like learning management systems or video conferencing tools. This helps optimize network performance and enhance the overall learning experience.
+Now, let's take a closer look at the Meraki Dashboard. **Click 'Dashboard' on the top navigation bar** to access the centralized platform. From here, you can **navigate to 'Wireless > Access points'** to see all connected devices in real-time.
 
-[Prompt for Discussion]
-Now that we've covered some key use cases, I want to hear from you. How do you think Meraki MT can address the unique networking challenges faced by K12 schools? 
+Moving on, let's explore how Meraki streamlines troubleshooting. **Click on a specific device under 'Access points' and select 'Tools > Ping'** to diagnose connectivity issues instantly.
 
-[Use Case 5: Guest Access]
-K12 schools often host events or meetings where external guests need access to the network. With Meraki MT, you can easily **set up a guest network by clicking 'Wireless > SSIDs > Add a new SSID'**. This allows guests to connect securely without compromising the main school network.
+As we wrap up, here are a couple of FAQs to help partners effectively pitch Meraki in the K-12 Education/Primary Education sector:
 
-[Use Case 6: Device Management]
-Managing a large number of devices in a K12 environment can be overwhelming. Meraki MT simplifies device management with features like **'Systems Manager > Devices > Add new device'**. This streamlines the process of onboarding and monitoring devices, ensuring optimal performance across the network.
+Q: What objections might the partner hear in K-12 Education/Primary Education?
+A: Cost vs legacy vendors, and skepticism over cloud-managed security — arm them with TCO comparisons.
 
-[Prompt for Discussion]
-As you think about your K12 customers, how do you see Meraki MT improving their network management and overall efficiency?
+Q: What enablement do we provide for partners?
+A: Access to demo kits, dashboards, playbooks, and partner-exclusive webinars.
 
-[Closing]
-Thank you for participating in today's demo. I hope you now feel more confident in pitching Meraki MT to K12 customers. Remember, understanding their unique needs and showcasing how Meraki can address them is key to a successful pitch. Before we wrap up, I'd like to hear from you: how do you plan on integrating Meraki MT into your conversations with K12 customers? What challenges do you anticipate, and how can we support you in overcoming them?
+Q: How do we support onboarding post-sale?
+A: We offer co-delivery workshops, pre-built config templates, and Meraki support handles escalations fast.
+
+Thanks for joining us today, and we look forward to supporting you in delivering top-notch solutions to our education partners.

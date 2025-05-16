@@ -1,27 +1,36 @@
-[Opening]
+Hello everyone! Today we're going to dive into a demo of Cisco Meraki MX, tailored specifically for the Manufacturing sector. Whether you're a partner reseller, customer IT admin, or internal SE, our goal is to equip you with the knowledge you need to effectively pitch and support MX solutions in this space.
 
-Presenter: Good morning everyone, thank you for joining today's Meraki MX demo focused on the Manufacturing sector. Our goal today is to equip you with the knowledge and tools to effectively pitch the Meraki MX solution to our customers in the manufacturing industry.
+Let's kick things off with a couple of warm-up questions:
+- For partners: What trends or challenges are you seeing with customers in the Manufacturing sector? What do you find unique or tricky about positioning solutions in this space?
+- For customers: What does your current network setup look like? Where are your biggest IT headaches today?
+- For internal: What common questions do our customers ask in the Manufacturing sector? What objections or misconceptions do we frequently encounter?
 
-[Slide 1: Introduction to Meraki MX]
-Presenter: Let's start by looking at the Meraki MX, a comprehensive security and SD-WAN solution that is ideal for manufacturing environments. It offers simple deployment, centralized management, and robust security features.
+Now, let's explore the power of Meraki MX in the Manufacturing sector with a few use cases.
 
-[Slide 2: Use Case 1 - Secure Remote Access]
-Presenter: One common use case in manufacturing is the need for secure remote access to the network. With Meraki MX, we can easily set up VPNs to allow remote workers or vendors to securely connect to the network. **Click 'Security & SD-WAN > Appliance > Site-to-Site VPN'**
+**Use Case 1: Secure Remote Connectivity**
+In Manufacturing, remote sites and workers are common. With **MX VPN**, you can securely connect all your locations and ensure seamless communication.
 
-[Slide 3: Use Case 2 - Application Optimization]
-Presenter: Another important aspect in manufacturing is ensuring optimal performance for critical applications. Meraki MX offers application-aware routing and traffic shaping capabilities to prioritize traffic and ensure smooth operations. **Click 'Security & SD-WAN > SD-WAN & Traffic Shaping'**
+**Use Case 2: Threat Protection**
+Protecting sensitive data is crucial in Manufacturing. With **MX Advanced Security Features**, you can defend against cyber threats and ensure business continuity.
 
-[Slide 4: Use Case 3 - IoT Device Segmentation]
-Presenter: With the rise of IoT devices in manufacturing, network segmentation becomes crucial for security and performance. Meraki MX allows us to easily segment IoT devices from critical production systems for better control and visibility. **Click 'Security & SD-WAN > Addressing & VLANs'**
+**Use Case 3: Application Visibility**
+In a fast-paced Manufacturing environment, understanding network traffic is essential. **MX Application Visibility** gives you insights into bandwidth usage and application performance.
 
-[Slide 5: Partner Enablement]
-Presenter: Now that we've seen some key use cases, it's important for our partners to be able to effectively pitch the Meraki MX solution to our manufacturing customers. Remember to focus on the simplicity of deployment, centralized management, and robust security features that Meraki MX offers.
+Now, let's take a look at the Meraki Dashboard, your central platform for network management.
 
-[Slide 6: Smart Questions]
-Presenter: To prompt discussion with our customers, here are a few smart questions you can ask:
-1. How are you currently managing remote access for your employees and vendors?
-2. Have you experienced any challenges with application performance in your manufacturing environment?
-3. What steps have you taken to secure IoT devices on your network?
+**Click 'Dashboard' to access the main overview page.**
+**Navigate to 'Security & SD-WAN > Threat Protection' to explore advanced security settings.**
+**Click 'Monitor > Application Usage' to view real-time application data.**
 
-[Closing]
-Presenter: Thank you for attending today's Meraki MX demo. We hope you feel more confident in pitching this solution to our manufacturing customers. If you have any further questions or need additional support, please don't hesitate to reach out. Thank you and have a great day!
+To support partners selling MX in Manufacturing, here are a few FAQs:
+
+Q: What objections might the partner hear in manufacturing?
+A: Cost vs legacy vendors, and skepticism over cloud-managed security — arm them with TCO comparisons.
+
+Q: What enablement do we provide for partners?
+A: Access to demo kits, dashboards, playbooks, and partner-exclusive webinars.
+
+Q: How do we support onboarding post-sale?
+A: We offer co-delivery workshops, pre-built config templates, and Meraki support handles escalations fast.
+
+Thank you for joining this demo of Cisco Meraki MX in the Manufacturing sector. We hope you feel more confident in pitching and supporting our solutions. Let's empower our partners for success!

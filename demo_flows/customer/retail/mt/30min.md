@@ -1,21 +1,32 @@
-[Start of Demo]
+---
+Great, let's dive into the demo!
 
-Presenter: Good morning everyone, thank you for joining us today for this Meraki MT demo tailored for the Retail sector. Today, we're going to show you how Meraki MT can help streamline your network operations, improve efficiency, and ultimately save you time and money.
+**Warm-up Question:** What does your current network setup look like? Where are your biggest IT headaches today?
 
-Let's dive right in. Imagine you're managing multiple retail locations and you need to monitor and manage the network at each store remotely. With Meraki MT, you can easily do this from one centralized dashboard. **Click 'Dashboard'** to see an overview of all your locations and their network status.
+**Demo Script:**
 
-Now, let's talk about security. In retail, it's crucial to ensure that your network is secure to protect customer data and prevent breaches. With Meraki MT, you can set up firewall rules, VPNs, and intrusion detection to keep your network safe. **Click 'Security & SD-WAN'** to see the options available.
+- **Use Case 1: Secure Guest Wi-Fi**
+  - **Click 'Wireless > SSIDs'** to show how easy it is to create a separate guest network.
+  - Explain how MT's built-in security features protect the main network from potential threats.
 
-Another key use case for Meraki MT in retail is inventory management. By using IoT sensors and cameras, you can track inventory levels in real-time and receive alerts when stock is running low. This can help you avoid stockouts and improve customer satisfaction. **Click 'Cameras & Sensors'** to see how this works.
+- **Use Case 2: Inventory Management**
+  - **Navigate to 'Systems Manager > Devices'** and show how devices can be tracked and managed remotely.
+  - Discuss how this feature can help with inventory tracking and device security for retail stores.
 
-Now, let's talk about cost justification. With Meraki MT, you can reduce the time and resources needed to manage your network, leading to cost savings in the long run. Additionally, by improving network security and inventory management, you can prevent losses due to data breaches or stockouts.
+- **Use Case 3: Location Analytics**
+  - **Click 'Wireless > Access Points'** to demonstrate how location analytics can provide insights into customer behavior.
+  - Highlight how this data can be used for marketing strategies and store layout optimization.
 
-[End of Demo]
+**Frequently Asked Questions:**
 
-Presenter: Now that you've seen how Meraki MT can benefit your retail operations, I'd like to ask you a few questions to prompt discussion:
+Q: How does this solution reduce IT workload in our retail environment?  
+A: Meraki simplifies management through one dashboard and automates many tasks like updates and troubleshooting.
 
-1. How much time do you currently spend managing your network across multiple retail locations?
-2. Have you experienced any security incidents or inventory management challenges in the past that could have been prevented with better network management tools?
-3. What are your key priorities when it comes to improving network operations and efficiency in your retail business?
+Q: What kind of ROI or cost reduction can we expect?  
+A: Customers often report major time savings and reduced downtime, especially for remote sites.
 
-Thank you for your time, and please feel free to reach out if you have any further questions or would like to schedule a follow-up demo.
+Q: Can we integrate this with our existing systems and security policies?  
+A: Yes — Meraki supports APIs, SAML, and integration with existing firewalls, Active Directory, and SIEM tools.
+
+---
+That's it for the demo! Let me know if you have any more questions or if you'd like to see a specific feature in more detail.

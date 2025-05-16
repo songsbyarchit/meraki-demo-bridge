@@ -1,29 +1,27 @@
-[Opening]
+Hey there, thanks for joining us today for this demo! I know we have a mix of partners in the audience, so let's kick things off with a couple of questions tailored to your perspective.
 
-Hello and welcome, everyone. Today, we're going to talk about how Meraki SM can revolutionize the way healthcare organizations manage their network infrastructure. As partners, it's crucial to understand the pain points that healthcare customers face and how Meraki can address those challenges. Let's dive in.
+What trends or challenges are you seeing with customers in the Healthcare sector? What do you find unique or tricky about positioning solutions in this space?
 
-[Pain Points]
+Great, now let's dive into the demo and explore how Cisco Meraki can address those challenges in the Healthcare sector.
 
-Healthcare organizations often struggle with maintaining a secure and reliable network infrastructure. With the increasing number of connected devices and sensitive patient data being transferred, security is a top concern. Additionally, managing a complex network with limited IT resources can be overwhelming. This is where Meraki SM comes in.
+**Use Case 1: Secure Guest Access**
+Let's start by navigating to the Meraki Dashboard and **click 'Wireless > Configure > SSIDs'**. In the Healthcare industry, it's crucial to provide secure guest access for patients and visitors while keeping the network protected. With Meraki, you can easily set up a separate SSID for guests with customizable access policies to ensure network security.
 
-[Use Case 1: Device Management]
+**Use Case 2: Location Analytics**
+Next, let's **click 'Wireless > Monitor > Location Analytics'**. Understanding patient flow and staff movement within a healthcare facility is essential for optimizing operations. Meraki's location analytics feature provides valuable insights into foot traffic patterns, helping healthcare providers make data-driven decisions to improve efficiency.
 
-Imagine a hospital with hundreds of medical devices scattered throughout the building. With Meraki SM, partners can easily enroll and manage all these devices from a centralized dashboard. **Click 'Systems Manager > Devices'** to see real-time status updates, enforce security policies, and troubleshoot any issues remotely. This streamlines device management and ensures compliance with industry regulations.
+**Use Case 3: Remote Site Management**
+Lastly, let's **click 'Organization > Inventory > Devices'**. Healthcare organizations often have multiple sites that need to be managed centrally. With Meraki's single pane of glass dashboard, you can easily monitor and configure network devices across different locations, simplifying troubleshooting and ensuring consistent network performance.
 
-[Use Case 2: Network Monitoring]
+Now, let's wrap up with a few common questions partners might have when positioning SM in the Healthcare space.
 
-In a healthcare setting, network downtime is not an option. With Meraki SM, partners can proactively monitor the network health and performance. **Click 'Monitor > Overview'** to view real-time analytics and receive alerts for any potential issues. This allows IT teams to quickly identify and resolve issues before they impact patient care.
+Q: What are the top healthcare pain points this addresses?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-[Use Case 3: Application Control]
+Q: How do we best position SM during the pitch?
+A: Emphasize Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-Healthcare organizations often have strict policies around which applications can be accessed on their network. With Meraki SM, partners can easily set up application control policies to restrict access to non-essential apps. **Click 'Systems Manager > Security Policies'** to configure rules based on user roles or device types. This ensures a secure and efficient network environment.
+Q: What installation or deployment concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
 
-[Smart Questions]
-
-1. How are you currently managing device security and compliance in your healthcare organization?
-2. Have you experienced any network downtime or performance issues that have impacted patient care?
-3. What specific challenges do you face in terms of application control and network security?
-
-[Closing]
-
-By understanding the pain points of healthcare customers and showcasing the capabilities of Meraki SM, partners can effectively pitch this solution to drive value and improve network infrastructure in healthcare settings. Thank you for joining us today. Let's continue the conversation and explore how Meraki can transform your healthcare organization.
+Thank you for joining us today! I hope this demo has given you a better understanding of how Cisco Meraki can help address the specific needs of the Healthcare sector. Let's continue to work together to bring these innovative solutions to our customers.

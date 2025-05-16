@@ -1,26 +1,28 @@
-[Opening]
+Hey there, thanks for joining me today. Whether you're a partner looking to better serve your manufacturing customers, a customer IT admin seeking new solutions, or an internal SE wanting to understand the challenges in this sector, this demo is tailored just for you.
 
-Presenter: Good morning everyone, thank you for joining today's Meraki MS demo focusing on the Manufacturing sector. Our goal today is to equip you with the knowledge and tools to effectively pitch Meraki MS solutions to our manufacturing customers. Let's dive right in.
+Let's kick things off with a quick question:
+For partners: What trends or challenges are you seeing with customers in the manufacturing sector? What do you find unique or tricky about positioning solutions in this space?
 
-[Use Case 1: Network Visibility and Control]
+Now, let's dive into the Meraki MS and how it can revolutionize networking in the manufacturing sector.
 
-Presenter: One of the key challenges in manufacturing is ensuring network reliability and security. With Meraki MS, we offer a centralized dashboard that provides real-time visibility into the network. From here, partners can easily **click 'Configure > Switch ports'** to monitor and control network traffic. This level of control is crucial in maintaining operational efficiency and minimizing downtime in manufacturing facilities.
+**Use Case 1: Enhancing Visibility**
+Imagine being able to see all your network devices in one place, easily identifying and troubleshooting any issues. With the Meraki Dashboard, you can **click 'Network-wide > Monitor > Clients'** to get a comprehensive view of all connected devices.
 
-[Use Case 2: Plug-and-Play Deployment]
+**Use Case 2: Simplified Troubleshooting**
+In manufacturing, downtime is costly. The Meraki Dashboard allows you to quickly pinpoint network problems. Let's **click 'Switch > Monitor > Switch ports'** to identify any connectivity issues.
 
-Presenter: Another pain point for manufacturing customers is the complexity of network deployment. With Meraki MS, we offer a plug-and-play solution that streamlines the deployment process. Partners can **click 'Configure > Add a switch'** to quickly add new devices to the network without the need for manual configuration. This feature not only saves time but also reduces the risk of human error during deployment.
+**Use Case 3: Unified Management**
+Managing a complex network can be overwhelming. With Meraki, you can streamline operations by **clicking 'Configure > VLANs'** to easily set up and manage VLANs across your manufacturing environment.
 
-[Use Case 3: Network Segmentation]
+Now, let's address some common questions for partners selling MS in manufacturing:
 
-Presenter: Security is a top priority for manufacturing companies, especially when it comes to protecting sensitive data and intellectual property. With Meraki MS, partners can easily **click 'Configure > VLANs'** to segment the network and create isolated zones for different departments or applications. This level of network segmentation enhances security measures and ensures that critical data remains protected.
+Q: What objections might the partner hear in manufacturing?
+A: Cost vs legacy vendors, and skepticism over cloud-managed security — arm them with TCO comparisons.
 
-[Smart Questions]
+Q: What enablement do we provide for partners?
+A: Access to demo kits, dashboards, playbooks, and partner-exclusive webinars.
 
-Presenter: Now, I'd like to pose a couple of questions to prompt discussion:
-1. How has network visibility and control impacted your manufacturing operations in the past?
-2. What are the biggest challenges you face when it comes to network deployment and management in your manufacturing facilities?
-3. In what ways do you currently segment your network to enhance security measures?
+Q: How do we support onboarding post-sale?
+A: We offer co-delivery workshops, pre-built config templates, and Meraki support handles escalations fast.
 
-[Closing]
-
-Presenter: Thank you for participating in today's demo. I hope you found it informative and valuable for your future customer engagements. Remember, Meraki MS offers a range of solutions tailored to the specific needs of the manufacturing sector. If you have any further questions or would like to explore more use cases, feel free to reach out to our team. Have a great day!
+Thank you for your time today, and I hope this demo has equipped you with the knowledge and tools to better support manufacturing customers with Meraki MS.

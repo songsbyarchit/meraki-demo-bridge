@@ -1,31 +1,27 @@
-[Opening]
+Hey there, thanks for joining me today. I know we have a lot to cover, so let's jump right in. As a partner reseller in the Hospitality sector, I'm sure you've encountered some interesting challenges. What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-Welcome everyone! Today, we're going to dive into a demo of the Meraki MV for the Hospitality sector. As partners, it's crucial to understand the pain points our customers in this industry face and how Meraki can help address them.
+---
 
-[Pain points]
+**Use Case 1: Security Monitoring**
+Let's start by looking at how **MV** cameras can enhance security monitoring in a hotel lobby. **Click 'Cameras > Live'** to view real-time footage and **click on a specific camera** to see detailed video feeds.
 
-One major pain point in the Hospitality sector is ensuring the safety and security of guests and staff. Traditional CCTV systems can be costly to install and maintain, not to mention they often lack the intelligence needed to proactively prevent incidents.
+**Use Case 2: Occupancy Tracking**
+Next, let's explore how **MV** cameras can help track occupancy in a hotel restaurant. **Click 'Cameras > Analytics'** to access occupancy data and **adjust the time frame** to see trends.
 
-Another pain point is the need for seamless integration with other hotel systems, like access control and guest Wi-Fi. Guests expect a connected experience, and hotels need a solution that can easily integrate with their existing infrastructure.
+**Use Case 3: Employee Safety**
+Now, let's see how **MV** cameras can improve employee safety in hotel back-of-house areas. **Click 'Cameras > Motion Alerts'** to set up alerts for specific zones and **test the motion detection feature**.
 
-[Use cases]
+**Use Case 4: Guest Experience**
+Lastly, let's discuss how **MV** cameras can enhance the guest experience by monitoring pool areas. **Click 'Cameras > Video Walls'** to create a custom video wall for real-time monitoring.
 
-Let's explore some use cases to demonstrate how Meraki MV can help address these pain points:
+---
 
-1. **Enhanced Security:** With Meraki MV's advanced analytics, hotels can proactively monitor and detect suspicious behavior, such as loitering in restricted areas or unauthorized access to guest rooms.
+When positioning **MV** in the Hospitality sector, partners often ask:
+Q: What are the top hospitality pain points this addresses?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-2. **Occupancy Insights:** By leveraging MV's people counting feature, hotels can better understand guest flow and occupancy levels, allowing them to optimize staffing and resource allocation.
+Q: How do we best position **MV** during the pitch?
+A: Emphasize Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-3. **Integration with Access Control:** MV cameras can easily integrate with access control systems, allowing hotels to automatically grant or deny access based on visual verification from the cameras.
-
-4. **Remote Monitoring:** With the Meraki dashboard, hotel staff can remotely monitor live video feeds from anywhere, ensuring around-the-clock security and peace of mind.
-
-[Smart questions]
-
-Now, here are a few smart questions you can ask your customers to prompt discussion:
-
-1. How are you currently addressing security challenges at your properties, and what are the pain points you're experiencing with your current solution?
-2. Can you walk me through your current system integration process and highlight any pain points or challenges you've encountered?
-3. How do you see the role of video surveillance evolving in the Hospitality sector, and what features or capabilities are most important to you?
-
-By understanding your customers' pain points and demonstrating how Meraki MV can address them with real-world use cases, you'll be better equipped to pitch to them effectively. Thank you for joining us today, and we look forward to helping you succeed in the Hospitality market with Meraki MV.
+Q: What installation or deployment concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.

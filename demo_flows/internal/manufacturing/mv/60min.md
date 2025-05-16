@@ -1,25 +1,36 @@
-Demo Script:
+Hey there! Today we're going to dive into a demo of Cisco Meraki MV, tailored specifically for the Manufacturing sector. Whether you're a partner reseller, customer IT admin, or internal SE, our focus is on enabling you to effectively pitch this solution to your customers.
 
-Welcome everyone! Today, we're going to dive into a demo of Meraki MV, specifically tailored for the Manufacturing sector. Our goal is to equip our partners with the knowledge and tools they need to effectively pitch Meraki MV to their customers in this industry.
+To kick things off, let's start with a warm-up question:
+For partners: What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-Let's start by looking at the key features and benefits of Meraki MV for Manufacturing:
+Now, let's explore the Meraki MV solution with a focus on Manufacturing. Here are some key use cases to consider:
 
-1. Use Case 1: Security Monitoring - With Meraki MV cameras, manufacturing facilities can easily monitor their premises in real-time, ensuring the safety and security of their assets.
+1. **Real-time Monitoring:** See live video feeds from the factory floor to ensure safety protocols are being followed.
+2. **Inventory Management:** Track inventory movement and identify bottlenecks in the production process.
+3. **Access Control:** Manage access permissions for different areas of the facility to enhance security.
+4. **Quality Control:** Use video analytics to detect defects in products and improve quality control processes.
+5. **Remote Troubleshooting:** Diagnose equipment issues remotely using video feeds to minimize downtime.
+6. **Compliance Auditing:** Easily retrieve video footage for compliance audits and investigations.
 
-2. Use Case 2: Quality Control - By utilizing the advanced analytics capabilities of Meraki MV, manufacturers can identify and address quality control issues before they escalate, improving overall production efficiency.
+Now, let's dive into the Meraki Dashboard, our central platform for unified management and visibility. **Click 'Cameras' to view live feeds from different locations.**
 
-3. Use Case 3: Remote Monitoring - Meraki MV allows manufacturing managers to remotely monitor multiple facilities from a single dashboard, enabling them to make informed decisions in real-time.
+**Click 'Alerts' to see notifications for any security incidents.**
 
-4. Use Case 4: Operational Efficiency - By integrating Meraki MV with other Meraki products such as switches and access points, manufacturers can create a seamless network infrastructure that enhances operational efficiency.
+**Click 'Analytics' to access video analytics for quality control purposes.**
 
-Now, let's **click 'Configure > Switch ports'** to see how easy it is to set up and manage Meraki MV cameras within a manufacturing environment.
+**Click 'Settings > Network-wide settings' to configure access permissions for different areas.**
 
-As we navigate through the demo, keep in mind these key questions to ask your customers:
+**Click 'Tools > Remote Connection' to troubleshoot equipment remotely.**
 
-1. How important is security and surveillance in your manufacturing facility?
-2. What challenges are you currently facing in terms of quality control and monitoring?
-3. How could improved visibility and remote monitoring benefit your operations?
+**Click 'Video Wall' to create a customized video wall for monitoring multiple feeds simultaneously.**
 
-By understanding the unique needs and pain points of our manufacturing customers, we can effectively position Meraki MV as a valuable solution that addresses their specific requirements.
+As you pitch MV to customers in the Manufacturing space, here are some FAQs to keep in mind:
 
-Thank you for joining this demo. We hope you feel empowered to engage with your manufacturing customers and showcase the value of Meraki MV in their operations.
+Q: What objections might the partner hear in manufacturing?
+A: Cost vs legacy vendors, and skepticism over cloud-managed security — arm them with TCO comparisons.
+
+Q: What enablement do we provide for partners?
+A: Access to demo kits, dashboards, playbooks, and partner-exclusive webinars.
+
+Q: How do we support onboarding post-sale?
+A: We offer co-delivery workshops, pre-built config templates, and Meraki support handles escalations fast.

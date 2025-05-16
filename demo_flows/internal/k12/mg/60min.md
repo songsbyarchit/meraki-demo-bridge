@@ -1,34 +1,34 @@
-Demo Script: Meraki MG for K12 Sector Partner Enablement
+Hey there, thanks for joining me today. Whether you're a partner reseller, customer IT admin, or internal SE, I'm excited to walk you through a demo of our Cisco Meraki MG solution tailored for the K-12 Education/Primary Education sector.
 
-Introduction (5 mins)
-- Welcome everyone to the Meraki MG demo for the K12 sector. Today, we will focus on how our solution can support schools in providing reliable and secure connectivity.
-- The Meraki MG is a powerful tool for managing network traffic and ensuring a seamless online learning experience for students and teachers.
+To kick things off, I'd love to hear from our partners: What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-Use Case 1: Internet Failover (10 mins)
-- Let's start with a common scenario in schools - internet outages. With the Meraki MG, we can easily set up failover to ensure uninterrupted connectivity.
-- **Go to the Meraki dashboard and click 'Configure > Internet failover' to set up backup connections.**
-- This feature allows schools to switch seamlessly between different internet sources, ensuring minimal disruption to online classes.
+Let's dive in and explore how Meraki MG can address these challenges with some specific use cases:
 
-Use Case 2: Application Prioritization (10 mins)
-- In a school environment, it's important to prioritize educational applications over non-essential ones. The Meraki MG allows for easy application prioritization.
-- **Navigate to 'Traffic shaping > Application prioritization' to assign priority levels to different applications.**
-- This ensures that critical learning tools have sufficient bandwidth, even during peak usage times.
+1. **Remote Learning Support**: With the increase in remote learning, Meraki MG ensures reliable connectivity for students and teachers, even from home.
 
-Use Case 3: Content Filtering (10 mins)
-- Schools need to ensure a safe online environment for students. The Meraki MG offers robust content filtering capabilities to block inappropriate content.
-- **Access 'Content filtering' in the dashboard to set up custom filtering rules based on categories or specific URLs.**
-- This feature helps schools comply with regulations and protect students from harmful online content.
+2. **Content Filtering and Security**: Protect students from accessing harmful content while ensuring a secure online environment.
 
-Use Case 4: Traffic Analytics (10 mins)
-- Understanding network traffic patterns is vital for optimizing performance. The Meraki MG provides detailed traffic analytics for informed decision-making.
-- **Explore 'Traffic analytics' to view real-time and historical data on network usage, applications, and users.**
-- This insight helps schools identify bottlenecks, plan for capacity upgrades, and monitor network performance.
+3. **Device Management**: Simplify the management of a large number of devices across multiple campuses with centralized control.
 
-Smart Questions for Discussion (5 mins)
-1. How can the Meraki MG help schools address the challenges of managing a growing number of connected devices in the classroom?
-2. What are some key considerations for schools when implementing a network security strategy with the Meraki MG?
-3. How can partners leverage the unique features of the Meraki MG to differentiate their offerings and win over K12 customers?
+4. **Bandwidth Management**: Prioritize critical applications like educational tools over recreational ones to optimize network performance.
 
-Conclusion (5 mins)
-- Thank you for participating in today's demo. We hope you now have a better understanding of how the Meraki MG can support schools in the K12 sector.
-- Remember, as partners, you play a crucial role in helping schools leverage technology effectively. Feel free to reach out if you have any questions or need further support.
+Now, let's take a look at the Meraki Dashboard, our central platform for unified management and troubleshooting:
+
+**Click 'Wireless > Access Points' to view all connected devices.  
+Navigate to 'Security & SD-WAN > Content Filtering' to set up content filtering policies.  
+Click 'Systems Manager > Devices' to manage and secure devices across the network.  
+Access 'SD-WAN & Traffic Shaping' to prioritize traffic for critical applications.  
+Explore 'Switch > Switch Ports' to configure and monitor switch ports.**
+
+As we wrap up, here are some FAQs to support our partners in selling Meraki MG in the K-12 Education/Primary Education space:
+
+Q: What objections might the partner hear in K-12 education/primary education?  
+A: Cost vs legacy vendors, and skepticism over cloud-managed security — arm them with TCO comparisons.
+
+Q: What enablement do we provide for partners?  
+A: Access to demo kits, dashboards, playbooks, and partner-exclusive webinars.
+
+Q: How do we support onboarding post-sale?  
+A: We offer co-delivery workshops, pre-built config templates, and Meraki support handles escalations fast.
+
+Thanks for joining me today, and I hope this demo has equipped you with the tools to effectively pitch Meraki MG to our customers in the K-12 Education/Primary Education sector.

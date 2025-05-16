@@ -1,34 +1,36 @@
-**Introduction (5 mins)**
-- Introduce yourself and the purpose of the demo.
-- Briefly explain how Meraki MS can benefit manufacturing companies.
-- Outline the agenda for the demo.
+Hey there! Thanks for joining me today. Whether you're a partner reseller, customer IT admin, or internal SE, I'm excited to walk you through how Cisco Meraki's MS can revolutionize networking in the Manufacturing sector.
 
-**Use Case 1: Network Visibility and Monitoring (10 mins)**
-- Show the audience how to **navigate to 'Monitor > Network-wide > Switch ports'** to see real-time network traffic.
-- Highlight the importance of monitoring network performance in a manufacturing environment.
-- Discuss how this feature can help partners proactively detect and troubleshoot network issues for their customers.
+Let's kick things off with a couple of warm-up questions tailored to your role:
+- For partners: What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
+- For customers: What does your current network setup look like? Where are your biggest IT headaches today?
+- For internal: What common questions do our customers ask in the Manufacturing sector? What objections or misconceptions do we frequently encounter?
 
-**Use Case 2: Network Segmentation (10 mins)**
-- Demonstrate how to **configure VLANs in 'Configure > Switch ports > Edit > VLAN'** to segment the network for different departments in a manufacturing plant.
-- Explain the benefits of network segmentation for enhancing security and improving network performance.
-- Emphasize how partners can position this feature to address customer concerns about network security in a manufacturing setting.
+Now, let's dive into the demo focusing on the needs of the Manufacturing sector. Here are some key use cases where MS shines:
+1. **Monitoring production line connectivity**
+2. **Ensuring device security and compliance**
+3. **Remote troubleshooting for distributed facilities**
+4. **Optimizing network performance for IIoT devices**
+5. **Implementing guest networks for factory tours**
+6. **Enabling secure access for BYOD devices**
 
-**Use Case 3: Quality of Service (QoS) (10 mins)**
-- Show how to **set up QoS policies in 'Configure > Switch ports > Edit > Quality of Service'** to prioritize critical applications in a manufacturing environment.
-- Discuss the importance of QoS for ensuring consistent performance of mission-critical applications.
-- Provide examples of how partners can use QoS as a value-add for their customers in the manufacturing sector.
+Throughout this demo, keep an eye on the Meraki Dashboard as our central platform. It provides a single pane of glass for visibility, simplified troubleshooting, and unified management. Let's **click 'Dashboard'** to get started.
 
-**Use Case 4: Remote Troubleshooting (10 mins)**
-- Walk through the process of **remotely troubleshooting network issues using the Meraki dashboard**.
-- Highlight the convenience and efficiency of remote troubleshooting for partners supporting manufacturing customers.
-- Explain how partners can leverage this feature to differentiate themselves in the market by providing proactive support.
+Now, let's **click 'Devices > Switches'** to see how easy it is to manage and monitor all switches from one place. You can quickly identify any issues and make necessary configurations without jumping between different interfaces.
 
-**Smart Questions for Discussion (5 mins)**
-- How do you currently address network security concerns in your manufacturing environment?
-- What are the key performance metrics you monitor to ensure optimal network performance?
-- How do you see network automation impacting your manufacturing operations in the future?
+Next, let's **click 'Clients'** to check on the devices connected to the network. With real-time insights, you can easily troubleshoot any connectivity issues and ensure smooth operations on the factory floor.
 
-**Conclusion (5 mins)**
-- Recap the key benefits of Meraki MS for the manufacturing sector.
-- Encourage partners to leverage the use cases demonstrated in the demo to pitch effectively to customers.
-- Thank the audience for their participation and invite any final questions or feedback.
+Moving on, let's **click 'Network-wide > Alerts'** to see how the dashboard proactively notifies you of any potential issues, allowing you to address them before they impact production.
+
+Lastly, let's **click 'Security & SD-WAN > Security Center'** to explore how Meraki simplifies security management, including firewall rules, content filtering, and intrusion prevention, all from one intuitive interface.
+
+To support our partners in selling MS to the Manufacturing sector, here are a few FAQs:
+- Q: What objections might the partner hear in manufacturing?
+  A: Cost vs legacy vendors, and skepticism over cloud-managed security — arm them with TCO comparisons.
+  
+- Q: What enablement do we provide for partners?
+  A: Access to demo kits, dashboards, playbooks, and partner-exclusive webinars.
+  
+- Q: How do we support onboarding post-sale?
+  A: We offer co-delivery workshops, pre-built config templates, and Meraki support handles escalations fast.
+
+Thank you for joining me in this demo. Feel free to reach out if you have any more questions or need further assistance in pitching MS effectively in the Manufacturing sector.

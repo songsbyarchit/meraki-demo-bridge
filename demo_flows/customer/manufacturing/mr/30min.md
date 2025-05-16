@@ -1,31 +1,22 @@
-[Opening]
+Hello and welcome to our Cisco Meraki demo for the **MR** product tailored for the Manufacturing sector. I'm excited to show you how our solution can streamline your network operations and provide cost savings. 
 
-Hello everyone, thank you for joining us today for this Meraki MR demo tailored specifically for the Manufacturing sector. My name is [Your Name] and I'll be guiding you through the next 30 minutes.
+Let's start by discussing your current network setup. What are some of the biggest IT challenges you face in your manufacturing environment today?
 
-[Slide 1: Introduction to Meraki MR]
-Meraki MR is a cloud-managed networking solution that offers seamless connectivity, security, and visibility for your manufacturing environment. With Meraki MR, you can easily manage your network from anywhere, ensuring high performance and reliability for your critical operations.
+**Great, thank you for sharing that. Now, let's dive into the demo.**
 
-[Slide 2: Use Case 1 - Shop Floor Connectivity]
-Let's dive into our first use case - shop floor connectivity. In a manufacturing environment, it's crucial to have a reliable and secure network to connect machinery, sensors, and devices. With Meraki MR, you can easily **click 'Configure > Wireless'** to set up dedicated networks for different parts of your facility, ensuring optimal performance and minimal interference.
+Imagine having complete visibility and control over your network through a single pane of glass - the Meraki Dashboard. Let's **click 'Dashboard'** to see how easy it is to monitor your network health, troubleshoot issues, and manage all your Meraki devices in one place.
 
-[Demo: Setting up VLANs for different shop floor areas]
+Now, let's explore a specific use case for the Manufacturing sector. **Click 'Wireless > Access points'** to see how Meraki MR access points can ensure seamless connectivity across your facility, even in challenging environments. With features like automatic RF optimization and application-aware traffic shaping, you can deliver a reliable network experience for your users.
 
-[Slide 3: Use Case 2 - Guest Access Control]
-Next, let's talk about guest access control. In manufacturing facilities, you may have visitors or contractors who need temporary access to your network. With Meraki MR, you can **click 'Configure > Guest Access'** to set up a secure guest network with limited access and bandwidth, ensuring that your sensitive data remains protected.
+Another key feature for Manufacturing is the ability to **click 'Switch > Switch ports'** and easily configure and monitor your network switches. Whether you need to prioritize critical devices, set up VLANs, or troubleshoot connectivity issues, the Meraki Dashboard simplifies these tasks and saves you time.
 
-[Demo: Setting up a guest network with time-limited access]
+**Let's address some common questions that Manufacturing customers might have:**
 
-[Slide 4: Use Case 3 - Location Analytics]
-Lastly, let's explore location analytics. With Meraki MR, you can collect valuable data on the movement of assets, employees, and visitors within your facility. By **clicking 'Monitor > Location Analytics'**, you can gain insights into traffic patterns, dwell times, and popular areas, helping you optimize your layout for efficiency.
+Q: How does this solution reduce IT workload in our manufacturing environment?  
+A: Meraki simplifies management through one dashboard and automates many tasks like updates and troubleshooting.
 
-[Demo: Analyzing location data to improve workflow]
+Q: What kind of ROI or cost reduction can we expect?  
+A: Customers often report major time savings and reduced downtime, especially for remote sites.
 
-[Closing]
-
-Now, before we wrap up, I want to leave you with a few thought-provoking questions:
-
-1. How do you currently manage network security and performance in your manufacturing facility?
-2. What specific challenges are you facing in terms of network scalability and visibility?
-3. How do you see Meraki MR fitting into your overall IT infrastructure and operational goals?
-
-Thank you for your time and attention today. If you have any further questions or would like to discuss how Meraki MR can benefit your manufacturing operations, please feel free to reach out to us. Have a great day!
+Q: Can we integrate this with our existing systems and security policies?  
+A: Yes — Meraki supports APIs, SAML, and integration with existing firewalls, Active Directory, and SIEM tools.

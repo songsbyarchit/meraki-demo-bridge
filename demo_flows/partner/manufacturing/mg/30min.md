@@ -1,24 +1,27 @@
-[Demo Script]
+Hey there! Thanks for joining us today for this demo on Cisco Meraki's MG for the Manufacturing sector.
 
-Hello and welcome to our Meraki MG demo tailored for the Manufacturing sector. Today, we'll be focusing on how Meraki can help address common pain points in this industry and provide solutions to improve network connectivity and security.
+Let's dive right in with a quick warm-up question: What trends or challenges are you seeing with customers in the Manufacturing sector? What do you find unique or tricky about positioning solutions in this space?
 
-First, let's discuss some pain points that customers in the Manufacturing sector typically face. These include the need for reliable and secure network connectivity across multiple locations, the challenge of managing and monitoring a large number of devices, and the importance of ensuring uptime for critical operations.
+Now, let's explore how Meraki can address these challenges with a focus on the Manufacturing sector.
 
-So, how can Meraki help address these pain points? Let's dive into a few use cases that demonstrate the capabilities of the Meraki MG.
+**Use Case 1: Remote Monitoring and Troubleshooting**
+Imagine a scenario where you have multiple manufacturing facilities spread out across different locations. With Meraki's centralized dashboard, you can quickly **navigate to 'Monitor > Clients'** to see real-time data on all connected devices and easily troubleshoot any issues remotely.
 
-Use Case 1: Remote Monitoring and Troubleshooting
-Imagine a scenario where a manufacturing plant experiences a network outage. With Meraki MG, partners can remotely access the network dashboard to identify the issue quickly. By **clicking 'Tools > Live Tools'**, they can troubleshoot connectivity problems in real-time, minimizing downtime and keeping operations running smoothly.
+**Use Case 2: Secure Access Control**
+In a manufacturing environment, security is paramount. With Meraki, you can **click 'Configure > Wireless > Access Control'** to set up granular access policies, ensuring only authorized devices can connect to your network.
 
-Use Case 2: Secure Network Segmentation
-In a manufacturing environment, it's crucial to separate different types of devices to ensure security and compliance. Partners can easily create secure network segments using Meraki MG by **clicking 'Configure > VLANs'**. This allows for granular control over network traffic and helps prevent unauthorized access to sensitive data.
+**Use Case 3: Scalability and Expansion**
+As your manufacturing business grows, so does your network. With Meraki, adding new sites or expanding existing ones is a breeze. Simply **go to 'Organization > Inventory'** to see all your network devices and easily manage them from a single pane of glass.
 
-Use Case 3: Quality of Service (QoS) for Voice and Video Applications
-Many manufacturing facilities rely on voice and video communications for efficient operations. With Meraki MG, partners can prioritize traffic for these applications by **clicking 'Configure > Traffic Shaping'**. This ensures a seamless user experience and consistent performance for critical business processes.
+Now, let's address some common questions partners might have when pitching MG in the Manufacturing space:
 
-Now, let's wrap up with a few smart questions that partners can use to prompt discussion with potential customers:
+Q: What are the top manufacturing pain points this addresses?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-1. How are you currently managing network connectivity across your manufacturing sites? Are there any pain points you are experiencing in this area?
-2. What measures do you have in place to ensure the security of your network and devices in your manufacturing environment?
-3. How important is reliable and high-quality network performance for your day-to-day operations, and what challenges have you faced in achieving this?
+Q: How do we best position MG during the pitch?
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-Thank you for joining our Meraki MG demo today. We hope this session has provided you with valuable insights on how Meraki can help address the unique needs of the Manufacturing sector. If you have any further questions or would like to explore a customized solution for your business, please feel free to reach out to us.
+Q: What installation or deployment concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
+
+That's all for today's demo. Thank you for your time, and we look forward to helping you empower your manufacturing customers with Cisco Meraki's MG solution.

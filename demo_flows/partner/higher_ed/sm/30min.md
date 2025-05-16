@@ -1,27 +1,31 @@
-[Start of Demo]
+Hey there! Thanks for joining us today for this demo on Cisco Meraki's SM solution. I'm excited to dive into how we can help you better serve your customers in the Higher Education sector. Before we get started, let's warm up with a couple of questions tailored to your role:
 
-Host: Good morning/afternoon everyone! Thank you for joining us for this Meraki SM demo focusing on the Higher Ed sector. Today, we will be discussing how Meraki can help address the pain points that Higher Ed institutions face and how you can position Meraki to your customers. Let's dive in.
+For partners: What trends or challenges are you seeing with customers in the Higher Education sector? What do you find unique or tricky about positioning solutions in this space?
 
-1. Pain Points in Higher Ed:
-- One of the main pain points in the Higher Ed sector is the need for seamless and secure network management across multiple campuses. With different departments, buildings, and devices spread out, it can be a challenge to maintain visibility and control.
-- Another pain point is student engagement and satisfaction. Students expect fast and reliable Wi-Fi access, which can be difficult to achieve with outdated network solutions.
-- Lastly, network security is a top concern for Higher Ed institutions. With the abundance of personal devices and sensitive data being shared, it's crucial to have a robust security solution in place.
+Great, now let's jump into the demo.
 
-2. Positioning Meraki:
-- Meraki offers a cloud-managed solution that provides centralized visibility and control over your network. With a user-friendly dashboard, **click 'Dashboard'**, you can easily monitor and manage all your devices from one place.
-- Meraki's seamless integration with other Cisco products allows for a holistic network solution, ensuring a smooth and secure network experience for students and faculty.
-- By leveraging Meraki's advanced security features, such as content filtering and threat protection, Higher Ed institutions can protect their network from cyber threats and ensure data privacy.
+---
 
-3. Use Cases:
-- Use Case 1: **click 'Configure > Switch ports'**. Show how easy it is to configure switch ports for different devices, such as printers, computers, and access points. This can help streamline network management and ensure optimal performance.
-- Use Case 2: **click 'Wireless > Access Points'**. Demonstrate how Meraki's access points can provide seamless Wi-Fi coverage across campus, ensuring fast and reliable connectivity for students and faculty.
-- Use Case 3: **click 'Security & SD-WAN > Content filtering'**. Showcase how Meraki's content filtering feature can help block inappropriate websites and protect students from harmful content while browsing the internet.
+**Use Case 1: Campus Network Management**  
+Let's say you're an IT admin at a large university with multiple campuses. With Meraki's SM solution, you can easily manage all your network devices from a single dashboard. **Click 'Network-wide > Monitor > Clients'** to see real-time client activity across all sites.
 
-[End of Demo]
+**Use Case 2: Device Configuration and Security**  
+Imagine you need to push out a software update to all the laptops in a lecture hall. With Meraki, you can **click 'Systems Manager > Manage > Profiles'** to deploy updates and ensure all devices are up to date and secure.
 
-Host: Before we wrap up, here are a few smart questions you can ask your customers to prompt discussion:
-1. How are you currently managing your network across multiple campuses, and what challenges are you facing?
-2. How important is network security to your institution, and what measures do you currently have in place to protect your network?
-3. In what ways do you think Meraki can help improve the network experience for your students and faculty?
+**Use Case 3: Troubleshooting and Alerts**  
+If a student reports slow Wi-Fi in the dorms, you can quickly identify the issue by **clicking 'Wireless > Monitor > Access Points'** to see performance metrics and troubleshoot from the dashboard.
 
-Thank you for attending this Meraki SM demo! Feel free to reach out if you have any further questions or would like to explore Meraki for your Higher Ed customers. Have a great day!
+Now, let's address some common questions partners might have:
+
+Q: What are the top Higher Education pain points this addresses?  
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
+
+Q: How do we best position SM during the pitch?  
+A: Emphasize Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
+
+Q: What installation or deployment concerns should we be ready for?  
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
+
+---
+
+And that's a wrap! Thanks for taking the time to learn more about Cisco Meraki's SM solution and how it can benefit Higher Education customers. Feel free to reach out if you have any further questions.

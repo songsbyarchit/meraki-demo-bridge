@@ -1,21 +1,16 @@
-[Opening]
-Hello everyone, thank you for joining today's Meraki MV demo specifically tailored for the Manufacturing sector. Today, we will be focusing on partner enablement and supporting you in effectively pitching this solution to your customers.
+Hey there! Thanks for joining me today. I'm excited to dive into how Cisco Meraki MV can revolutionize the way we approach network security in the Manufacturing sector.
 
-[Slide 1: Introduction to Meraki MV]
-Meraki MV is a cloud-managed smart camera solution that provides reliable security and insights for your manufacturing facility. With features like advanced analytics and easy deployment, it's a game-changer for the industry.
+Let's start by discussing the trends and challenges you're seeing with your customers in this space. What do you find unique or tricky about positioning solutions in Manufacturing?
 
-[Slide 2: Use Case 1 - Security Monitoring]
-Imagine a scenario where a manufacturing plant needs to monitor its perimeter for unauthorized access. With Meraki MV, partners can easily set up motion-based alerts and live video feeds to ensure round-the-clock security. **Click 'Configure > Motion Alerts'** to demonstrate how easy it is to customize alerts based on specific criteria.
+Now, let's take a look at the Meraki Dashboard, our central platform for unified management. With a single pane of glass, you can gain visibility into your entire network, simplify troubleshooting, and manage everything from one place.
 
-[Slide 3: Use Case 2 - Quality Control]
-Now, let's consider a situation where a manufacturing line needs to ensure product quality and detect defects in real-time. Meraki MV's advanced analytics can help partners set up quality control zones and receive alerts for any deviations. **Click 'Configure > Motion Search'** to show how partners can quickly search for specific events within the video feed.
+One key use case in Manufacturing is using MV cameras for real-time monitoring of production lines. With **click 'Cameras > Live View'**, you can keep an eye on operations and ensure everything is running smoothly.
 
-[Slide 4: Use Case 3 - Operational Efficiency]
-Lastly, let's explore how Meraki MV can improve operational efficiency in a manufacturing facility. By analyzing foot traffic and production processes, partners can identify bottlenecks and optimize workflows. **Click 'Dashboard > Foot Traffic Analysis'** to showcase the insights provided by Meraki MV.
+Another use case is enhancing warehouse security with MV smart cameras. By **clicking 'Security > Video Settings'**, you can easily configure motion detection and notifications to keep your assets safe.
 
-[Closing]
-As you prepare to pitch Meraki MV to your manufacturing customers, here are two smart questions to prompt discussion:
-1. How are you currently addressing security and surveillance needs in your manufacturing facility?
-2. What operational challenges are you facing that could be addressed with real-time video insights?
+Lastly, let's explore using MV cameras for quality control inspections. By **navigating to 'Analytics > Object Detection'**, you can set up alerts for anomalies and improve your production processes.
 
-Thank you for participating in today's demo. We hope this session has equipped you with the knowledge and tools to effectively showcase the benefits of Meraki MV to your customers in the Manufacturing sector.
+Now, let's address some common questions in the Manufacturing sector:
+- What objections might partners hear in manufacturing? Cost vs. legacy vendors, and skepticism over cloud-managed security. Arm them with TCO comparisons.
+- What enablement do we provide for partners? Access to demo kits, dashboards, playbooks, and partner-exclusive webinars.
+- How do we support onboarding post-sale? We offer co-delivery workshops, pre-built config templates, and fast Meraki support escalations.

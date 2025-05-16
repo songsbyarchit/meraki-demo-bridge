@@ -1,36 +1,26 @@
-[Opening]
+Hey there, thanks for joining us today! I'm excited to walk you through a demo of Cisco Meraki's MX solution, specifically tailored for the Higher Education sector. Let's dive in!
 
-1. Introduce yourself and thank the partners for attending the Meraki MX demo.
-2. Explain that today's demo will focus on how Meraki MX can address the pain points specific to the Higher Ed sector.
-3. Outline the agenda for the next 60 minutes.
+**UI Interaction 1:** **Login to the Meraki Dashboard**  
+**UI Interaction 2:** **Navigate to the MX Security Appliance**  
+**UI Interaction 3:** **Click on 'Security & SD-WAN' to view security settings**  
+**UI Interaction 4:** **Check traffic analytics and application visibility**  
+**UI Interaction 5:** **Set up VPN for remote campuses**  
+**UI Interaction 6:** **Monitor network health and client connectivity**
 
-[Pain Points]
+Now, let's talk about some key use cases for Meraki MX in Higher Education:
 
-1. **Discuss bandwidth management**: In Higher Ed, there is a constant struggle to balance limited bandwidth with the increasing demand for high-speed internet. Show how Meraki MX's traffic shaping feature can prioritize critical applications like online exams over non-essential traffic.
-2. **Talk about network security**: Higher Ed institutions handle sensitive student and faculty data, making them prime targets for cyber attacks. Showcase how Meraki MX's integrated security features, such as content filtering and intrusion prevention, can protect the network from threats.
-3. **Highlight remote learning support**: With the rise of remote learning, universities need a reliable VPN solution for students and faculty to access campus resources securely. Demonstrate how Meraki MX's Auto VPN feature simplifies remote access setup and management.
+1. **Secure Campus Connectivity:** Ensure a safe and reliable network for students and faculty across multiple locations.
+2. **Application Visibility:** Easily monitor and manage bandwidth for educational apps, ensuring a smooth learning experience.
+3. **Remote Campus VPN:** Connect distant campuses securely and seamlessly for collaborative projects.
+4. **Network Health Monitoring:** Proactively troubleshoot issues and optimize network performance for uninterrupted learning.
 
-[Use Cases]
+**Partner Question 1:** What are the top higher education pain points this addresses?  
+**Answer:** Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-1. **Use Case 1: Secure Campus Network**
-   - Show partners how to set up a secure VLAN for administrative staff using Meraki MX's intuitive dashboard.
-   - Explain how this segmentation can prevent unauthorized access to sensitive data.
+**Partner Question 2:** How do we best position MX during the pitch?  
+**Answer:** Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-2. **Use Case 2: Student Dormitory Wi-Fi**
-   - Walk through the process of creating a dedicated SSID for student dormitories with limited bandwidth allocation.
-   - Emphasize how this setup can ensure fair usage and optimal performance for all users.
+**Partner Question 3:** What installation or deployment concerns should we be ready for?  
+**Answer:** It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
 
-3. **Use Case 3: Online Exam Proctoring**
-   - Illustrate how partners can use Meraki MX to prioritize online exam traffic and block unauthorized access during exam periods.
-   - Discuss how this feature can maintain the integrity of online assessments.
-
-[Smart Questions]
-
-1. How does your current network infrastructure handle the increasing demand for high-bandwidth applications like video conferencing and online streaming?
-2. What security measures do you have in place to protect your network from cyber threats, especially with the growing volume of remote users?
-
-[Closing]
-
-1. Recap the key benefits of Meraki MX for the Higher Ed sector.
-2. Invite partners to reach out for further information or to schedule a personalized demo for their customers.
-3. Thank partners for their time and participation in the demo.
+That wraps up our demo! Thank you for your time and feel free to reach out with any additional questions or feedback.

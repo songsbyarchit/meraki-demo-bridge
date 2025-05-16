@@ -1,34 +1,43 @@
-Welcome everyone to today's Meraki SM demo targeted at the K12 sector. As partners, we understand the unique challenges that educational institutions face when it comes to managing their IT infrastructure. Today, we're going to show you how Meraki SM can help address those pain points and provide a seamless solution for your K12 customers.
+Hey there! Thanks for joining me today. I'm excited to dive into the world of K-12 Education/Primary Education and explore how Cisco Meraki can help address some of the challenges in this sector.
 
-**Introduction** (5 mins)
-- Introduce yourself and your company.
-- Briefly explain the purpose of the demo.
-- Highlight the key benefits of Meraki SM for the K12 sector.
+Before we get started, I'd love to hear from you:
+- What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-**Use Case 1: Device Management** (10 mins)
-- Show how easy it is to enroll and manage devices using Meraki SM.
-- **Navigate to 'Systems Manager > Manage > Add devices'** to demonstrate the enrollment process.
-- Explain how this simplifies the onboarding process for IT administrators in K12 institutions.
+Great, let's jump in!
 
-**Use Case 2: Application Management** (10 mins)
-- Showcase how Meraki SM allows for easy deployment and management of applications on devices.
-- **Click 'Apps > Add new app'** to demonstrate how to deploy applications remotely.
-- Discuss how this feature can help streamline software updates and ensure compliance with school policies.
+**Use Case 1: Secure Student Internet Access**
+- **Click 'Security & SD-WAN > Content Filtering'**
+- Show how easy it is to set up content filtering to keep students safe online.
 
-**Use Case 3: Security and Compliance** (10 mins)
-- Emphasize the importance of security in K12 environments.
-- Show how Meraki SM can enforce security policies and track device compliance.
-- **Navigate to 'Security > Policies'** to demonstrate setting up security policies.
-- Highlight how this helps protect sensitive student data and ensure a safe learning environment.
+**Use Case 2: Classroom Device Management**
+- **Click 'Systems Manager > Monitor > Devices'**
+- Demonstrate how to view and manage devices in a classroom setting.
 
-**Use Case 4: Content Filtering** (10 mins)
-- Address the need for content filtering in K12 institutions to protect students from inappropriate content.
-- **Click 'Settings > Content filtering'** to showcase how Meraki SM allows for granular control over web content.
-- Discuss how this feature can help schools comply with regulations and ensure a safe online experience for students.
+**Use Case 3: Guest Wi-Fi for Events**
+- **Click 'Wireless > SSIDs'**
+- Showcase how to create a separate SSID for guest access during school events.
 
-**Smart Questions to Prompt Discussion** (5 mins)
-1. How are you currently managing your IT infrastructure in your K12 environment?
-2. What are the biggest challenges you face when it comes to device and application management in your school?
-3. How do you ensure the security and compliance of your devices and data in the education sector?
+**Use Case 4: Network Performance Monitoring**
+- **Click 'Monitor > Performance'**
+- Highlight the ability to monitor network performance in real-time.
 
-In conclusion, Meraki SM offers a comprehensive solution for managing IT infrastructure in K12 environments, addressing key pain points such as device management, application deployment, security, and content filtering. By showcasing these use cases and asking smart questions, you can effectively position Meraki SM as the ideal solution for your K12 customers. Thank you for joining us today, and we look forward to helping you pitch Meraki SM to your clients.
+**Use Case 5: Remote Site Management**
+- **Click 'Organization > Inventory'**
+- Show how to manage multiple school sites from a single dashboard.
+
+**Use Case 6: Automated Firmware Updates**
+- **Click 'Organization > Firmware Upgrades'**
+- Illustrate how Cisco Meraki automates firmware updates for a hassle-free experience.
+
+Now, let's address some common questions you might encounter when pitching SM in the K-12 Education/Primary Education space:
+
+Q: What are the top K-12 Education/Primary Education pain points this addresses?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
+
+Q: How do we best position SM during the pitch?
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
+
+Q: What installation or deployment concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
+
+Thanks for joining me today! If you have any more questions or need further information, feel free to reach out.

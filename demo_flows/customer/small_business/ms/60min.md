@@ -1,26 +1,36 @@
-[Opening]
+Hello and welcome to our Cisco Meraki MS demo! Today, we'll be focusing on how our network switches can benefit small businesses like yours. 
 
-Hello everyone, thank you for joining us today for our Meraki MS demo tailored specifically for the Small Business sector. Today we'll be discussing how Meraki MS can streamline your network operations and help justify the cost. 
+I see you're a customer IT admin, so let's start by discussing your current network setup. What are your biggest IT headaches today?
 
-[Slide 1: Introduction to Meraki MS]
-Let's start by giving you a brief overview of Meraki MS. Meraki MS is a cloud-managed switch that brings the benefits of cloud computing to the world of networking. With Meraki MS, you can manage your network from anywhere, at any time, through a simple and intuitive web-based dashboard.
+Now, let's dive into the demo. One of the key features of Meraki switches is the centralized management through the Meraki Dashboard. This single pane of glass provides visibility, simplified troubleshooting, and unified management for your network.
 
-[Use Case 1: Simplified Network Management]
-Let's dive into our first use case. As an IT admin, one of your main challenges is managing a network with limited resources. With Meraki MS, you can easily configure and monitor your network from a single dashboard. **Click 'Configure > Switch ports'** to see how you can quickly set up and manage your switch ports without the need for complex CLI commands.
+**Use Case 1: Setting up a new switch**
+Let's walk through adding a new switch to your network. **Click 'Add new device > Switch'**.
 
-[Use Case 2: Network Visibility]
-Another key benefit of Meraki MS is the enhanced network visibility it provides. **Click 'Monitor > Clients'** to see real-time information about the devices connected to your network. This level of visibility can help you quickly identify and troubleshoot any network issues.
+**Use Case 2: VLAN configuration**
+Next, let's configure VLANs for different departments in your organization. **Click 'Configure > VLANs'**.
 
-[Use Case 3: Security and Compliance]
-For financial decision makers, security and compliance are top priorities. With Meraki MS, you can easily enforce security policies and ensure compliance with regulations. **Click 'Security > Access Control'** to see how you can set up access control policies to restrict unauthorized access to your network.
+**Use Case 3: Monitoring network traffic**
+Now, let's take a look at how you can monitor network traffic in real-time. **Click 'Monitor > Traffic'**.
 
-[Use Case 4: Remote Troubleshooting]
-In the age of remote work, having the ability to troubleshoot network issues from anywhere is crucial. With Meraki MS, you can remotely diagnose and fix network problems without the need for on-site visits. **Click 'Tools > Remote Live Tools'** to see how you can use remote live tools to troubleshoot network issues in real-time.
+**Use Case 4: Troubleshooting connectivity issues**
+If you encounter any connectivity issues, the Meraki Dashboard can help you troubleshoot. Let's investigate a potential issue together. **Click 'Tools > Ping'**.
 
-[Smart Questions]
-Now, let's wrap up with a couple of smart questions to prompt discussion:
-1. How do you currently manage your network infrastructure, and what challenges do you face?
-2. What are your top priorities when it comes to network security and compliance?
-3. How do you see cloud-managed networking solutions like Meraki MS fitting into your organization's IT strategy?
+**Use Case 5: Firmware updates**
+Keeping your network up to date is crucial for security and performance. Let's initiate a firmware update for your switches. **Click 'Configure > Firmware updates'**.
 
-Thank you for attending our Meraki MS demo today. We hope you found it informative and valuable for your small business. If you have any further questions or would like to discuss how Meraki MS can benefit your organization, please feel free to reach out to us.
+**Use Case 6: Access control policies**
+Lastly, let's set up access control policies to secure your network. **Click 'Security > Access control'**.
+
+Now, let's address some common questions customers in the Small Business sector might have:
+
+Q: How does this solution reduce IT workload in our small business environment?
+A: Meraki simplifies management through one dashboard and automates many tasks like updates and troubleshooting.
+
+Q: What kind of ROI or cost reduction can we expect?
+A: Customers often report major time savings and reduced downtime, especially for remote sites.
+
+Q: Can we integrate this with our existing systems and security policies?
+A: Yes — Meraki supports APIs, SAML, and integration with existing firewalls, Active Directory, and SIEM tools.
+
+Thank you for joining us today. We hope this demo has given you a good understanding of how Cisco Meraki MS switches can benefit your small business. If you have any further questions, please don't hesitate to reach out.

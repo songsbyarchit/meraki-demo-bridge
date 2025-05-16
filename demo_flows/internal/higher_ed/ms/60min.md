@@ -1,24 +1,19 @@
-Demo Script: Meraki MS Demo for Higher Ed Sector
+Hello and welcome! Today, we're going to dive into a demo of Cisco Meraki's MS product, specifically tailored for the Higher Education sector. Whether you're a partner reseller, customer IT admin, or internal SE, the goal of this demo is to equip you with the knowledge and tools to effectively pitch and leverage the MS solution in the education space.
 
-Introduction:
-- Welcome everyone to today's demo on Meraki MS for the Higher Ed sector. Today, we'll focus on partner enablement and how to effectively pitch to customers.
+Let's kick things off with a couple of warm-up questions:
+- For partners: What trends or challenges are you seeing with customers in the Higher Education sector? What do you find unique or tricky about positioning solutions in this space?
+- For customers: What does your current network setup look like in your educational institution? Where are your biggest IT headaches today?
+- For internal: What common questions do our customers ask in the Higher Education sector? What objections or misconceptions do we frequently encounter?
 
-Use Case 1: Simplified Network Management
-- Let's start by showcasing how easy it is to manage your network with Meraki MS. **Log in to the Meraki dashboard and click 'Network-wide > Switches'**. Here, you can see all your switches in one place, making it easy to monitor and troubleshoot any issues.
+Now, let's explore the power of Cisco Meraki's MS product in the Higher Education sector:
 
-Use Case 2: Network Segmentation for Departments
-- Next, let's discuss how Meraki MS allows for network segmentation. **Click 'Configure > VLANs > Add a new VLAN'**. With this feature, Higher Ed institutions can create separate networks for different departments, ensuring data security and network performance.
+1. **Click 'Switches' tab on the Meraki Dashboard**
+2. **Navigate to 'Topology' view to visualize network layout**
+3. **Click on a specific switch to view port details and connected devices**
+4. **Enable 'Virtual Stacking' to simplify switch management across multiple locations**
+5. **Set up VLANs for different departments or areas within the institution**
+6. **Utilize 'Switch Port Scheduling' to automate port access control based on class schedules**
 
-Use Case 3: Power over Ethernet (PoE) for IP Cameras
-- Another key feature of Meraki MS is PoE for IP cameras. **Click 'Configure > Switch ports'**. This allows Higher Ed institutions to easily deploy security cameras across campus without the need for additional power sources.
+In the Higher Education sector, partners may encounter objections such as cost vs legacy vendors and skepticism over cloud-managed security. Arm them with TCO comparisons to address these concerns effectively. Furthermore, we provide partners with access to demo kits, dashboards, playbooks, and partner-exclusive webinars to support their sales efforts. Post-sale, we offer co-delivery workshops, pre-built config templates, and fast escalations handling through Meraki support to ensure smooth onboarding for customers.
 
-Use Case 4: Dynamic Layer 3 Routing
-- Meraki MS also offers dynamic Layer 3 routing capabilities. **Click 'Configure > Routing & DHCP > Layer 3 routing'**. This feature enables seamless communication between different networks within the campus, enhancing connectivity and user experience.
-
-Smart Questions to Prompt Discussion:
-1. How do you currently manage your network infrastructure, and what challenges do you face?
-2. What specific use cases within the Higher Ed sector do you think Meraki MS could address effectively?
-3. How important is network security and scalability in your institution's IT strategy?
-
-Conclusion:
-- Thank you for joining us today for this demo on Meraki MS for the Higher Ed sector. We hope you found it informative and are excited about the possibilities this solution offers. Don't hesitate to reach out with any further questions or to discuss how Meraki MS can benefit your institution.
+Thank you for joining this demo session. We hope you feel more confident in pitching and leveraging Cisco Meraki's MS solution in the Higher Education sector. If you have any further questions or need additional support, please don't hesitate to reach out.

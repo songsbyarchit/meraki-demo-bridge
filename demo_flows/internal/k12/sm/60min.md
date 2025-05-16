@@ -1,36 +1,28 @@
-Title: Meraki SM Demo for K12 Sector Partner Enablement
+Hey there! I'm excited to talk to you today about Cisco Meraki's SM solution, especially tailored for the K-12 Education/Primary Education sector. Whether you're a partner reseller, customer IT admin, or internal SE, the goal of this demo is to equip you with the knowledge and tools to effectively pitch SM to customers in this space.
 
-Introduction (5min)
-- Welcome everyone to the Meraki SM demo for the K12 sector.
-- Today, we will focus on partner enablement and supporting you in effectively pitching to customers.
-- Let's dive into some real-world use cases that showcase the power of Meraki SM in K12 environments.
+To kick things off, let's dive into the specific needs of the K-12 Education sector. What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-Use Case 1: Device Management (10min)
-- **Click 'Systems Manager > Devices'** to see all managed devices in the school network.
-- Show how easy it is to deploy apps, settings, and restrictions remotely on devices.
-- Highlight the time-saving benefits for IT administrators in managing a large number of devices efficiently.
+Now, let's explore the Meraki Dashboard, your central platform for visibility, troubleshooting, and management. **Click 'Dashboard'** to access the single pane of glass.
 
-Use Case 2: Content Filtering (10min)
-- **Click 'Systems Manager > Content filtering'** to set up URL filtering policies.
-- Demonstrate how easily you can block inappropriate content and ensure a safe browsing experience for students.
-- Discuss the importance of web filtering in maintaining a secure online environment in schools.
+One key use case for K-12 Education is ensuring secure and reliable connectivity for students and staff. **Click 'Wireless > Access Points'** to see real-time data on network usage and performance.
 
-Use Case 3: Location Tracking (10min)
-- **Click 'Systems Manager > Location'** to track the real-time location of devices.
-- Show how this feature can help in asset tracking and ensuring devices are where they should be.
-- Emphasize the importance of location tracking in preventing device theft or loss in school premises.
+Another use case is managing a large number of devices across multiple campuses. **Navigate to 'Systems Manager > Overview'** to view device inventory and configuration details.
 
-Use Case 4: Security Compliance (10min)
-- **Click 'Systems Manager > Security policies'** to set up security policies for devices.
-- Showcase how Meraki SM helps in ensuring devices are compliant with security standards.
-- Discuss how this feature can help in maintaining data security and privacy in K12 environments.
+For IT teams juggling multiple responsibilities, automated network monitoring and alerts can be a game-changer. **Click 'Alerts'** to set up notifications for critical events.
 
-Smart Questions to Prompt Discussion:
-1. How do you currently manage device security and compliance in your school network?
-2. What are the biggest challenges you face in device management and security in K12 environments?
-3. How do you see Meraki SM fitting into your current IT infrastructure and workflows?
+In the event of a network issue, troubleshooting can be simplified with integrated tools like remote desktop access. **Navigate to 'Systems Manager > Remote Desktop'** to troubleshoot devices from anywhere.
 
-Conclusion (5min)
-- Thank you for attending the Meraki SM demo for the K12 sector.
-- We hope you now have a better understanding of how Meraki SM can benefit schools and educational institutions.
-- Feel free to reach out to us for any further questions or to schedule a personalized demo.
+Lastly, let's talk about scalability. **Click 'Organization > Inventory'** to see how easy it is to add and manage new devices as your network grows.
+
+Now, let's address some FAQs to support partners selling SM in the K-12 Education/Primary Education space:
+
+Q: What objections might the partner hear in K-12 Education/Primary Education?
+A: Cost vs legacy vendors, and skepticism over cloud-managed security — arm them with TCO comparisons.
+
+Q: What enablement do we provide for partners?
+A: Access to demo kits, dashboards, playbooks, and partner-exclusive webinars.
+
+Q: How do we support onboarding post-sale?
+A: We offer co-delivery workshops, pre-built config templates, and Meraki support handles escalations fast.
+
+Thanks for joining me today! I hope you feel more confident in pitching SM to K-12 Education customers. Let's go out there and make a difference in education technology together.

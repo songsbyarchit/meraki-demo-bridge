@@ -1,31 +1,37 @@
-[Opening]
+Hey there! Today, we're going to dive into how Cisco Meraki's SM solution can address the unique needs of Service Providers. As a partner in this sector, you're likely facing challenges like managing multiple customer sites, ensuring network security, and troubleshooting issues efficiently. Let's explore how Meraki can help you overcome these pain points.
 
-Hello everyone, welcome to our Meraki SM demo specifically tailored for Service Providers. Today, we will be diving into the features and use cases that matter most to your customers. Let's get started.
+So, what trends or challenges are you seeing with customers in the Service Provider sector? What do you find unique or tricky about positioning solutions in this space?
 
-[Slide 1: Introduction to Meraki SM]
-Meraki SM is a cloud-based mobile device management solution that allows Service Providers to easily manage and secure their customers' devices from anywhere. It provides a centralized platform for deploying policies, monitoring device status, and troubleshooting issues in real-time.
+Let's start by taking a look at the Meraki Dashboard, your central platform for network management. This single pane of glass provides visibility, simplifies troubleshooting, and allows for unified management across all your customer sites. Let's dive in and see it in action.
 
-[Slide 2: Pain Points]
-Now, let's talk about the pain points that your customers care about. Service Providers often struggle with managing a large number of devices across multiple locations, ensuring security and compliance, and providing timely support to their customers. Meraki SM addresses these pain points by offering a simple and intuitive solution that streamlines device management and enhances security.
+**UI Interaction 1: Log in to the Meraki Dashboard**
+- Enter your credentials and **click 'Login'**
 
-[Use Case 1: Device Provisioning]
-Imagine a scenario where a Service Provider needs to onboard a new customer with a fleet of devices. With Meraki SM, this process is simplified through automated device provisioning. The partner can easily **click 'Systems Manager > Add devices'** to enroll devices in bulk, configure settings, and deploy applications remotely.
+**UI Interaction 2: View Network Overview**
+- Navigate to the Networks tab and **click 'Overview'**
 
-[Use Case 2: Security Policies]
-Security is a top concern for Service Providers and their customers. Meraki SM allows partners to enforce security policies across all managed devices, ensuring compliance with industry regulations. Partners can **click 'Systems Manager > Security Policies'** to set up restrictions on device usage, enforce encryption, and remotely wipe data in case of a security breach.
+**UI Interaction 3: Troubleshoot Network Issues**
+- Select a specific network and **click 'Tools > Ping'** to troubleshoot connectivity
 
-[Use Case 3: Remote Troubleshooting]
-In a fast-paced environment, quick resolution of device issues is crucial. Meraki SM enables partners to troubleshoot device problems remotely, reducing downtime and improving customer satisfaction. Partners can **click 'Systems Manager > Device Management > Remote Troubleshooting'** to diagnose issues, push software updates, and restart devices without the need for on-site visits.
+**UI Interaction 4: Set up Network Alerts**
+- Head to Alerts & administration and **click 'Configure > Alerts'** to set up email notifications for network events
 
-[Use Case 4: Location Tracking]
-For Service Providers managing devices in various locations, tracking device whereabouts is essential. Meraki SM offers real-time location tracking capabilities, allowing partners to **click 'Systems Manager > Devices > Location Tracking'** to view device locations on a map, set up geofencing alerts, and optimize device deployment based on location data.
+Now, let's explore some specific use cases tailored to Service Providers:
 
-[Closing]
+1. **Remote Site Management**: Easily monitor and manage multiple customer sites from a single dashboard.
+2. **Security Management**: Implement security policies and ensure compliance across all customer networks.
+3. **Traffic Analysis**: Gain insights into network traffic patterns and optimize bandwidth allocation.
+4. **Template Configuration**: Streamline network deployment by applying pre-configured templates across sites.
 
-In conclusion, Meraki SM provides Service Providers with a comprehensive solution for managing and securing customer devices efficiently. By addressing key pain points and offering practical use cases, partners can confidently pitch Meraki SM to their customers as a reliable and cost-effective solution.
+When pitching SM in the Service Provider space, partners often ask:
 
-[Smart Questions]
+Q: What are the top service provider pain points this addresses?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-1. How are you currently managing device provisioning and security for your customers?
-2. What challenges have you faced in troubleshooting device issues remotely?
-3. Have you considered implementing location tracking for optimizing device deployment and resource allocation?
+Q: How do we best position SM during the pitch?
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
+
+Q: What installation or deployment concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
+
+With Cisco Meraki's SM solution, you can streamline network management, enhance security, and provide exceptional service to your customers in the Service Provider sector. Let's continue to explore how Meraki can elevate your network operations.

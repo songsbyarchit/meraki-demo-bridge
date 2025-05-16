@@ -1,44 +1,24 @@
-[Opening]
+Hello and welcome, everyone! Today, we're going to dive into a demo of Cisco Meraki's MX product, specifically tailored for the Hospitality sector. Whether you're a partner reseller looking to pitch to customers or an internal team member wanting to learn more, this demo is for you.
 
-Presenter: Welcome everyone to today's demo on Meraki MX for the Hospitality sector. Today, we'll be focusing on partner enablement and how to effectively pitch to customers in this industry. Let's dive in.
+Let's start by discussing some trends and challenges you may have encountered in the Hospitality sector. What do you find unique or tricky about positioning solutions in this space?
 
-[Use Case 1: Secure Guest Wi-Fi]
+Now, let's explore the Meraki Dashboard, our central platform that provides a single pane of glass for visibility, troubleshooting, and unified management. **Click 'Dashboard'** to access this powerful tool.
 
-Presenter: One common use case in the Hospitality sector is providing secure guest Wi-Fi. With Meraki MX, partners can easily set up a separate VLAN for guest Wi-Fi, ensuring that guest traffic is isolated from the internal network. This helps maintain security and compliance while providing a seamless guest experience.
+One key use case for Hospitality is ensuring secure guest Wi-Fi access. With Meraki MX, you can easily **click 'Security & SD-WAN > Addressing & VLANs'** to set up isolated guest networks for added security.
 
-**click 'Configure > Wireless > SSIDs'** 
-**click 'Add a new SSID'**
-**click 'Advanced settings'**
-**select 'Use VLAN tagging'**
-**enter VLAN ID for guest network**
-**save changes**
+Another use case is streamlining network management across multiple sites. **Click 'Configure > Site-to-site VPN'** to see how Meraki MX simplifies VPN deployment for seamless connectivity.
 
-[Use Case 2: Content Filtering]
+In the Hospitality sector, network downtime can be costly. With Meraki MX, you can **click 'Monitor > Appliance status'** to proactively identify and resolve issues before they impact guest experience.
 
-Presenter: Another important use case for hotels and resorts is content filtering. With Meraki MX, partners can easily set up web filtering policies to block inappropriate content and ensure a safe browsing experience for guests. This can help hotels comply with regulations and protect their guests from malicious websites.
+Here are some FAQs to support partners selling MX in the Hospitality space:
 
-**click 'Security & SD-WAN > Content filtering'**
-**configure web filtering policies**
-**select categories to block**
-**save changes**
+Q: What objections might the partner hear in hospitality?
+A: Cost vs legacy vendors, and skepticism over cloud-managed security — arm them with TCO comparisons.
 
-[Use Case 3: Auto VPN for Multi-site Connectivity]
+Q: What enablement do we provide for partners?
+A: Access to demo kits, dashboards, playbooks, and partner-exclusive webinars.
 
-Presenter: Lastly, for hotels with multiple locations, Meraki MX offers a seamless solution for connecting multiple sites through Auto VPN. This feature simplifies the process of setting up secure site-to-site VPN connections, ensuring that all locations are securely connected and can easily share resources.
+Q: How do we support onboarding post-sale?
+A: We offer co-delivery workshops, pre-built config templates, and Meraki support handles escalations fast.
 
-**click 'Security & SD-WAN > Site-to-site VPN'**
-**enable Auto VPN**
-**add new VPN peers for each site**
-**save changes**
-
-[Questions for Discussion]
-
-Presenter: Now, let's open up the floor for discussion. Here are a few questions to prompt conversation:
-
-1. How do you currently address the challenges of providing secure guest Wi-Fi in the Hospitality sector?
-2. Have you encountered any difficulties with content filtering in hotels or resorts, and how do you currently handle it?
-3. What are your thoughts on using Auto VPN for multi-site connectivity in the Hospitality sector, and how do you see it benefiting your customers?
-
-[Closing]
-
-Presenter: Thank you for joining today's demo on Meraki MX for the Hospitality sector. We hope this session has equipped you with the knowledge and tools to effectively pitch to customers in this industry. Feel free to reach out if you have any further questions or would like to explore Meraki MX further. Have a great day!
+Thank you for joining this demo. We hope you feel more equipped to pitch Meraki MX to customers in the Hospitality sector. Let's continue to empower our partners for success!

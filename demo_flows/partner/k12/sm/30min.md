@@ -1,36 +1,25 @@
-Demo Script:
+Hey there! Thanks for joining us today. I'm excited to dive into a demo of Cisco Meraki's SM solution with you, especially tailored for the K-12 Education/Primary Education sector. Before we get started, I'd love to hear from you: what trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-Introduction:
-- Welcome everyone, today we're going to talk about how Meraki SM can revolutionize the way K12 schools manage their devices. 
-- As partners, it's important to understand the pain points our customers face and how Meraki can address them effectively. 
+Great, now let's jump in and explore how Meraki SM can address some of these pain points for K-12 Education/Primary Education customers.
 
-Pain Points:
-- Let's start by discussing some common pain points schools face with device management:
-  1. Lack of visibility and control over devices.
-  2. Time-consuming manual updates and configurations.
-  3. Difficulty in enforcing security policies across devices.
+**Use Case 1: Secure Student Devices**
+Imagine being able to easily manage and secure hundreds of student devices across multiple school locations from a single dashboard. With Meraki SM, you can enforce security policies, push out updates, and track device usage in real-time. Let's take a look at how you can do this on the Meraki Dashboard. **Click 'Systems Manager > Monitor > Devices'**.
 
-Positioning Meraki:
-- Meraki SM offers a cloud-based solution that provides real-time visibility and control over all devices on the network.
-- With Meraki, schools can easily push out updates, configurations, and security policies to all devices remotely.
-- The intuitive dashboard makes device management simple and efficient, saving time and resources.
+**Use Case 2: Streamlined Content Filtering**
+One of the biggest challenges for K-12 Education/Primary Education is ensuring students have safe access to online resources. Meraki SM allows you to set up content filtering policies based on user groups, ensuring students can only access appropriate content. Let's see how you can set this up on the Dashboard. **Click 'Systems Manager > Configure > Content Filtering'**.
 
-Use Cases:
-1. Device Onboarding:
-- **click 'Systems Manager > Add devices'**
-- Show how easy it is to onboard new devices by simply adding them to the dashboard and pushing out configurations.
-- This feature is especially useful for schools with large numbers of devices that need to be set up quickly and efficiently.
+**Use Case 3: Remote Troubleshooting**
+When an issue arises with a student device, IT admins need to be able to troubleshoot quickly and efficiently. Meraki SM provides remote troubleshooting tools that allow you to diagnose and resolve issues without needing to be physically present. Let's walk through how you can do this on the Dashboard. **Click 'Systems Manager > Troubleshooting > Remote Desktop'**.
 
-2. Security Policy Enforcement:
-- **click 'Systems Manager > Security policies'**
-- Demonstrate how schools can create and enforce security policies across all devices, ensuring data protection and compliance with regulations.
-- This feature is critical for schools that need to safeguard sensitive student information.
+Now, let's address some common questions partners might have when positioning Meraki SM in the K-12 Education/Primary Education space:
 
-Smart Questions:
-1. How does your current device management solution handle remote updates and configurations?
-2. What challenges have you faced in enforcing security policies across all devices in your school?
+Q: What are the top K-12 Education/Primary Education pain points this addresses?  
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-Conclusion:
-- Meraki SM offers a comprehensive solution for device management in K12 schools, addressing key pain points and providing easy-to-use features.
-- As partners, we can help schools optimize their device management processes and enhance their overall IT infrastructure with Meraki.
-- Thank you for joining us today. Let's discuss how Meraki can benefit your school and improve your device management strategy.
+Q: How do we best position SM during the pitch?  
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
+
+Q: What installation or deployment concerns should we be ready for?  
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
+
+Thanks for exploring Meraki SM with me today! Let me know if you have any other questions or if you'd like to see more features in action.

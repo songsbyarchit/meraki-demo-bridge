@@ -1,31 +1,34 @@
-[Opening]
+Alright, let's dive into the demo. As we know, the K-12 Education sector has unique challenges and requirements when it comes to networking. Let's see how Cisco Meraki MR can address these specific needs.
 
-Welcome everyone to today's Meraki MR demo! Today, we'll be focusing on how our Meraki MR solution can benefit the K12 sector. Our goal is to equip our partners with the knowledge and tools they need to effectively pitch this solution to customers. 
+**Use Case 1: Guest Wi-Fi for Parent-Teacher Meetings**  
+- **Navigate to Wireless > SSIDs**
+- **Add a new SSID for Guest Wi-Fi**
+- **Set up splash page with custom message for parents**
 
-Let's dive right in with our first use case.
+**Use Case 2: Classroom Wi-Fi Access Control**  
+- **Navigate to Wireless > Access Control**
+- **Create group policies for different classrooms**
+- **Set time-based access controls for student devices**
 
-[Use Case 1: Seamless Classroom Connectivity]
+**Use Case 3: Security Camera Integration**  
+- **Navigate to Cameras > MV Sense**
+- **Integrate security cameras with Wi-Fi for better monitoring**
+- **Set up motion alerts for after-hours surveillance**
 
-Imagine a classroom full of students trying to connect to the school's Wi-Fi network. With Meraki MR, setting up a secure and reliable network is a breeze. Simply **log into the Meraki dashboard**, **click 'Wireless > Access points'**, and **add a new access point**. The system will automatically configure itself, ensuring that every student has a fast and stable connection.
+**Use Case 4: Student Device Management**  
+- **Navigate to Systems Manager > Devices**
+- **Enroll student devices for easy management**
+- **Apply content filtering and app restrictions**
 
-[Use Case 2: Guest Access Management]
+Now, let's address some common FAQs to help partners in the K-12 Education sector:
 
-Many K12 schools host events where guests need temporary access to the Wi-Fi network. With Meraki MR, you can easily set up a separate guest network with limited access. **Navigate to 'Wireless > SSIDs'**, **create a new SSID for guests**, and **set up a splash page for authentication**. This way, you can provide seamless connectivity for guests without compromising security.
+**Q: What objections might the partner hear in K-12 Education?**  
+**A: Cost vs legacy vendors, and skepticism over cloud-managed security — arm them with TCO comparisons.**
 
-[Use Case 3: Location Analytics for School Safety]
+**Q: What enablement do we provide for partners?**  
+**A: Access to demo kits, dashboards, playbooks, and partner-exclusive webinars.**
 
-In today's world, school safety is a top priority. With Meraki MR, you can leverage location analytics to track the movement of devices within the school premises. This can be invaluable during emergencies or for monitoring student attendance. **Navigate to 'Wireless > Clients'**, and **view the real-time location of devices** on the map.
+**Q: How do we support onboarding post-sale?**  
+**A: We offer co-delivery workshops, pre-built config templates, and Meraki support handles escalations fast.**
 
-[Use Case 4: Application Visibility and Control]
-
-As a K12 school, it's important to ensure that students are using the network responsibly. With Meraki MR, you can easily monitor and control the applications being used on the network. **Navigate to 'Wireless > Application visibility'**, and **set up policies to block specific applications**. This helps in maintaining a safe and productive learning environment.
-
-[Prompting Discussion]
-
-Now that we've explored some key use cases, here are a few questions to consider:
-
-1. How can the seamless connectivity provided by Meraki MR enhance the learning experience for students?
-2. In what ways can the location analytics feature be utilized to improve school safety measures?
-3. How can the application visibility and control feature help in promoting responsible internet usage among students?
-
-Thank you for joining us today for this demo. We hope you feel more confident in pitching Meraki MR to K12 customers. If you have any further questions or need assistance, feel free to reach out to our team. Happy selling!
+And that wraps up our demo. Thank you for joining us today!

@@ -1,25 +1,38 @@
-[Start of Demo]
+Hello and welcome everyone! Today, we are going to dive into a demo of Cisco Meraki's MG, specifically tailored for the Healthcare sector. Whether you are a partner reseller, customer IT admin, or internal SE, this demo is aimed at equipping you with the knowledge and tools to effectively pitch MG to customers in this industry.
 
-Hello everyone. Welcome to today's Meraki MG demo, specifically tailored for the Healthcare sector. Our goal today is to equip you with the knowledge and tools to effectively pitch this solution to your customers. Let's get started.
+Let's start by warming up with a couple of questions:
+- For partners: What trends or challenges are you seeing with customers in the Healthcare sector? What do you find unique or tricky about positioning solutions in this space?
+- For customers: What does your current network setup look like? Where are your biggest IT headaches today?
+- For internal: What common questions do our customers ask in the Healthcare sector? What objections or misconceptions do we frequently encounter?
 
-Use Case 1: **click 'Dashboard > Security & SD-WAN > SD-WAN & traffic shaping'**
-Imagine a hospital with multiple branches that need to securely connect to a central data center. With Meraki MG, you can easily set up SD-WAN to prioritize critical healthcare applications like Electronic Health Records (EHR) over less important traffic, ensuring seamless connectivity and optimized performance.
+Now, let's delve into the demo focusing on the specific needs of the Healthcare sector, leveraging the Meraki Dashboard as our central platform for visibility, troubleshooting, and management.
 
-Use Case 2: **click 'Wireless > Access points'**
-In a busy hospital environment, reliable Wi-Fi is crucial for patient care and staff communication. With Meraki MG, you can effortlessly manage wireless access points across multiple locations, ensuring seamless coverage and connectivity for both patients and healthcare professionals.
+**Use Case 1: Ensuring HIPAA Compliance**
+Let's **navigate to Security & SD-WAN > Security Center** to showcase how MG helps in maintaining compliance with HIPAA regulations.
 
-Use Case 3: **click 'Switch > Port schedules'**
-Maintaining network security and compliance is essential in healthcare. With Meraki MG, you can easily configure port schedules to restrict access to sensitive data during non-business hours, providing an extra layer of security against potential threats.
+**Use Case 2: Guest Wi-Fi for Patients**
+Next, let's **click 'Wireless > Access points'** to demonstrate how easy it is to set up a separate guest network for patients and visitors.
 
-Use Case 4: **click 'Security & SD-WAN > Content filtering'**
-Protecting patient data and ensuring regulatory compliance is a top priority in healthcare. With Meraki MG's content filtering feature, you can block access to harmful websites and prevent unauthorized data transfers, safeguarding sensitive information and maintaining compliance with industry regulations.
+**Use Case 3: Remote Patient Monitoring**
+We can **navigate to Network-wide > Clients** to show how MG provides real-time insights into connected devices, crucial for remote patient monitoring.
 
-[End of Demo]
+**Use Case 4: Asset Tracking**
+Now, let's **click 'Systems Manager > Monitor > Devices'** to highlight how MG can be used for asset tracking within healthcare facilities.
 
-Now, let's wrap up with a few smart questions you can use to prompt discussion with your customers:
+**Use Case 5: Telemedicine Support**
+We'll **navigate to Security & SD-WAN > SD-WAN & Traffic Shaping** to illustrate how MG ensures a reliable connection for telemedicine applications.
 
-1. How are you currently managing network security and compliance in your healthcare environment?
-2. What challenges are you facing in terms of providing reliable Wi-Fi access across your healthcare facilities?
-3. How do you prioritize critical healthcare applications over less important traffic to ensure optimal performance?
+**Use Case 6: Scalable Network Expansion**
+Lastly, let's **click 'Switch > Switch ports'** to demonstrate how easy it is to expand the network seamlessly as healthcare facilities grow.
 
-I hope this demo has provided you with valuable insights into how Meraki MG can benefit healthcare organizations. Thank you for your time. If you have any further questions or would like to discuss how to tailor this solution to meet your specific needs, please feel free to reach out.
+For our partners selling MG in the Healthcare space, here are a couple of FAQs to support you:
+- Q: What objections might the partner hear in healthcare?
+  A: Cost vs legacy vendors, and skepticism over cloud-managed security — arm them with TCO comparisons.
+  
+- Q: What enablement do we provide for partners?
+  A: Access to demo kits, dashboards, playbooks, and partner-exclusive webinars.
+  
+- Q: How do we support onboarding post-sale?
+  A: We offer co-delivery workshops, pre-built config templates, and Meraki support handles escalations fast.
+
+Thank you for joining us today for this demo. We hope you feel more equipped to pitch MG effectively in the Healthcare sector. Feel free to reach out if you have any further questions or need additional support.

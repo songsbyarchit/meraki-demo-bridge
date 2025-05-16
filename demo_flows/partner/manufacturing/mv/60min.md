@@ -1,22 +1,31 @@
-[Opening]
-Hello and welcome, partners! Today we will be diving into a demo of Meraki MV, specifically tailored for the Manufacturing sector. As you know, the manufacturing industry faces unique challenges when it comes to security, surveillance, and operational efficiency. Meraki MV offers a solution that addresses these pain points head-on. 
+Hey there! Thanks for joining us today to learn more about Cisco Meraki and how our **MV** product can benefit your customers in the Manufacturing sector. Let's dive right in!
 
-[Pain Points]
-Manufacturing facilities often struggle with outdated and fragmented security systems that are difficult to manage and monitor. This can leave them vulnerable to theft, vandalism, and safety hazards. Additionally, traditional surveillance systems can be costly to install and maintain, with limited scalability and flexibility. 
+**Partner Reseller**, what trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-[Positioning Meraki]
-Meraki MV provides a cloud-managed solution that is easy to deploy and scale, offering advanced analytics and AI-powered insights. With centralized management and automatic updates, Meraki MV reduces the burden on IT teams and ensures that the system is always up-to-date and secure. 
+---
 
-[Use Cases]
-1. **Live Monitoring**: Show how partners can easily set up live camera feeds and monitor multiple areas of a manufacturing facility from a single dashboard.
-2. **Motion Detection Alerts**: Demonstrate how partners can configure motion detection alerts to receive notifications of any suspicious activity in real-time.
-3. **Heatmap Analysis**: Showcase how partners can use heatmap analysis to identify high-traffic areas in the facility and optimize workflow and resource allocation.
-4. **License Plate Recognition**: Illustrate how partners can leverage license plate recognition to enhance security and track vehicle movement within the premises.
+Today, we're going to explore how Meraki MV can address some of the key pain points faced by manufacturers. Let's start by taking a look at the Meraki Dashboard, our central platform for network management.
 
-[Smart Questions]
-1. How are you currently managing your security and surveillance systems in your manufacturing facility?
-2. What are the key pain points you are experiencing with your current surveillance setup?
-3. How important is scalability and flexibility in a surveillance solution for your organization?
+**Navigate to the Meraki Dashboard**  
+**Click 'Cameras' > 'Overview'**
 
-[Closing]
-Thank you for joining us today for this Meraki MV demo targeted towards the Manufacturing sector. We hope you found these use cases and insights valuable in understanding how Meraki MV can address the specific needs of manufacturing facilities. If you have any further questions or would like to discuss a customized solution for your customers, please don't hesitate to reach out to us.
+Here, you can see all your cameras in a single view, providing you with unparalleled visibility across your manufacturing facilities. This level of visibility is crucial for ensuring the safety and security of your premises.
+
+Now, let's move on to some specific **MV** use cases in the Manufacturing sector:
+
+1. **Remote Monitoring**: **Click 'Cameras' > 'Live'** to view real-time footage of your production line from anywhere, ensuring everything is running smoothly.
+
+2. **Quality Control**: **Click 'Cameras' > 'Motion Heat Maps'** to identify areas of high activity in your facility, helping you optimize workflows and improve efficiency.
+
+3. **Incident Investigation**: **Click 'Cameras' > 'Motion Search'** to quickly search through hours of footage and pinpoint the exact moment of an incident for investigation.
+
+4. **Access Control Integration**: **Click 'Cameras' > 'Access Control'** to seamlessly integrate your MV cameras with access control systems, enhancing security measures.
+
+**Partner Question 1:** What are the top manufacturing pain points this addresses?  
+**Answer:** Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
+
+**Partner Question 2:** How do we best position MV during the pitch?  
+**Answer:** Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
+
+**Partner Question 3:** What installation or deployment concerns should we be ready for?  
+**Answer:** It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.

@@ -1,37 +1,33 @@
-[Opening slide]
+Great, let's dive into the demo script:
 
-Presenter: Good morning everyone and thank you for joining us today for our Meraki MV demo targeting the State Local Gov sector. Today, we'll be discussing how Meraki can help address the pain points that customers in this sector care about. Let's dive right in.
+---
 
-[Slide: Pain points in State Local Gov sector]
+**Demo Script**
 
-Presenter: State Local Gov agencies often face challenges with ensuring public safety, managing traffic congestion, and monitoring public spaces. Traditional surveillance systems can be complex to manage and costly to maintain. This is where Meraki MV comes in.
+Hey there, partner reseller! Today, we're going to talk about Cisco Meraki's MV camera solution and how it can benefit State and Local Government customers. What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-[Slide: Use case 1 - Public Safety]
+**Use Case 1: Public Safety**
+Imagine a scenario where a local government needs to enhance public safety in a high-traffic area. With Meraki MV cameras, they can easily deploy a video surveillance solution that provides real-time monitoring and alerts for any suspicious activity. Let's **navigate to the Meraki Dashboard** and **click 'Cameras > Live View'** to see this in action.
 
-Presenter: Let's walk through a use case for public safety. Imagine a city park where incidents of vandalism have been reported. With Meraki MV cameras strategically placed throughout the park, authorities can monitor real-time video footage, easily search for specific events, and even receive alerts for suspicious activity. This helps improve response times and deter future incidents.
+**Use Case 2: Traffic Management**
+Another common pain point for State and Local Governments is managing traffic flow efficiently. By using MV cameras with advanced analytics capabilities, they can gather valuable data on traffic patterns, congestion points, and pedestrian behavior. Let's **click 'Cameras > Analytics'** in the Dashboard to explore these insights.
 
-**Click 'Cameras > Live View' to show real-time footage of the park**
+**Use Case 3: Building Security**
+Lastly, building security is always a top priority for government facilities. Meraki MV cameras offer high-quality video recording, motion detection, and remote access features that make it easy to monitor and secure government buildings effectively. Let's **click 'Cameras > Motion Alerts'** to see how alerts can be set up for specific areas.
 
-[Slide: Use case 2 - Traffic Management]
+When positioning MV to State and Local Government customers, it's essential to highlight the ease of use and centralized management provided by the Meraki Dashboard. This single pane of glass enables visibility, simplified troubleshooting, and unified management across multiple sites.
 
-Presenter: Another use case is traffic management. State Local Gov agencies can use Meraki MV cameras to monitor traffic flow, identify congestion points, and analyze traffic patterns. This data can be used to optimize traffic signal timings, improve road safety, and reduce traffic congestion.
+**Partner Questions:**
 
-**Click 'Cameras > Traffic Analysis' to show traffic flow data and analysis**
+Q: What are the top state and local government pain points this addresses?  
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-[Slide: Use case 3 - Public Space Monitoring]
+Q: How do we best position MV during the pitch?  
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-Presenter: Lastly, Meraki MV can be used for monitoring public spaces such as government buildings, parking lots, and recreational areas. With advanced analytics capabilities, agencies can track foot traffic, detect loitering, and even count the number of people in a specific area. This helps improve public safety and resource allocation.
+Q: What installation or deployment concerns should we be ready for?  
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
 
-**Click 'Cameras > Analytics' to show foot traffic data and analytics**
+---
 
-[Slide: Smart Questions]
-
-Presenter: Before we wrap up, here are a few smart questions you can ask your customers in the State Local Gov sector:
-
-1. How are you currently managing surveillance and security in your public spaces?
-2. What challenges are you facing with traffic management and public safety?
-3. Have you considered implementing a cloud-managed surveillance solution like Meraki MV?
-
-[Closing slide]
-
-Presenter: Thank you for attending our Meraki MV demo today. We hope you now have a better understanding of how Meraki can address the pain points that State Local Gov agencies care about. If you have any further questions or would like to discuss how Meraki can benefit your organization, please don't hesitate to reach out. Thank you and have a great day.
+And that's a wrap for our Cisco Meraki MV demo tailored to the State and Local Government sector!

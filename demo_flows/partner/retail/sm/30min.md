@@ -1,29 +1,19 @@
-[Opening]
+Hey there, Partner! Thanks for joining us for this demo on Cisco Meraki's SM solution tailored for the Retail sector. Before we dive in, could you share any trends or challenges you're seeing with customers in this space? And what do you find unique or tricky about positioning solutions here?
 
-Hello and welcome, everyone. Today, we're going to dive into a demo of Meraki SM tailored specifically for the retail sector. As partners, it's crucial to understand the pain points our retail customers face and how Meraki can address them effectively. Let's get started.
+**Use Case 1: Managing Multiple Store Locations**
+Let's imagine you have a retail chain with stores spread across different locations. With Meraki SM, you can easily manage all these sites from a single dashboard. **Click 'Network-wide > Overview'** to see a summary of all your locations at a glance.
 
-[Pain Points]
+**Use Case 2: Guest Wi-Fi for Customer Engagement**
+In the retail sector, providing seamless guest Wi-Fi is crucial for enhancing customer experience. With Meraki, you can set up secure guest networks in just a few clicks. **Click 'Wireless > SSIDs'** to configure a guest network with custom splash pages.
 
-Now, when it comes to retail, one of the biggest pain points for our customers is the need for centralized management of their network infrastructure. With multiple stores spread across different locations, it can be challenging to ensure consistent network performance and security. This is where Meraki shines with its cloud-based dashboard that allows for easy management and monitoring of all network devices from a single interface.
+**Use Case 3: PCI Compliance for Retail Security**
+Retailers handling payment card transactions must comply with PCI standards. Meraki SM simplifies this process by providing built-in tools for monitoring and securing your network. **Click 'Security > Content filtering'** to ensure compliance with web access policies.
 
-Another pain point for retail customers is the need for reliable connectivity to support various applications such as POS systems, inventory management, and customer Wi-Fi. Meraki's robust network infrastructure ensures seamless connectivity and high performance, even during peak times.
+Q: What are the top retail pain points this addresses?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-[Use Case 1: Store Network Management]
+Q: How do we best position SM during the pitch?
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-Let's take a look at a common use case in retail - store network management. With Meraki SM, partners can easily configure and manage all network devices, from access points to switches, in each store location. By **clicking 'Configure > Switch ports'**, partners can quickly set up VLANs for different departments, prioritize traffic for POS systems, and monitor network performance in real-time.
-
-[Use Case 2: Guest Wi-Fi Access]
-
-Another key use case for retail is providing secure and reliable guest Wi-Fi access. With Meraki SM, partners can easily set up a separate guest network with customizable splash pages and bandwidth limits. By **clicking 'Wireless > SSIDs'**, partners can create a guest SSID, set up authentication options, and monitor guest traffic to ensure a seamless experience for customers.
-
-[Smart Questions]
-
-Now, as you pitch Meraki SM to retail customers, here are a few smart questions to prompt discussion:
-
-1. How are you currently managing your network infrastructure across multiple store locations?
-2. What challenges have you faced in providing reliable connectivity for your store applications and customer Wi-Fi?
-3. How important is network security and compliance for your retail business, and how do you currently address these concerns?
-
-[Closing]
-
-In conclusion, Meraki SM offers a comprehensive solution for retail customers to address their network management pain points effectively. By showcasing the ease of centralized management, reliable connectivity, and secure guest Wi-Fi access, partners can position Meraki as the ideal choice for retail businesses. Thank you for joining us today, and we look forward to helping you pitch Meraki SM to your retail customers.
+Q: What installation or deployment concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.

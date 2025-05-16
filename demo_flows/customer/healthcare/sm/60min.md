@@ -1,23 +1,25 @@
-[Opening]
+Great, let's dive into the demo now. I'd like to start by showing you how **SM** can help address some of the key challenges faced by healthcare organizations. 
 
-Hello and welcome to our Meraki SM demo for the Healthcare sector. Today, we'll be focusing on how Meraki SM can revolutionize the way IT admins manage their network infrastructure and devices in a healthcare setting. Let's dive right in!
+**Use Case 1: Device Management**
+Let's start by navigating to **Systems Manager > Devices** on the Meraki Dashboard. Here, you can see all the devices connected to your network, including laptops, tablets, and mobile devices. With **SM**, you can easily enroll, monitor, and secure these devices, ensuring compliance with healthcare regulations.
 
-[Use Case 1: Device Management]
-First up, let's talk about device management. With Meraki SM, you can easily manage all your healthcare devices from a single dashboard. **Click 'Systems Manager > Devices'** to see real-time information on each device, including location, usage, and security status. This simplifies the IT admin's job and ensures that all devices are up-to-date and secure.
+**Use Case 2: Application Control**
+Next, let's **click 'Systems Manager > App Management'**. Here, you can control which applications are allowed on your network, ensuring that only authorized apps are used. This is crucial for maintaining security and compliance in a healthcare environment.
 
-[Use Case 2: Security Compliance]
-Next, let's discuss security compliance. In the healthcare sector, data security is paramount. Meraki SM allows you to enforce security policies across all devices, ensuring that patient information is protected at all times. **Click 'Systems Manager > Security Policies'** to see how easy it is to set up and enforce these policies on all your devices.
+**Use Case 3: Remote Troubleshooting**
+Now, let's **navigate to 'Systems Manager > Remote Desktop'**. With **SM**, you can remotely troubleshoot devices, saving time and resources by resolving issues without the need for on-site visits. This is particularly valuable in a healthcare setting where downtime can impact patient care.
 
-[Use Case 3: Remote Troubleshooting]
-Now, let's talk about remote troubleshooting. With Meraki SM, IT admins can troubleshoot device issues remotely, saving time and resources. **Click 'Systems Manager > Remote Tools'** to see how you can remotely access devices, diagnose problems, and even push updates without ever leaving your desk.
+**Use Case 4: Security Compliance**
+Let's **click 'Systems Manager > Security Policies'**. Here, you can easily set up and enforce security policies across all devices, ensuring that sensitive patient data is protected at all times. This helps healthcare organizations maintain compliance with regulations like HIPAA.
 
-[Use Case 4: Asset Tracking]
-Another important use case in healthcare is asset tracking. With Meraki SM, you can easily track the location and usage of all your devices, ensuring that nothing goes missing or gets misplaced. **Click 'Systems Manager > Inventory'** to see how you can keep tabs on all your devices in real-time.
+**Frequently Asked Questions**
+Q: How does **SM** help improve security in our healthcare environment?
+A: **SM** enhances security by providing centralized device management, application control, and security policy enforcement.
 
-[Smart Questions]
-To prompt discussion with the attendee, here are two smart questions you can ask:
-1. How much time and resources do you currently spend on managing and securing your healthcare devices?
-2. Are there any specific challenges or pain points you face in terms of device management and security compliance in your healthcare setting?
+Q: Can **SM** help us streamline our IT operations and reduce costs?
+A: Yes, **SM** simplifies IT management through automation and centralized control, leading to time and cost savings for healthcare organizations.
 
-[Closing]
-Thank you for joining us today for this Meraki SM demo. We hope you've seen the operational impact and cost justification that Meraki SM can bring to your healthcare organization. If you have any further questions or would like to discuss how Meraki SM can be tailored to your specific needs, please don't hesitate to reach out. Thank you and have a great day!
+Q: Can **SM** integrate with our existing systems and workflows?
+A: Absolutely, **SM** supports integration with existing systems and security policies, ensuring a seamless implementation within your healthcare environment.
+
+That concludes our demo. If you have any more questions or would like to see specific features in more detail, feel free to ask. Thank you for your time today!

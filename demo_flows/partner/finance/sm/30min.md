@@ -1,24 +1,22 @@
-Title: Meraki SM Demo for the Finance Sector
+Hey there! Thanks for joining us today for this demo. We're excited to dive into how Cisco Meraki's SM solution can benefit the financial services sector. Before we get started, could you share what trends or challenges you're seeing with customers in this space?
 
-Introduction:
-Hello and welcome! Today, we'll be exploring how Meraki Systems Manager (SM) can revolutionize the way finance companies manage their network infrastructure. As a partner, understanding the pain points of your customers in the finance sector is crucial to positioning Meraki as the solution they need. Let's dive in!
+Great, let's jump right in. In the financial services sector, network security and compliance are always top of mind. With Meraki SM, you can ensure secure access for employees and clients while maintaining compliance standards. Let's take a look at a couple of use cases specific to this sector.
 
-Pain Points:
-Finance companies often deal with sensitive data and strict compliance regulations. They need a centralized solution to manage their network security, device provisioning, and software updates efficiently. Traditional methods of network management can be time-consuming, expensive, and prone to security vulnerabilities. Meraki SM addresses these pain points by providing a cloud-based platform that simplifies network management and enhances security.
+**Use Case 1: Branch Office Connectivity**
+Imagine you're managing multiple branch locations for a financial institution. With Meraki, you can easily deploy and manage secure VPN connections between branches using the Dashboard. **Click 'Configure > Security & SD-WAN > Site-to-Site VPN'** to see how simple it is to set up.
 
-Use Case 1: Device Provisioning
-Imagine a finance company onboarding a new employee who needs access to critical applications and data. With Meraki SM, partners can easily provision devices remotely, ensuring that the new employee has access to the necessary resources without compromising security. **Click 'Systems Manager > Devices'** to see all managed devices and **click 'Add new device'** to provision a new device.
+**Use Case 2: Guest WiFi for Banking**
+Providing secure guest WiFi access is crucial for banks and financial institutions. With Meraki, you can create a separate guest network with custom splash pages and access policies. **Click 'Wireless > SSIDs > Add a new SSID'** to see how easy it is to set up a guest network.
 
-Use Case 2: Software Updates
-Finance companies rely on up-to-date software to protect against security threats. With Meraki SM, partners can schedule and push software updates to all devices in the network seamlessly. This ensures that all devices are running the latest software versions, reducing the risk of security breaches. **Click 'Systems Manager > Settings > Software updates'** to configure update schedules.
+Now, let's address some common questions partners might have when positioning SM in the financial services space:
 
-Use Case 3: Security Compliance
-Compliance with regulations such as PCI DSS is critical for finance companies. Meraki SM provides robust security features like application whitelisting, network access control, and encryption to help companies meet compliance requirements. **Click 'Systems Manager > Security policies'** to configure security policies for devices.
+Q: What are the top financial services pain points this addresses?  
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-Smart Questions:
-1. How are you currently managing device provisioning and software updates in your network?
-2. What challenges do you face in ensuring security compliance with industry regulations?
-3. How would centralized network management help streamline your operations and reduce costs?
+Q: How do we best position SM during the pitch?  
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-Conclusion:
-By understanding the pain points of finance companies and showcasing the practical use cases of Meraki SM, partners can effectively pitch this solution to customers in the finance sector. With its user-friendly interface, robust security features, and cloud-based management platform, Meraki SM is the ideal choice for finance companies looking to enhance network efficiency and security. Thank you for joining us today! Let's continue the discussion on how Meraki SM can transform your network infrastructure.
+Q: What installation or deployment concerns should we be ready for?  
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
+
+Thanks for joining us today. We hope this demo has given you a better understanding of how Cisco Meraki can benefit financial services organizations. Let us know if you have any more questions!

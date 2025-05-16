@@ -1,38 +1,26 @@
-Title: Meraki SM Demo for Retail Partners
+Hey there, thanks for joining me today for this demo! I know we're all busy, so let's dive right in. 
 
-Introduction (5 mins):
-- Welcome partners to the demo
-- Brief overview of Meraki SM and its benefits for the Retail sector
-- Introduce key pain points in retail IT management and how Meraki can address them
+First off, for all our partners out there, I'm curious to hear about the trends or challenges you're seeing with customers in the Retail sector. What do you find unique or tricky about positioning solutions in this space?
 
-Use Case 1: Network Security (10 mins)
-- Demonstrate how Meraki SM can provide secure network access for both employees and customers
-- Show partners how to **set up firewall rules and content filtering** to protect sensitive data and prevent unauthorized access
-- Highlight the importance of network security in retail environments where customer data is at risk
+Now, let's talk about how **SM** can address those pain points. 
 
-Use Case 2: Device Management (10 mins)
-- Showcase how partners can use Meraki SM to remotely manage and monitor devices such as POS systems, inventory scanners, and security cameras
-- Walk partners through **installing and configuring profiles** for different types of devices to ensure proper functionality and security
-- Emphasize the time and cost savings of centralized device management for retail businesses with multiple locations
+Imagine a retail environment where you need to manage multiple locations with different network requirements. **Click 'Network-wide > Overview'** on the Meraki Dashboard to see a holistic view of all your sites. This visibility allows you to quickly identify any issues and ensure consistent network performance across the board.
 
-Use Case 3: Guest Wi-Fi (10 mins)
-- Illustrate how partners can create and manage guest Wi-Fi networks using Meraki SM
-- Guide partners through **setting up a guest SSID** with customizable login pages and bandwidth limits
-- Explain the benefits of providing secure and reliable Wi-Fi for retail customers while collecting valuable analytics data
+Next, let's tackle the headache of troubleshooting. **Click 'Monitor > Clients'** to see real-time client information and **click on a specific client** to view detailed insights. With this level of visibility, you can troubleshoot issues faster and keep your customers satisfied.
 
-Use Case 4: Inventory Tracking (10 mins)
-- Show partners how Meraki SM can be used to track and monitor inventory using Bluetooth Low Energy (BLE) technology
-- Demonstrate **configuring BLE beacons** and setting up alerts for low stock levels or misplaced items
-- Discuss the potential for improving operational efficiency and reducing shrinkage in retail stores through real-time inventory tracking
+Now, let's talk about unified management. **Click 'Configure > Wireless settings'** to easily make changes that apply to all your sites simultaneously. This centralized approach saves time and ensures consistency in your network configurations.
 
-Smart Questions for Discussion (5 mins):
-1. How do you currently handle network security and device management in your retail clients' IT environments?
-2. Have you encountered any challenges with guest Wi-Fi management or inventory tracking in retail settings?
-3. What features or capabilities of Meraki SM do you think would be most valuable to your retail customers?
+Moving on to security, **click 'Security & SD-WAN > Security policies'** to set up and enforce security policies across all your sites. With **SM**, you can ensure a secure network environment without the hassle of managing individual firewalls at each location.
 
-Conclusion (5 mins):
-- Recap key benefits and use cases of Meraki SM for the Retail sector
-- Encourage partners to leverage this knowledge in their customer pitches
-- Offer resources for further training and support on Meraki SM
+Now, let's address some common questions partners might have when pitching **SM** in the Retail space:
 
-Thank partners for attending the demo and open the floor for any additional questions or feedback.
+Q: What are the top retail pain points this addresses?  
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
+
+Q: How do we best position **SM** during the pitch?  
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
+
+Q: What installation or deployment concerns should we be ready for?  
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
+
+Thanks for joining me today, and I hope this demo has given you a good overview of how **SM** can benefit your retail customers. Let's keep the conversation going and find the best solution for their needs.

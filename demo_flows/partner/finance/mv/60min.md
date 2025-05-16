@@ -1,22 +1,32 @@
-Hello and welcome everyone! Today, we're going to dive into a demo of Meraki MV, specifically tailored for the Finance sector. As partners, it's important to understand the pain points that customers in the finance industry care about and how Meraki can address those needs.
+Hey there! Thanks for joining me today for this demo focused on Cisco Meraki's MV solution tailored for the Financial Services sector. As a partner reseller, I know you're always looking for ways to address the unique challenges your customers face in this industry. So, what trends or challenges are you seeing with customers in the Financial Services sector? And what do you find unique or tricky about positioning solutions in this space?
 
-Let's start by discussing some common pain points in the finance sector. Security is a top concern for financial institutions, whether it's protecting sensitive data or ensuring the safety of employees and customers. Another pain point is operational efficiency - finance companies need to be able to quickly and easily access video footage for monitoring and compliance purposes.
+Let's dive into how Meraki MV can address these pain points and provide a seamless solution for your customers.
 
-Now, let's talk about how Meraki can help address these pain points. Meraki MV offers a cloud-managed solution for video surveillance, making it easy to deploy and manage cameras across multiple locations. With advanced analytics and AI-powered features, Meraki MV can help finance companies improve security and operational efficiency.
+1. **Use Case 1: Branch Security**
+   - **click 'Cameras' > 'Live View'** to see real-time footage of a branch location
+   - **hover over a camera feed** to view analytics like people counting and dwell time
 
-Let's move on to some use cases that are particularly relevant to the finance sector:
+2. **Use Case 2: Compliance Monitoring**
+   - **click 'Cameras' > 'Motion Search'** to quickly find specific events for compliance purposes
+   - **filter by date and time** to narrow down search results
 
-1. **Fraud Prevention**: Show how MV's advanced analytics can help detect suspicious behavior and prevent fraud in bank branches or ATMs.
-2. **Compliance Monitoring**: Demonstrate how MV can help finance companies easily access and review video footage to ensure compliance with industry regulations.
-3. **Customer Experience**: Showcase how MV can help finance companies monitor customer traffic and behavior to optimize branch layouts and improve the overall customer experience.
-4. **Employee Safety**: Highlight how MV can help finance companies ensure the safety of employees by monitoring key areas such as parking lots and entrances.
+3. **Use Case 3: Fraud Prevention**
+   - **click 'Cameras' > 'Motion Alerts'** to set up alerts for suspicious activity
+   - **adjust alert sensitivity levels** for accurate notifications
 
-Now, let's dive into a live demo of Meraki MV. **Click 'Dashboard' to show an overview of all cameras deployed across different locations.** **Click on a specific camera to show the live feed and access playback options.** **Navigate to the analytics section to showcase the advanced features such as motion heat maps and people counting.**
+4. **Use Case 4: Customer Experience Improvement**
+   - **click 'Cameras' > 'Heatmaps'** to analyze customer traffic patterns in a branch
+   - **compare heatmap data** between different time periods for insights
 
-As we wrap up the demo, here are a few smart questions you can ask your customers to prompt discussion:
+Now, let's address some common questions partners might have when positioning MV in the Financial Services space:
 
-1. How are you currently managing your video surveillance systems across multiple locations, and what challenges are you facing?
-2. How important is it for your organization to have real-time access to video footage for security and compliance purposes?
-3. What specific use cases do you envision for video surveillance in your finance company, and how do you see Meraki MV fitting into those scenarios?
+Q: What are the top financial services pain points this addresses?  
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-Thank you for joining this demo today. We hope this has provided you with valuable insights on how Meraki MV can benefit finance companies. If you have any further questions or would like to discuss a customized solution for your organization, feel free to reach out to us.
+Q: How do we best position MV during the pitch?  
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
+
+Q: What installation or deployment concerns should we be ready for?  
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
+
+Thanks for exploring the capabilities of Meraki MV with me today. I hope this demo has given you valuable insights into how to position this solution effectively in the Financial Services sector.

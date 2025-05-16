@@ -1,27 +1,34 @@
-[Opening]
+Hello and welcome to our demo of Cisco Meraki MG. Today, we will be focusing on how our solution can benefit professionals in the Professional Services sector. Let's dive in!
 
-Welcome everyone, thank you for joining us today for our Meraki MG demo specifically tailored for the Professional Services sector. Whether you're an IT admin or a financial decision maker, this session is designed to showcase the operational impact and cost justification of the Meraki MG.
+**Warm-up Questions:**
+- For customers: What does your current network setup look like? Where are your biggest IT headaches today?
 
-[Use Case 1: Remote Offices]
+**Use Case 1: Remote Site Connectivity**
+- **Navigate to 'Security & SD-WAN > Appliance Status'**
+- **Click on the remote site appliance to view connectivity status**
+- Show how Meraki MG provides secure and reliable connectivity for remote sites, ensuring seamless operations.
 
-Let's start with one of the most common use cases in the Professional Services sector - managing remote offices. With the Meraki MG, you can easily set up and manage secure connections between your main office and remote locations. **Click 'Configure > VPN'** to see how simple it is to establish secure connections and ensure seamless communication between your teams.
+**Use Case 2: Application Performance Monitoring**
+- **Navigate to 'Insights > Application'
+- **Click on an application to view performance metrics**
+- Demonstrate how MG offers deep insights into application performance, helping IT admins optimize network resources.
 
-[Use Case 2: Client VPN]
+**Use Case 3: Traffic Shaping and QoS**
+- **Navigate to 'SD-WAN & Traffic Shaping > Traffic Shaping'**
+- **Adjust QoS settings for critical applications**
+- Showcase how MG allows for intelligent traffic prioritization, ensuring critical applications run smoothly.
 
-For IT admins, managing client VPNs can be a headache. With the Meraki MG, you can streamline this process and provide secure access to your network for remote employees or clients. **Click 'Configure > Client VPN'** to see how easy it is to set up and manage client VPN connections.
+**Use Case 4: Security and Threat Protection**
+- **Navigate to 'Security & SD-WAN > Security Center'**
+- **Review security events and threat intelligence**
+- Highlight how MG offers robust security features to protect against cyber threats, keeping data and operations secure.
 
-[Use Case 3: Load Balancing]
+**Frequently Asked Questions:**
+Q: How does this solution reduce IT workload in our professional services environment?
+A: Meraki simplifies management through one dashboard and automates many tasks like updates and troubleshooting.
 
-In the Professional Services sector, downtime is not an option. The Meraki MG offers built-in load balancing capabilities to ensure high availability and reliability for your network. **Click 'Configure > Traffic Shaping'** to see how you can easily distribute network traffic across multiple links and prevent bottlenecks.
+Q: What kind of ROI or cost reduction can we expect?
+A: Customers often report major time savings and reduced downtime, especially for remote sites.
 
-[Use Case 4: Analytics and Reporting]
-
-As a financial decision maker, you need visibility into your network performance to make informed decisions. The Meraki MG provides real-time analytics and reporting tools to help you monitor network usage, identify trends, and optimize resource allocation. **Click 'Monitor > Analytics'** to see how you can gain valuable insights into your network performance.
-
-[Closing]
-
-Before we wrap up, I'd like to ask you a couple of smart questions to prompt some discussion:
-- How do you currently manage remote offices and ensure secure connections?
-- What challenges do you face in providing secure access to your network for remote employees or clients?
-
-Thank you for attending our Meraki MG demo today. We hope you found it informative and valuable for your Professional Services organization. If you have any further questions or would like to explore how the Meraki MG can benefit your business, please don't hesitate to reach out to us.
+Q: Can we integrate this with our existing systems and security policies?
+A: Yes — Meraki supports APIs, SAML, and integration with existing firewalls, Active Directory, and SIEM tools.

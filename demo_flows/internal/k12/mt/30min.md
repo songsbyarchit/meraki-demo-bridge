@@ -1,31 +1,22 @@
-[Opening Slide]
+Hey there, thanks for joining us today! I'm excited to talk to you about Cisco Meraki and how our solutions can benefit K-12 Education/Primary Education. Before we dive in, I'd love to hear from our partners: What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-Presenter: Welcome everyone to today's Meraki MT demo, specifically tailored for the K12 sector. Our focus today is on partner enablement and how we can support you in effectively pitching Meraki MT to your customers. 
+**Use Case 1: Classroom Connectivity**
+Let's start by taking a look at the Meraki Dashboard. **Click 'Wireless > Access points'** to see how easy it is to manage multiple access points across different classrooms. With just a few clicks, you can ensure seamless connectivity for students and teachers alike.
 
-[Slide 1: Introduction to Meraki MT]
+**Use Case 2: Security and Content Filtering**
+Next, let's explore how we can enhance security in schools. **Click 'Security & SD-WAN > Content filtering'** to set up policies that restrict access to harmful or distracting websites. This feature not only keeps students safe but also helps in maintaining a focused learning environment.
 
-Presenter: Let's start by talking about why Meraki MT is a game-changer for K12 institutions. The simplicity of cloud-managed networking, the robust security features, and the ease of scalability make it a perfect fit for schools and educational institutions. 
+**Use Case 3: Remote Learning Support**
+Given the current landscape, many schools are adopting remote learning. **Click 'VPN > Client VPN'** to see how easily teachers and staff can securely access the network from anywhere. This ensures that learning can continue uninterrupted, no matter where the students or teachers are.
 
-[Slide 2: Use Case 1 - Network Visibility]
+Now, let's address some FAQs to better equip our partners:
+Q: What objections might the partner hear in K-12 Education/Primary Education?
+A: Cost vs legacy vendors, and skepticism over cloud-managed security — arm them with TCO comparisons.
 
-Presenter: One of the key benefits of Meraki MT is the real-time network visibility it offers. With just a few clicks, you can **navigate to the 'Dashboard > Network-wide > Clients'** and see all the devices connected to your network. This level of visibility is crucial for K12 schools to ensure a safe and secure online environment for students.
+Q: What enablement do we provide for partners?
+A: Access to demo kits, dashboards, playbooks, and partner-exclusive webinars.
 
-[Slide 3: Use Case 2 - Security Policies]
+Q: How do we support onboarding post-sale?
+A: We offer co-delivery workshops, pre-built config templates, and Meraki support handles escalations fast.
 
-Presenter: Another use case that resonates well with K12 institutions is the ability to set granular security policies. With Meraki MT, you can **configure firewall rules and content filtering** to ensure that students are only accessing appropriate content. This level of control is essential in maintaining a safe learning environment.
-
-[Slide 4: Use Case 3 - Easy Deployment]
-
-Presenter: Lastly, let's talk about the ease of deployment with Meraki MT. Whether it's setting up new access points or switches, the **plug-and-play functionality** makes it a breeze to expand your network as needed. This is crucial for K12 institutions that often have limited IT resources.
-
-[Slide 5: Smart Questions]
-
-Presenter: Now, let's wrap up with a few smart questions that you can use when pitching Meraki MT to your customers:
-
-1. How important is network visibility to your school's IT infrastructure?
-2. What security measures do you currently have in place to protect students' online activities?
-3. How do you envision leveraging the scalability of Meraki MT to support your school's growth?
-
-[Closing Slide]
-
-Presenter: Thank you for joining today's demo. We hope you feel more confident in pitching Meraki MT to your customers in the K12 sector. Remember, we're here to support you every step of the way. If you have any questions or need further assistance, don't hesitate to reach out. Thank you!
+Thanks for your time today, and remember, we're here to support you every step of the way in pitching Cisco Meraki to K-12 Education/Primary Education customers. Let's empower schools with seamless, secure, and scalable networking solutions!

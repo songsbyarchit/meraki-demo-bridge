@@ -1,34 +1,26 @@
-Title: Meraki MX Demo for State Local Gov Sector Partners
+Hey there! Today, we're focusing on how Cisco Meraki's MX can address the specific needs of the State And Local Government sector. Let's dive right in.
 
-Introduction (5 minutes)
-- Introduce yourself and your role at Meraki.
-- Briefly explain the agenda for the demo.
+**Use Case 1: Secure Remote Access**  
+**Click 'Security & SD-WAN > VPN'**  
+Here, we have the ability to set up secure VPN connections for remote workers, ensuring data confidentiality and integrity.
 
-Pain Points and Positioning (10 minutes)
-- Discuss common pain points for State Local Gov customers, such as limited IT resources, security concerns, and the need for easy-to-use networking solutions.
-- Position Meraki as a comprehensive solution that addresses these pain points with its cloud-managed networking devices, centralized management dashboard, and robust security features.
+**Use Case 2: Traffic Shaping**  
+**Click 'SD-WAN & Traffic Shaping > Traffic Shaping'**  
+With MX, you can prioritize critical applications over non-essential traffic, ensuring consistent performance for essential services.
 
-Use Case 1: Secure Remote Access (10 minutes)
-- Demonstrate how partners can set up secure VPN connections for remote workers using the Meraki MX.
-- Show how to configure VPN settings in the Meraki dashboard and monitor remote access activity.
+**Use Case 3: Centralized Management**  
+**Click 'Organization > Overview'**  
+The Meraki Dashboard provides a single pane of glass for managing all your sites, making it easy to troubleshoot and make changes across your network.
 
-Use Case 2: Traffic Shaping and QoS (10 minutes)
-- Show partners how to prioritize critical applications and ensure quality of service using Meraki MX's traffic shaping and QoS features.
-- **click 'Configure > Traffic shaping'** to demonstrate setting up rules for different types of traffic.
+**Use Case 4: Integrated Security**  
+**Click 'Security & SD-WAN > Content Filtering'**  
+MX includes built-in security features like content filtering to protect against online threats and ensure compliance with regulations.
 
-Use Case 3: Threat Protection (10 minutes)
-- Highlight Meraki MX's advanced security features, such as intrusion prevention, content filtering, and malware protection.
-- Show partners how to configure security policies and monitor threats in the Meraki dashboard.
+**Question 1:** What are the top state and local government pain points this addresses?  
+**Answer:** Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-Use Case 4: SD-WAN Deployment (10 minutes)
-- Explain the benefits of deploying SD-WAN with Meraki MX, such as improved network performance and reliability.
-- Demonstrate how partners can set up and manage SD-WAN policies in the Meraki dashboard.
+**Question 2:** How do we best position MX during the pitch?  
+**Answer:** Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-Smart Questions for Discussion (5 minutes)
-1. How do you currently handle remote access for your employees, and what challenges have you faced in ensuring security and performance?
-2. What are your top priorities for network security, and how do you see Meraki MX addressing those needs?
-3. How do you envision leveraging SD-WAN technology to optimize your network performance and reduce costs?
-
-Conclusion (5 minutes)
-- Recap the key features and use cases demonstrated during the demo.
-- Encourage partners to reach out for further information or assistance in pitching Meraki MX to State Local Gov customers.
+**Question 3:** What installation or deployment concerns should we be ready for?  
+**Answer:** It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.

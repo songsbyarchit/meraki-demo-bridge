@@ -1,40 +1,36 @@
-Title: Meraki MX Demo for Professional Services Sector
+Hey there, thanks for joining me today. I know we're all busy, so let's dive right in. 
 
-Introduction (5 mins):
-- Introduce yourself and the purpose of the demo
-- Briefly explain Meraki's cloud-managed networking solutions
-- Highlight the focus on simplicity, security, and scalability for professional services firms
+So, as a partner in the Professional Services sector, what trends or challenges are you seeing with customers? What do you find unique or tricky about positioning solutions in this space?
 
-Pain Points (5 mins):
-- Discuss common pain points for professional services firms, such as network security vulnerabilities, complex network management, and limited scalability
-- Emphasize the need for a solution that is easy to deploy, manage, and secure
+**click 'Security & SD-WAN > SD-WAN'**
 
-Use Case 1: Secure Remote Access (10 mins):
-- Show how the Meraki MX can provide secure VPN connections for remote employees
-- **Navigate to 'Security & SD-WAN > VPN' and show how easy it is to set up secure connections**
-- Explain how this feature can help professional services firms ensure secure access for remote workers and clients
+In the Professional Services sector, one common pain point is the need for secure and reliable connectivity across multiple sites. This is where Meraki MX shines. With its easy-to-use dashboard, you can quickly set up and manage SD-WAN policies to ensure seamless communication between branches.
 
-Use Case 2: Application Optimization (10 mins):
-- Highlight how the Meraki MX can prioritize and optimize network traffic for critical applications
-- **Click 'SD-WAN > Performance' and demonstrate how to prioritize traffic for specific applications**
-- Discuss how this feature can improve productivity and efficiency for professional services firms
+**click 'Security & SD-WAN > Security Center'**
 
-Use Case 3: Threat Protection (10 mins):
-- Showcase the Meraki MX's advanced security features, including intrusion prevention and content filtering
-- **Go to 'Security & SD-WAN > Threat Protection' and show how to set up security policies**
-- Explain how this can help professional services firms protect against cyber threats and ensure data security
+Another key use case for Meraki MX in Professional Services is security. With advanced security features like content filtering, intrusion prevention, and malware protection, you can safeguard your network and sensitive client data with ease.
 
-Use Case 4: Scalability and Growth (10 mins):
-- Illustrate how the Meraki MX can easily scale to accommodate the growth of professional services firms
-- **Navigate to 'Security & SD-WAN > Appliance Status' and show how to monitor device performance**
-- Discuss how this feature can support business expansion without compromising performance or security
+**click 'Appliance > Traffic Shaping'**
 
-Smart Questions for Discussion:
-1. How does your current networking solution address the security needs of your professional services firm?
-2. What challenges have you faced in managing and scaling your network infrastructure, and how do you envision Meraki addressing these challenges?
-3. In what ways do you see Meraki MX fitting into your long-term network strategy for your professional services firm?
+When it comes to optimizing network performance, Meraki MX allows you to prioritize critical applications and ensure bandwidth is allocated efficiently. This is crucial in the Professional Services sector where every second counts.
 
-Conclusion (5 mins):
-- Recap the key features and benefits of the Meraki MX for professional services firms
-- Encourage partners to pitch Meraki as a comprehensive, secure, and scalable networking solution
-- Invite questions and discussions from the audience
+**click 'Appliance > VLANs'**
+
+For Professional Services firms with diverse network requirements, VLAN support on Meraki MX enables you to segment traffic, improve network efficiency, and enhance security by isolating sensitive data.
+
+**click 'Security & SD-WAN > Security & SD-WAN Policies'**
+
+Managing security and connectivity policies across multiple sites can be a headache. With Meraki MX, you can easily create and enforce policies from a centralized dashboard, reducing complexity and ensuring consistency across your network.
+
+**click 'Security & SD-WAN > Threat Grid'**
+
+In an industry where data breaches can have serious consequences, Meraki MX offers integrated threat intelligence through Threat Grid. This helps you stay ahead of potential threats and proactively protect your network.
+
+Q: What are the top professional services pain points this addresses?  
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
+
+Q: How do we best position MX during the pitch?  
+A: Emphasize Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
+
+Q: What installation or deployment concerns should we be ready for?  
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.

@@ -1,29 +1,18 @@
-[Opening]
+Hey there! Thanks for joining us today. I'm excited to talk to you about Cisco Meraki's MS product, specifically tailored for the Service Provider sector. 
 
-1. Introduction: Hello everyone and thank you for joining us today for this Meraki MS demo tailored for Service Providers. I'm excited to show you how Meraki can help address the pain points that your customers in the Service Provider sector care about.
+So, let me ask you, as a partner reseller, what trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-2. Pain points: Service Providers often face challenges such as complex network management, limited visibility into network performance, and the need for scalability and flexibility. These pain points can result in increased costs, operational inefficiencies, and ultimately, unhappy customers.
+Great, let's dive in. Imagine you're a service provider looking to streamline your network management across multiple client sites. With Meraki MS, you can easily achieve this through the intuitive Meraki Dashboard. **Click 'Dashboard > Network-wide > Monitor > Clients'** to see real-time client activity across all sites.
 
-3. Positioning Meraki: Meraki offers a cloud-managed networking solution that simplifies network management, provides real-time visibility into network performance, and scales easily to meet the needs of Service Providers and their customers. With Meraki, you can offer a reliable and secure network that is easy to deploy and manage, ultimately improving customer satisfaction and reducing operational costs.
+Now, let's consider a common pain point for service providers: troubleshooting network issues. With Meraki MS, you have complete visibility into each network device. **Click 'Dashboard > Network-wide > Monitor > Switches'** to quickly identify any connectivity issues and resolve them in minutes.
 
-[Use Case 1: Network Deployment]
+Another key use case for service providers is managing network security policies. **Click 'Dashboard > Security & SD-WAN > Firewall'** to easily configure and enforce security policies across all client sites, ensuring consistent protection against threats.
 
-4. Use Case 1 - Network Deployment: Let's say a Service Provider needs to deploy a new network for a customer quickly and efficiently. With Meraki, you can **click 'Configure > Switch ports'** to easily set up and configure network devices remotely. This simplifies the deployment process and reduces the time and effort required to get the network up and running.
+Partner: What are the top service provider pain points this addresses?  
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-[Use Case 2: Network Monitoring]
+Partner: How do we best position MS during the pitch?  
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-5. Use Case 2 - Network Monitoring: Another common pain point for Service Providers is the lack of visibility into network performance. With Meraki, you can **click 'Monitor > Network-wide > Performance**' to access real-time data on network traffic, bandwidth usage, and device connectivity. This visibility allows you to proactively identify and address any issues before they impact your customers.
-
-[Use Case 3: Network Security]
-
-6. Use Case 3 - Network Security: Security is a top concern for Service Providers and their customers. With Meraki, you can **click 'Security > Firewall & traffic shaping'** to easily configure firewall rules and traffic shaping policies to protect the network from cyber threats. Meraki's built-in security features help ensure that your customers' data is safe and secure.
-
-7. Smart Questions:
-
-- How important is network visibility and performance monitoring to your customers?
-- Are your customers looking for a network solution that is easy to deploy and manage?
-- What are the biggest security concerns that your customers have when it comes to their network?
-
-[Closing]
-
-8. Thank you for taking the time to attend this demo. I hope you now have a better understanding of how Meraki can address the pain points that Service Providers care about. If you have any further questions or would like to discuss how Meraki can help your customers, please feel free to reach out. Thank you.
+Partner: What installation or deployment concerns should we be ready for?  
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.

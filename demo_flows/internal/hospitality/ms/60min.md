@@ -1,36 +1,21 @@
-Title: Meraki MS Demo for Hospitality Sector
+Hey there, **partner resellers**! Thanks for joining us today. We're here to dive into how Cisco Meraki's MS solutions can revolutionize network management in the Hospitality sector. Before we jump in, what trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-Introduction (5 mins):
-- Welcome everyone to the Meraki MS demo focused on the Hospitality sector.
-- Today, we will be exploring how Meraki MS can help hotels and resorts improve their network infrastructure.
-- Our goal is to equip you with the knowledge and tools to effectively pitch Meraki MS to customers in the Hospitality sector.
+Let's take a look at how Meraki MS can address these pain points for your customers. 
 
-Use Case 1: Simplified Deployment (10 mins):
-- **Login to the Meraki dashboard and show how easy it is to set up a new network for a hotel.**
-- Discuss how Meraki's plug-and-play deployment can save time and resources for hotel IT teams.
-- Highlight the automatic firmware updates and cloud-based management for seamless network maintenance.
+**Use Case 1: Guest Wi-Fi Management**
+**Click 'Wireless > SSIDs'** to set up a separate guest network with customized access policies.
 
-Use Case 2: Guest Wi-Fi Management (10 mins):
-- **Navigate to the Guest Wi-Fi settings and demonstrate how to set up a custom splash page for guest authentication.**
-- Explain how Meraki MS allows hotels to provide a branded and secure Wi-Fi experience for guests.
-- Discuss the benefits of collecting guest data for marketing and analytics purposes.
+**Use Case 2: CCTV Integration**
+**Click 'Security > Camera settings'** to easily integrate security cameras into the network for seamless monitoring.
 
-Use Case 3: Network Security (10 mins):
-- **Show the Security Center tab and discuss the different security features available, such as content filtering and intrusion detection.**
-- Highlight how Meraki MS helps hotels protect their network and guests from cyber threats.
-- Emphasize the importance of network security in the Hospitality sector to prevent data breaches.
+**Use Case 3: Room Control Integration**
+**Click 'Switch > VLANs'** to create separate VLANs for room control systems, ensuring secure and efficient automation.
 
-Use Case 4: VLAN Configuration for IoT Devices (10 mins):
-- **Navigate to VLAN settings and demonstrate how to create separate VLANs for IoT devices in guest rooms.**
-- Explain how Meraki MS can help hotels segment their network to ensure IoT devices do not compromise guest privacy or security.
-- Discuss the growing trend of IoT adoption in the Hospitality sector and the need for secure network segmentation.
+**Use Case 4: Bandwidth Prioritization**
+**Click 'Traffic Shaping > Add a rule'** to prioritize bandwidth for essential services like booking systems and guest check-ins.
 
-Smart Questions to Prompt Discussion:
-1. How do you currently manage network deployments and maintenance in your hotel/resort?
-2. What are the biggest challenges you face in providing a seamless Wi-Fi experience for guests?
-3. How do you prioritize network security and compliance in your hospitality business?
+In the Hospitality sector, objections might include cost vs. legacy vendors and skepticism over cloud-managed security. Arm yourself with TCO comparisons to address these concerns effectively.
 
-Conclusion (5 mins):
-- Thank you for joining us today for the Meraki MS demo tailored for the Hospitality sector.
-- We hope you now have a better understanding of how Meraki MS can benefit hotels and resorts.
-- Please feel free to reach out if you have any further questions or would like to explore a customized solution for your business.
+We provide partners with access to demo kits, dashboards, playbooks, and partner-exclusive webinars to support your sales efforts.
+
+Post-sale, we offer co-delivery workshops, pre-built config templates, and fast escalations through Meraki support to ensure a smooth onboarding process for your customers.

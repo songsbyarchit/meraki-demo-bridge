@@ -1,27 +1,29 @@
-[Opening]
+Hey there, thanks for joining me today. Whether you're a partner reseller, customer IT admin, or internal SE, I'm excited to show you how Cisco Meraki MR can make a big impact in the Hospitality sector.
 
-Hello everyone, thank you for joining today's Meraki MR demo focused on the Hospitality sector. Today, we'll be diving into the key features and use cases of Meraki MR that are specifically tailored to meet the needs of hospitality businesses. Our goal is to equip you with the knowledge and tools to effectively pitch this solution to our customers in the hospitality industry. 
+Let's kick things off with a couple of warm-up questions tailored to your role:
+- For partners: What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
+- For customers: What does your current network setup look like? Where are your biggest IT headaches today?
+- For internal: What common questions do our customers ask in the Hospitality sector? What objections or misconceptions do we frequently encounter?
 
-[Use Case 1: Guest Wi-Fi]
+Now, let's dive into the demo and explore how Meraki MR can revolutionize networking in Hospitality.
 
-Let's start with one of the most critical aspects for hospitality businesses - providing reliable and secure guest Wi-Fi. With Meraki MR, setting up a separate guest network is a breeze. **Navigate to 'Wireless > SSIDs' and create a new SSID for guests**. You can easily customize the login page with the hotel's branding and set bandwidth limits to ensure optimal performance for all guests. 
+1. **Click 'Wireless > Access Points' to see all your MR devices at a glance**
+2. **Navigate to 'Network-wide > Clients' to see real-time client activity across your entire network**
+3. **Click 'Security > Wireless Protection' to set up custom security policies for guest networks**
+4. **Navigate to 'Monitor > Performance' to view historical data on network usage trends**
+5. **Click 'Switch > Switch ports' to easily configure and manage your switch ports**
+6. **Explore 'Systems Manager > Overview' for endpoint management and security**
 
-[Use Case 2: Location Analytics]
+As you can see, the Meraki Dashboard provides a single pane of glass for all your networking needs, offering unparalleled visibility, simplified troubleshooting, and unified management.
 
-Another powerful feature of Meraki MR is location analytics. By **clicking 'Wireless > Bluetooth settings'**, you can enable Bluetooth scanning to track the movement of guests within the hotel premises. This data can help hotels understand guest behavior, optimize the layout of facilities, and even send targeted promotions based on their location.
+To support our partners in selling MR to the Hospitality sector, here are a few FAQs to keep in mind:
+- Q: What objections might the partner hear in hospitality?
+  A: Cost vs legacy vendors, and skepticism over cloud-managed security — arm them with TCO comparisons.
 
-[Use Case 3: Content Filtering]
+- Q: What enablement do we provide for partners?
+  A: Access to demo kits, dashboards, playbooks, and partner-exclusive webinars.
 
-For hotels that want to provide a family-friendly Wi-Fi experience, Meraki MR offers content filtering capabilities. **Go to 'Wireless > Firewall & traffic shaping'** to set up content filtering rules that block access to inappropriate websites. This feature is crucial for ensuring a safe and secure internet experience for all guests, especially families with children.
+- Q: How do we support onboarding post-sale?
+  A: We offer co-delivery workshops, pre-built config templates, and Meraki support handles escalations fast.
 
-[Use Case 4: Seamless Roaming]
-
-With Meraki MR's seamless roaming capabilities, guests can move around the hotel without experiencing any interruptions in their Wi-Fi connection. **Navigate to 'Wireless > Access points' and enable 'Client balancing'** to ensure that devices are always connected to the nearest access point for optimal performance. This feature is essential for providing a seamless and hassle-free Wi-Fi experience for guests.
-
-[Smart Questions]
-
-1. How important is guest Wi-Fi experience for your customers in the hospitality sector?
-2. Have you encountered any specific challenges related to Wi-Fi management in hospitality settings?
-3. How do you think location analytics could benefit hotels in understanding guest behavior and improving their services?
-
-Thank you for participating in today's demo. We hope you found these use cases informative and valuable for your discussions with customers in the hospitality sector. If you have any further questions or would like to explore Meraki MR in more detail, feel free to reach out to our team.
+Thanks for joining me today. I hope you're as excited as I am about the possibilities Meraki MR can bring to the Hospitality sector. Let's work together to make networking simpler and more effective for our customers.

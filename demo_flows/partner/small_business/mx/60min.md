@@ -1,29 +1,23 @@
-[Slide 1: Introduction]
-Welcome to our Meraki MX demo for small businesses! Today, we will be showcasing how the Meraki MX can revolutionize your customers' network security and management. Let's dive in!
+Hey there! Thanks for joining us today. I know you're a partner reseller, and I'm excited to show you how Cisco Meraki MX can help you pitch to small business customers. Before we dive in, what trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-[Slide 2: Pain Points]
-Before we get into the demo, let's talk about the pain points that small businesses often face when it comes to their network security. Small businesses typically have limited IT resources and expertise, leading to challenges in managing and securing their networks effectively. They also need a solution that is easy to deploy and manage, without compromising on security.
+Let's take a look at the Meraki Dashboard. **Click on 'Dashboard'** to get started. Here, you can see all your networks in one place, making it easy to manage multiple sites. **Navigate to 'Network-wide > Monitor > Clients'** to see real-time client information.
 
-[Slide 3: Positioning Meraki]
-This is where Meraki MX comes in. Meraki MX offers a cloud-managed security appliance that provides comprehensive security features, centralized management, and easy deployment. With Meraki MX, small businesses can have peace of mind knowing that their network is secure and easily manageable.
+Now, let's talk about some key use cases for small businesses. **Click 'Security & SD-WAN > Configure > Security appliance > Threat protection'** to set up advanced security features like intrusion prevention. This helps protect your network from cyber threats.
 
-[Use Case 1: Secure Remote Access]
-Let's start with our first use case - secure remote access. With Meraki MX, small businesses can easily set up secure VPN connections for remote employees, ensuring that their data is protected when accessing the network from outside the office. **click 'Configure > VPN'**
+Another important use case is VPN connectivity. **Click 'Security & SD-WAN > Configure > Site-to-site VPN'** to easily create secure connections between remote sites. This ensures seamless communication between locations.
 
-[Use Case 2: Content Filtering]
-Next, let's talk about content filtering. Small businesses can use Meraki MX to block access to websites with malicious content or inappropriate material, ensuring a safe browsing experience for employees. **click 'Configure > Content filtering'**
+Next, let's discuss network performance. **Click 'Security & SD-WAN > Configure > SD-WAN & traffic shaping'** to prioritize critical applications and ensure optimal performance. This helps avoid network congestion and slowdowns.
 
-[Use Case 3: SD-WAN]
-Another key use case for small businesses is SD-WAN. With Meraki MX, businesses can optimize their network traffic by prioritizing critical applications and ensuring a reliable connection for all users, even in remote locations. **click 'Configure > SD-WAN'**
+For small businesses with limited IT resources, cloud management is a game-changer. **Click 'Wireless > Configure > Access points'** to quickly deploy and manage wireless networks across all your sites. This simplifies troubleshooting and maintenance.
 
-[Use Case 4: Intrusion Prevention]
-Moving on to intrusion prevention. Meraki MX offers advanced intrusion prevention features that detect and block malicious traffic, protecting small businesses from cyber threats and attacks. **click 'Configure > Intrusion prevention'**
+Lastly, let's address guest access. **Click 'Wireless > Configure > SSID > Guest access'** to create secure guest networks with customizable splash pages. This enhances the customer experience while keeping your main network secure.
 
-[Slide 4: Smart Questions]
-Now that we've gone through some key use cases, here are a few smart questions you can ask your customers to prompt discussion:
-1. How are you currently managing your network security, and what pain points are you facing?
-2. Have you experienced any security incidents or breaches in the past, and how did you handle them?
-3. How important is network reliability and performance for your business operations?
+Now, let's wrap up with some common questions partners might have:
+Q: What are the top small business pain points this addresses?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-[Slide 5: Conclusion]
-In conclusion, Meraki MX is the perfect solution for small businesses looking to enhance their network security and management. With its easy deployment, centralized management, and comprehensive security features, Meraki MX is a game-changer for small businesses. Thank you for joining our demo today!
+Q: How do we best position MX during the pitch?
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
+
+Q: What installation or deployment concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.

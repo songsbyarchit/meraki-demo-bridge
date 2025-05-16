@@ -1,36 +1,28 @@
-[Opening]
-Presenter: Welcome everyone to our Meraki MR demo targeted towards the Finance sector. Today, we'll be discussing how Meraki can address the pain points that customers in the finance industry care about. Let's dive in!
+Hey there! Thanks for joining me today for this demo on Cisco Meraki MR, tailored to the Financial Services sector. As a partner in this space, you likely understand the unique challenges and opportunities that come with providing networking solutions to financial institutions. Before we dive into the demo, I'd love to hear from you about any trends or challenges you're seeing with customers in this sector. What do you find unique or tricky about positioning solutions in the Financial Services space?
 
-[Slide 1: Introduction to Meraki MR]
-Presenter: Meraki MR is a cloud-managed wireless solution that offers easy deployment, seamless integration, and advanced security features. For finance companies, this means reliable connectivity for employees and customers, as well as simplified management and monitoring.
+Great, now let's explore some key use cases where Meraki MR can make a real difference in the Financial Services sector:
 
-[Slide 2: Pain Points in the Finance Sector]
-Presenter: Finance companies often face challenges related to network security, compliance, and scalability. With Meraki MR, these pain points can be addressed through features like advanced security settings, compliance reporting, and easy scalability for growing networks.
+1. **Enhanced Security**: With Meraki MR, you can easily create secure guest networks for visitors while ensuring that sensitive financial data remains protected.
+   
+2. **Compliance**: The centralized Meraki Dashboard allows you to quickly generate compliance reports, making audits a breeze for financial institutions.
 
-[Use Case 1: Secure Guest Wi-Fi]
-Presenter: One common use case in the finance sector is providing secure guest Wi-Fi for customers visiting branches or offices. With Meraki MR, you can easily set up a separate guest network with customizable security settings to ensure a safe browsing experience for visitors.
+3. **Branch Connectivity**: Simplify the management of multiple branch locations with Meraki's cloud-based architecture, providing consistent network policies across all sites.
 
-**Demo: Click 'Configure > Wireless > SSIDs' to set up a guest network with WPA2 security.**
+4. **Quality of Service (QoS)**: Prioritize critical financial transactions over less time-sensitive traffic to ensure a smooth user experience for employees and customers.
 
-[Use Case 2: Compliance Reporting]
-Presenter: Finance companies need to adhere to strict compliance regulations when it comes to data security. Meraki MR offers compliance reporting features that allow you to track and monitor network activity to ensure regulatory requirements are met.
+Let's take a closer look at the Meraki Dashboard now. **Click 'Wireless > Clients'** to see a real-time view of all connected devices across your network.
 
-**Demo: Click 'Monitor > Clients' to view real-time client activity and generate compliance reports.**
+**Click 'Security & SD-WAN > Security Center'** to easily configure firewall rules and VPN settings to secure your network traffic.
 
-[Use Case 3: Seamless Roaming]
-Presenter: In a finance office environment, employees need seamless connectivity as they move between different areas. Meraki MR's seamless roaming feature ensures that devices stay connected to the strongest access point without any interruption in service.
+Now, let's address some common questions partners might have when positioning Meraki MR in the Financial Services sector:
 
-**Demo: Click 'Wireless > Wireless Settings' to enable seamless roaming for a smoother user experience.**
+Q: What are the top financial services pain points this addresses?  
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-[Use Case 4: Remote Network Management]
-Presenter: With the rise of remote work in the finance sector, it's crucial to have the ability to manage and monitor networks from anywhere. Meraki MR's cloud-based management platform allows for remote network management, making it easy to troubleshoot issues and make changes on the go.
+Q: How do we best position MR during the pitch?  
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-**Demo: Click 'Dashboard > Network-wide > Clients' to view and manage devices connected to the network remotely.**
+Q: What installation or deployment concerns should we be ready for?  
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
 
-[Closing]
-Presenter: As you can see, Meraki MR offers a range of features that address the pain points finance companies care about, from network security to compliance and scalability. Before we wrap up, here are a few smart questions you can ask your customers to prompt discussion:
-1. How are you currently managing your guest Wi-Fi network, and are you facing any security challenges?
-2. What compliance regulations are you required to follow, and how are you currently monitoring network activity to ensure compliance?
-3. With the increasing trend of remote work, how are you managing and monitoring your network for employees working from home?
-
-Thank you for joining us today, and we hope this demo has equipped you with the knowledge and tools to pitch Meraki MR to your finance sector customers effectively. If you have any further questions, feel free to reach out to our team.
+Thank you for exploring Cisco Meraki MR with me today. I hope this demo has provided you with valuable insights into how Meraki can meet the unique networking needs of the Financial Services sector. If you have any further questions or would like to discuss how to best position Meraki with your customers, feel free to reach out.

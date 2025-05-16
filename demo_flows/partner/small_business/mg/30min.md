@@ -1,43 +1,30 @@
-[Opening]
+Hey there, thanks for joining me for this demo today. I know we're all busy, so let's jump right in. 
 
-Presenter: "Good morning everyone! Thank you for joining us today for this Meraki MG demo specifically designed for small businesses. Today, we'll be exploring how the Meraki MG can help solve some common pain points for your customers and how you can position it to drive sales. Let's dive in!"
+**Warm-up question for partners:** What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-[Slide 1: Introduction to Meraki MG]
+**Warm-up question for customers:** What does your current network setup look like? Where are your biggest IT headaches today?
 
-Presenter: "Before we get started, let me give you a quick overview of the Meraki MG. It's a cloud-managed gateway that provides reliable connectivity for small businesses, with features like SD-WAN capabilities, VPN connectivity, and intelligent traffic routing. Now, let's discuss some pain points your customers might be facing."
+**Warm-up question for internal:** What common questions do our customers ask in the Small Business sector? What objections or misconceptions do we frequently encounter?
 
-[Slide 2: Common pain points for small businesses]
+---
 
-Presenter: "Small businesses often struggle with unreliable internet connectivity, complex network setups, and limited IT resources. This can lead to downtime, decreased productivity, and security concerns. The Meraki MG addresses these pain points by offering a simple, cloud-managed solution that is easy to deploy and manage, even with limited technical expertise."
+So, let's talk about the needs of Small Businesses. They often struggle with limited IT resources, lack of visibility into their network, and the complexity of managing multiple sites. This is where Meraki really shines.
 
-[Use case 1: Ensuring reliable connectivity]
+Let's dive into some specific use cases. Imagine a small retail store with multiple locations. With Meraki, you can easily manage all your networks from one dashboard. **Click 'Network-wide > Monitor > Clients'** and see real-time data on all connected devices.
 
-Presenter: "Imagine a small business that relies on a cloud-based POS system to process transactions. Any downtime or slow connectivity can result in lost sales and frustrated customers. With the Meraki MG, you can ensure reliable connectivity by leveraging its SD-WAN capabilities to automatically route traffic over the most optimal path, improving performance and reducing downtime."
+Now, let's talk about a small manufacturing company. They need reliable connectivity for their machinery. With Meraki, you can quickly troubleshoot any network issues. **Click 'Monitor > Live Tools > Ping'** to test connectivity to specific devices.
 
-**click 'Configure > SD-WAN'**
+Lastly, consider a small law firm that values security. Meraki offers built-in security features to protect your network. **Click 'Security & SD-WAN > Security Appliance'** to view and configure security settings.
 
-[Use case 2: Simplifying network management]
+Now, let's address some common questions partners might have:
 
-Presenter: "Small businesses often have limited IT resources and may struggle with complex network setups. The Meraki MG simplifies network management by providing a centralized dashboard where you can easily monitor and configure your network devices, including the MG gateway, switches, and access points."
+Q: What are the top small business pain points this addresses?  
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-**click 'Configure > Switch ports'**
+Q: How do we best position MG during the pitch?  
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-[Use case 3: Enhancing security with VPN connectivity]
+Q: What installation or deployment concerns should we be ready for?  
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
 
-Presenter: "Security is a top concern for small businesses, especially when it comes to protecting sensitive customer data. The Meraki MG offers built-in VPN connectivity, allowing you to securely connect remote offices or users to the network, ensuring data privacy and compliance."
-
-**click 'Configure > VPN'**
-
-[Slide 3: Positioning Meraki MG to customers]
-
-Presenter: "When pitching the Meraki MG to your customers, emphasize its ease of use, reliability, and security features. Highlight how it can help them improve connectivity, simplify network management, and enhance security, all while reducing IT overhead."
-
-[Closing]
-
-Presenter: "Before we wrap up, here are a few smart questions you can ask your customers to prompt discussion:
-
-1. How are you currently managing your network connectivity, and are you experiencing any challenges?
-2. Have you considered implementing SD-WAN technology to improve your network performance and reliability?
-3. What security measures do you have in place to protect your data and ensure compliance?
-
-I hope this demo has given you some valuable insights on how to position the Meraki MG to your small business customers. If you have any further questions or would like to learn more, feel free to reach out to us. Thank you for joining us today!"
+Thanks for your time today. If you have any more questions or need further information, feel free to reach out.

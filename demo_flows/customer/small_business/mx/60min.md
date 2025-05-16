@@ -1,23 +1,38 @@
-[Opening]
+Intro:
+Hello and welcome to our Cisco Meraki MX demo! Today, we will be focusing on how the MX can benefit small businesses like yours. Whether you are an IT admin or a financial decision maker, we are excited to show you how the Meraki Dashboard can simplify network management and drive operational efficiency. 
 
-Hello everyone, thank you for joining us today for this Meraki MX demo targeted towards small businesses. Whether you're an IT admin or a financial decision maker, we understand the importance of operational impact and cost justification in your organization. Today, we'll be showcasing how the Meraki MX can streamline your network security and management processes, ultimately saving you time and money.
+Warm-up questions:
+- For customers: What does your current network setup look like? Where are your biggest IT headaches today?
 
-[Use Case 1: Secure Remote Access]
-Let's start with one of the most common use cases for small businesses - secure remote access. With Meraki MX, you can easily set up secure VPN connections for remote employees to access company resources. **click 'Configure > VPN > Client VPN'**. This not only ensures data security but also improves productivity by enabling remote work flexibility.
+Use Case 1: Secure VPN for Remote Workers
+**Navigate to 'Security & SD-WAN > Appliance status'**
+**Click 'VPN > Non-Meraki peers'**
+**Click 'Add a peer'**
+**Enter peer IP address and configure settings**
+**Click 'Save changes'**
 
-[Use Case 2: Traffic Shaping]
-Next, let's talk about traffic shaping. With the Meraki MX, you can prioritize critical applications and limit bandwidth for non-essential ones. **click 'Configure > Traffic Shaping'**. This ensures that your business-critical applications always have the necessary bandwidth, improving overall network performance and user experience.
+Use Case 2: Content Filtering for Compliance
+**Navigate to 'Security & SD-WAN > Content filtering'**
+**Enable content filtering and configure policies**
+**Click 'Save changes'**
 
-[Use Case 3: Threat Protection]
-Security is a top priority for any small business. The Meraki MX comes with built-in threat protection features such as intrusion prevention and content filtering. **click 'Security & SD-WAN > Threat protection'**. By proactively blocking malicious content and protecting against cyber threats, you can safeguard your network and sensitive data.
+Use Case 3: Application-aware Firewall Rules
+**Navigate to 'Security & SD-WAN > Firewall'**
+**Create new firewall rule based on application**
+**Click 'Save changes'**
 
-[Use Case 4: Cloud Management]
-One of the key advantages of the Meraki MX is its cloud-based management platform. **click 'Dashboard'**. This allows you to easily monitor and manage your network from anywhere, reducing the need for onsite IT support and saving you time and resources.
+Use Case 4: Auto VPN for Branch Offices
+**Navigate to 'Security & SD-WAN > Site-to-site VPN'**
+**Click 'Add a VPN'**
+**Configure settings for branch office VPN**
+**Click 'Save changes'**
 
-[Smart Questions]
-Now, before we conclude, I'd like to ask you a couple of smart questions to prompt discussion:
+Frequently Asked Questions:
+Q: How does this solution reduce IT workload in our small business environment?  
+A: Meraki simplifies management through one dashboard and automates many tasks like updates and troubleshooting.
 
-1. How are you currently managing your network security and remote access for your employees?
-2. What are the biggest challenges you face in terms of network management and security in your organization?
+Q: What kind of ROI or cost reduction can we expect?  
+A: Customers often report major time savings and reduced downtime, especially for remote sites.
 
-Thank you for your time and attention. We hope this demo has given you a better understanding of how the Meraki MX can benefit your small business. If you have any further questions or would like to discuss your specific needs, please feel free to reach out to us.
+Q: Can we integrate this with our existing systems and security policies?  
+A: Yes — Meraki supports APIs, SAML, and integration with existing firewalls, Active Directory, and SIEM tools.

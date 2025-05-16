@@ -1,20 +1,19 @@
-Welcome, partners, to today's Meraki MS demo targeted towards the Small Business sector. Today, we will be discussing how Meraki can address the pain points that small businesses care about and help you pitch it to your customers effectively.
+Hey there! Today, we're going to dive into how Cisco Meraki's MS switches can revolutionize network management for small businesses. As a partner, you know the challenges your customers face in this sector. What trends are you seeing? What do you find unique about positioning solutions here?
 
-First, let's talk about some common pain points that small businesses face when it comes to their network infrastructure. Many small businesses struggle with the complexity of traditional networking solutions, the high cost of deployment and maintenance, and the lack of visibility and control over their network.
+Let's kick things off by exploring the Meraki Dashboard, your go-to platform for network management. **Click 'Dashboard'** to get started.
 
-This is where Meraki comes in. Meraki offers a simple, cloud-managed networking solution that is easy to deploy, manage, and scale. With Meraki, small businesses can have full visibility and control over their network, without the need for expensive IT resources.
+Imagine a small business struggling with network downtime and security threats. With Meraki MS, these pain points can be a thing of the past. **Click 'Network-wide > Clients'** to see all devices connected to the network in real-time.
 
-Now, let's dive into some use cases that demonstrate the value of Meraki for small businesses:
+Now, picture a scenario where a small business needs to quickly troubleshoot network issues. **Click 'Monitor > Live Tools'** to access powerful troubleshooting tools like cable testing and ping.
 
-1. **Network Deployment**: Show how easy it is to set up a new Meraki switch using the intuitive dashboard. **click 'Configure > Switch ports'**.
-2. **Traffic Monitoring**: Demonstrate how Meraki provides real-time insights into network traffic and application usage. **click 'Monitor > Traffic analytics'**.
-3. **Security**: Showcase how Meraki's built-in security features, such as content filtering and intrusion prevention, can help small businesses protect their network. **click 'Security > Content filtering'**.
-4. **Remote Troubleshooting**: Highlight how Meraki's cloud-managed solution allows for remote troubleshooting and configuration changes. **click 'Tools > Remote desktop'**.
+In a small business with multiple sites, managing network configurations can be a nightmare. **Click 'Configure > Switch ports'** to easily configure and monitor ports across all sites from one central location.
 
-Now, let's discuss some smart questions that you can ask your customers to prompt discussion:
+For small businesses looking to enhance security, Meraki MS offers built-in features like VLANs and access controls. **Click 'Security & SD-WAN > Addressing & VLANs'** to set up secure VLANs in minutes.
 
-1. How much time and resources are currently spent on managing your network infrastructure?
-2. What are the biggest challenges you face when it comes to network security?
-3. How important is it for your business to have real-time visibility and control over your network?
+When it comes to scalability, Meraki MS makes it easy to add new devices and locations with zero-touch deployment. **Click 'Switch > Switches'** to see how simple it is to add a new switch to your network.
 
-By understanding your customers' pain points and demonstrating how Meraki can address them, you can effectively pitch Meraki to small businesses and help them improve their network infrastructure. Thank you for attending today's demo. If you have any questions, please feel free to ask.
+In the Small Business sector, partners often ask about the key pain points Meraki MS addresses. Lack of visibility, slow troubleshooting, and complexity managing multiple sites are common challenges that Meraki solves.
+
+When positioning MS, emphasize Meraki's ease of use, single dashboard, and fast deployment with built-in security.
+
+Partners should be ready for a plug-and-play installation, but ensure licensing is pre-applied and templates are ready for a smooth deployment process.

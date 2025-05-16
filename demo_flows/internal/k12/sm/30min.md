@@ -1,20 +1,18 @@
-[Opening]
+Hey there! Thanks for joining me today for this demo focused on Cisco Meraki's SM solution in the K-12 Education/Primary Education sector. Whether you're a partner reseller, customer IT admin, or internal SE, the goal here is to equip you with the knowledge and tools to effectively pitch our solutions in this space.
 
-Welcome everyone to today's Meraki SM demo focused on the K12 sector. Our goal today is to equip our partners with the knowledge and tools they need to effectively pitch Meraki SM to their customers in the education industry. Let's dive right in.
+Let's kick things off with a couple of warm-up questions tailored to your role:
+- For partners: What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
+- For customers: What does your current network setup look like? Where are your biggest IT headaches today?
+- For internal: What common questions do our customers ask in the K-12 Education/Primary Education sector? What objections or misconceptions do we frequently encounter?
 
-[Use Case 1: Device Management]
-One common use case in K12 schools is managing a large number of devices, such as tablets or laptops, used by students and staff. With Meraki SM, partners can easily enroll new devices, push apps and updates, and ensure compliance with school policies. **Click 'Systems Manager > Devices'** to see an overview of all managed devices in the school network. Partners can highlight how Meraki SM simplifies the device management process and improves efficiency for IT administrators.
+Moving on, let's dive into the Meraki Dashboard, the heart of our SM solution. This single pane of glass provides unparalleled visibility, simplified troubleshooting, and unified management. **Click 'Dashboard'** to explore real-time insights into your network health.
 
-[Use Case 2: Content Filtering]
-Another important feature for K12 schools is content filtering to ensure a safe and secure online environment for students. **Click 'Systems Manager > Content filtering'** to show how partners can set up policies to block inappropriate websites or content on school devices. This use case demonstrates how Meraki SM helps schools enforce internet safety policies and protect students from harmful online content.
+Now, let's explore two key use cases in the K-12 Education/Primary Education sector:
+1. **Click 'Clients' to see a detailed breakdown of device activity across your network, helping you identify any potential security risks or performance issues.**
+2. **Navigate to 'Security & SD-WAN > Security Center' to set up firewall rules and VPN connections, ensuring a secure and reliable network environment for your students and staff.**
 
-[Use Case 3: Location Tracking]
-For schools with large campuses, location tracking can be a valuable tool for asset management and security. **Click 'Systems Manager > Location tracking'** to demonstrate how partners can track the real-time location of school devices and set up geofencing alerts. This use case showcases how Meraki SM enhances school security measures and improves the overall management of school resources.
+As you engage with customers in this sector, you may encounter objections such as cost vs. legacy vendors and skepticism over cloud-managed security. Arm yourself with TCO comparisons to address these concerns effectively.
 
-[Smart Questions to Prompt Discussion]
-1. How have you seen the adoption of mobile devices in K12 schools impact the need for better device management solutions?
-2. What are some of the biggest challenges K12 schools face when it comes to internet safety and content filtering for students?
-3. In what ways do you think location tracking technology can benefit K12 schools in terms of security and asset management?
+Additionally, we provide partners with access to demo kits, dashboards, playbooks, and partner-exclusive webinars to support your sales efforts. Post-sale onboarding is equally crucial, and we offer co-delivery workshops, pre-built config templates, and fast escalations handling by our dedicated Meraki support team.
 
-[Closing]
-Thank you for joining today's demo. We hope you now feel more confident in pitching Meraki SM to K12 customers and showcasing its benefits for device management, content filtering, and location tracking. If you have any further questions or need support, please don't hesitate to reach out to our team. Thank you and have a great day!
+That wraps up our demo for today. Thank you for your time, and remember, we're here to support you every step of the way in selling SM in the K-12 Education/Primary Education space. Happy pitching!

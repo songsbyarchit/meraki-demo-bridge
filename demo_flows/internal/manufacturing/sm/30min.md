@@ -1,39 +1,13 @@
-[Opening]
+Hey there, thanks for joining us today! Whether you're a partner reseller, customer IT admin, or internal SE, we're excited to show you how Cisco Meraki's SM solution can revolutionize network management in the Manufacturing sector.
 
-Presenter: Welcome, everyone! Today, we're going to dive into a demo of Meraki SM specifically tailored for the Manufacturing sector. Our goal is to equip you with the knowledge and tools to effectively pitch Meraki SM to our manufacturing customers. Let's get started!
+To kick things off, let's dive into the unique challenges and trends you're seeing in this space. What are some pain points your customers are facing, or what do you find particularly tricky about positioning solutions in Manufacturing?
 
-[Use Case 1: Device Management]
+Now, let's take a look at the Meraki Dashboard, your central platform for network management. With just a few **clicks**, you can gain visibility into your entire network, troubleshoot issues easily, and manage all your devices in one place.
 
-Presenter: One key use case for manufacturers is device management. With Meraki SM, we can easily enroll and manage all devices within a manufacturing facility from a single dashboard. Let's take a look at how this works.
+Let's explore a couple of specific use cases in the Manufacturing sector. Imagine being able to quickly identify and resolve connectivity issues on the factory floor with just a **click** on the Dashboard. Or easily segmenting your network to ensure sensitive data stays secure — all from a single pane of glass.
 
-**Click 'Systems Manager > Add devices'**
+Now, let's **navigate** to the Dashboard and see how you can streamline your network management tasks. You can easily **click 'Configure > VLANs'** to set up network segmentation tailored to your Manufacturing environment.
 
-Presenter: Here, you can see all the devices that are connected to the network. From here, we can push updates, security policies, and even remotely wipe a device if it's lost or stolen. This level of control and visibility is crucial for ensuring operational efficiency and security in a manufacturing setting.
+As you're pitching SM to customers in Manufacturing, you might encounter objections around cost compared to legacy vendors or skepticism towards cloud-managed security. Arm yourself with total cost of ownership comparisons to address these concerns effectively.
 
-[Use Case 2: Network Security]
-
-Presenter: Another use case that resonates with manufacturing customers is network security. With Meraki SM, we can easily enforce security policies across all devices to prevent unauthorized access and protect sensitive data.
-
-**Click 'Systems Manager > Security policies'**
-
-Presenter: Here, we can set up policies such as firewall rules, VPN configurations, and app restrictions to ensure that only approved devices and applications can access the network. This level of granular control is essential for maintaining a secure manufacturing environment.
-
-[Use Case 3: Compliance Monitoring]
-
-Presenter: Lastly, compliance monitoring is a critical aspect for manufacturers who need to adhere to industry regulations and standards. With Meraki SM, we can easily track and report on compliance metrics to ensure that all devices and systems are up to date and meeting regulatory requirements.
-
-**Click 'Systems Manager > Compliance dashboard'**
-
-Presenter: Here, we can see a comprehensive overview of compliance status across all devices, making it easy to identify any areas that need attention. This level of visibility and reporting is invaluable for manufacturers who need to demonstrate compliance to auditors and regulatory bodies.
-
-[Prompting Discussion]
-
-Presenter: Now that we've seen how Meraki SM can benefit manufacturing customers, let's discuss a few key questions that you can ask during your pitch:
-
-1. How are you currently managing device security and compliance within your manufacturing facility?
-2. What challenges have you faced with network management and security in the past?
-3. How important is it for your organization to have a centralized platform for managing all devices and ensuring compliance?
-
-[Closing]
-
-Presenter: Thank you for joining us today for this demo of Meraki SM in the Manufacturing sector. I encourage you to leverage these use cases and discussion points in your conversations with manufacturing customers to showcase the value and benefits of Meraki SM. If you have any further questions or need additional support, please don't hesitate to reach out. Thank you!
+For partners selling in the Manufacturing space, we provide access to demo kits, dashboards, playbooks, and partner-exclusive webinars. And post-sale, we offer co-delivery workshops, pre-built config templates, and fast escalations through Meraki support.

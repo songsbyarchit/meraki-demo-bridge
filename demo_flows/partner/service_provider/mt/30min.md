@@ -1,24 +1,30 @@
-Title: Meraki MT Demo for Service Providers
+Hey there! Thanks for joining us today. I know you are a partner in the Service Provider sector and we are excited to show you how Cisco Meraki can help you pitch to your customers. Let's dive in!
 
-Introduction:
-Hello and welcome to our Meraki MT demo tailored for Service Providers. Today, we'll explore the benefits of Meraki's Managed Services and how it can help you better serve your customers. Let's dive in!
+**Partner:** What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-1. Pain Points and Positioning:
-Service Providers often face challenges with managing multiple customer networks efficiently. Customers demand reliable connectivity, security, and visibility into their networks. With Meraki MT, you can offer a cloud-managed solution that simplifies network management and provides real-time insights.
+Today, we're going to showcase the power of Cisco Meraki in addressing the specific needs of Service Providers. Let's start by taking a look at the Meraki Dashboard. **Click 'Dashboard'**.
 
-2. Use Case 1: Network Monitoring and Troubleshooting
-Imagine a scenario where a customer's network goes down unexpectedly. With Meraki MT, you can **click 'Monitor > Network Health'** to quickly identify the issue and **click 'Troubleshooting > Diagnostics'** to resolve it remotely. This level of visibility and control is invaluable for Service Providers.
+Imagine having all your network information in one place, easily accessible and manageable. That's what the Meraki Dashboard offers. With just a few clicks, you can see all your network devices, monitor performance, and even troubleshoot issues in real-time.
 
-3. Use Case 2: Security and Compliance
-Customers are increasingly concerned about cybersecurity threats and compliance regulations. With Meraki MT, you can **click 'Security > Threat Protection'** to monitor and protect customer networks in real-time. You can also **click 'Compliance > Policy Enforcement'** to ensure adherence to industry standards.
+Now, let's explore a couple of use cases where Meraki shines in the Service Provider sector.
 
-4. Use Case 3: Scalability and Automation
-As your customer base grows, managing multiple networks manually becomes burdensome. With Meraki MT, you can **click 'Configure > Templates'** to easily replicate network configurations across multiple sites. You can also **click 'Automation > Scheduled Tasks'** to automate routine network maintenance tasks.
+**Use Case 1: Multi-site Management**  
+**Click 'Network-wide > Sites'**
 
-5. Smart Questions for Discussion:
-- How are you currently managing your customer networks, and what are the pain points you face?
-- What specific features or capabilities are your customers looking for in a managed services provider?
-- How do you envision leveraging Meraki MT to differentiate your offerings and drive customer satisfaction?
+For Service Providers managing multiple client locations, the Meraki Dashboard provides a single pane of glass to oversee all networks. You can quickly identify network health, deploy configurations across sites, and ensure consistent security policies.
 
-Conclusion:
-Thank you for joining our Meraki MT demo today. We hope you see the value that Meraki's Managed Services can bring to your Service Provider business. If you have any further questions or would like to discuss how to implement Meraki MT for your customers, please feel free to reach out. Let's revolutionize network management together!
+**Use Case 2: Remote Troubleshooting**  
+**Click 'Clients' > Select a client device > Troubleshooting Tools'**
+
+When issues arise, time is of the essence. With Meraki, you can troubleshoot network problems remotely with ease. From packet capture to ping tests, you have the tools to diagnose and resolve issues quickly, saving both time and resources.
+
+**Partner:** What are the top service provider pain points this addresses?  
+**Answer:** Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
+
+**Partner:** How do we best position MT during the pitch?  
+**Answer:** Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
+
+**Partner:** What installation or deployment concerns should we be ready for?  
+**Answer:** It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
+
+That's a wrap! Thank you for exploring Cisco Meraki with us today. We hope you can leverage these insights to better serve your customers in the Service Provider sector.

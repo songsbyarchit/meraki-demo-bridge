@@ -1,29 +1,36 @@
-[Title Slide: Meraki MS Demo for Service Providers]
-[Slide 1: Introduction]
-- Welcome to our demo of Meraki MS for Service Providers. Today, we'll show you how Meraki can help you deliver reliable and secure networking solutions to your customers.
+Hey there! Today, we're going to dive into how Cisco Meraki's MS can revolutionize network management for Service Providers. Our focus is on simplifying your network operations and providing a seamless experience for your customers. 
 
-[Slide 2: Pain Points in the Service Provider Sector]
-- Service providers often struggle with managing multiple networks efficiently, ensuring security across all endpoints, and providing reliable connectivity to their customers. These pain points can lead to customer dissatisfaction and lost revenue.
+Let's kick things off with a quick warm-up question: What trends or challenges are you seeing with customers in the Service Provider sector? And what do you find unique or tricky about positioning solutions in this space?
 
-[Slide 3: Positioning Meraki MS]
-- Meraki MS offers a cloud-managed solution that simplifies network management, enhances security with built-in features like threat protection and segmentation, and ensures high performance with advanced analytics and troubleshooting tools.
+Great, now let's jump into the demo!
 
-[Slide 4: Use Case 1 - Remote Network Management]
-- **Demo:** Show how easy it is to manage multiple networks from a single dashboard. **Click 'Dashboard > Networks'** to see all networks at a glance, **click 'Configure > Switch ports'** to make changes remotely.
+**Use Case 1: Centralized Management**
+Let's start by **logging into the Meraki Dashboard**. Here, you can see all your network devices in a single pane of glass, making it easy to manage multiple sites from one place.
 
-[Slide 5: Use Case 2 - Security Segmentation]
-- **Demo:** Highlight how Meraki MS allows for easy segmentation of networks for different customers. **Click 'Security & SD-WAN > Addressing & VLANs'** to set up VLANs and firewall rules.
+**Use Case 2: Network Visibility**
+With Meraki, you can **click on 'Monitor > Clients'** to see real-time insights into client activity on your network. This visibility helps you identify and resolve issues quickly.
 
-[Slide 6: Use Case 3 - Troubleshooting Tools]
-- **Demo:** Showcase the advanced troubleshooting tools in Meraki MS. **Click 'Monitor > Switch ports'** to see real-time traffic and quickly identify issues.
+**Use Case 3: Troubleshooting Made Easy**
+If we **navigate to 'Wireless > Access Points'** on the dashboard, you can troubleshoot network connectivity or performance issues with just a few clicks, saving you time and effort.
 
-[Slide 7: Use Case 4 - Scalability and Performance]
-- **Demo:** Demonstrate how Meraki MS scales effortlessly as your customer base grows. **Click 'Configure > Switch settings'** to adjust settings for optimal performance.
+**Use Case 4: Security**
+Meraki's built-in security features ensure that your network is protected. By **going to 'Security & SD-WAN > Firewall'**, you can easily set up firewall rules to secure your network.
 
-[Slide 8: Smart Questions to Ask Attendees]
-1. How are you currently managing multiple networks for your customers?
-2. What security measures are you currently using to protect customer data?
-3. How do you handle network performance issues for your customers?
+**Use Case 5: Scalability**
+Whether you're managing a few sites or hundreds, Meraki's scalability ensures that you can easily expand your network without added complexity. Simply **click on 'Organizations > Inventory'** to see all your devices at a glance.
 
-[Slide 9: Conclusion]
-- In conclusion, Meraki MS offers service providers a comprehensive solution to address their pain points and deliver exceptional networking services to their customers. Thank you for joining our demo today. Let's discuss how Meraki can help you elevate your offerings.
+**Use Case 6: Remote Deployment**
+With Meraki's cloud-managed architecture, you can deploy new devices remotely with ease. By **navigating to 'Organization > Configure > Add New Device'**, you can set up new devices in minutes.
+
+Now, let's address some common questions partners might have when positioning MS in the Service Provider space:
+
+Q: What are the top service provider pain points this addresses?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
+
+Q: How do we best position MS during the pitch?
+A: Emphasize Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
+
+Q: What installation or deployment concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
+
+And that's a wrap! Cisco Meraki's MS is the perfect solution for Service Providers looking to streamline their network operations and deliver exceptional service to their customers. Thanks for joining us today!

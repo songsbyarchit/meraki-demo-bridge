@@ -1,24 +1,36 @@
-[Opening]
+Hello and welcome! Today, we're going to dive into a demo of Cisco Meraki's MR product, tailored specifically for the Higher Education sector. Whether you're a partner reseller, a customer IT admin, or an internal SE, this demo is designed to help you effectively pitch and understand the unique benefits of Meraki in this space.
 
-Welcome everyone to today's Meraki MR demo focused on the Higher Ed sector. Our goal today is to equip our partners with the knowledge and tools they need to effectively pitch Meraki MR solutions to their Higher Ed customers. Let's dive right in.
+Let's start by discussing some trends and challenges you may be facing in the Higher Education sector. What are some unique aspects or difficulties you encounter when positioning solutions in this space?
 
-[Use Case 1: Guest Wi-Fi Access]
-One common use case in Higher Ed is providing secure and reliable guest Wi-Fi access for visitors to campus. With Meraki MR, partners can easily set up a separate guest network with customized login portals and time limits. **click 'Configure > Wireless > SSIDs'** to create a new SSID specifically for guest access.
+Now, let's explore the Meraki Dashboard, our central platform that provides a single pane of glass for visibility, troubleshooting, and management. **Click 'Dashboard'** to get started.
 
-[Use Case 2: Classroom Wi-Fi Coverage]
-Another key use case for Higher Ed institutions is ensuring seamless Wi-Fi coverage in classrooms. Meraki MR's intelligent mesh technology automatically optimizes coverage and performance, making it easy to scale Wi-Fi networks across multiple classrooms. **click 'Monitor > Access points'** to view real-time coverage maps and client connectivity.
+**Use Case 1: Simplified Onboarding**  
+**Click 'Wireless > Onboarding'** to see how easy it is to onboard new devices and users in a Higher Education setting.
 
-[Use Case 3: Student Housing Networks]
-In student housing, network security and bandwidth management are crucial. With Meraki MR, partners can set up dynamic VLANs to segregate traffic and prioritize bandwidth for academic activities. **click 'Configure > Wireless > Access control'** to set up VLANs and traffic shaping rules for student networks.
+**Use Case 2: Student Engagement**  
+**Click 'Wireless > Splash Pages'** to learn how to create custom splash pages for student engagement and information dissemination.
 
-[Use Case 4: Campus Events and Outdoor Coverage]
-For outdoor events and campus-wide coverage, partners can leverage Meraki MR's outdoor access points and antennas. These devices are weatherproof and designed to provide reliable Wi-Fi coverage in any environment. **click 'Configure > Wireless > Access points'** to add outdoor access points to the network.
+**Use Case 3: Network Security**  
+**Click 'Security & SD-WAN > Firewall'** to explore how Meraki enhances network security in a Higher Education environment.
 
-[Closing]
+**Use Case 4: Bandwidth Management**  
+**Click 'Wireless > Traffic Shaping'** to see how bandwidth can be effectively managed to optimize network performance.
 
-Before we wrap up, I want to leave you with a few smart questions to ask your Higher Ed customers:
-1. How are you currently managing guest Wi-Fi access on campus, and are there any pain points you're experiencing?
-2. What are your network security requirements for student housing, and how do you currently address them?
-3. Have you considered expanding Wi-Fi coverage to outdoor areas for campus events or student gatherings?
+**Use Case 5: Location Analytics**  
+**Click 'Wireless > Location Analytics'** to understand how Meraki can provide valuable insights into user behavior and movement on campus.
 
-Thank you for joining us today. We hope you found this demo valuable in preparing you to pitch Meraki MR solutions to your Higher Ed customers. If you have any further questions or need assistance, please don't hesitate to reach out.
+**Use Case 6: IoT Integration**  
+**Click 'Wireless > Bluetooth & Beacon'** to see how Meraki integrates with IoT devices to enhance campus services and operations.
+
+Now, let's address some common FAQs that partners may encounter when selling MR in the Higher Education space:
+
+Q: What objections might the partner hear in higher education?  
+A: Cost vs legacy vendors, and skepticism over cloud-managed security — arm them with TCO comparisons.
+
+Q: What enablement do we provide for partners?  
+A: Access to demo kits, dashboards, playbooks, and partner-exclusive webinars.
+
+Q: How do we support onboarding post-sale?  
+A: We offer co-delivery workshops, pre-built config templates, and Meraki support handles escalations fast.
+
+Thank you for joining this demo. We hope you feel equipped to effectively pitch and sell Meraki MR in the Higher Education sector.

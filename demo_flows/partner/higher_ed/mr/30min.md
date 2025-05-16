@@ -1,29 +1,20 @@
-[Opening]
+Hey there, thank you for joining us today. I wanted to touch base with you as a partner reseller and discuss how we can effectively pitch Cisco Meraki's MR product to customers in the Higher Education sector.
 
-Hello everyone and welcome to our Meraki MR demo today! Today, we'll be focusing on how Meraki can benefit the Higher Ed sector. As a partner, it's important to understand the pain points our customers care about and how Meraki can address them effectively. 
+To kick things off, I'd love to hear from you about the trends or challenges you're seeing with customers in this space. What do you find unique or tricky about positioning solutions in Higher Education?
 
-[Pain Points and Positioning]
+Great, let's dive into the demo now. Imagine you're presenting to a Higher Education customer. One of the pain points they often face is the complexity of managing multiple sites. With Meraki's single pane of glass Dashboard, you can easily oversee all your networks in one place. **Click 'Network-wide > Monitor > Overview'** to see how this works.
 
-In the Higher Ed sector, one of the key pain points is managing a large number of devices and users on the network. This can lead to network congestion, security vulnerabilities, and difficulty in troubleshooting issues. Meraki's cloud-managed approach simplifies network management, offers real-time visibility, and provides easy scalability. This allows Higher Ed institutions to focus on providing a seamless and secure network experience for students, faculty, and staff.
+Another use case for Higher Education is the need for visibility into network performance. Troubleshooting issues quickly is essential to keep the network running smoothly. **Click 'Wireless > Access points'** to view real-time data and **click on a specific AP** to see detailed information.
 
-[Use Case 1: Onboarding New Students]
+Lastly, let's talk about unified management. Higher Education institutions often have diverse network needs across campuses. Meraki's Dashboard allows you to configure and monitor all your devices from one central platform. **Click 'Configure > Switch ports'** to see how easy it is to make changes across your network.
 
-Let's dive into our first use case. When it's time to onboard new students at the beginning of the semester, there can be a surge in network activity as students connect their devices to the network. With Meraki, partners can easily **click 'Configure > Wireless > Splash Page'** to create a customized onboarding experience for new students. This not only ensures a smooth onboarding process but also allows the institution to gather valuable information about their users.
+Now, let's address a couple of common partner questions when positioning MR in Higher Education:
 
-[Use Case 2: Network Security]
+Q: What are the top Higher Education pain points this addresses?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-Moving on to our second use case - network security. Higher Ed institutions often deal with sensitive data and the need to protect against cyber threats. With Meraki's integrated security features, partners can **click 'Configure > Security & SD-WAN > Firewall'** to set up policies that help prevent unauthorized access and protect against malware. This proactive approach to network security gives customers peace of mind knowing their data is secure.
+Q: How do we best position MR during the pitch?
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-[Use Case 3: Location Analytics]
-
-Our final use case revolves around location analytics. In a Higher Ed setting, understanding how students move around campus can provide insights for optimizing resources and improving the overall student experience. Partners can **click 'Configure > Wireless > Location Analytics'** to access real-time data on user movement patterns. This information can be used to make data-driven decisions on campus layout, resource allocation, and more.
-
-[Smart Questions]
-
-Now, let's end with a few smart questions you can ask attendees to prompt discussion:
-
-1. How are you currently managing network onboarding for new students, and what challenges have you faced in the past?
-2. What measures do you have in place to ensure network security for your institution, and how do you stay ahead of emerging threats?
-3. Have you considered leveraging location analytics to optimize resources and enhance the student experience on campus?
-
-Thank you for joining our Meraki MR demo today. We hope you found the information valuable and are excited to help you pitch Meraki to your Higher Ed customers. If you have any further questions or would like to schedule a deeper dive into any of the use cases we discussed, please don't hesitate to reach out. Have a great day!
+Q: What installation or deployment concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.

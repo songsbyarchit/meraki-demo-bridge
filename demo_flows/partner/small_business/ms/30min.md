@@ -1,36 +1,28 @@
-[Start of the demo]
+Hey there! Thanks for joining us today for this demo. We're excited to talk to you about Cisco Meraki's MS product and how it can benefit small businesses. Before we dive in, let's start with a couple of warm-up questions tailored to your role as a partner:
 
-Hello everyone, thank you for joining this Meraki MS demo today. I'm excited to show you how Meraki can greatly benefit your small business customers. Let's dive right in.
+- What trends or challenges are you seeing with customers in the small business sector?
+- What do you find unique or tricky about positioning solutions in this space?
 
-[Slide 1: Introduction]
-- Introduce yourself and your company.
-- Briefly explain the agenda for today's demo.
+Now, let's jump into the demo and see how Meraki can address the pain points that small businesses care about.
 
-[Slide 2: Pain Points]
-- Small businesses often struggle with managing their network infrastructure efficiently and cost-effectively.
-- They may lack the IT expertise and resources to handle complex networking solutions.
-- Downtime can be detrimental to their business operations and bottom line.
+**Use Case 1: Simplified Network Management**
+Let's say you have multiple small business locations that need to be managed from a central location. With Meraki's Dashboard, you can **click 'Network-wide > Sites'** to easily view and manage all your sites in one place. This visibility and unified management make troubleshooting a breeze.
 
-[Slide 3: Meraki Solution]
-- Meraki offers a cloud-managed networking solution that is simple, reliable, and secure.
-- With Meraki, partners can easily deploy and manage networks remotely, saving time and resources.
-- The centralized dashboard provides real-time insights and analytics to help troubleshoot issues quickly.
+**Use Case 2: Secure Guest Access**
+Small businesses often struggle with providing secure guest Wi-Fi access. With Meraki, you can **click 'Wireless > Guest Access'** to set up secure guest networks with ease. This feature not only enhances security but also improves the overall customer experience.
 
-[Use Case 1: Remote Network Management]
-- Imagine a small business with multiple locations. With Meraki, partners can **log into the dashboard** and manage all network devices from one place.
-- They can **monitor network performance**, **configure switch ports**, and **set up VLANs** without needing to be physically present at each location.
-- This level of remote management saves time and reduces the need for on-site visits, making it a cost-effective solution for small businesses.
+**Use Case 3: Network Health Monitoring**
+Keeping tabs on your network's health is crucial for small businesses. By **clicking 'Monitor > Appliance Status'**, you can quickly identify any issues and proactively address them before they impact your operations.
 
-[Use Case 2: Guest Wi-Fi Access]
-- Another pain point for small businesses is providing secure and reliable guest Wi-Fi access.
-- With Meraki, partners can **easily set up a guest network** with custom splash pages and access controls.
-- This feature not only enhances the customer experience but also helps businesses collect valuable customer data for marketing purposes.
+Now, let's address a couple of common questions that partners might have when pitching Meraki MS to small businesses:
 
-[Slide 4: Smart Questions]
-1. How do you currently manage your network infrastructure across multiple locations?
-2. What challenges do you face when it comes to providing guest Wi-Fi access?
-3. Have you considered cloud-managed networking solutions before? If so, what was your experience like?
+Q: What are the top small business pain points this addresses?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-[End of the demo]
+Q: How do we best position MS during the pitch?
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-Thank you for attending this Meraki MS demo. I hope you found it informative and valuable for pitching to your small business customers. Don't hesitate to reach out if you have any further questions or would like to explore Meraki further. Have a great day!
+Q: What installation or deployment concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
+
+That's it for our demo today. We hope you see the value that Meraki MS can bring to small businesses. Thank you for joining us!

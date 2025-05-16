@@ -1,33 +1,26 @@
-[Opening]
-Good morning/afternoon everyone, thank you for joining us today for this Meraki MR demo tailored for the Hospitality sector. As partners, we understand the unique challenges that hotels and resorts face when it comes to providing reliable and secure Wi-Fi to their guests. Today, we will show you how Meraki MR can address these pain points and help you pitch to customers effectively.
+Hey there, [Partner]! Thanks for joining us today for this demo on Cisco Meraki and how it can benefit your customers in the Hospitality sector. Before we dive in, I'd love to hear from you: What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-[Pain Points]
-- Slow or unreliable Wi-Fi: Guests expect fast and seamless connectivity for work and leisure. A poor Wi-Fi experience can lead to negative reviews and lost business.
-- Security concerns: Hotels need to safeguard guest data and prevent unauthorized access to the network.
-- Limited IT resources: Many hospitality businesses have limited IT staff who are responsible for managing the network along with other duties.
+Alright, let's get started. Imagine you're working with a hotel chain that wants to enhance their guest Wi-Fi experience. With Meraki MR, you can easily set up a branded guest Wi-Fi portal that captures user data and offers seamless connectivity throughout the property. **Click 'Wireless > Access points'** to see the network in action.
 
-[Use Case 1: Guest Wi-Fi]
-Let's start with one of the most critical use cases for the Hospitality sector - providing a secure and reliable guest Wi-Fi network. With Meraki MR, setting up a guest network is as simple as **click 'Configure > Wireless > SSIDs'**. You can easily create multiple SSIDs for different user groups and apply customized access policies to ensure a seamless and secure experience for guests.
+Next, let's address the issue of network security in a busy hotel environment. Meraki's built-in security features, such as integrated firewall and content filtering, help protect guest data and ensure compliance with regulations. **Navigate to 'Security & SD-WAN > Firewall'** to configure security policies.
 
-[Use Case 2: Location Analytics]
-Another key feature of Meraki MR is the ability to gather location analytics. By **clicking 'Wireless > Access Points > Location Analytics'**, you can track guest movements within the property, identify high-traffic areas, and optimize the layout for better guest experience and operational efficiency.
+Now, let's talk about scalability. Whether your customer has one hotel or a chain of properties, managing multiple sites is a breeze with the Meraki Dashboard. **Click 'Organizations > Inventory'** to see all network devices across different locations and easily make configuration changes.
 
-[Use Case 3: Application Visibility]
-With Meraki MR, you can also gain insights into the applications consuming the most bandwidth on your network. By **clicking 'Wireless > Access Points > Application Visibility'**, you can prioritize critical applications, such as video conferencing or streaming, to ensure a seamless experience for guests.
+One of the biggest pain points for hotel IT teams is troubleshooting network issues quickly and efficiently. With Meraki, you can leverage real-time monitoring and alerts to identify and resolve issues before they impact guests. **Check the 'Network-wide > Clients' tab** to see real-time client information.
 
-[Use Case 4: Guest Authentication]
-One of the pain points in the Hospitality sector is managing guest authentication. With Meraki MR, you can easily set up a captive portal for guests to authenticate before accessing the network. By **clicking 'Wireless > Configure > Access Control'**, you can customize the authentication process and collect valuable guest data for marketing purposes.
+Moving on to guest room automation, Meraki MR can integrate with IoT devices to control smart thermostats, lights, and locks. **Explore 'Wireless > Bluetooth & Beacon'** to see how Meraki enables seamless connectivity for IoT devices throughout the hotel.
 
-[Use Case 5: Remote Troubleshooting]
-In the event of network issues, IT staff can remotely troubleshoot and resolve problems with Meraki MR. By **clicking 'Wireless > Monitor > Clients'**, you can identify and address connectivity issues without having to be on-site, saving time and resources.
+Lastly, let's discuss the importance of analytics in the Hospitality sector. Meraki's centralized dashboard provides valuable insights into network performance, user behavior, and trends that can help your customers make data-driven decisions to improve guest satisfaction. **Click 'Monitor > Clients'** to view client behavior and usage patterns.
 
-[Use Case 6: Guest Satisfaction Surveys]
-Lastly, Meraki MR allows you to gather feedback from guests through satisfaction surveys. By **clicking 'Wireless > Configure > Splash page'**, you can create custom surveys to measure guest satisfaction and improve service delivery.
+Now, let's address some common questions you might encounter when pitching Meraki MR in the Hospitality space:
 
-[Smart Questions]
-1. How do you currently address guest Wi-Fi connectivity and security concerns at your properties?
-2. Have you considered implementing location analytics to optimize guest experience and operational efficiency?
-3. What challenges do you face in managing guest authentication and collecting valuable guest data for marketing purposes?
+Q: What are the top hospitality pain points this addresses?  
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-[Closing]
-We hope this demo has given you a better understanding of how Meraki MR can help address the pain points faced by the Hospitality sector. By leveraging these use cases and asking the right questions, you can effectively pitch Meraki to your customers and help them enhance their guest experience. Thank you for your time, and please feel free to reach out if you have any further questions or would like to discuss how Meraki can benefit your customers.
+Q: How do we best position MR during the pitch?  
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
+
+Q: What installation or deployment concerns should we be ready for?  
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
+
+That's a wrap for our demo today. Thank you for your time and insights. We look forward to helping you empower your customers in the Hospitality sector with Cisco Meraki MR.

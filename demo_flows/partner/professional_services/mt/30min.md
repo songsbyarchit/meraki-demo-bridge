@@ -1,29 +1,31 @@
-[Opening]
+Hey there! Thanks for joining us today. I'm excited to walk you through a demo of Cisco Meraki targeted towards the Professional Services sector.
 
-Presenter: Hello everyone, thank you for joining us today for this demo of Meraki MT targeting the Professional Services sector. I'm excited to show you how Meraki can help you pitch to your customers and address their pain points effectively. 
+Before we dive in, I'd love to hear from you:
+- What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-[Slide 1: Pain Points]
+Let's start by looking at the Meraki Dashboard, our central platform for network management. **Click 'Dashboard'** to access it.
 
-Presenter: Let's start by discussing the pain points that customers in the Professional Services sector care about. Most of your clients are likely looking for a networking solution that is easy to manage, secure, and scalable. They want a solution that allows them to focus on their core business without worrying about network infrastructure.
+One key pain point in the Professional Services sector is the need for visibility and control over multiple sites. With Meraki, you can easily monitor and manage all your locations from a single pane of glass.
 
-[Slide 2: Meraki Positioning]
+Let's take a look at a use case: a professional services firm with multiple branch offices. **Click 'Network-wide > Sites'** to see all the locations on the dashboard.
 
-Presenter: This is where Meraki comes in. Meraki offers a cloud-managed networking solution that is intuitive, secure, and scalable. With Meraki, your customers can easily manage their network from anywhere, ensure security with built-in security features, and scale their network as their business grows.
+Another common challenge is troubleshooting network issues quickly. With Meraki, you can easily identify and resolve issues through real-time monitoring and alerts.
 
-[Use Case 1: Remote Office Setup]
+Let's navigate to the troubleshooting section. **Click 'Monitor > Clients'** to see a list of connected devices and their status.
 
-Presenter: Let's look at a use case. Imagine one of your customers in the Professional Services sector is setting up a remote office. With Meraki, they can easily deploy and manage network devices remotely through the cloud dashboard. They can **click 'Configure > Switch ports'** to set up VLANs, QoS, and security policies without needing to be on-site.
+Lastly, managing a complex network infrastructure can be daunting. Meraki simplifies this by offering unified management for all your networking devices.
 
-[Use Case 2: Guest Wi-Fi Access]
+Let's explore network configuration. **Click 'Configure > Switch ports'** to set up and manage switch ports easily.
 
-Presenter: Another common use case for Professional Services firms is providing guest Wi-Fi access. With Meraki, your clients can easily set up a separate guest network with limited access and bandwidth controls. They can **click 'Wireless > SSIDs'** to create a new SSID for guests and **click 'Access Control'** to set up authentication requirements.
+Now, let's address some common questions partners might have when positioning Meraki in the Professional Services space:
 
-[Closing]
+Q: What are the top professional services pain points this addresses?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-Presenter: To wrap up, I want to leave you with a few smart questions you can ask your customers to prompt discussion:
+Q: How do we best position MT during the pitch?
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-1. How do you currently manage your network infrastructure, and what pain points are you experiencing?
-2. Are you looking to expand your network in the future, and how important is scalability to your business?
-3. What security measures do you currently have in place, and how do you ensure the security of your network?
+Q: What installation or deployment concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
 
-Remember, with Meraki, you can offer your customers a solution that is easy to manage, secure, and scalable. Thank you for joining us today, and I look forward to helping you pitch Meraki to your clients in the Professional Services sector.
+Thanks for taking the time to explore Meraki with me today. If you have any further questions or need additional information, feel free to reach out.

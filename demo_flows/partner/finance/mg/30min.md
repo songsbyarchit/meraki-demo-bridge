@@ -1,30 +1,20 @@
-[Opening]
+Hey there! Thanks for joining me today. I'm excited to show you how Cisco Meraki's MG can revolutionize network management in the Financial Services sector. Before we dive in, I'd love to hear from you about any trends or challenges you're noticing with customers in this space. What do you find unique or tricky about positioning solutions in the Financial Services sector?
 
-Hello everyone, thank you for joining us today for this Meraki MG demo. Today, we will be focusing on how Meraki MG can benefit the finance sector and help you pitch it to your customers. Let's dive in!
+Great insights, thank you! Now, let's explore how Meraki's MG can address these pain points. Imagine a scenario where a financial institution is struggling with network visibility across multiple branches. With Meraki's Dashboard as the central platform, **click 'Network-wide > Clients'** to see real-time data on all connected devices. This level of visibility enables quick troubleshooting and unified management across all sites.
 
-[Pain Points]
+Another common challenge in the Financial Services sector is ensuring network security and compliance. By **clicking 'Security > Content filtering'**, you can easily set up policies to restrict access to non-business websites, ensuring compliance with industry regulations. The simplicity of managing security policies through the Meraki Dashboard saves time and reduces the risk of breaches.
 
-Now, let's talk about the pain points that customers in the finance sector care about. Security and compliance are top concerns for financial institutions. They need to ensure that their network is secure, data is protected, and compliance regulations are met. Additionally, reliability and performance are crucial in this industry where every second counts.
+Lastly, let's consider the need for fast and seamless deployment in a constantly evolving industry. **Click 'Configure > Templates'** to create a standardized configuration that can be easily applied to new branches, streamlining the deployment process. This level of automation ensures consistency and reduces the potential for human error during setup.
 
-[Positioning Meraki]
+Now, as you prepare to pitch Meraki MG to customers in the Financial Services sector, here are some common questions you might encounter:
 
-Meraki MG is a cloud-managed security gateway that provides secure connectivity, advanced threat protection, and seamless integration with the Meraki ecosystem. With features like content filtering, malware protection, and intrusion prevention, Meraki MG offers a comprehensive security solution for financial institutions. Its cloud-based management platform allows for easy deployment, monitoring, and troubleshooting, making it a perfect fit for companies in the finance sector.
+Q: What are the top financial services pain points this addresses?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-[Use Case 1: Secure Remote Access]
+Q: How do we best position MG during the pitch?
+A: Emphasize Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-One use case for Meraki MG in the finance sector is secure remote access for employees working from home or on the go. With Meraki MG, employees can securely connect to the corporate network using VPN, ensuring data privacy and security even when accessing sensitive financial information remotely. To set up secure remote access, **click 'Configure > Security & SD-WAN > VPN'**.
+Q: What installation or deployment concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
 
-[Use Case 2: Branch Office Connectivity]
-
-Another use case is branch office connectivity. Many financial institutions have multiple branch offices that need to be connected securely and reliably. Meraki MG simplifies branch office connectivity by providing secure VPN tunnels and automatic failover, ensuring uninterrupted access to critical applications and data. To configure branch office connectivity, **click 'Configure > Security & SD-WAN > Site-to-site VPN'**.
-
-[Smart Questions]
-
-Here are a few smart questions you can ask your customers to prompt discussion:
-1. How do you currently ensure secure remote access for your employees, especially those working from home?
-2. What challenges do you face in connecting and securing your branch offices, and how do you currently address them?
-3. Have you considered a cloud-managed security solution like Meraki MG to streamline your network management and improve security posture?
-
-[Closing]
-
-In conclusion, Meraki MG offers a robust security solution that addresses the unique needs of the finance sector. By focusing on security, compliance, reliability, and performance, Meraki MG can help financial institutions stay ahead of the curve and protect their most valuable assets. Thank you for attending this demo, and we look forward to helping you pitch Meraki MG to your customers. If you have any questions, please feel free to ask.
+Thank you for exploring Meraki MG with me today. With its intuitive Dashboard and powerful features, it's clear how Meraki can bring significant value to financial institutions looking to streamline their network management. Let's work together to empower our customers with the best solutions tailored to their unique needs.

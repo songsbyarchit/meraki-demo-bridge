@@ -1,42 +1,27 @@
-[Opening]
+Hey there! Today, we're going to dive into how Cisco Meraki's MX can revolutionize networking for Professional Services. Let's kick things off with a couple of questions to get us started:
 
-1. Introduce yourself and thank the audience for joining the demo.
-2. Briefly explain that today's demo will focus on how Meraki MX can benefit Professional Services customers.
+- What trends or challenges are you seeing with customers in the Professional Services sector? What do you find unique or tricky about positioning solutions in this space?
 
-[Pain Points]
+Now, let's explore how Meraki MX can address these pain points and provide seamless networking solutions for Professional Services.
 
-3. Start by addressing common pain points in the Professional Services sector, such as the need for reliable and secure connectivity, seamless collaboration across multiple locations, and efficient network management.
-4. Highlight how Meraki MX addresses these pain points with its simple deployment, centralized cloud management, and advanced security features.
+**Use Case 1: Secure Remote Connectivity**
+Let's say you have multiple branch offices that need secure and reliable connectivity back to your main office. With Meraki MX, you can easily set up site-to-site VPNs and ensure all traffic is encrypted for maximum security. Let's **click 'Security & SD-WAN > Site-to-Site VPN'** to see how simple it is to configure.
 
-[Use Case 1: Secure Remote Access]
+**Use Case 2: Application-Aware Traffic Shaping**
+In the Professional Services sector, ensuring critical applications have priority over non-essential traffic is vital. With Meraki MX, you can easily prioritize traffic based on application type to ensure a smooth user experience. Let's **click 'SD-WAN & traffic shaping > Application-aware traffic shaping'** to see how this is done.
 
-5. **Navigate to the Security & SD-WAN > VPN > Client VPN** section in the Meraki dashboard.
-6. Explain how Meraki MX enables secure remote access for employees working off-site or at client locations.
-7. Emphasize the ease of setting up secure VPN connections and the granular access controls provided by Meraki MX.
+**Use Case 3: Centralized Management and Visibility**
+Managing multiple sites can be a challenge, but with the Meraki Dashboard, you have a single pane of glass for all your networking needs. From monitoring network health to troubleshooting connectivity issues, everything is centralized for ease of use. Let's **click 'Dashboard > Overview'** to see the power of unified management in action.
 
-[Use Case 2: SD-WAN for Branch Offices]
+Now, let's address some common questions partners might have when pitching Meraki MX in the Professional Services space:
 
-8. **Click 'Configure > SD-WAN'** to show how Meraki MX simplifies branch office network management.
-9. Discuss how Meraki MX's SD-WAN capabilities optimize network performance and prioritize critical applications.
-10. Mention how Professional Services firms can benefit from improved application performance and reduced downtime.
+Q: What are the top professional services pain points this addresses?  
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-[Use Case 3: Unified Threat Management]
+Q: How do we best position MX during the pitch?  
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-11. **Navigate to the Security & SD-WAN > Firewall** section to demonstrate Meraki MX's UTM features.
-12. Explain how Meraki MX combines firewall, intrusion prevention, content filtering, and malware protection in a single appliance.
-13. Stress the importance of robust security measures for Professional Services firms handling sensitive client data.
+Q: What installation or deployment concerns should we be ready for?  
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
 
-[Discussion Questions]
-
-14. To prompt discussion, ask the audience:
-- How are you currently addressing remote access and network security for your Professional Services clients?
-- What challenges have you faced in managing branch office networks and ensuring application performance?
-- How do your clients prioritize security in their IT infrastructure?
-
-[Closing]
-
-15. Thank the audience for their time and attention.
-16. Encourage them to reach out for a more in-depth discussion or personalized demo tailored to their specific needs.
-17. Provide contact information for further inquiries.
-
-[End of Script]
+That wraps up our demo for today. Thank you for exploring the power of Cisco Meraki MX in the Professional Services sector!

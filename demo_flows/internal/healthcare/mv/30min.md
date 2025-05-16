@@ -1,39 +1,24 @@
-[Opening]
+Hey there! Thanks for joining me today. Whether you're a partner reseller, a customer IT admin, or an internal SE, I'm excited to show you how Cisco Meraki MV can transform the way healthcare organizations manage their security and surveillance needs.
 
-Welcome everyone to today's Meraki MV demo focused on the Healthcare sector. Today, we're going to dive into how our MV cameras can help healthcare facilities improve security, patient care, and overall efficiency. 
+To kick things off, let me ask you: What trends or challenges are you seeing with customers in the healthcare sector? And what do you find unique or tricky about positioning solutions in this space?
 
-Let's start by looking at a common use case in healthcare - monitoring patient rooms.
+Now, let's dive into the demo. Imagine you're a healthcare provider looking to enhance the safety and security of your facilities. With Meraki MV, you can easily monitor entrances, patient rooms, and parking lots all from one centralized platform.
 
-[Use Case 1 - Monitoring Patient Rooms]
+**Click 'Cameras' > 'Overview'** to see all your cameras in one place. The Meraki Dashboard gives you a single pane of glass view, providing visibility into your entire surveillance network.
 
-Imagine a scenario where a patient is in a hospital room and needs constant monitoring. With Meraki MV cameras, healthcare staff can easily keep an eye on the patient without having to physically be in the room. 
+Now, let's explore a specific use case. Say you want to investigate an incident in the emergency room. **Click on a specific camera feed** to zoom in and playback footage in real-time. The intuitive interface makes troubleshooting a breeze.
 
-**Click 'Configure > Cameras'** to see live feeds from patient rooms. Here, you can adjust camera angles, zoom in for closer inspection, and even set up motion alerts to notify staff of any unusual activity.
+Another key feature of Meraki MV is its ability to unify management across multiple locations. Whether you have one clinic or a network of hospitals, **navigate to 'Network-wide' > 'Cameras'** to see all your devices and settings in one location.
 
-This not only improves patient care by ensuring timely assistance but also enhances security by preventing unauthorized access to patient rooms.
+As we wrap up, here are some FAQs to help you effectively pitch Meraki MV in the healthcare sector:
 
-[Use Case 2 - Monitoring Waiting Areas]
+Q: What objections might the partner hear in healthcare?
+A: Cost vs legacy vendors, and skepticism over cloud-managed security — arm them with TCO comparisons.
 
-Another important area in healthcare facilities is the waiting areas, where patients and visitors spend a significant amount of time. 
+Q: What enablement do we provide for partners?
+A: Access to demo kits, dashboards, playbooks, and partner-exclusive webinars.
 
-**Click 'Configure > Cameras'** to view live feeds from the waiting areas. Here, you can monitor crowd levels, identify any potential disturbances, and ensure a smooth flow of patients through the facility.
+Q: How do we support onboarding post-sale?
+A: We offer co-delivery workshops, pre-built config templates, and Meraki support handles escalations fast.
 
-By leveraging Meraki MV cameras in waiting areas, healthcare facilities can improve the overall patient experience, reduce wait times, and enhance security measures.
-
-[Use Case 3 - Tracking Assets]
-
-In addition to patient monitoring, Meraki MV cameras can also be used to track valuable assets within the healthcare facility. 
-
-**Click 'Configure > Asset Tracking'** to see how MV cameras can help locate equipment, supplies, and even staff members in real-time. By tagging assets with QR codes or RFID tags, healthcare facilities can easily track their location and optimize resource utilization.
-
-By utilizing Meraki MV cameras for asset tracking, healthcare facilities can reduce equipment loss, improve inventory management, and ultimately save time and money.
-
-[Closing]
-
-Now that we've seen how Meraki MV cameras can benefit healthcare facilities, I'd like to leave you with a few questions to consider:
-
-1. How can Meraki MV cameras be integrated with existing security systems in healthcare facilities to provide a more comprehensive security solution?
-2. What are some specific challenges that healthcare facilities face in terms of patient monitoring, and how can Meraki MV cameras address these challenges?
-3. How can partners leverage the unique features of Meraki MV cameras to differentiate themselves in the healthcare sector and win over potential customers?
-
-Thank you for joining today's demo, and I look forward to hearing your thoughts and feedback. Let's continue to empower our partners with the tools they need to succeed in the healthcare industry.
+Thanks for joining me today. I hope this demo has given you a glimpse of how Meraki MV can revolutionize security and surveillance in the healthcare industry. If you have any further questions, feel free to reach out.

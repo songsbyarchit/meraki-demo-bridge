@@ -1,32 +1,30 @@
-Demo Script:
+---
 
-Introduction:
-- Hello and welcome to our Meraki SM demo focused on the Professional Services sector.
-- Today, we will be showcasing how Meraki SM can streamline your IT operations and provide cost savings for your organization.
+Hey there! Thanks for joining us today for this demo on Cisco Meraki's SM solution. I'm excited to show you how our platform can make a real difference in your Professional Services sector. Let's dive in!
 
-Use Case 1: Device Management
-- Let's start with device management. With Meraki SM, you can easily manage all your devices from a single dashboard.
-- **Click 'Devices' tab** to see all your devices, including laptops, mobile phones, and tablets.
-- You can remotely push software updates, enforce security policies, and track device usage all from one central location.
-- This saves time for your IT team and ensures all devices are up to date and secure.
+**Audience: Customer IT Admin**
 
-Use Case 2: Network Security
-- Next, let's talk about network security. Meraki SM offers advanced security features to protect your network from cyber threats.
-- **Click 'Security Center' tab** to see real-time threat alerts and take immediate action to mitigate risks.
-- You can set up automated security policies to block malicious websites and prevent unauthorized access to your network.
-- By proactively managing security threats, you can prevent costly data breaches and downtime.
+To start off, can you tell me a bit about your current network setup? Where are you facing the biggest IT challenges right now?
 
-Use Case 3: Cost Savings
-- Lastly, let's discuss cost savings. Meraki SM not only improves operational efficiency but also helps reduce IT costs.
-- **Click 'Cost Savings' tab** to see a breakdown of potential savings by using Meraki SM.
-- By automating routine tasks, reducing downtime, and preventing security incidents, you can save on IT labor costs and avoid expensive network disruptions.
+**Use Case 1: Remote Site Management**
+Let's say you have multiple remote sites that need to be managed. With Meraki's SM, you can easily deploy and manage devices across all locations from one central dashboard. This saves time and ensures consistency across the board.
 
-Smart Questions:
-1. How much time does your IT team currently spend on device management tasks?
-2. Have you experienced any security incidents in the past year that could have been prevented with better network security measures?
-3. What are your key priorities for IT cost savings in the upcoming year?
+**Use Case 2: Security Compliance**
+Ensuring compliance with security policies is crucial in the Professional Services sector. With SM, you can enforce security settings, push updates, and monitor device compliance in real-time, all from the Meraki Dashboard.
 
-Conclusion:
-- Thank you for joining our Meraki SM demo today.
-- If you have any further questions or would like to discuss how Meraki SM can benefit your organization, please feel free to reach out to us.
-- We look forward to helping you improve your IT operations and achieve cost savings with Meraki SM.
+**Use Case 3: Application Performance**
+In a sector where performance is key, SM allows you to monitor application performance metrics, troubleshoot issues, and prioritize critical applications for optimal user experience. This can make a significant impact on productivity and client satisfaction.
+
+Let's take a look at the Meraki Dashboard now. **Click 'Devices > Monitor > Application Performance'** to see how easily you can track performance metrics.
+
+**FAQs:**
+Q: How does this solution reduce IT workload in our professional services environment?
+A: Meraki simplifies management through one dashboard and automates many tasks like updates and troubleshooting.
+
+Q: What kind of ROI or cost reduction can we expect?
+A: Customers often report major time savings and reduced downtime, especially for remote sites.
+
+Q: Can we integrate this with our existing systems and security policies?
+A: Yes — Meraki supports APIs, SAML, and integration with existing firewalls, Active Directory, and SIEM tools.
+
+Thanks for exploring Cisco Meraki's SM solution with us today. If you have any more questions or would like to discuss further, feel free to reach out. Have a great day!

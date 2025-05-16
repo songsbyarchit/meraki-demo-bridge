@@ -1,32 +1,30 @@
-Demo Script for Meraki MT in Hospitality Sector
+Hey there! Thanks for joining us today for this demo of Cisco Meraki's MT solution tailored for the Hospitality sector. Whether you're a partner reseller, customer IT admin, or an internal SE, we're excited to show you how Meraki can address the pain points in this industry and help you pitch to customers effectively.
 
-Intro:
-- Welcome everyone! Today, we are going to talk about how Meraki MT can revolutionize the way hospitality businesses manage their network infrastructure. 
-- As partners, it's crucial to understand the pain points of our customers in the hospitality sector and position Meraki as the solution to their problems.
+Let's kick things off with a couple of warm-up questions tailored to your role:
+- For partners: What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
+- For customers: What does your current network setup look like? Where are your biggest IT headaches today?
+- For internal: What common questions do our customers ask in the Hospitality sector? What objections or misconceptions do we frequently encounter?
 
-Pain Points:
-- Customers in the hospitality sector often struggle with managing multiple locations, ensuring reliable Wi-Fi for guests, and maintaining network security.
-- Traditional networking solutions can be complex to set up and manage, leading to downtime and frustrated guests.
-- Security is a top concern for hotels, as they need to protect guest data and ensure compliance with regulations.
+Now, let's dive into the demo:
 
-Use Case 1: Guest Wi-Fi Management
-- Let's start by showcasing how easy it is to set up and manage guest Wi-Fi networks with Meraki.
-- **Click 'Wireless > SSIDs'** to create a new SSID for guests.
-- With Meraki, you can easily set up splash pages, bandwidth limits, and guest isolation to provide a seamless and secure Wi-Fi experience for guests.
+**Use Case 1: Guest Wi-Fi Management**
+Let's **click 'Wireless > Access points'** on the Meraki Dashboard. Here, you can see how easy it is to set up and manage guest Wi-Fi networks across multiple locations. With Meraki, you can provide seamless and secure connectivity for your guests, ensuring a positive experience for everyone.
 
-Use Case 2: Location-Based Analytics
-- Another key feature of Meraki MT is location-based analytics, which can help hotels understand guest behavior and improve the overall guest experience.
-- **Click 'Analytics > Location analytics'** to see real-time data on guest foot traffic, dwell time, and popular areas within the hotel.
-- By analyzing this data, hotels can optimize their layout, marketing strategies, and staffing to better serve their guests.
+**Use Case 2: Security Camera Integration**
+Navigate to **'Security Cameras'** on the Dashboard. Meraki's integrated security camera solution allows you to monitor your premises in real-time, ensuring the safety and security of your guests and staff. With centralized management, you can easily view and manage camera feeds from anywhere.
 
-Use Case 3: Network Security
-- Security is a top priority for hotels, especially when it comes to protecting guest information and ensuring compliance with regulations like PCI DSS.
-- **Click 'Security > Threat protection'** to see how Meraki's advanced security features can help detect and prevent network threats.
-- With Meraki, hotels can rest assured that their network is secure and their guests' data is protected.
+**Use Case 3: Cloud-Managed Switching**
+Let's **click 'Switch > Switches'** on the Dashboard to see how Meraki simplifies switch management. With cloud-managed switches, you can easily configure and monitor your network infrastructure, ensuring optimal performance and reliability for your hospitality business.
 
-Smart Questions:
-1. How are you currently managing your network infrastructure across multiple hotel locations?
-2. What are your biggest challenges when it comes to providing reliable Wi-Fi for guests?
-3. How important is network security and compliance to your hotel's operations?
+Now, let's address some common questions partners might have when pitching MT in the Hospitality space:
 
-Remember to tailor the demo script to the specific needs and pain points of the audience, and use the use cases and smart questions to prompt a meaningful discussion with potential customers. Good luck with your pitch!
+Q: What are the top hospitality pain points this addresses?  
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
+
+Q: How do we best position MT during the pitch?  
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
+
+Q: What installation or deployment concerns should we be ready for?  
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
+
+That's a wrap for our demo today. We hope this session has given you valuable insights into how Meraki can transform network management in the Hospitality sector. Thank you for joining us!

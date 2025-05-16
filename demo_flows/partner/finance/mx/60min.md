@@ -1,25 +1,34 @@
-[Opening]
-Welcome, everyone, to our Meraki MX demo tailored for the Finance sector. Today, we're going to explore how Meraki can address the pain points that finance customers care about and help you position Meraki effectively to your clients. Let's dive in!
+Hey there, thanks for joining me today. I know you're a partner in the financial services sector, so I'm excited to show you how Cisco Meraki's MX can help address some of the challenges you might be seeing with your customers. Before we dive in, can you share what trends or challenges you're noticing in this sector?
 
-[Pain Points]
-Finance customers are often concerned about network security, compliance with regulations, and the need for reliable and scalable network infrastructure. They also face challenges in managing distributed locations and ensuring seamless connectivity for remote employees. With Meraki MX, we can address these pain points effectively.
+**click 'Security & SD-WAN > Addressing Challenges'**
 
-[Use Case 1: Security]
-Let's start with security, a top priority for finance customers. With Meraki's integrated security features, such as advanced threat protection and content filtering, you can provide your clients with a robust defense against cyber threats. **Click 'Security & SD-WAN > Threat Protection'** to see how easily you can configure and monitor security policies.
+One common pain point in financial services is the need for robust security and compliance. With Meraki MX, you can easily set up security policies and VPN connections to ensure data protection and regulatory compliance.
 
-[Use Case 2: Compliance]
-Compliance with regulations like PCI DSS and GDPR is crucial for finance organizations. Meraki MX offers built-in compliance reporting tools that make it easy to demonstrate adherence to these standards. **Click 'Dashboard > Security & SD-WAN > Compliance'** to access compliance reports and ensure your clients are always audit-ready.
+**click 'SD-WAN > Use Case: Branch Connectivity'**
 
-[Use Case 3: Remote Connectivity]
-In today's remote work environment, finance companies need a reliable VPN solution to ensure secure connectivity for their remote employees. Meraki MX provides a seamless VPN experience with auto VPN configuration and client VPN support. **Click 'Security & SD-WAN > VPN > Client VPN'** to see how easy it is to set up and manage VPN connections.
+Another key use case is branch connectivity. Many financial institutions have multiple branches that need to be securely connected. Meraki MX provides a simple solution for setting up and managing these connections through the Dashboard.
 
-[Use Case 4: SD-WAN]
-As finance organizations expand their operations to multiple locations, they need a scalable and efficient network infrastructure. Meraki MX offers SD-WAN capabilities that optimize traffic routing and ensure high performance across distributed sites. **Click 'Security & SD-WAN > SD-WAN'** to explore how SD-WAN can benefit your clients.
+**click 'Traffic Shaping > Use Case: Bandwidth Management'**
 
-[Smart Questions]
-As you pitch Meraki MX to finance customers, consider asking them:
-1. How important is network security and compliance in your organization, and how do you currently address these challenges?
-2. What are your plans for remote work and expanding to new locations, and how can Meraki MX help support these initiatives?
+Bandwidth management is also crucial in the financial services sector. With Meraki MX, you can easily prioritize critical applications to ensure smooth operations even during peak times.
 
-[Closing]
-By highlighting these use cases and asking the right questions, you can position Meraki MX as the ideal solution for finance organizations looking to enhance their network security, compliance, and scalability. Thank you for joining our demo today, and feel free to reach out if you have any further questions or would like to explore Meraki further.
+**click 'Security & SD-WAN > Use Case: Remote Workers'**
+
+Remote workers are becoming more common in the financial services industry. Meraki MX offers secure VPN connectivity for remote employees, ensuring they can access company resources safely from anywhere.
+
+**click 'VPN Status > Monitoring VPN Connections'**
+
+Monitoring VPN connections is essential for maintaining a secure network. With Meraki MX, you can easily track VPN status and performance metrics through the Dashboard for quick troubleshooting.
+
+**click 'Security & SD-WAN > Use Case: Compliance Reporting'**
+
+Lastly, compliance reporting is a key requirement for financial institutions. Meraki MX provides detailed reporting capabilities to help you demonstrate compliance with industry regulations.
+
+**Q: What are the top financial services pain points this addresses?**  
+**A:** Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
+
+**Q: How do we best position MX during the pitch?**  
+**A:** Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
+
+**Q: What installation or deployment concerns should we be ready for?**  
+**A:** It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.

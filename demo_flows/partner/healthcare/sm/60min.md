@@ -1,40 +1,17 @@
-[Title Slide: Meraki SM Demo for Healthcare Sector]
+Hey there, thanks for joining us today. I'm excited to walk you through a demo of Cisco Meraki's SM solution tailored for the Healthcare sector. Before we dive in, I'd love to hear from our partners: What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-[Opening Slide: Welcome and Introductions]
-- Introduce yourself and your company
-- Briefly explain the agenda for the demo
+**UI Interaction 1:** **Log in to the Meraki Dashboard with your credentials.**
 
-[Slide: Pain Points in Healthcare Sector]
-- Discuss common pain points in the healthcare sector such as network security, regulatory compliance, and device management
-- Explain how Meraki SM can address these pain points
+**UI Interaction 2:** **Navigate to 'Monitor > Clients' to view all connected devices.**
 
-[Use Case 1: Secure Patient Data]
-- Scenario: A hospital needs to protect patient data on their network
-- Demo: **navigate to 'Systems Manager > Security Policies' to set up custom security policies for different devices**
+**UI Interaction 3:** **Click 'Network-wide > Performance > Summary' to check network performance at a glance.**
 
-[Use Case 2: Device Tracking]
-- Scenario: A clinic wants to track the location of medical devices
-- Demo: **click 'Systems Manager > Device Locator' to view the real-time location of devices on a map**
+**UI Interaction 4:** **Select a specific network and click 'Clients' to view detailed client information.**
 
-[Use Case 3: Remote Device Management]
-- Scenario: A healthcare provider needs to remotely manage devices for telehealth services
-- Demo: **go to 'Systems Manager > Device Management' to remotely configure and troubleshoot devices**
+**UI Interaction 5:** **Navigate to 'Switch > Switch ports' to manage and configure ports on your switches.**
 
-[Use Case 4: Guest Access Control]
-- Scenario: A hospital wants to provide secure guest Wi-Fi access
-- Demo: **navigate to 'Wireless > Access Control' to set up a guest network with custom access policies**
+**UI Interaction 6:** **Click 'Security & SD-WAN' to explore security settings and policies.**
 
-[Slide: Positioning Meraki SM]
-- Explain how Meraki SM offers a centralized platform for device management, security, and network visibility
-- Highlight the ease of use and scalability of Meraki SM for healthcare providers
+In the Healthcare sector, Meraki's SM shines in various use cases. For instance, with the need for secure and reliable connectivity in hospitals, SM offers seamless network management for medical devices, ensuring patient data privacy and compliance. Additionally, in clinics with multiple locations, the centralized dashboard simplifies network monitoring and troubleshooting, reducing downtime and improving patient care.
 
-[Interactive Discussion]
-- Ask the partner attendees:
-1. How do you currently address network security and device management for healthcare customers?
-2. What are the biggest challenges you face when pitching solutions to healthcare providers?
-
-[Closing Slide: Q&A]
-- Invite questions from the attendees
-- Thank everyone for their time and participation
-
-[End of Demo]
+When positioning SM in Healthcare, partners often ask about the key pain points it addresses. Typically, lack of visibility, slow troubleshooting, and complexity managing multiple sites are the top concerns that Meraki solves. To best pitch SM, emphasize its ease of use, single dashboard, and fast deployment with built-in security. For deployment concerns, it's usually plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.

@@ -1,31 +1,18 @@
-[Opening]
+Hey there, thanks for joining us today! I'm excited to show you how Cisco Meraki's MS switches can revolutionize the network infrastructure for financial services. Before we dive in, I'd love to hear from you: What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-Hello everyone, thank you for joining us today for this Meraki MS demo specifically tailored for the Finance sector. I'm excited to show you how Meraki can address the pain points your customers care about and help you pitch to them effectively.
+Great, now let's explore how Meraki can address these pain points. Imagine a scenario where a financial services firm needs to secure their network while ensuring seamless operations. With Meraki's MS switches, you can easily segment traffic to meet compliance requirements. **Click 'Security & SD-WAN > Addressing'** to see how VLANs can be quickly set up for different departments. This simplifies network management and enhances security, all from the Meraki Dashboard.
 
-[Pain Points]
+In another use case, consider a bank with multiple branches struggling to maintain consistent network policies across locations. With Meraki's centralized dashboard, **click 'Configure > Templates'** to create and apply configurations universally. This reduces manual errors and streamlines operations, saving time and resources.
 
-In the Finance sector, customers are often concerned about network security, reliability, and ease of management. They need a solution that can ensure their sensitive data is protected, their network is always up and running, and that can be easily managed by their IT teams.
+Now, let's address some common questions partners may have when pitching Meraki MS in the financial services sector:
 
-[Positioning Meraki]
+Q: What are the top financial services pain points this addresses?  
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-Meraki is a cloud-managed networking solution that offers a secure, reliable, and easy-to-manage network infrastructure. With Meraki, customers can have peace of mind knowing that their network is protected by advanced security features, such as encrypted communication and integrated firewall capabilities. Its intuitive dashboard allows for easy monitoring and management, reducing the burden on IT teams and ensuring maximum uptime.
+Q: How do we best position MS during the pitch?  
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-[Use Case 1: Network Segmentation]
+Q: What installation or deployment concerns should we be ready for?  
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready. 
 
-Let's take a look at a common use case in the Finance sector - network segmentation. This is crucial for separating different departments or user groups to enhance security and compliance. With Meraki, you can easily create VLANs and segment your network by **clicking 'Configure > Switch ports'**. This allows you to control access to sensitive financial data and prevent unauthorized users from gaining access.
-
-[Use Case 2: Remote Access]
-
-Another important use case for the Finance sector is remote access. With more employees working remotely or on-the-go, it's essential to provide secure access to the network from anywhere. Meraki offers VPN capabilities that allow employees to securely connect to the network from any location, ensuring they can access the resources they need while maintaining security standards.
-
-[Smart Questions]
-
-Now, when pitching Meraki to your customers, here are a few smart questions you can ask to prompt discussion:
-
-1. How do you currently manage network security within your organization, and are there any pain points you're experiencing?
-2. What are your top priorities when it comes to network management and security, and how do you see Meraki fitting into those priorities?
-3. How important is ease of management and scalability for your organization, and how do you think Meraki can help address those needs?
-
-[Closing]
-
-I hope this demo has given you a better understanding of how Meraki can address the specific pain points in the Finance sector and how you can effectively pitch it to your customers. If you have any further questions or would like to see a live demo, please feel free to reach out to us. Thank you for joining us today.
+Thanks for exploring Meraki MS with me today. Feel free to reach out if you have any more questions or want to dive deeper into how Meraki can transform network management in financial services.

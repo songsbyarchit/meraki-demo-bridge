@@ -1,23 +1,44 @@
-[Opening]
+---
 
-Welcome everyone, thank you for joining us today for this Meraki MR demo tailored for the Higher Ed sector. Today, we will be showcasing the operational impact and cost justification of implementing Meraki MR in your network. Whether you're an IT admin or a financial decision maker, you'll see how Meraki MR can provide value to your institution.
+**Demo Script:**
 
-[Use Case 1: Network Visibility]
-Let's start with one of the key features of Meraki MR - network visibility. With Meraki's dashboard, you can easily monitor your network and see real-time data on connected devices, bandwidth usage, and application usage. This level of visibility allows you to quickly identify and troubleshoot any network issues that may arise. To access this feature, **click 'Monitor > Clients'**.
+Good morning and thank you for joining us today. I'm excited to show you how Cisco Meraki can revolutionize your network infrastructure in the Higher Education sector. Let's dive right in!
 
-[Use Case 2: Seamless User Experience]
-Next, let's talk about providing a seamless user experience for students, faculty, and staff. Meraki MR allows you to create different SSIDs for different user groups, ensuring that each group has the appropriate access and security settings. You can also set up guest access portals for visiting guests. To set up different SSIDs, **click 'Wireless > SSIDs'**.
+**Warm-up Question:** What does your current network setup look like? Where are your biggest IT headaches today?
 
-[Use Case 3: Location Analytics]
-Another valuable use case for Higher Ed institutions is location analytics. Meraki MR can provide insights into foot traffic patterns on campus, helping you optimize space utilization and improve the overall campus experience. By analyzing this data, you can make informed decisions about where to place Wi-Fi access points and other resources. To access location analytics, **click 'Location Analytics'**.
+**Use Case 1: Campus-Wide Coverage**
+- **Navigate to the Meraki Dashboard**
+- **Click 'Wireless > Access Points'**
+- **Show how easy it is to deploy, monitor, and troubleshoot APs across multiple buildings**
 
-[Use Case 4: Automated RF Optimization]
-Meraki MR also offers automated RF optimization, which helps ensure that your wireless network is running at peak performance. With Meraki's intelligent algorithms, the system can automatically adjust channel and power settings to minimize interference and maximize coverage. This saves you time and effort in manually optimizing your network. To enable automated RF optimization, **click 'Wireless > Radio Settings'**.
+**Use Case 2: Secure Guest Access**
+- **Navigate to 'Wireless > Splash Page'**
+- **Demonstrate how to create a custom splash page for visitors, ensuring a secure and branded experience**
 
-[Smart Questions]
-As we wrap up, here are a few questions to consider:
-1. How do you currently monitor and manage your network? Are there any pain points you experience in this process?
-2. What are your biggest challenges in providing a seamless user experience for students, faculty, and staff on your network?
-3. How do you currently gather data on campus foot traffic and space utilization? How could location analytics benefit your institution?
+**Use Case 3: Application Visibility**
+- **Navigate to 'Wireless > Air Marshal'**
+- **Show how the dashboard provides insights into network usage, application performance, and potential security threats**
 
-Thank you for attending this demo. We hope you see the value that Meraki MR can bring to your Higher Ed institution. If you have any further questions or would like to discuss a customized solution, please feel free to reach out to us.
+**Use Case 4: Dynamic RF Optimization**
+- **Navigate to 'Wireless > RF Profiles'**
+- **Highlight how Meraki automatically adjusts RF settings to optimize performance in high-density areas like lecture halls**
+
+**Use Case 5: Location Analytics**
+- **Navigate to 'Wireless > Location Analytics'**
+- **Illustrate how Meraki can track user locations for better resource allocation and security monitoring**
+
+**Use Case 6: Seamless Updates**
+- **Navigate to 'Organization > Firmware Upgrades'**
+- **Show how Meraki streamlines the update process, ensuring your network is always up-to-date and secure**
+
+**FAQs:**
+Q: How does this solution reduce IT workload in our higher education environment?
+A: Meraki simplifies management through one dashboard and automates many tasks like updates and troubleshooting.
+
+Q: What kind of ROI or cost reduction can we expect?
+A: Customers often report major time savings and reduced downtime, especially for remote sites.
+
+Q: Can we integrate this with our existing systems and security policies?
+A: Yes — Meraki supports APIs, SAML, and integration with existing firewalls, Active Directory, and SIEM tools.
+
+Thank you for your time today. I hope this demo has shown you the immense value that Cisco Meraki can bring to your Higher Education network infrastructure. If you have any further questions, please feel free to ask.

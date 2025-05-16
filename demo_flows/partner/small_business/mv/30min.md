@@ -1,52 +1,24 @@
-[Opening Slide]
-Title: Meraki MV Demo for Small Business Partners
-Duration: 30 minutes
-Audience: Partners
+Hello and welcome! Today, we're going to explore how Cisco Meraki MV can revolutionize the way small businesses manage their security camera systems. Whether you're a partner looking to pitch this solution to customers or an internal team member wanting to learn more, this demo is tailored to showcase the unique benefits of Meraki MV in the small business sector.
 
-[Slide 1]
-Welcome to the Meraki MV demo for small business partners. Today, we will explore how the Meraki MV series can help address common pain points for small businesses and provide valuable solutions.
+To kick things off, let's talk about the trends and challenges you're seeing with customers in this sector. What do you find unique or tricky about positioning solutions in this space?
 
-[Slide 2]
-Pain Points: 
-1. Limited Budget for Security Solutions
-2. Lack of IT Expertise for Video Surveillance
-3. Scalability and Flexibility in Deployment
+Great, now let's dive into the Meraki Dashboard. **Click on 'Cameras' in the left-hand menu** to see how MV offers a single pane of glass for managing all your security cameras. This visibility is crucial for small businesses that need to monitor multiple locations without the complexity of traditional systems.
 
-[Slide 3]
-Positioning Meraki MV:
-- Affordable and easy-to-deploy security solution
-- Cloud-managed for remote monitoring and management
-- Scalable for small businesses looking to expand
+One specific pain point that small businesses often face is the lack of visibility into their physical spaces. With Meraki MV, **navigate to a specific camera feed and adjust the viewing angle** to see how easy it is to monitor your premises in real time.
 
-[Slide 4]
-Use Case 1: Retail Store
-- Easily monitor customer traffic and behavior
-- Receive real-time alerts for suspicious activities
-- Improve store layout and marketing strategies based on insights
+Another use case is the simplified troubleshooting that Meraki MV offers. **Click on 'Camera health' to view the status of all your cameras at a glance**. This level of insight makes it quick and easy to identify and resolve issues, saving valuable time and resources.
 
-**Demo: Show how to set up motion-based alerts in the Meraki dashboard**
+Lastly, let's explore unified management with Meraki MV. **Navigate to 'Network-wide > Cameras' to see how you can apply settings globally across all your cameras**. This centralized approach streamlines operations and ensures consistency across your security infrastructure.
 
-[Slide 5]
-Use Case 2: Small Office
-- Monitor employee activities and office access
-- Ensure compliance with security protocols
-- Improve productivity and workflow efficiency
+Now, let's address some common questions partners might have when positioning MV in the small business space:
 
-**Demo: Show how to set up access controls for different employees in the Meraki dashboard**
+Q: What are the top small business pain points this addresses?
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
 
-[Slide 6]
-Use Case 3: Restaurant
-- Monitor kitchen and dining areas for safety and efficiency
-- Analyze customer flow and dining preferences
-- Ensure compliance with health and safety regulations
+Q: How do we best position MV during the pitch?
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
 
-**Demo: Show how to view live feeds and historical footage in the Meraki dashboard**
+Q: What installation or deployment concerns should we be ready for?
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
 
-[Slide 7]
-Smart Questions for Discussion:
-1. "How has your current security solution helped address your business's specific needs?"
-2. "What are your biggest concerns when it comes to video surveillance in your business?"
-3. "How do you envision leveraging video data to improve your operations and customer experience?"
-
-[Closing Slide]
-Thank you for joining the Meraki MV demo for small business partners. We hope you have gained valuable insights into how Meraki can help your customers address their security needs. For further information or to schedule a one-on-one consultation, please reach out to our team.
+Thank you for exploring Meraki MV with us today. We hope this demo has provided you with valuable insights into how this solution can meet the unique needs of small businesses. If you have any further questions or would like to discuss how to best position MV with your customers, please don't hesitate to reach out.

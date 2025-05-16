@@ -1,24 +1,31 @@
-[Opening]
+Hey there, thanks for joining us today! I'm excited to talk to you about Cisco Meraki and how it can revolutionize network management for Small Businesses. Let's dive right in!
 
-Hello everyone, welcome to our Meraki MT demo for small businesses. Today, we'll be focusing on how Meraki can help solve common pain points for small businesses and how you can effectively pitch this solution to your customers.
+**Warm-up question for partners:** What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
 
-First, let's talk about some pain points that small businesses typically face. These include limited IT resources, the need for reliable and secure networking, and the desire for easy-to-use technology that doesn't require constant maintenance.
+**Warm-up question for customers:** What does your current network setup look like? Where are your biggest IT headaches today?
 
-[Use Case 1: Network Visibility]
-One of the key features of Meraki is its intuitive dashboard that provides real-time visibility into the network. This is especially important for small businesses that may not have dedicated IT staff. With Meraki, partners can offer their customers a solution that allows them to easily monitor and manage their network from anywhere. To demonstrate this, **click 'Dashboard'** and show the various network health metrics and device statuses.
+**Warm-up question for internal:** What common questions do our customers ask in the Small Business sector? What objections or misconceptions do we frequently encounter?
 
-[Use Case 2: Guest Wi-Fi]
-Another common pain point for small businesses is providing secure guest Wi-Fi access. With Meraki, partners can set up a guest network with just a few clicks. This feature not only enhances the customer experience but also helps protect the main network from potential security threats. To showcase this, **click 'Configure > Wireless > SSIDs'** and set up a separate guest network with specific access controls.
+Imagine a world where managing your network is a breeze, troubleshooting is a snap, and everything is unified under one platform. That's the power of Cisco Meraki. Let's take a look at a few key use cases that highlight the benefits for Small Businesses.
 
-[Use Case 3: Security]
-Security is a top concern for small businesses, and Meraki offers advanced security features to address this. Partners can pitch Meraki as a comprehensive security solution that includes built-in firewall, intrusion prevention, content filtering, and more. To highlight this, **click 'Security & SD-WAN > Threat Protection'** and show how easy it is to configure security policies and monitor potential threats.
+**Use Case 1: Remote Monitoring and Troubleshooting**
+Let's say a branch office is experiencing slow internet speeds. With Meraki, you can **click 'Monitor > Network-wide > Clients'** to quickly identify the device causing the bottleneck and **click 'Tools > Ping'** to troubleshoot in real-time.
 
-[Smart Questions]
-As you pitch Meraki to customers, here are two smart questions you can ask to prompt discussion:
-1. How do you currently manage your network and what challenges do you face?
-2. What security measures do you have in place and are you confident in their effectiveness?
+**Use Case 2: Guest Wi-Fi Management**
+Small businesses often struggle with providing secure guest Wi-Fi access. With Meraki, you can **click 'Wireless > SSID'** to create a separate guest network with custom authentication and bandwidth limits.
 
-[Closing]
-In conclusion, Meraki offers a simple and effective solution for small businesses to overcome common pain points such as limited IT resources, secure networking, and ease of use. By highlighting key use cases and asking smart questions, partners can effectively pitch Meraki to their customers and provide them with a reliable and scalable networking solution.
+**Use Case 3: Multi-site Management**
+Managing multiple locations can be a headache, but not with Meraki. Simply **click 'Organisation > Inventory'** to see all your devices across sites and **click 'Configure > Templates'** to apply network settings uniformly.
 
-Thank you for joining our demo today. If you have any questions or would like to learn more about how Meraki can benefit your customers, please don't hesitate to reach out.
+**Common Questions from Partners:**
+
+Q: What are the top small business pain points this addresses?  
+A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
+
+Q: How do we best position MT during the pitch?  
+A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
+
+Q: What installation or deployment concerns should we be ready for?  
+A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.
+
+That's a wrap! Cisco Meraki is the solution your Small Business customers have been waiting for. Thanks for joining us today!
