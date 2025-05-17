@@ -13,7 +13,7 @@ def get_options_selector_card_with_defaults(audience=None, vertical=None, produc
         "type": "AdaptiveCard",
         "version": "1.2",
         "body": [
-            {"type": "TextBlock", "text": "Choose your demo options", "weight": "Bolder", "size": "Medium"},
+            {"type": "TextBlock", "text": "Tailor your demo or case study", "weight": "Bolder", "size": "Medium"},
             {
                 "type": "Input.ChoiceSet",
                 "id": "audience",

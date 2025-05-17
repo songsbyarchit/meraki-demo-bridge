@@ -7,6 +7,7 @@ from utils.webex import send_card
 import os, requests, sys
 from cards.demo_length_selector import get_demo_length_card
 from cards.demo_done_selector     import get_demo_done_card
+from cards.case_study_follow_up import get_follow_up_card
 from utils.demo_loader            import get_demo_flow
 from utils.label_maps import audience_map, vertical_map, product_map
 
@@ -223,20 +224,7 @@ def messages():
                 )
 
                 # Then send a follow-up card
-                send_card(
-                    room_id,
-                    {
-                        "type": "AdaptiveCard",
-                        "version": "1.3",
-                        "body": [{"type": "TextBlock", "text": "What would you like to do next?", "wrap": True}],
-                        "actions": [
-                            {"type": "Action.Submit", "title": "Return to Top 3", "data": {"action": "show_top_3_again"}},
-                            {"type": "Action.Submit", "title": "Return Home", "data": {"action": "restart"}}
-                        ],
-                        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
-                    },
-                    markdown="ℹ️ Please choose what to do next:"
-                )
+                send_card(room_id, get_follow_up_card(), markdown="ℹ️ Please choose what to do next:")
             else:
                 send_card(room_id, get_homepage_card(), markdown="⚠️ Summary not found. Returning home.")
         elif action == "restart":
@@ -260,20 +248,7 @@ def messages():
                 )
 
                 # Send follow-up card with buttons
-                send_card(
-                    room_id,
-                    {
-                        "type": "AdaptiveCard",
-                        "version": "1.3",
-                        "body": [{"type": "TextBlock", "text": "What would you like to do next?", "wrap": True}],
-                        "actions": [
-                            {"type": "Action.Submit", "title": "Return to Top 3", "data": {"action": "show_top_3_again"}},
-                            {"type": "Action.Submit", "title": "Return Home", "data": {"action": "restart"}}
-                        ],
-                        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
-                    },
-                    markdown=""
-                )
+                send_card(room_id, get_follow_up_card(), markdown="ℹ️ Please choose what to do next:")
         elif action == "case_study":
             room_state[room_id] = {"mode": "case_study"}
             context = get_user_context(room_id)
