@@ -63,7 +63,7 @@ def messages():
                 **• Vertical:** {vertical_map.get(context['vertical'], context['vertical'])}  
                 **• Product Line:** {product_map.get(context['product_line'], context['product_line'])}
 
-                Would you like to change these?"""
+                Would you like to change any of these?"""
                 send_card(room_id, {
                     "type": "AdaptiveCard",
                     "version": "1.3",
@@ -88,7 +88,14 @@ def messages():
                 "product_line": context["product_line"]
             }
             send_card(room_id, get_demo_length_card(), markdown="Using your last selections. How much time do you have for the demo?")
+        elif action == "use_previous_case_study_options":
+            context = get_user_context(room_id)
+            vertical = context.get("vertical")
+            product_line = context.get("product_line")
 
+            from utils.static_case_study_lookup import get_static_case_studies
+            matches = get_static_case_studies(vertical, product_line)
+            send_card(room_id, get_case_study_card(matches), markdown="📚 Here are relevant case studies based on your selection.")
         elif action == "change_options":
             context = get_user_context(room_id)
             send_card(
@@ -151,7 +158,21 @@ def messages():
                         "product_line": product_line
                     }
                     send_card(room_id, get_demo_length_card(), markdown="Got it! Now, choose how much time you have for the demo.")
+        elif action == "case_study_selected":
+            index = int(action_detail.get("inputs", {}).get("index", 0))
+            context = get_user_context(room_id)
+            vertical = context.get("vertical")
+            product_line = context.get("product_line")
 
+            from utils.static_case_study_lookup import get_static_case_studies
+            from cards.case_study_card import get_case_study_detail_card
+
+            matches = get_static_case_studies(vertical, product_line)
+            if index < len(matches):
+                case = matches[index]
+                send_card(room_id, get_case_study_detail_card(case, index), markdown=f"🔍 Here's more info about **{case['title']}**.")
+            else:
+                send_card(room_id, get_homepage_card(), markdown="⚠️ Could not find that case study. Returning home.")
         elif action == "select_demo_length":
             inputs = action_detail.get("inputs", {})
             length = inputs.get("duration")
@@ -174,6 +195,40 @@ def messages():
                 }
             )
             send_card(room_id, get_demo_done_card(), markdown="What would you like to do next?")
+        elif action == "show_summary":
+            context = get_user_context(room_id)
+            vertical = context.get("vertical")
+            product_line = context.get("product_line")
+            from utils.static_case_study_lookup import get_static_case_studies
+            matches = get_static_case_studies(vertical, product_line)
+
+            index = int(action_detail.get("inputs", {}).get("index", 0))  # fallback index
+            if index < len(matches):
+                summary = matches[index].get("summary", "⚠️ No summary available.")
+                send_card(
+                    room_id,
+                    {
+                        "type": "AdaptiveCard",
+                        "version": "1.3",
+                        "body": [{"type": "TextBlock", "text": summary, "wrap": True}],
+                        "actions": [
+                            {
+                                "type": "Action.Submit",
+                                "title": "Return to Top 3 List",
+                                "data": {"action": "show_top_3_again"}
+                            },
+                            {
+                                "type": "Action.Submit",
+                                "title": "Return Home",
+                                "data": {"action": "restart"}
+                            }
+                        ],
+                        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+                    },
+                    markdown="📝 Case Study Summary"
+                )
+            else:
+                send_card(room_id, get_homepage_card(), markdown="⚠️ Summary not found. Returning home.")
         elif action == "restart":
             room_state.pop(room_id, None)
             send_card(room_id, get_homepage_card(), markdown="Restarted")
@@ -187,7 +242,7 @@ def messages():
                 **• Vertical:** {vertical_map.get(context['vertical'], context['vertical'])}  
                 **• Product Line:** {product_map.get(context['product_line'], context['product_line'])}
 
-                Would you like to change these?"""
+                Would you like to change any of these?"""
                 send_card(room_id, {
                     "type": "AdaptiveCard",
                     "version": "1.3",

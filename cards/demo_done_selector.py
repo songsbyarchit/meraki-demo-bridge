@@ -5,7 +5,7 @@ def get_demo_done_card():
         title="What’s next?",
         text="Choose an action below:",
         buttons=[
-            {"title": "Make another demo", "value": "start_demo", "type": "action"},
+            {"title": "Build another Demo + FAQ", "value": "start_demo", "type": "action"},
             {"title": "Return home",        "value": "restart",    "type": "action"},
         ]
     )
