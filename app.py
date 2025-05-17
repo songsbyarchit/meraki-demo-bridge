@@ -95,6 +95,7 @@ def messages():
 
             from utils.static_case_study_lookup import get_static_case_studies
             matches = get_static_case_studies(vertical, product_line)
+            set_user_context(room_id, "last_top3_matches", matches)
             send_card(room_id, get_case_study_card(matches), markdown="📚 Here are relevant case studies based on your selection.")
         elif action == "change_options":
             context = get_user_context(room_id)
@@ -149,6 +150,7 @@ def messages():
                 if mode == "case_study":
                     from utils.static_case_study_lookup import get_static_case_studies
                     matches = get_static_case_studies(vertical, product_line)
+                    set_user_context(room_id, "last_top3_matches", matches)
                     send_card(room_id, get_case_study_card(matches), markdown="📚 Here are relevant case studies based on your selection.")
                 else:
                     room_state[room_id] = {
@@ -168,6 +170,7 @@ def messages():
             from cards.case_study_card import get_case_study_detail_card
 
             matches = get_static_case_studies(vertical, product_line)
+            set_user_context(room_id, "last_top3_matches", matches)
             if index < len(matches):
                 case = matches[index]
                 send_card(room_id, get_case_study_detail_card(case, index), markdown=f"🔍 Here's more info about **{case['title']}**.")
@@ -201,37 +204,76 @@ def messages():
             product_line = context.get("product_line")
             from utils.static_case_study_lookup import get_static_case_studies
             matches = get_static_case_studies(vertical, product_line)
-
+            set_user_context(room_id, "last_top3_matches", matches)
             index = int(action_detail.get("inputs", {}).get("index", 0))  # fallback index
             if index < len(matches):
                 summary = matches[index].get("summary", "⚠️ No summary available.")
+
+                # First send plain summary text
+                requests.post(
+                    "https://webexapis.com/v1/messages",
+                    headers={
+                        "Authorization": f"Bearer {WEBEX_TOKEN}",
+                        "Content-Type": "application/json"
+                    },
+                    json={
+                        "roomId": room_id,
+                        "markdown": f"📝 **Summary:**\n\n{summary}"
+                    }
+                )
+
+                # Then send a follow-up card
                 send_card(
                     room_id,
                     {
                         "type": "AdaptiveCard",
                         "version": "1.3",
-                        "body": [{"type": "TextBlock", "text": summary, "wrap": True}],
+                        "body": [{"type": "TextBlock", "text": "What would you like to do next?", "wrap": True}],
                         "actions": [
-                            {
-                                "type": "Action.Submit",
-                                "title": "Return to Top 3 List",
-                                "data": {"action": "show_top_3_again"}
-                            },
-                            {
-                                "type": "Action.Submit",
-                                "title": "Return Home",
-                                "data": {"action": "restart"}
-                            }
+                            {"type": "Action.Submit", "title": "Return to Top 3", "data": {"action": "show_top_3_again"}},
+                            {"type": "Action.Submit", "title": "Return Home", "data": {"action": "restart"}}
                         ],
                         "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
                     },
-                    markdown="📝 Case Study Summary"
+                    markdown="ℹ️ Please choose what to do next:"
                 )
             else:
                 send_card(room_id, get_homepage_card(), markdown="⚠️ Summary not found. Returning home.")
         elif action == "restart":
             room_state.pop(room_id, None)
             send_card(room_id, get_homepage_card(), markdown="Restarted")
+        elif action == "show_top_3_again":
+            matches = get_user_context(room_id).get("last_top3_matches", [])
+            if matches:
+                text_lines = [
+                    f"**Top 3 Case Studies:**\n"
+                ]
+                for i, match in enumerate(matches[:3]):
+                    text_lines.append(f"{i+1}. {match['title']} — Score: {match['score']:.2f}")
+                markdown_text = "\n".join(text_lines)
+
+                # Send plain text top 3 list
+                send_card(
+                    room_id,
+                    get_case_study_card(matches),
+                    markdown="📚 Here are your top 3 recommended case studies again."
+                )
+
+                # Send follow-up card with buttons
+                send_card(
+                    room_id,
+                    {
+                        "type": "AdaptiveCard",
+                        "version": "1.3",
+                        "body": [{"type": "TextBlock", "text": "What would you like to do next?", "wrap": True}],
+                        "actions": [
+                            {"type": "Action.Submit", "title": "Return to Top 3", "data": {"action": "show_top_3_again"}},
+                            {"type": "Action.Submit", "title": "Return Home", "data": {"action": "restart"}}
+                        ],
+                        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+                    },
+                    markdown=""
+                )
         elif action == "case_study":
             room_state[room_id] = {"mode": "case_study"}
             context = get_user_context(room_id)
@@ -258,6 +300,8 @@ def messages():
                     get_options_selector_card_with_defaults(audience="", vertical="", product_line=""),
                     markdown="Select your options"
                 )
+        else:
+            send_card(room_id, get_homepage_card(), markdown="⚠️ Couldn’t find your previous top 3. Returning home.")
     return "OK"
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5099)

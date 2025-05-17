@@ -29,7 +29,7 @@ def get_demo_length_card():
             },
             {
                 "type": "Action.Submit",
-                "title": "🏠 Go Back",
+                "title": "Return Home 🏠",
                 "data": {
                     "action": "restart"
                 }

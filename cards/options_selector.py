@@ -72,6 +72,6 @@ def get_options_selector_card_with_defaults(audience=None, vertical=None, produc
         ],
         "actions": [
             {"type": "Action.Submit", "title": "Continue", "data": {"action": "select_options"}},
-            {"type": "Action.Submit", "title": "Restart", "data": {"action": "restart"}}
+            {"type": "Action.Submit", "title": "Return Home 🏠", "data": {"action": "restart"}}
         ]
     }

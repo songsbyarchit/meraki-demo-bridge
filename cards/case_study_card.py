@@ -16,7 +16,7 @@ def get_case_study_card(matches):
         ] + [
             {
                 "type": "Action.Submit",
-                "title": "Return Home",
+                "title": "Return Home 🏠",
                 "data": {"action": "restart"}
             }
         ],
@@ -48,7 +48,7 @@ def get_case_study_detail_card(case, index):
             },
             {
                 "type": "Action.Submit",
-                "title": "Return Home",
+                "title": "Return Home 🏠",
                 "data": {"action": "restart"}
             }
         ],
