@@ -9,9 +9,9 @@ class MSSwitch(Base):
     use_case = Column(String)
     ports_1gbe = Column(Integer)
     ports_mgig = Column(Integer)
-    uplinks = Column(String)  # Comma-separated list
+    uplinks = Column(String)  # Comma-separated string like "2x 10G SFP+, 4x 1G SFP"
     poe_support = Column(String)
     stackable = Column(Boolean)
-    routing = Column(String)
+    routing = Column(String)  # e.g., "L2", "DHCP relay", "Dynamic"
     catalyst = Column(Boolean)
     notes = Column(String)
