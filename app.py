@@ -10,6 +10,7 @@ from cards.demo_done_selector     import get_demo_done_card
 from cards.case_study_follow_up import get_follow_up_card
 from utils.demo_loader            import get_demo_flow
 from utils.label_maps import audience_map, vertical_map, product_map
+from cards.sizing_selector import get_sizing_entry_card
 
 load_dotenv()
 WEBEX_TOKEN = os.getenv("WEBEX_BOT_TOKEN")
@@ -249,6 +250,8 @@ def messages():
 
                 # Send follow-up card with buttons
                 send_card(room_id, get_follow_up_card(), markdown="ℹ️ Please choose what to do next:")
+        elif action == "sizing":
+            send_card(room_id, get_sizing_entry_card(), markdown="📏 Let’s begin the sizing process. Select a product category.")
         elif action == "case_study":
             room_state[room_id] = {"mode": "case_study"}
             context = get_user_context(room_id)
