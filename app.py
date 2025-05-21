@@ -11,6 +11,10 @@ from cards.case_study_follow_up import get_follow_up_card
 from utils.demo_loader            import get_demo_flow
 from utils.label_maps import audience_map, vertical_map, product_map
 from cards.sizing_selector import get_sizing_entry_card
+from cards.filters.mr_filters import get_mr_filter_card
+from cards.filters.ms_filters import get_ms_filter_card
+from cards.filters.mx_filters import get_mx_filter_card
+from cards.filters.mv_filters import get_mv_filter_card
 
 load_dotenv()
 WEBEX_TOKEN = os.getenv("WEBEX_BOT_TOKEN")
@@ -252,6 +256,37 @@ def messages():
                 send_card(room_id, get_follow_up_card(), markdown="ℹ️ Please choose what to do next:")
         elif action == "sizing":
             send_card(room_id, get_sizing_entry_card(), markdown="📏 Let’s begin the sizing process. Select a product category.")
+        elif action == "sizing_select_family":
+            selected_family = action_detail.get("inputs", {}).get("product_family", "")
+            if not selected_family:
+                requests.post(
+                    "https://webexapis.com/v1/messages",
+                    headers={
+                        "Authorization": f"Bearer {WEBEX_TOKEN}",
+                        "Content-Type": "application/json"
+                    },
+                    json={
+                        "roomId": room_id,
+                        "markdown": "⚠️ Please select a product family before continuing."
+                    }
+                )
+                send_card(room_id, get_sizing_entry_card(), markdown="🔁 Please choose a valid option to continue.")
+                return "OK"
+
+
+            set_user_context(room_id, "sizing_family", selected_family)
+            room_state[room_id] = {"stage": "awaiting_sizing_filters", "sizing_family": selected_family}
+
+            if selected_family == "MX":
+                send_card(room_id, get_mx_filter_card(), markdown="🔍 Let’s narrow down your MX options.")
+            elif selected_family == "MR":
+                send_card(room_id, get_mr_filter_card(), markdown="🔍 Let’s narrow down your MR options.")
+            elif selected_family == "MS":
+                send_card(room_id, get_ms_filter_card(), markdown="🔍 Let’s narrow down your MS options.")
+            elif selected_family == "MV":
+                send_card(room_id, get_mv_filter_card(), markdown="🔍 Let’s narrow down your MV options.")
+            else:
+                send_card(room_id, get_homepage_card(), markdown="⚠️ Unknown product family. Returning home.")
         elif action == "case_study":
             room_state[room_id] = {"mode": "case_study"}
             context = get_user_context(room_id)
