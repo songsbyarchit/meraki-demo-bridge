@@ -3,78 +3,105 @@ def get_mr_filter_card():
         "type": "AdaptiveCard",
         "version": "1.3",
         "body": [
-            {"type": "TextBlock", "text": "🔍 Filter MR Access Points", "weight": "Bolder", "size": "Medium"},
-            {"type": "TextBlock", "text": "Set any constraints (or leave blank to see all):", "wrap": True},
+            {
+                "type": "TextBlock",
+                "text": "🔍 Filter MR Access Points",
+                "weight": "Bolder",
+                "size": "Medium"
+            },
+            {
+                "type": "TextBlock",
+                "text": "Set at least one filter\n(you may leave some at default value to see more options)",
+                "wrap": True
+            },
 
             # Wi-Fi Standard
+            {
+                "type": "TextBlock",
+                "text": "Wi-Fi Standard",
+                "weight": "Bolder",
+                "wrap": True
+            },
             {
                 "type": "Input.ChoiceSet",
                 "id": "wifi_standard",
                 "style": "compact",
                 "value": "",
                 "choices": [
-                    {"title": "--- ANY ---", "value": ""},
+                    {"title": "--- Select Wi-Fi Standard ---", "value": ""},
                     {"title": "Wi-Fi 5", "value": "Wi-Fi 5"},
                     {"title": "Wi-Fi 6", "value": "Wi-Fi 6"},
                     {"title": "Wi-Fi 6E", "value": "Wi-Fi 6E"},
-                    {"title": "Wi-Fi 7", "value": "Wi-Fi 7"},
+                    {"title": "Wi-Fi 7", "value": "Wi-Fi 7"}
                 ]
             },
 
             # Radios
+            {
+                "type": "TextBlock",
+                "text": "Number of Radios",
+                "weight": "Bolder",
+                "wrap": True
+            },
             {
                 "type": "Input.ChoiceSet",
                 "id": "radios",
                 "style": "compact",
                 "value": "",
                 "choices": [
-                    {"title": "--- ANY ---", "value": ""},
+                    {"title": "--- Show all ---", "value": ""},
                     {"title": "2", "value": "2"},
-                    {"title": "3", "value": "3"},
+                    {"title": "3", "value": "3"}
                 ]
             },
 
             # Antenna Type
+            {
+                "type": "TextBlock",
+                "text": "Antenna Type",
+                "weight": "Bolder",
+                "wrap": True
+            },
             {
                 "type": "Input.ChoiceSet",
                 "id": "antenna_type",
                 "style": "compact",
                 "value": "",
                 "choices": [
-                    {"title": "--- ANY ---", "value": ""},
+                    {"title": "--- Show all ---", "value": ""},
                     {"title": "Internal", "value": "Internal"},
-                    {"title": "External", "value": "External"},
+                    {"title": "External", "value": "External"}
                 ]
             },
 
-            # PoE
+            # PoE (toggle instead of dropdown)
             {
-                "type": "Input.ChoiceSet",
+                "type": "Input.Toggle",
                 "id": "poe",
-                "style": "compact",
-                "value": "",
-                "choices": [
-                    {"title": "--- ANY ---", "value": ""},
-                    {"title": "Yes", "value": "true"},
-                    {"title": "No", "value": "false"},
-                ]
+                "title": "Only show models with PoE support",
+                "valueOn": "true",
+                "valueOff": "false"
             },
 
-            # Catalyst
+            # Catalyst (toggle instead of dropdown)
             {
-                "type": "Input.ChoiceSet",
+                "type": "Input.Toggle",
                 "id": "catalyst",
-                "style": "compact",
-                "value": "",
-                "choices": [
-                    {"title": "--- ANY ---", "value": ""},
-                    {"title": "Yes", "value": "true"},
-                    {"title": "No", "value": "false"},
-                ]
+                "title": "Only show Catalyst models",
+                "valueOn": "true",
+                "valueOff": "false"
             }
         ],
         "actions": [
-            {"type": "Action.Submit", "title": "Find Matching Models", "data": {"action": "filter_mr_models"}},
-            {"type": "Action.Submit", "title": "Return to Category Selection", "data": {"action": "sizing"}}
+            {
+                "type": "Action.Submit",
+                "title": "Find Matching Models",
+                "data": {"action": "filter_mr_models"}
+            },
+            {
+                "type": "Action.Submit",
+                "title": "Return to Category Selection",
+                "data": {"action": "sizing"}
+            }
         ]
     }

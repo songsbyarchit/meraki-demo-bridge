@@ -11,4 +11,3 @@ class MRAccessPoint(Base):
     antenna_type = Column(String, nullable=False)
     poe = Column(Boolean, nullable=False)
     catalyst = Column(Boolean, nullable=False)  # ✅ ADD THIS LINE
-    notes = Column(String)

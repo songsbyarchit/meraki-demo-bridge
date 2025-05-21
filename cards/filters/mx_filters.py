@@ -16,16 +16,28 @@ def get_mx_filter_card():
                 "wrap": True
             },
             {
+                "type": "TextBlock",
+                "text": "Cellular Support",
+                "wrap": True,
+                "weight": "Bolder"
+            },
+            {
                 "type": "Input.Toggle",
                 "id": "has_cellular",
-                "title": "Must support Cellular?",
+                "title": "Only show models with cellular support",
                 "valueOn": "true",
                 "valueOff": "false"
             },
             {
+                "type": "TextBlock",
+                "text": "Wireless Support",
+                "wrap": True,
+                "weight": "Bolder"
+            },
+            {
                 "type": "Input.Toggle",
                 "id": "has_wireless",
-                "title": "Must support Wireless?",
+                "title": "Only show models with wireless support",
                 "valueOn": "true",
                 "valueOff": "false"
             }

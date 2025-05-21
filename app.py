@@ -15,6 +15,7 @@ from cards.filters.mr_filters import get_mr_filter_card
 from cards.filters.ms_filters import get_ms_filter_card
 from cards.filters.mx_filters import get_mx_filter_card
 from cards.filters.mv_filters import get_mv_filter_card
+from utils.filter_engine import filter_mx_models, filter_mr_models, filter_ms_models, filter_mv_models
 
 load_dotenv()
 WEBEX_TOKEN = os.getenv("WEBEX_BOT_TOKEN")
@@ -255,7 +256,7 @@ def messages():
                 # Send follow-up card with buttons
                 send_card(room_id, get_follow_up_card(), markdown="ℹ️ Please choose what to do next:")
         elif action == "sizing":
-            send_card(room_id, get_sizing_entry_card(), markdown="📏 Let’s begin the sizing process. Select a product category.")
+            send_card(room_id, get_sizing_entry_card(), markdown="📏 Let’s begin the sizing process. Select a product family to begin.")
         elif action == "sizing_select_family":
             selected_family = action_detail.get("inputs", {}).get("product_family", "")
             if not selected_family:
@@ -287,6 +288,95 @@ def messages():
                 send_card(room_id, get_mv_filter_card(), markdown="🔍 Let’s narrow down your MV options.")
             else:
                 send_card(room_id, get_homepage_card(), markdown="⚠️ Unknown product family. Returning home.")
+        elif action == "filter_mx_models":
+            filters = action_detail.get("inputs", {})
+            results, error = filter_mx_models(filters)
+            if error:
+                send_card(room_id, get_mx_filter_card(), markdown=f"⚠️ {error}")
+            else:
+                formatted = "\n".join(f"- {r.model}" for r in results) or "No models matched."
+                requests.post(
+                    "https://webexapis.com/v1/messages",
+                    headers={
+                        "Authorization": f"Bearer {WEBEX_TOKEN}",
+                        "Content-Type": "application/json"
+                    },
+                    json={
+                        "roomId": room_id,
+                        "markdown": f"🔎 **Matching MX Models:**\n\n{formatted}"
+                    }
+                )
+
+        elif action == "filter_mr_models":
+            filters = action_detail.get("inputs", {})
+            results, error = filter_mr_models(filters)
+            if error:
+                send_card(room_id, get_mr_filter_card(), markdown=f"⚠️ {error}")
+            else:
+                formatted = "\n".join(f"- {r.model}" for r in results) or "No models matched."
+                requests.post(
+                    "https://webexapis.com/v1/messages",
+                    headers={
+                        "Authorization": f"Bearer {WEBEX_TOKEN}",
+                        "Content-Type": "application/json"
+                    },
+                    json={
+                        "roomId": room_id,
+                        "markdown": f"🔎 **Matching MR Models:**\n\n{formatted}"
+                    }
+                )
+
+        elif action == "filter_ms_models":
+            filters = action_detail.get("inputs", {})
+            results, error = filter_ms_models(filters)
+            if error:
+                # Send plain-text warning message
+                requests.post(
+                    "https://webexapis.com/v1/messages",
+                    headers={
+                        "Authorization": f"Bearer {WEBEX_TOKEN}",
+                        "Content-Type": "application/json"
+                    },
+                    json={
+                        "roomId": room_id,
+                        "markdown": f"⚠️ {error}\n🔁 Please apply at least one filter and press 'Continue' again."
+                    }
+                )
+                # Then send the card again
+                send_card(room_id, get_ms_filter_card(), markdown="")
+            else:
+                formatted = "\n".join(f"- {r.model}" for r in results) or "No models matched."
+                requests.post(
+                    "https://webexapis.com/v1/messages",
+                    headers={
+                        "Authorization": f"Bearer {WEBEX_TOKEN}",
+                        "Content-Type": "application/json"
+                    },
+                    json={
+                        "roomId": room_id,
+                        "markdown": f"🔎 **Matching MS Models:**\n\n{formatted}"
+                    }
+                )
+
+        elif action == "filter_mv_models":
+            filters = action_detail.get("inputs", {})
+            results, error = filter_mv_models(filters)
+            if error:
+                send_card(room_id, get_mv_filter_card(), markdown=f"⚠️ {error}")
+            else:
+                formatted = "\n".join(f"- {r.model}" for r in results) or "No models matched."
+                requests.post(
+                    "https://webexapis.com/v1/messages",
+                    headers={
+                        "Authorization": f"Bearer {WEBEX_TOKEN}",
+                        "Content-Type": "application/json"
+                    },
+                    json={
+                        "roomId": room_id,
+                        "markdown": f"🔎 **Matching MV Models:**\n\n{formatted}"
+                    }
+                )
+                
         elif action == "case_study":
             room_state[room_id] = {"mode": "case_study"}
             context = get_user_context(room_id)

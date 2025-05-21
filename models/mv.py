@@ -6,8 +6,9 @@ class MVCamera(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     model = Column(String, unique=True, index=True)
-    use_case = Column(String)
-    resolution = Column(String)
     onboard_storage = Column(Boolean)
-    wireless = Column(Boolean)
-    notes = Column(String)
+    location = Column(String)
+    fov = Column(String)
+    max_fps = Column(Integer)
+    resolution = Column(String)
+    use_case = Column(String)

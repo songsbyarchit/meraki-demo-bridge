@@ -16,19 +16,46 @@ def get_mv_filter_card():
                 "wrap": True
             },
             {
-                "type": "Input.Toggle",
-                "id": "wireless",
-                "title": "Must be Wireless?",
-                "valueOn": "true",
-                "valueOff": "false"
+                "type": "Input.ChoiceSet",
+                "id": "location",
+                "label": "Location",
+                "style": "compact",
+                "choices": [
+                    {"title": "Indoor", "value": "indoor"},
+                    {"title": "Outdoor", "value": "outdoor"}
+                ]
             },
             {
-                "type": "Input.Toggle",
-                "id": "onboard_storage",
-                "title": "Require onboard storage?",
-                "valueOn": "true",
-                "valueOff": "false"
-            }
+                "type": "Input.ChoiceSet",
+                "id": "fov",
+                "label": "Field of View",
+                "style": "compact",
+                "choices": [
+                    {"title": "Wide", "value": "wide"},
+                    {"title": "Narrow", "value": "narrow"},
+                    {"title": "Fisheye", "value": "fisheye"}
+                ]
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "max_fps",
+                "label": "Maximum FPS",
+                "style": "compact",
+                "choices": [
+                    {"title": "15 FPS", "value": "15"},
+                    {"title": "24 FPS", "value": "24"}
+                ]
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "resolution",
+                "label": "Resolution",
+                "style": "compact",
+                "choices": [
+                    {"title": "1080p", "value": "1080p"},
+                    {"title": "4K", "value": "4K"}
+                ]
+            },
         ],
         "actions": [
             {

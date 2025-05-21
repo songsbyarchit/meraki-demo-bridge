@@ -12,7 +12,7 @@ def get_sizing_entry_card():
             },
             {
                 "type": "TextBlock",
-                "text": "Select a product category to begin:",
+                "text": "Select a product family to begin:",
                 "wrap": True
             },
             {
@@ -32,7 +32,7 @@ def get_sizing_entry_card():
         "actions": [
             {
                 "type": "Action.Submit",
-                "title": "Confirm",
+                "title": "Continue",
                 "data": {"action": "sizing_select_family"}
             },
             {

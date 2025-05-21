@@ -16,20 +16,90 @@ def get_ms_filter_card():
                 "wrap": True
             },
             {
+                "type": "TextBlock",
+                "text": "PoE Support",
+                "wrap": True,
+                "weight": "Bolder"
+            },
+            {
                 "type": "Input.ChoiceSet",
                 "id": "poe_support",
                 "style": "compact",
+                "value": "",
                 "choices": [
+                    {"title": "--- Show all ---", "value": ""},
                     {"title": "PoE", "value": "PoE"},
                     {"title": "PoE+", "value": "PoE+"},
                     {"title": "UPOE", "value": "UPOE"},
-                    {"title": "UPOE+", "value": "UPOE+"},
+                    {"title": "UPOE+", "value": "UPOE+"}
+                ]
+            },
+            {
+                "type": "TextBlock",
+                "text": "Routing Capabilities",
+                "wrap": True,
+                "weight": "Bolder"
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "routing",
+                "style": "compact",
+                "value": "",
+                "choices": [
+                    {"title": "--- Select Routing ---", "value": ""},
+                    {"title": "Layer 2 only", "value": "L2"},
+                    {"title": "DHCP Relay", "value": "DHCP relay"},
+                    {"title": "Dynamic Routing", "value": "Dynamic"}
+                ]
+            },
+            {
+                "type": "TextBlock",
+                "text": "1G Port Count",
+                "wrap": True,
+                "weight": "Bolder"
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "min_ports_1gbe",
+                "style": "compact",
+                "value": "",
+                "choices": [
+                    {"title": "--- Show all ---", "value": ""},
+                    {"title": "8+", "value": "8"},
+                    {"title": "16+", "value": "16"},
+                    {"title": "24+", "value": "24"},
+                    {"title": "48+", "value": "48"}
+                ]
+            },
+            {
+                "type": "TextBlock",
+                "text": "mGig Port Count",
+                "wrap": True,
+                "weight": "Bolder"
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "min_ports_mgig",
+                "style": "compact",
+                "value": "",
+                "choices": [
+                    {"title": "--- Show all ---", "value": ""},
+                    {"title": "1+", "value": "1"},
+                    {"title": "2+", "value": "2"},
+                    {"title": "4+", "value": "4"}
                 ]
             },
             {
                 "type": "Input.Toggle",
+                "id": "stackable",
+                "title": "Only show stackable models",
+                "valueOn": "true",
+                "valueOff": "false"
+            },
+            {
+                "type": "Input.Toggle",
                 "id": "catalyst",
-                "title": "Catalyst only",
+                "title": "Only show Catalyst models",
                 "valueOn": "true",
                 "valueOff": "false"
             }
