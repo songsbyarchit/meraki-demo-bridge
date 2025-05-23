@@ -21,9 +21,11 @@ def get_mv_filter_card():
                 "label": "Location",
                 "style": "compact",
                 "choices": [
+                    {"title": "--- Show All ---", "value": ""},
                     {"title": "Indoor", "value": "indoor"},
                     {"title": "Outdoor", "value": "outdoor"}
-                ]
+                ],
+                "value": "all"
             },
             {
                 "type": "Input.ChoiceSet",
@@ -31,10 +33,12 @@ def get_mv_filter_card():
                 "label": "Field of View",
                 "style": "compact",
                 "choices": [
+                    {"title": "--- Show All ---", "value": ""},
                     {"title": "Wide", "value": "wide"},
                     {"title": "Narrow", "value": "narrow"},
                     {"title": "Fisheye", "value": "fisheye"}
-                ]
+                ],
+                "value": "all"
             },
             {
                 "type": "Input.ChoiceSet",
@@ -42,9 +46,11 @@ def get_mv_filter_card():
                 "label": "Maximum FPS",
                 "style": "compact",
                 "choices": [
+                    {"title": "--- Show All ---", "value": ""},
                     {"title": "15 FPS", "value": "15"},
                     {"title": "24 FPS", "value": "24"}
-                ]
+                ],
+                "value": "all"
             },
             {
                 "type": "Input.ChoiceSet",
@@ -52,10 +58,12 @@ def get_mv_filter_card():
                 "label": "Resolution",
                 "style": "compact",
                 "choices": [
+                    {"title": "--- Show All ---", "value": ""},
                     {"title": "1080p", "value": "1080p"},
                     {"title": "4K", "value": "4K"}
-                ]
-            },
+                ],
+                "value": "all"
+            }
         ],
         "actions": [
             {

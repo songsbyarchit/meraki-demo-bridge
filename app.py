@@ -330,7 +330,6 @@ def messages():
             filters = action_detail.get("inputs", {})
             results, error = filter_ms_models(filters)
             if error:
-                # Send plain-text warning message
                 requests.post(
                     "https://webexapis.com/v1/messages",
                     headers={
@@ -342,8 +341,6 @@ def messages():
                         "markdown": f"⚠️ {error}\n🔁 Please apply at least one filter and press 'Continue' again."
                     }
                 )
-                # Then send the card again
-                send_card(room_id, get_ms_filter_card(), markdown="")
             else:
                 formatted = "\n".join(f"- {r.model}" for r in results) or "No models matched."
                 requests.post(
@@ -376,7 +373,7 @@ def messages():
                         "markdown": f"🔎 **Matching MV Models:**\n\n{formatted}"
                     }
                 )
-                
+
         elif action == "case_study":
             room_state[room_id] = {"mode": "case_study"}
             context = get_user_context(room_id)
