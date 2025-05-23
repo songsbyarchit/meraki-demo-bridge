@@ -12,3 +12,4 @@ class MVCamera(Base):
     max_fps = Column(Integer)
     resolution = Column(String)
     use_case = Column(String)
+    datasheet_url = Column(String, nullable=True)

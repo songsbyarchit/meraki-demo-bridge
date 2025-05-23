@@ -14,3 +14,4 @@ class MSSwitch(Base):
     stackable = Column(Boolean)
     routing = Column(String)  # e.g., "L2", "DHCP relay", "Dynamic"
     catalyst = Column(Boolean)
+    datasheet_url = Column(String, nullable=True)

@@ -12,3 +12,4 @@ class MXAppliance(Base):
     uplink_ports = Column(String)  # Comma-separated list
     has_wireless = Column(Boolean)
     has_cellular = Column(Boolean)
+    datasheet_url = Column(String, nullable=True)
