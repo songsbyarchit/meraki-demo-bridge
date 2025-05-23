@@ -12,7 +12,7 @@ def get_ms_filter_card():
             },
             {
                 "type": "TextBlock",
-                "text": "Set filters to narrow down MS models:",
+                "text": "Set at least one filter to narrow down MS models:",
                 "wrap": True
             },
             {
@@ -28,10 +28,10 @@ def get_ms_filter_card():
                 "value": "",
                 "choices": [
                     {"title": "--- Show all ---", "value": ""},
-                    {"title": "PoE", "value": "PoE"},
-                    {"title": "PoE+", "value": "PoE+"},
-                    {"title": "UPOE", "value": "UPOE"},
-                    {"title": "UPOE+", "value": "UPOE+"}
+                    {"title": "PoE", "value": "poe"},
+                    {"title": "PoE+", "value": "poe+"},
+                    {"title": "UPOE", "value": "upoe"},
+                    {"title": "UPOE+", "value": "upoe+"}
                 ]
             },
             {
@@ -47,9 +47,9 @@ def get_ms_filter_card():
                 "value": "",
                 "choices": [
                     {"title": "--- Select Routing ---", "value": ""},
-                    {"title": "Layer 2 only", "value": "L2"},
-                    {"title": "DHCP Relay", "value": "DHCP relay"},
-                    {"title": "Dynamic Routing", "value": "Dynamic"}
+                    {"title": "Layer 2 only", "value": "layer 2 only"},
+                    {"title": "DHCP Relay", "value": "dhcp relay"},
+                    {"title": "Dynamic Routing", "value": "dynamic routing"}
                 ]
             },
             {

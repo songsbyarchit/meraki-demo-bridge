@@ -12,7 +12,7 @@ def get_sizing_entry_card():
             },
             {
                 "type": "TextBlock",
-                "text": "Select a product family to begin:",
+                "text": "Select a product family to begin sizing:",
                 "wrap": True
             },
             {
@@ -21,7 +21,7 @@ def get_sizing_entry_card():
                 "style": "compact",
                 "value": "",
                 "choices": [
-                    {"title": "--- SELECT AN OPTION ---", "value": ""},
+                    {"title": "--- Select a product family ---", "value": ""},
                     {"title": "MR (Access Points)", "value": "MR"},
                     {"title": "MS (Switches)", "value": "MS"},
                     {"title": "MX (Security & SD-WAN)", "value": "MX"},
@@ -37,7 +37,7 @@ def get_sizing_entry_card():
             },
             {
                 "type": "Action.Submit",
-                "title": "Return to Home",
+                "title": "Return Home 🏠",
                 "data": {"action": "restart"}
             }
         ]

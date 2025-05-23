@@ -12,32 +12,96 @@ def get_mx_filter_card():
             },
             {
                 "type": "TextBlock",
-                "text": "Set filters to narrow down MX models:",
+                "text": "Set at least one filter to narrow down MX models:",
                 "wrap": True
             },
             {
                 "type": "TextBlock",
-                "text": "Cellular Support",
+                "text": "Use Case",
                 "wrap": True,
                 "weight": "Bolder"
             },
             {
-                "type": "Input.Toggle",
-                "id": "has_cellular",
-                "title": "Only show models with cellular support",
-                "valueOn": "true",
-                "valueOff": "false"
+                "type": "Input.ChoiceSet",
+                "id": "use_case",
+                "style": "compact",
+                "value": "",
+                "choices": [
+                    {"title": "--- Show all ---", "value": ""},
+                    {"title": "Branch", "value": "branch"},
+                    {"title": "Small Office", "value": "small office"},
+                    {"title": "Data Center", "value": "data center"},
+                    {"title": "SD-WAN", "value": "sd-wan"}
+                ]
             },
             {
                 "type": "TextBlock",
-                "text": "Wireless Support",
+                "text": "Minimum Throughput (Mbps)",
                 "wrap": True,
                 "weight": "Bolder"
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "min_throughput",
+                "style": "compact",
+                "value": "",
+                "choices": [
+                    {"title": "--- Show all ---", "value": ""},
+                    {"title": "200+", "value": "200"},
+                    {"title": "500+", "value": "500"},
+                    {"title": "1000+", "value": "1000"},
+                    {"title": "2000+", "value": "2000"}
+                ]
+            },
+            {
+                "type": "TextBlock",
+                "text": "Minimum User Count",
+                "wrap": True,
+                "weight": "Bolder"
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "min_users",
+                "style": "compact",
+                "value": "",
+                "choices": [
+                    {"title": "--- Show all ---", "value": ""},
+                    {"title": "50+", "value": "50"},
+                    {"title": "100+", "value": "100"},
+                    {"title": "250+", "value": "250"},
+                    {"title": "500+", "value": "500"}
+                ]
+            },
+            {
+                "type": "TextBlock",
+                "text": "Uplink Ports",
+                "wrap": True,
+                "weight": "Bolder"
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "uplink_ports",
+                "style": "compact",
+                "value": "",
+                "choices": [
+                    {"title": "--- Show all ---", "value": ""},
+                    {"title": "1G", "value": "1g"},
+                    {"title": "10G", "value": "10g"},
+                    {"title": "SFP", "value": "sfp"},
+                    {"title": "SFP+", "value": "sfp+"}
+                ]
             },
             {
                 "type": "Input.Toggle",
                 "id": "has_wireless",
                 "title": "Only show models with wireless support",
+                "valueOn": "true",
+                "valueOff": "false"
+            },
+            {
+                "type": "Input.Toggle",
+                "id": "has_cellular",
+                "title": "Only show models with cellular support",
                 "valueOn": "true",
                 "valueOff": "false"
             }

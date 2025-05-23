@@ -12,7 +12,7 @@ def get_mv_filter_card():
             },
             {
                 "type": "TextBlock",
-                "text": "Set filters to narrow down MV models:",
+                "text": "Set at least one filter to narrow down MV models:",
                 "wrap": True
             },
             {
@@ -21,7 +21,7 @@ def get_mv_filter_card():
                 "label": "Location",
                 "style": "compact",
                 "choices": [
-                    {"title": "--- Show All ---", "value": ""},
+                    {"title": "--- Show all ---", "value": ""},
                     {"title": "Indoor", "value": "indoor"},
                     {"title": "Outdoor", "value": "outdoor"}
                 ],
@@ -33,7 +33,7 @@ def get_mv_filter_card():
                 "label": "Field of View",
                 "style": "compact",
                 "choices": [
-                    {"title": "--- Show All ---", "value": ""},
+                    {"title": "--- Show all ---", "value": ""},
                     {"title": "Wide", "value": "wide"},
                     {"title": "Narrow", "value": "narrow"},
                     {"title": "Fisheye", "value": "fisheye"}
@@ -46,7 +46,7 @@ def get_mv_filter_card():
                 "label": "Maximum FPS",
                 "style": "compact",
                 "choices": [
-                    {"title": "--- Show All ---", "value": ""},
+                    {"title": "--- Show all ---", "value": ""},
                     {"title": "15 FPS", "value": "15"},
                     {"title": "24 FPS", "value": "24"}
                 ],
@@ -58,7 +58,7 @@ def get_mv_filter_card():
                 "label": "Resolution",
                 "style": "compact",
                 "choices": [
-                    {"title": "--- Show All ---", "value": ""},
+                    {"title": "--- Show all ---", "value": ""},
                     {"title": "1080p", "value": "1080p"},
                     {"title": "4K", "value": "4K"}
                 ],

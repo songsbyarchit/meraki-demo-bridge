@@ -288,11 +288,22 @@ def messages():
                 send_card(room_id, get_mv_filter_card(), markdown="🔍 Let’s narrow down your MV options.")
             else:
                 send_card(room_id, get_homepage_card(), markdown="⚠️ Unknown product family. Returning home.")
+                
         elif action == "filter_mx_models":
             filters = action_detail.get("inputs", {})
             results, error = filter_mx_models(filters)
             if error:
-                send_card(room_id, get_mx_filter_card(), markdown=f"⚠️ {error}")
+                requests.post(
+                    "https://webexapis.com/v1/messages",
+                    headers={
+                        "Authorization": f"Bearer {WEBEX_TOKEN}",
+                        "Content-Type": "application/json"
+                    },
+                    json={
+                        "roomId": room_id,
+                        "markdown": f"⚠️ {error}"
+                    }
+                )
             else:
                 formatted = "\n".join(f"- {r.model}" for r in results) or "No models matched."
                 requests.post(
@@ -311,7 +322,17 @@ def messages():
             filters = action_detail.get("inputs", {})
             results, error = filter_mr_models(filters)
             if error:
-                send_card(room_id, get_mr_filter_card(), markdown=f"⚠️ {error}")
+                requests.post(
+                    "https://webexapis.com/v1/messages",
+                    headers={
+                        "Authorization": f"Bearer {WEBEX_TOKEN}",
+                        "Content-Type": "application/json"
+                    },
+                    json={
+                        "roomId": room_id,
+                        "markdown": f"⚠️ {error}"
+                    }
+                )
             else:
                 formatted = "\n".join(f"- {r.model}" for r in results) or "No models matched."
                 requests.post(
@@ -338,7 +359,7 @@ def messages():
                     },
                     json={
                         "roomId": room_id,
-                        "markdown": f"⚠️ {error}\n🔁 Please apply at least one filter and press 'Continue' again."
+                        "markdown": f"⚠️ {error}"
                     }
                 )
             else:
@@ -359,7 +380,17 @@ def messages():
             filters = action_detail.get("inputs", {})
             results, error = filter_mv_models(filters)
             if error:
-                send_card(room_id, get_mv_filter_card(), markdown=f"⚠️ {error}")
+                requests.post(
+                    "https://webexapis.com/v1/messages",
+                    headers={
+                        "Authorization": f"Bearer {WEBEX_TOKEN}",
+                        "Content-Type": "application/json"
+                    },
+                    json={
+                        "roomId": room_id,
+                        "markdown": f"⚠️ {error}"
+                    }
+                )
             else:
                 formatted = "\n".join(f"- {r.model}" for r in results) or "No models matched."
                 requests.post(

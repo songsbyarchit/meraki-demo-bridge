@@ -11,7 +11,7 @@ def get_mr_filter_card():
             },
             {
                 "type": "TextBlock",
-                "text": "Set at least one filter\n(you may leave some at default value to see more options)",
+                "text": "Set at least one filter to narrow down MR models",
                 "wrap": True
             },
 
@@ -29,10 +29,10 @@ def get_mr_filter_card():
                 "value": "",
                 "choices": [
                     {"title": "--- Select Wi-Fi Standard ---", "value": ""},
-                    {"title": "Wi-Fi 5", "value": "Wi-Fi 5"},
-                    {"title": "Wi-Fi 6", "value": "Wi-Fi 6"},
-                    {"title": "Wi-Fi 6E", "value": "Wi-Fi 6E"},
-                    {"title": "Wi-Fi 7", "value": "Wi-Fi 7"}
+                    {"title": "Wi-Fi 5", "value": "wi-fi 5"},
+                    {"title": "Wi-Fi 6", "value": "wi-fi 6"},
+                    {"title": "Wi-Fi 6E", "value": "wi-fi 6e"},
+                    {"title": "Wi-Fi 7", "value": "wi-fi 7"}
                 ]
             },
 
@@ -69,12 +69,12 @@ def get_mr_filter_card():
                 "value": "",
                 "choices": [
                     {"title": "--- Show all ---", "value": ""},
-                    {"title": "Internal", "value": "Internal"},
-                    {"title": "External", "value": "External"}
+                    {"title": "Internal", "value": "internal"},
+                    {"title": "External", "value": "external"}
                 ]
             },
 
-            # PoE (toggle instead of dropdown)
+            # PoE (toggle)
             {
                 "type": "Input.Toggle",
                 "id": "poe",
@@ -83,7 +83,7 @@ def get_mr_filter_card():
                 "valueOff": "false"
             },
 
-            # Catalyst (toggle instead of dropdown)
+            # Catalyst (toggle)
             {
                 "type": "Input.Toggle",
                 "id": "catalyst",
