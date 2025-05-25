@@ -454,17 +454,42 @@ def messages():
                 )
         elif action == "submit_feedback":
             inputs = action_detail.get("inputs", {})
+
+            def is_blank(value):
+                return value in ("", None)
+
             required_fields = {
                 "role": "role",
                 "audience": "audience",
                 "product_line": "product line",
                 "industry": "industry",
-                "used_tool": "tool used"
+                "used_tool": "tool used",
+                "usual_minutes": "time without tool",
+                "bridge_minutes": "time using tool",
+                "quality_rating": "quality rating"
             }
-            missing = [label for key, label in required_fields.items() if inputs.get(key, "") == ""]
+
+            missing = [
+                label for key, label in required_fields.items()
+                if is_blank(inputs.get(key))
+            ]
+
+            # Save current inputs to re-populate the form
+            user_context = {
+                "role": inputs.get("role", ""),
+                "audience": inputs.get("audience", ""),
+                "product_line": inputs.get("product_line", ""),
+                "industry": inputs.get("industry", ""),
+                "used_tool": inputs.get("used_tool", ""),
+                "usual_minutes": inputs.get("usual_minutes", ""),
+                "bridge_minutes": inputs.get("bridge_minutes", ""),
+                "quality_rating": inputs.get("quality_rating", ""),
+                "extra_feedback": inputs.get("extra_feedback", "")
+            }
+            for k, v in user_context.items():
+                set_user_context(room_id, k, v)
 
             if missing:
-                # Warn user and resend card
                 requests.post(
                     "https://webexapis.com/v1/messages",
                     headers={
@@ -476,10 +501,10 @@ def messages():
                         "markdown": f"⚠️ Please select a value for: {', '.join(missing)}.\n\n🔁 Update your selections and press **Submit Feedback** again."
                     }
                 )
-                send_card(room_id, get_feedback_card(), markdown="Please review your selections.")
+                send_card(room_id, get_feedback_card(defaults=user_context), markdown="Please review your selections.")
                 return "OK"
 
-            # Save feedback
+            # Save feedback to DB
             new_entry = Feedback(
                 room_id         = room_id,
                 role            = inputs.get("role"),
@@ -503,65 +528,13 @@ def messages():
                 },
                 json={
                     "roomId": room_id,
-                    "markdown": "✅ Thanks for your feedback! It’s been saved to our database."
-                }
-            )
-        elif action == "submit_feedback":
-            inputs = action_detail.get("inputs", {})
-            required_fields = {
-                "role": "role",
-                "audience": "audience",
-                "product_line": "product line",
-                "industry": "industry",
-                "used_tool": "tool used"
-            }
-            missing = [label for key, label in required_fields.items() if inputs.get(key, "") == ""]
-
-            if missing:
-                # Warn user and resend card
-                requests.post(
-                    "https://webexapis.com/v1/messages",
-                    headers={
-                        "Authorization": f"Bearer {WEBEX_TOKEN}",
-                        "Content-Type": "application/json"
-                    },
-                    json={
-                        "roomId": room_id,
-                        "markdown": f"⚠️ Please select a value for: {', '.join(missing)}.\n\n🔁 Update your selections and press **Submit Feedback** again."
-                    }
-                )
-                send_card(room_id, get_feedback_card(), markdown="Please review your selections.")
-                return "OK"
-            # Save feedback
-            new_entry = Feedback(
-                room_id         = room_id,
-                role            = inputs.get("role"),
-                audience        = inputs.get("audience"),
-                product_line    = inputs.get("product_line"),
-                industry        = inputs.get("industry"),
-                tool_used       = inputs.get("used_tool"),
-                usual_minutes   = int(inputs.get("usual_minutes") or 0),
-                bridge_minutes  = int(inputs.get("bridge_minutes") or 0),
-                quality_rating  = int(inputs.get("quality_rating") or 0),
-                extra_feedback  = inputs.get("extra_feedback", "")
-            )
-            db.add(new_entry)
-            db.commit()
-
-            requests.post(
-                "https://webexapis.com/v1/messages",
-                headers={
-                    "Authorization": f"Bearer {WEBEX_TOKEN}",
-                    "Content-Type": "application/json"
-                },
-                json={
-                    "roomId": room_id,
-                    "markdown": "✅ Thanks for your feedback! It’s been saved to our database."
+                    "markdown": "✅ Thanks for your feedback! It’s been saved to our database.\nOur developers take all feedback into consideration for future versions of the tool!."
                 }
             )
         elif action == "give_feedback":
             room_state[room_id] = {"stage": "giving_feedback"}
-            send_card(room_id, get_feedback_card(), markdown="📝 We'd love your feedback.")
+            previous = get_user_context(room_id)
+            send_card(room_id, get_feedback_card(defaults=previous), markdown="📝 We'd love your feedback.")
         else:
             send_card(room_id, get_homepage_card(), markdown="⚠️ Couldn’t find your previous top 3. Returning home.")
     return "OK"
