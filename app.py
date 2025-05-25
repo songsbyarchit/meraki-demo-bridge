@@ -15,9 +15,8 @@ from cards.filters.mr_filters import get_mr_filter_card
 from cards.filters.ms_filters import get_ms_filter_card
 from cards.filters.mx_filters import get_mx_filter_card
 from cards.filters.mv_filters import get_mv_filter_card
-from cards.post_sizing_card import build_sizing_card
+from cards.sizing_follow_up import get_sizing_follow_up_card
 from utils.filter_engine import filter_mx_models, filter_mr_models, filter_ms_models, filter_mv_models
-
 
 load_dotenv()
 WEBEX_TOKEN = os.getenv("WEBEX_BOT_TOKEN")
