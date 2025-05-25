@@ -303,7 +303,7 @@ def messages():
                     },
                     json={
                         "roomId": room_id,
-                        "markdown": f"⚠️ {error}"
+                        "markdown": "⚠️ Please apply at least one MX filter and press **Show Matching Models** on the card above again."
                     }
                 )
             else:
@@ -332,7 +332,7 @@ def messages():
                     },
                     json={
                         "roomId": room_id,
-                        "markdown": f"⚠️ {error}"
+                        "markdown": "⚠️ Please apply at least one MR filter and press **Show Matching Models** on the card above again."
                     }
                 )
             else:
@@ -361,7 +361,7 @@ def messages():
                     },
                     json={
                         "roomId": room_id,
-                        "markdown": f"⚠️ {error}"
+                        "markdown": "⚠️ Please apply at least one MS filter and press **Show Matching Models** on the card above again."
                     }
                 )
             else:
@@ -390,7 +390,7 @@ def messages():
                     },
                     json={
                         "roomId": room_id,
-                        "markdown": f"⚠️ {error}"
+                        "markdown": "⚠️ Please apply at least one MV filter and press **Show Matching Models** on the card above again."
                     }
                 )
             else:

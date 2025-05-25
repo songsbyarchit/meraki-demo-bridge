@@ -6,9 +6,8 @@ from models.ms import MSSwitch
 from models.mr import MRAccessPoint
 from models.mv import MVCamera
 
-
 def at_least_one_filter_applied(filters: dict) -> bool:
-    return any(v not in [None, ""] for v in filters.values())
+    return any(v not in [None, "", "false"] for v in filters.values())
 
 def filter_mx_models(filters):
     mx_keys = ["has_cellular", "has_wireless", "use_case", "min_throughput", "min_users", "uplink_ports"]

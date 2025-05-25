@@ -1,4 +1,4 @@
-def get_ms_filter_card():
+def get_ms_filter_card(force_refresh=False):
     return {
         "type": "AdaptiveCard",
         "version": "1.3",
