@@ -142,7 +142,7 @@ def get_feedback_card(defaults=None):
             },
             {
                 "type": "TextBlock",
-                "text": "How would you rate the quality of the tool’s output?",
+                "text": "How would you rate the quality of the tool’s output? (especially technical accuracy!)",
                 "wrap": True
             },
             {
