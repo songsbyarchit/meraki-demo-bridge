@@ -141,6 +141,7 @@ def get_feedback_card():
                 "id": "quality_rating",
                 "style": "compact",
                 "choices": [
+                    {"title": "-- Select a quality rating --", "value": ""},
                     {"title": "1 – Poor", "value": "1"},
                     {"title": "2 – Fair", "value": "2"},
                     {"title": "3 – Good", "value": "3"},
@@ -167,9 +168,9 @@ def get_feedback_card():
                 "data": {"action": "submit_feedback"}
             },
             {
-                "type": "Action.Submit",
-                "title": "Skip",
-                "data": {"action": "skip_feedback"}
+            "type": "Action.Submit",
+            "title": "Return Home 🏠",
+            "data": {"action": "restart"}
             }
         ]
     }
