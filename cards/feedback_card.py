@@ -109,9 +109,9 @@ def get_feedback_card(defaults=None):
                 "value": defaults.get("used_tool", ""),
                 "choices": [
                     {"title": "-- Select a tool --", "value": ""},
-                    {"title": "Demo Flow Generator", "value": "demo_flow"},
-                    {"title": "Sizing Assistant", "value": "sizing"},
-                    {"title": "Case Study Finder", "value": "case_study"}
+                    {"title": "Demo flow + FAQs", "value": "demo_flow"},
+                    {"title": "Sizing wizard", "value": "sizing"},
+                    {"title": "Case study finder", "value": "case_study"}
                 ]
             },
             {

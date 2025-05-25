@@ -520,6 +520,23 @@ def messages():
             db.add(new_entry)
             db.commit()
 
+            from utils.google_sheets import push_feedback_to_sheets
+            try:
+                push_feedback_to_sheets({
+                    "room_id": room_id,
+                    "tool_used": inputs.get("used_tool"),
+                    "usual_minutes": int(inputs.get("usual_minutes") or 0),
+                    "bridge_minutes": int(inputs.get("bridge_minutes") or 0),
+                    "quality_rating": int(inputs.get("quality_rating") or 0),
+                    "extra_feedback": inputs.get("extra_feedback", ""),
+                    "role": inputs.get("role", ""),
+                    "audience": inputs.get("audience", ""),
+                    "product_line": inputs.get("product_line", ""),
+                    "industry": inputs.get("industry", "")
+                })
+            except Exception as e:
+                print(f"⚠️ Failed to push to Google Sheets: {e}")
+
             requests.post(
                 "https://webexapis.com/v1/messages",
                 headers={
@@ -528,7 +545,7 @@ def messages():
                 },
                 json={
                     "roomId": room_id,
-                    "markdown": "✅ Thanks for your feedback! It’s been saved to our database.\nOur developers take all feedback into consideration for future versions of the tool!."
+                    "markdown": "✅ Thanks for your feedback! It’s been saved to our database.\nOur developers take all feedback into consideration for future versions!"
                 }
             )
         elif action == "give_feedback":
