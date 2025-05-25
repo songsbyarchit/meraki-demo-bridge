@@ -1,4 +1,5 @@
-def get_mv_filter_card():
+def get_mv_filter_card(defaults=None):
+    defaults = defaults or {}
     return {
         "type": "AdaptiveCard",
         "version": "1.3",
@@ -25,7 +26,7 @@ def get_mv_filter_card():
                     {"title": "Indoor", "value": "indoor"},
                     {"title": "Outdoor", "value": "outdoor"}
                 ],
-                "value": "all"
+                "value": defaults.get("location", "")
             },
             {
                 "type": "Input.ChoiceSet",
@@ -38,7 +39,7 @@ def get_mv_filter_card():
                     {"title": "Narrow", "value": "narrow"},
                     {"title": "Fisheye", "value": "fisheye"}
                 ],
-                "value": "all"
+                "value": defaults.get("fov", "")
             },
             {
                 "type": "Input.ChoiceSet",
@@ -50,7 +51,7 @@ def get_mv_filter_card():
                     {"title": "15 FPS", "value": "15"},
                     {"title": "24 FPS", "value": "24"}
                 ],
-                "value": "all"
+                "value": defaults.get("max_fps", "")
             },
             {
                 "type": "Input.ChoiceSet",
@@ -62,7 +63,7 @@ def get_mv_filter_card():
                     {"title": "1080p", "value": "1080p"},
                     {"title": "4K", "value": "4K"}
                 ],
-                "value": "all"
+                "value": defaults.get("resolution", "")
             }
         ],
         "actions": [

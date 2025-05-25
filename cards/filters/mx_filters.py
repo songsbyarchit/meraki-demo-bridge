@@ -1,4 +1,5 @@
-def get_mx_filter_card():
+def get_mx_filter_card(defaults=None):
+    defaults = defaults or {}
     return {
         "type": "AdaptiveCard",
         "version": "1.3",
@@ -25,7 +26,7 @@ def get_mx_filter_card():
                 "type": "Input.ChoiceSet",
                 "id": "use_case",
                 "style": "compact",
-                "value": "",
+                "value": defaults.get("use_case", ""),
                 "choices": [
                     {"title": "--- Show all ---", "value": ""},
                     {"title": "Branch", "value": "branch"},
@@ -44,7 +45,7 @@ def get_mx_filter_card():
                 "type": "Input.ChoiceSet",
                 "id": "min_throughput",
                 "style": "compact",
-                "value": "",
+                "value": defaults.get("min_throughput", ""),
                 "choices": [
                     {"title": "--- Show all ---", "value": ""},
                     {"title": "200+", "value": "200"},
@@ -63,7 +64,7 @@ def get_mx_filter_card():
                 "type": "Input.ChoiceSet",
                 "id": "min_users",
                 "style": "compact",
-                "value": "",
+                "value": defaults.get("min_users", ""),
                 "choices": [
                     {"title": "--- Show all ---", "value": ""},
                     {"title": "50+", "value": "50"},
@@ -82,7 +83,7 @@ def get_mx_filter_card():
                 "type": "Input.ChoiceSet",
                 "id": "uplink_ports",
                 "style": "compact",
-                "value": "",
+                "value": defaults.get("uplink_ports", ""),
                 "choices": [
                     {"title": "--- Show all ---", "value": ""},
                     {"title": "1G", "value": "1g"},
@@ -96,14 +97,16 @@ def get_mx_filter_card():
                 "id": "has_wireless",
                 "title": "Only show models with wireless support",
                 "valueOn": "true",
-                "valueOff": "false"
+                "valueOff": "false",
+                "value": defaults.get("has_wireless", "false")
             },
             {
                 "type": "Input.Toggle",
                 "id": "has_cellular",
                 "title": "Only show models with cellular support",
                 "valueOn": "true",
-                "valueOff": "false"
+                "valueOff": "false",
+                "value": defaults.get("has_cellular", "false")
             }
         ],
         "actions": [

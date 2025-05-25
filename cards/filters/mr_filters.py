@@ -1,4 +1,5 @@
-def get_mr_filter_card():
+def get_mr_filter_card(defaults=None):
+    defaults = defaults or {}
     return {
         "type": "AdaptiveCard",
         "version": "1.3",
@@ -15,7 +16,6 @@ def get_mr_filter_card():
                 "wrap": True
             },
 
-            # Wi-Fi Standard
             {
                 "type": "TextBlock",
                 "text": "Wi-Fi Standard",
@@ -26,7 +26,7 @@ def get_mr_filter_card():
                 "type": "Input.ChoiceSet",
                 "id": "wifi_standard",
                 "style": "compact",
-                "value": "",
+                "value": defaults.get("wifi_standard", ""),
                 "choices": [
                     {"title": "--- Select Wi-Fi Standard ---", "value": ""},
                     {"title": "Wi-Fi 5", "value": "wi-fi 5"},
@@ -36,7 +36,6 @@ def get_mr_filter_card():
                 ]
             },
 
-            # Radios
             {
                 "type": "TextBlock",
                 "text": "Number of Radios",
@@ -47,7 +46,7 @@ def get_mr_filter_card():
                 "type": "Input.ChoiceSet",
                 "id": "radios",
                 "style": "compact",
-                "value": "",
+                "value": defaults.get("radios", ""),
                 "choices": [
                     {"title": "--- Show all ---", "value": ""},
                     {"title": "2", "value": "2"},
@@ -55,7 +54,6 @@ def get_mr_filter_card():
                 ]
             },
 
-            # Antenna Type
             {
                 "type": "TextBlock",
                 "text": "Antenna Type",
@@ -66,7 +64,7 @@ def get_mr_filter_card():
                 "type": "Input.ChoiceSet",
                 "id": "antenna_type",
                 "style": "compact",
-                "value": "",
+                "value": defaults.get("antenna_type", ""),
                 "choices": [
                     {"title": "--- Show all ---", "value": ""},
                     {"title": "Internal", "value": "internal"},
@@ -74,22 +72,22 @@ def get_mr_filter_card():
                 ]
             },
 
-            # PoE (toggle)
             {
                 "type": "Input.Toggle",
                 "id": "poe",
                 "title": "Only show models with PoE support",
                 "valueOn": "true",
-                "valueOff": "false"
+                "valueOff": "false",
+                "value": defaults.get("poe", "false")
             },
 
-            # Catalyst (toggle)
             {
                 "type": "Input.Toggle",
                 "id": "catalyst",
                 "title": "Only show Catalyst models",
                 "valueOn": "true",
-                "valueOff": "false"
+                "valueOff": "false",
+                "value": defaults.get("catalyst", "false")
             }
         ],
         "actions": [

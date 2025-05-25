@@ -279,19 +279,24 @@ def messages():
             set_user_context(room_id, "sizing_family", selected_family)
             room_state[room_id] = {"stage": "awaiting_sizing_filters", "sizing_family": selected_family}
 
+            context = get_user_context(room_id)
             if selected_family == "MX":
-                send_card(room_id, get_mx_filter_card(), markdown="🔍 Let’s narrow down your MX options.")
+                defaults = get_user_context(room_id).get("last_filters_MX", {})
+                send_card(room_id, get_mx_filter_card(defaults), markdown="🔍 Let’s narrow down your MX options.")
             elif selected_family == "MR":
-                send_card(room_id, get_mr_filter_card(), markdown="🔍 Let’s narrow down your MR options.")
+                defaults = get_user_context(room_id).get("last_filters_MR", {})
+                send_card(room_id, get_mr_filter_card(defaults), markdown="🔍 Let’s narrow down your MR options.")
             elif selected_family == "MS":
-                send_card(room_id, get_ms_filter_card(), markdown="🔍 Let’s narrow down your MS options.")
+                defaults = get_user_context(room_id).get("last_filters_MS", {})
+                send_card(room_id, get_ms_filter_card(defaults), markdown="🔍 Let’s narrow down your MS options.")
             elif selected_family == "MV":
-                send_card(room_id, get_mv_filter_card(), markdown="🔍 Let’s narrow down your MV options.")
-            else:
-                send_card(room_id, get_homepage_card(), markdown="⚠️ Unknown product family. Returning home.")
+                defaults = get_user_context(room_id).get("last_filters_MV", {})
+                send_card(room_id, get_mv_filter_card(defaults), markdown="🔍 Let’s narrow down your MV options.")
+
                 
         elif action == "filter_mx_models":
             filters = action_detail.get("inputs", {})
+            set_user_context(room_id, "last_filters_MX", filters)
             results, error = filter_mx_models(filters)
             if error:
                 requests.post(
@@ -318,9 +323,11 @@ def messages():
                         "markdown": f"🔎 **Matching MX Models:**\n\n{formatted}"
                     }
                 )
+                send_card(room_id, get_sizing_follow_up_card("MX"), markdown="✅ You’ve completed MX sizing.")
 
         elif action == "filter_mr_models":
             filters = action_detail.get("inputs", {})
+            set_user_context(room_id, "last_filters_MR", filters)
             results, error = filter_mr_models(filters)
             if error:
                 requests.post(
@@ -347,9 +354,12 @@ def messages():
                         "markdown": f"🔎 **Matching MR Models:**\n\n{formatted}"
                     }
                 )
+                send_card(room_id, get_sizing_follow_up_card("MR"), markdown="✅ You’ve completed MX sizing.")
+
 
         elif action == "filter_ms_models":
             filters = action_detail.get("inputs", {})
+            set_user_context(room_id, "last_filters_MS", filters)
             results, error = filter_ms_models(filters)
             if error:
                 requests.post(
@@ -376,9 +386,12 @@ def messages():
                         "markdown": f"🔎 **Matching MS Models:**\n\n{formatted}"
                     }
                 )
+                send_card(room_id, get_sizing_follow_up_card("MS"), markdown="✅ You’ve completed MX sizing.")
+
 
         elif action == "filter_mv_models":
             filters = action_detail.get("inputs", {})
+            set_user_context(room_id, "last_filters_MV", filters)
             results, error = filter_mv_models(filters)
             if error:
                 requests.post(
@@ -405,6 +418,8 @@ def messages():
                         "markdown": f"🔎 **Matching MV Models:**\n\n{formatted}"
                     }
                 )
+                send_card(room_id, get_sizing_follow_up_card("MV"), markdown="✅ You’ve completed MX sizing.")
+
 
         elif action == "case_study":
             room_state[room_id] = {"mode": "case_study"}

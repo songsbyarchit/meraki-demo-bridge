@@ -1,4 +1,5 @@
-def get_ms_filter_card(force_refresh=False):
+def get_ms_filter_card(defaults=None):
+    defaults = defaults or {}
     return {
         "type": "AdaptiveCard",
         "version": "1.3",
@@ -25,7 +26,7 @@ def get_ms_filter_card(force_refresh=False):
                 "type": "Input.ChoiceSet",
                 "id": "poe_support",
                 "style": "compact",
-                "value": "",
+                "value": defaults.get("poe_support", ""),
                 "choices": [
                     {"title": "--- Show all ---", "value": ""},
                     {"title": "PoE", "value": "poe"},
@@ -44,7 +45,7 @@ def get_ms_filter_card(force_refresh=False):
                 "type": "Input.ChoiceSet",
                 "id": "routing",
                 "style": "compact",
-                "value": "",
+                "value": defaults.get("routing", ""),
                 "choices": [
                     {"title": "--- Select Routing ---", "value": ""},
                     {"title": "Layer 2 only", "value": "layer 2 only"},
@@ -62,7 +63,7 @@ def get_ms_filter_card(force_refresh=False):
                 "type": "Input.ChoiceSet",
                 "id": "min_ports_1gbe",
                 "style": "compact",
-                "value": "",
+                "value": defaults.get("min_ports_1gbe", ""),
                 "choices": [
                     {"title": "--- Show all ---", "value": ""},
                     {"title": "8+", "value": "8"},
@@ -81,7 +82,7 @@ def get_ms_filter_card(force_refresh=False):
                 "type": "Input.ChoiceSet",
                 "id": "min_ports_mgig",
                 "style": "compact",
-                "value": "",
+                "value": defaults.get("min_ports_mgig", ""),
                 "choices": [
                     {"title": "--- Show all ---", "value": ""},
                     {"title": "1+", "value": "1"},
@@ -94,14 +95,16 @@ def get_ms_filter_card(force_refresh=False):
                 "id": "stackable",
                 "title": "Only show stackable models",
                 "valueOn": "true",
-                "valueOff": "false"
+                "valueOff": "false",
+                "value": defaults.get("stackable", "false")
             },
             {
                 "type": "Input.Toggle",
                 "id": "catalyst",
                 "title": "Only show Catalyst models",
                 "valueOn": "true",
-                "valueOff": "false"
+                "valueOff": "false",
+                "value": defaults.get("catalyst", "false")
             }
         ],
         "actions": [
