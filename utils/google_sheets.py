@@ -16,13 +16,7 @@ def push_feedback_to_sheets(data):
     if not sheet_id:
         raise ValueError("Missing GOOGLE_SHEET_ID in environment variables.")
 
-    sheet_map = {
-        "demo_flow": "Demo Feedback",
-        "sizing": "Sizing Feedback",
-        "case_study": "Case Study Feedback"
-    }
-
-    tab_name = sheet_map.get(data["tool_used"], "General Feedback")
+    tab_name = "All Feedback"
     sheet = client.open_by_key(sheet_id)
 
     try:
