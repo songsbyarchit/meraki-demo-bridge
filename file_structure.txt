@@ -1,0 +1,849 @@
+.
+├── app.py
+├── cards
+│   ├── __init__.py
+│   ├── base_card.py
+│   ├── case_study_card.py
+│   ├── case_study_follow_up.py
+│   ├── datasheet_link_helper.py
+│   ├── demo_done_selector.py
+│   ├── demo_length_selector.py
+│   ├── feedback_card.py
+│   ├── feedback_follow_up_card.py
+│   ├── filters
+│   │   ├── mr_filters.py
+│   │   ├── ms_filters.py
+│   │   ├── mv_filters.py
+│   │   └── mx_filters.py
+│   ├── homepage.py
+│   ├── options_selector.py
+│   ├── sizing_follow_up.py
+│   └── sizing_selector.py
+├── case_studies.json
+├── case_study_embeddings.json
+├── database.py
+├── demo_flows
+│   ├── customer
+│   │   ├── federal_gov
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── finance
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── healthcare
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── higher_ed
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── hospitality
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── k12
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── manufacturing
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── professional_services
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── retail
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── service_provider
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── small_business
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   └── state_local_gov
+│   │       ├── mg
+│   │       │   ├── 30min.md
+│   │       │   └── 60min.md
+│   │       ├── mr
+│   │       │   ├── 30min.md
+│   │       │   └── 60min.md
+│   │       ├── ms
+│   │       │   ├── 30min.md
+│   │       │   └── 60min.md
+│   │       ├── mt
+│   │       │   ├── 30min.md
+│   │       │   └── 60min.md
+│   │       ├── mv
+│   │       │   ├── 30min.md
+│   │       │   └── 60min.md
+│   │       ├── mx
+│   │       │   ├── 30min.md
+│   │       │   └── 60min.md
+│   │       └── sm
+│   │           ├── 30min.md
+│   │           └── 60min.md
+│   ├── internal
+│   │   ├── federal_gov
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── finance
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── healthcare
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── higher_ed
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── hospitality
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── k12
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── manufacturing
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── professional_services
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── retail
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── service_provider
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── small_business
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   └── state_local_gov
+│   │       ├── mg
+│   │       │   ├── 30min.md
+│   │       │   └── 60min.md
+│   │       ├── mr
+│   │       │   ├── 30min.md
+│   │       │   └── 60min.md
+│   │       ├── ms
+│   │       │   ├── 30min.md
+│   │       │   └── 60min.md
+│   │       ├── mt
+│   │       │   ├── 30min.md
+│   │       │   └── 60min.md
+│   │       ├── mv
+│   │       │   ├── 30min.md
+│   │       │   └── 60min.md
+│   │       ├── mx
+│   │       │   ├── 30min.md
+│   │       │   └── 60min.md
+│   │       └── sm
+│   │           ├── 30min.md
+│   │           └── 60min.md
+│   └── partner
+│       ├── federal_gov
+│       │   ├── mg
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mr
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── ms
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mt
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mv
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mx
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   └── sm
+│       │       ├── 30min.md
+│       │       └── 60min.md
+│       ├── finance
+│       │   ├── mg
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mr
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── ms
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mt
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mv
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mx
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   └── sm
+│       │       ├── 30min.md
+│       │       └── 60min.md
+│       ├── healthcare
+│       │   ├── mg
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mr
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── ms
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mt
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mv
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mx
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   └── sm
+│       │       ├── 30min.md
+│       │       └── 60min.md
+│       ├── higher_ed
+│       │   ├── mg
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mr
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── ms
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mt
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mv
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mx
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   └── sm
+│       │       ├── 30min.md
+│       │       └── 60min.md
+│       ├── hospitality
+│       │   ├── mg
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mr
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── ms
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mt
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mv
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mx
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   └── sm
+│       │       ├── 30min.md
+│       │       └── 60min.md
+│       ├── k12
+│       │   ├── mg
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mr
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── ms
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mt
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mv
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mx
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   └── sm
+│       │       ├── 30min.md
+│       │       └── 60min.md
+│       ├── manufacturing
+│       │   ├── mg
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mr
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── ms
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mt
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mv
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mx
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   └── sm
+│       │       ├── 30min.md
+│       │       └── 60min.md
+│       ├── professional_services
+│       │   ├── mg
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mr
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── ms
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mt
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mv
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mx
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   └── sm
+│       │       ├── 30min.md
+│       │       └── 60min.md
+│       ├── retail
+│       │   ├── mg
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mr
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── ms
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mt
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mv
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mx
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   └── sm
+│       │       ├── 30min.md
+│       │       └── 60min.md
+│       ├── service_provider
+│       │   ├── mg
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mr
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── ms
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mt
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mv
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mx
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   └── sm
+│       │       ├── 30min.md
+│       │       └── 60min.md
+│       ├── small_business
+│       │   ├── mg
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mr
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── ms
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mt
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mv
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mx
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   └── sm
+│       │       ├── 30min.md
+│       │       └── 60min.md
+│       └── state_local_gov
+│           ├── mg
+│           │   ├── 30min.md
+│           │   └── 60min.md
+│           ├── mr
+│           │   ├── 30min.md
+│           │   └── 60min.md
+│           ├── ms
+│           │   ├── 30min.md
+│           │   └── 60min.md
+│           ├── mt
+│           │   ├── 30min.md
+│           │   └── 60min.md
+│           ├── mv
+│           │   ├── 30min.md
+│           │   └── 60min.md
+│           ├── mx
+│           │   ├── 30min.md
+│           │   └── 60min.md
+│           └── sm
+│               ├── 30min.md
+│               └── 60min.md
+├── demo_writer.py
+├── file_structure.txt
+├── fill_summaries.py
+├── generate_case_study_embeddings.py
+├── generate_summaries.py
+├── init_db.py
+├── match_case_studies.py
+├── models
+│   ├── feedback.py
+│   ├── mr.py
+│   ├── ms.py
+│   ├── mv.py
+│   └── mx.py
+├── README.md
+├── requirements.txt
+├── seed_data.py
+├── top_case_studies.json
+├── top3_generator.py
+└── utils
+    ├── __init__.py
+    ├── case_study_matcher.py
+    ├── demo_loader.py
+    ├── filter_engine.py
+    ├── google_sheets.py
+    ├── label_maps.py
+    ├── static_case_study_lookup.py
+    └── webex.py
+
+297 directories, 550 files

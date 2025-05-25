@@ -1,6 +1,7 @@
 from flask import Flask, request
 from dotenv import load_dotenv
 from cards.homepage import get_homepage_card
+from cards.feedback_card import get_feedback_card
 from cards.options_selector import get_options_selector_card_with_defaults
 from cards.case_study_card import get_case_study_card
 from utils.webex import send_card
@@ -17,6 +18,9 @@ from cards.filters.mx_filters import get_mx_filter_card
 from cards.filters.mv_filters import get_mv_filter_card
 from cards.sizing_follow_up import get_sizing_follow_up_card
 from utils.filter_engine import filter_mx_models, filter_mr_models, filter_ms_models, filter_mv_models
+from cards.feedback_follow_up_card import get_feedback_follow_up_card
+from models.feedback import Feedback
+from database import SessionLocal
 
 load_dotenv()
 WEBEX_TOKEN = os.getenv("WEBEX_BOT_TOKEN")
@@ -44,6 +48,7 @@ def set_user_context(user_id, key, value):
 
 @app.route("/messages", methods=["POST"])
 def messages():
+    db = SessionLocal()
     data = request.json
     print("⟳ Incoming webhook:", data)
     print("⚙️  BOT_ID is", BOT_ID)
@@ -447,6 +452,37 @@ def messages():
                     get_options_selector_card_with_defaults(audience="", vertical="", product_line=""),
                     markdown="Select your options"
                 )
+        elif action == "submit_feedback":
+            inputs = action_detail.get("inputs", {})
+            new_entry = Feedback(
+                room_id         = room_id,
+                role            = inputs.get("role"),
+                audience        = inputs.get("audience"),
+                product_line    = inputs.get("product_line"),
+                industry        = inputs.get("industry"),
+                tool_used       = inputs.get("used_tool"),
+                usual_minutes   = int(inputs.get("usual_minutes") or 0),
+                bridge_minutes  = int(inputs.get("bridge_minutes") or 0),
+                quality_rating  = int(inputs.get("quality_rating") or 0),
+                extra_feedback  = inputs.get("extra_feedback", "")
+            )
+            db.add(new_entry)
+            db.commit()
+
+            requests.post(
+                "https://webexapis.com/v1/messages",
+                headers={
+                    "Authorization": f"Bearer {WEBEX_TOKEN}",
+                    "Content-Type": "application/json"
+                },
+                json={
+                    "roomId": room_id,
+                    "markdown": "✅ Thanks for your feedback! It’s been saved to our database."
+                }
+            )
+        elif action == "give_feedback":
+            room_state[room_id] = {"stage": "giving_feedback"}
+            send_card(room_id, get_feedback_card(), markdown="📝 We'd love your feedback.")
         else:
             send_card(room_id, get_homepage_card(), markdown="⚠️ Couldn’t find your previous top 3. Returning home.")
     return "OK"
