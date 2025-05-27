@@ -1,0 +1,34 @@
+Room ID,Tool Used,Usual Minutes,Bridge Minutes,Quality Rating,Extra Feedback,Timestamp,Role,Audience,Product Line,Industry
+Y2lzY29zcGFyazovL3VzL1JPT00vqy2qcfaca70v9m23vnx2x2vxowisccu7jlo2,case_study,50,15,3,,2025-05-01 09:11:28,Technical Solutions Architect,internal,mv,k12
+Y2lzY29zcGFyazovL3VzL1JPT00vo1ejtcd8is5szw3royicrufkhynwigitobd3,case_study,35,35,3,,2025-05-01 10:40:19,Sales Leader,customer,mt,higher_ed
+Y2lzY29zcGFyazovL3VzL1JPT00vdrrecreq9g7ypqz7sslk08qrau6ooe5anyqe,case_study,35,20,3,,2025-05-06 10:25:00,Account Executive,internal,ms,higher_ed
+Y2lzY29zcGFyazovL3VzL1JPT00vjhxtx28p52lmkffbzxw199j845bx75cgsy38,case_study,50,45,4,,2025-05-06 10:33:11,Account Executive,customer,mr,k12
+Y2lzY29zcGFyazovL3VzL1JPT00v22hc922drhgbwqt1c4tecerrjbjmssbnuyeb,demo_flow,35,25,4,,2025-05-06 10:45:46,Other,customer,mx,k12
+Y2lzY29zcGFyazovL3VzL1JPT00vic4ftc2rutux9tikr6u0ozs5umrkwjqh88v7,demo_flow,40,10,4,,2025-05-07 11:34:46,Sales Leader,partner,mr,small_business
+Y2lzY29zcGFyazovL3VzL1JPT00vyajti1bb1w6dyfypz898khrvo7nvmxfa42w2,case_study,60,50,5,,2025-05-07 11:46:34,Other,internal,ms,higher_ed
+Y2lzY29zcGFyazovL3VzL1JPT00v8ofzp5xu3nu6rfa986v1p3ykg93lpkor2uu1,sizing,50,50,3,,2025-05-07 12:48:23,Sales Leader,customer,ms,higher_ed
+Y2lzY29zcGFyazovL3VzL1JPT00vkimi8qyueb7brgvy923q5t8qbuabe5atd99v,case_study,35,35,4,,2025-05-07 14:05:24,Technical Solutions Architect,internal,mt,k12
+Y2lzY29zcGFyazovL3VzL1JPT00v8fmm80hoj9nfv0t0cj8djqva62jxi79ldyyn,demo_flow,45,20,4,,2025-05-07 15:45:03,Other,internal,ms,k12
+Y2lzY29zcGFyazovL3VzL1JPT00vk1jw6fxjvrgrol8m5mihsenipgp6h2mvx4ta,sizing,35,15,3,,2025-05-08 08:42:47,Technical Solutions Architect,internal,mr,k12
+Y2lzY29zcGFyazovL3VzL1JPT00vjiypw4do25q0eb8us8b88dea4uvf8h179zfq,sizing,55,15,5,,2025-05-08 11:05:38,Account Executive,internal,mx,k12
+Y2lzY29zcGFyazovL3VzL1JPT00v1qdlsaptmpv5xizvombng2cvyvmqbmib8whc,demo_flow,35,25,5,,2025-05-08 11:11:08,Systems Engineer,partner,mx,higher_ed
+Y2lzY29zcGFyazovL3VzL1JPT00vi0dn5hmve8ia7h6rzwpa9ghbbey44gtc8kyw,demo_flow,30,30,5,,2025-05-08 14:05:15,Sales Leader,customer,mv,higher_ed
+Y2lzY29zcGFyazovL3VzL1JPT00vtt3u2bo2at2vlyfg6tj2nluv13w5xq4fwa55,demo_flow,60,60,3,,2025-05-13 09:35:34,Other,internal,mr,k12
+Y2lzY29zcGFyazovL3VzL1JPT00viv5ril283mh5hnji1xj067a2bhxznhg3d35w,case_study,60,20,4,,2025-05-13 10:05:58,Systems Engineer,partner,mv,small_business
+Y2lzY29zcGFyazovL3VzL1JPT00vvn1ky08mtmr7ckvfno7pissff6c8mx7lqa9s,case_study,50,50,5,,2025-05-13 10:49:29,Technical Solutions Architect,internal,mr,higher_ed
+Y2lzY29zcGFyazovL3VzL1JPT00vb3m0cya144rq08k78cdf5or9sgq2hziocmvm,case_study,45,35,5,,2025-05-13 11:09:15,Technical Solutions Architect,partner,mt,k12
+Y2lzY29zcGFyazovL3VzL1JPT00vj06j55hrozv67xsgwuc7mate7zqeb81qyqvi,demo_flow,55,30,4,,2025-05-13 11:18:26,Technical Solutions Architect,customer,mx,state_local_gov
+Y2lzY29zcGFyazovL3VzL1JPT00vxyk0dclhpor3jqsjmfvoor1pnrh7uepuxjrx,sizing,30,20,3,,2025-05-13 13:51:43,Other,partner,mv,small_business
+Y2lzY29zcGFyazovL3VzL1JPT00v2u0llycaepunzx7ntzoaivyitqzjopdty9vu,sizing,35,25,4,,2025-05-14 09:21:13,Other,customer,mt,k12
+Y2lzY29zcGFyazovL3VzL1JPT00voyh8jmb1xucewkhdtr9s4645l7wmpd1imwnh,sizing,35,35,2,,2025-05-14 10:21:18,Technical Solutions Architect,internal,mt,state_local_gov
+Y2lzY29zcGFyazovL3VzL1JPT00vwwrscr2xow670wfl1xar38hzin6idgz019cf,demo_flow,40,10,4,,2025-05-14 11:13:32,Sales Leader,customer,ms,higher_ed
+Y2lzY29zcGFyazovL3VzL1JPT00vher3yeaj4vppm8s8sr4d6g96pvh2eydgcofc,demo_flow,50,45,4,,2025-05-14 14:45:57,Sales Leader,customer,mr,higher_ed
+Y2lzY29zcGFyazovL3VzL1JPT00vnh6xkqfdii6spa5o33rxcw4yi30y5y68ooc1,demo_flow,35,5,5,,2025-05-14 16:17:15,Sales Leader,partner,ms,k12
+Y2lzY29zcGFyazovL3VzL1JPT00vue74huxun3jdu222d8anetd0gwd0ka2c53sr,demo_flow,35,10,5,,2025-05-15 10:39:06,Systems Engineer,internal,mv,small_business
+Y2lzY29zcGFyazovL3VzL1JPT00vMzNhNThmMTAtMjdiNC0xMWYwLTlmZDUtNTVjMjdiNGY5OTc1,demo_flow,50,20,4,,2025-05-15 10:52:54,Systems Engineer,customer,ms,k12
+Y2lzY29zcGFyazovL3VzL1JPT00vn8kn9ql6z1wr59ncu0fv8u0c5o1jo4kecbvh,demo_flow,60,40,2,,2025-05-21 12:31:38,Sales Leader,customer,ms,k12
+Y2lzY29zcGFyazovL3VzL1JPT00vmkxfii6dpdc2afcx2am7ldrr4rpjl9nr6ize,case_study,55,35,2,,2025-05-21 15:41:39,Technical Solutions Architect,customer,mt,k12
+Y2lzY29zcGFyazovL3VzL1JPT00vbi5xqi7fvmkhryfzczae53nisr11474ju13k,demo_flow,40,25,5,,2025-05-21 16:59:34,Account Executive,internal,mv,k12
+Y2lzY29zcGFyazovL3VzL1JPT00vj56ur5nvbfl33nheokrchm9bs8gidp9zff5w,demo_flow,40,25,2,,2025-05-22 10:38:09,Systems Engineer,partner,mx,k12
+Y2lzY29zcGFyazovL3VzL1JPT00vujtyvo3fhyhkpdqnjg96kfelfo172cvc1xy7,demo_flow,55,40,2,,2025-05-22 13:23:27,Account Executive,customer,ms,state_local_gov
+Y2lzY29zcGFyazovL3VzL1JPT00vlw672uq1zgmfj1wz139bs7ki1m7pg8agtaoc,demo_flow,45,5,4,,2025-05-22 17:10:29,Other,internal,mr,higher_ed

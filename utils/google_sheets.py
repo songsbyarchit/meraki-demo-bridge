@@ -25,8 +25,8 @@ def push_feedback_to_sheets(data):
         worksheet = sheet.add_worksheet(title=tab_name, rows="1000", cols="20")
         worksheet.append_row([
             "Room ID", "Tool Used", "Usual Minutes", "Bridge Minutes",
-            "Quality Rating", "Extra Feedback", "Timestamp", "Role",
-            "Audience", "Product Line", "Industry"
+            "Percentage Time Saved", "Quality Rating", "Extra Feedback", "Timestamp",
+            "Role", "Audience", "Product Line", "Industry"
         ])
 
     row = [
@@ -34,13 +34,15 @@ def push_feedback_to_sheets(data):
         data.get("tool_used", ""),
         data.get("usual_minutes", ""),
         data.get("bridge_minutes", ""),
+        data.get("percentage_time_saved", ""),
         data.get("quality_rating", ""),
-        data.get("extra_feedback", ""),
         datetime.now(timezone("Europe/London")).strftime("%Y-%m-%d %H:%M:%S"),
         data.get("role", ""),
         data.get("audience", ""),
         data.get("product_line", ""),
-        data.get("industry", "")
+        data.get("industry", ""),
+        data.get("extra_feedback", ""),
     ]
+
     worksheet.append_row(row)
     print(f"✅ Pushed feedback row to '{tab_name}' tab.")

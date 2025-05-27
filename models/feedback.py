@@ -19,6 +19,7 @@ class Feedback(Base):
     tool_used = Column(String)
     usual_minutes = Column(Integer)
     bridge_minutes = Column(Integer)
+    percentage_time_saved = Column(Integer)  # Can be negative or positive
     quality_rating = Column(Integer)
-    extra_feedback = Column(Text)
     timestamp = Column(DateTime, default=datetime.utcnow)
+    extra_feedback = Column(Text)

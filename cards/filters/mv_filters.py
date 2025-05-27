@@ -66,16 +66,21 @@ def get_mv_filter_card(defaults=None):
                 "value": defaults.get("resolution", "")
             }
         ],
-        "actions": [
-            {
-                "type": "Action.Submit",
-                "title": "Show Matching Models",
-                "data": {"action": "filter_mv_models"}
-            },
-            {
-                "type": "Action.Submit",
-                "title": "Back",
-                "data": {"action": "sizing"}
-            }
-        ]
+            "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Find Matching Models",
+            "data": {"action": "filter_mv_models"}
+        },
+        {
+            "type": "Action.Submit",
+            "title": "Return to Category Selection",
+            "data": {"action": "sizing"}
+        },
+        {
+            "type": "Action.Submit",
+            "title": "Return Home 🏠",
+            "data": {"action": "restart"}
+        }
+    ]
     }

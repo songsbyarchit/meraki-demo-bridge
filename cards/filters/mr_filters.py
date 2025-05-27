@@ -100,6 +100,11 @@ def get_mr_filter_card(defaults=None):
                 "type": "Action.Submit",
                 "title": "Return to Category Selection",
                 "data": {"action": "sizing"}
+            },
+            {
+                "type": "Action.Submit",
+                "title": "Return Home 🏠",
+                "data": {"action": "restart"}
             }
         ]
     }

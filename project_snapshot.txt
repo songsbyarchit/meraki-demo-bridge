@@ -1,0 +1,3520 @@
+📁 Project Root: /Users/arsachde/Downloads/meraki-demo-bridge
+
+===== FILE: requirements.txt =====
+
+annotated-types==0.7.0
+anyio==4.9.0
+blinker==1.9.0
+cachetools==5.5.2
+certifi==2025.4.26
+charset-normalizer==3.4.2
+click==8.1.8
+distro==1.9.0
+filelock==3.18.0
+Flask==3.1.0
+fsspec==2025.3.2
+future==1.0.0
+google-auth==2.40.2
+google-auth-oauthlib==1.2.2
+gspread==6.2.1
+h11==0.16.0
+httpcore==1.0.9
+httplib2==0.22.0
+httpx==0.28.1
+huggingface-hub==0.31.2
+idna==3.10
+itsdangerous==2.2.0
+Jinja2==3.1.6
+jiter==0.9.0
+joblib==1.5.0
+MarkupSafe==3.0.2
+mpmath==1.3.0
+networkx==3.4.2
+numpy==2.2.5
+oauth2client==4.1.3
+oauthlib==3.2.2
+openai==1.77.0
+packaging==25.0
+pandas==2.2.3
+pillow==11.2.1
+psycopg2-binary==2.9.10
+pyasn1==0.6.1
+pyasn1_modules==0.4.2
+pydantic==2.11.4
+pydantic_core==2.33.2
+PyJWT==1.7.1
+pyparsing==3.2.3
+python-dateutil==2.9.0.post0
+python-dotenv==1.1.0
+pytz==2025.2
+PyYAML==6.0.2
+regex==2024.11.6
+requests==2.32.3
+requests-oauthlib==2.0.0
+requests-toolbelt==1.0.0
+rsa==4.9.1
+safetensors==0.5.3
+scikit-learn==1.6.1
+scipy==1.15.3
+sentence-transformers==4.1.0
+setuptools==80.7.1
+six==1.17.0
+sniffio==1.3.1
+SQLAlchemy==2.0.41
+sympy==1.14.0
+threadpoolctl==3.6.0
+tokenizers==0.21.1
+torch==2.7.0
+tqdm==4.67.1
+transformers==4.51.3
+typing-inspection==0.4.0
+typing_extensions==4.13.2
+tzdata==2025.2
+urllib3==2.4.0
+webexteamssdk==1.7
+Werkzeug==3.1.3
+
+
+===== FILE: project_snapshot.txt =====
+
+
+
+===== FILE: generate_case_study_embeddings.py =====
+
+import json
+import torch
+from sentence_transformers import SentenceTransformer, util
+import os
+
+model = SentenceTransformer("all-MiniLM-L6-v2")
+
+with open("case_studies.json") as f:
+    case_studies = json.load(f)
+
+if not os.path.exists("case_study_embeddings.json"):
+    print("⚙️ Generating embeddings...")
+    texts = [entry["text"] for entry in case_studies]
+    embeddings = model.encode(texts, convert_to_numpy=True)
+    with open("case_study_embeddings.json", "w") as f:
+        json.dump(embeddings.tolist(), f)
+        print(f"✅ Saved {len(embeddings)} embeddings to case_study_embeddings.json")
+
+else:
+    with open("case_study_embeddings.json") as f:
+        embeddings = json.load(f)
+
+case_embeddings = embeddings
+
+def match_case_studies(query, top_k=3):
+    query_embedding = model.encode(query, convert_to_tensor=True)
+    with open("case_study_embeddings.json") as f:
+        case_embeddings = json.load(f)
+    embedding_tensor = torch.tensor(case_embeddings)
+    hits = util.semantic_search(query_embedding, embedding_tensor, top_k=top_k)[0]
+    matches = [case_studies[hit["corpus_id"]] for hit in hits]
+    return matches
+
+===== FILE: generate_summaries.py =====
+
+import json
+import os
+from openai import OpenAI
+from tqdm import tqdm
+
+# Set your API key
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+# Load case studies
+with open("case_studies.json", "r") as f:
+    case_studies = json.load(f)
+
+# Load top matches
+with open("top_case_studies.json", "r") as f:
+    top_case_studies = json.load(f)
+
+# Create mapping from URL to case study text
+url_to_text = {case["url"]: case.get("text", "") for case in case_studies}
+
+# Loop through and summarise
+seen = set()
+
+for key, matches in tqdm(top_case_studies.items(), desc="Summarising"):
+    for match in matches:
+        if "summary" in match or match["url"] in seen:
+            continue
+        seen.add(match["url"])
+
+        url = match["url"]
+        full_text = url_to_text.get(url, "")
+        if not full_text:
+            match["summary"] = "⚠️ No content found to summarise."
+            continue
+
+        print(f"🔍 Summarising: {match['title']}")
+        try:
+            completion = client.chat.completions.create(
+                model="gpt-4",  # or "gpt-3.5-turbo"
+                messages=[
+                    {"role": "system", "content": "You are a concise technical summariser."},
+                    {"role": "user", "content": f"""Summarise this case study into 4–7 bullet points. Focus on results, key metrics, and outcomes. Keep as much of the original phrasing as possible. Only output bullet points:\n\n{full_text}"""}
+                ],
+                temperature=0.4
+            )
+            match["summary"] = completion.choices[0].message.content.strip()
+        except Exception as e:
+            print(f"❌ Failed to summarise {match['title']}: {e}")
+            match["summary"] = f"⚠️ Error during summary: {str(e)}"
+
+# Save back
+with open("top_case_studies.json", "w") as f:
+    json.dump(top_case_studies, f, indent=2)
+
+print("✅ Summaries added to top_case_studies.json")
+
+===== FILE: fill_summaries.py =====
+
+import json
+
+# === Step 1: Load JSON ===
+with open("top_case_studies.json", "r", encoding="utf-8") as f:
+    data = json.load(f)
+
+# === Step 2: Build title → summary map (only non-empty summaries) ===
+title_to_summary = {}
+for section in data.values():
+    for entry in section:
+        title = entry.get("title")
+        summary = entry.get("summary", "").strip()
+        if title and summary:
+            title_to_summary[title] = summary
+
+# === Step 3: Fill missing summaries using title match ===
+filled_count = 0
+for section in data.values():
+    for entry in section:
+        title = entry.get("title")
+        summary = entry.get("summary", "").strip()
+        if title and not summary and title in title_to_summary:
+            entry["summary"] = title_to_summary[title]
+            filled_count += 1
+
+# === Step 4: Save updated file (overwrite same file) ===
+with open("top_case_studies.json", "w", encoding="utf-8") as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+
+print(f"✅ Filled {filled_count} missing summaries based on matching titles. Output written to 'top_case_studies.json'.")
+
+
+===== FILE: database.py =====
+
+# database.py
+import os
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker, declarative_base
+from dotenv import load_dotenv
+
+load_dotenv()
+
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+engine = create_engine(DATABASE_URL)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+Base = declarative_base()
+
+===== FILE: demo_writer.py =====
+
+import os
+import openai
+from dotenv import load_dotenv
+from pathlib import Path
+import time
+from utils.label_maps import vertical_map
+
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+MAX_WRITES_PER_RUN = 404
+
+audiences = {
+    "customer": "Speak to them as IT admins or financial decision makers. Emphasise operational impact and cost justification.",
+    "partner": "Help them pitch to customers. Explain pain points customers care about and how to position Meraki.",
+    "internal": "Focus on partner enablement and supporting them in pitching to customers effectively."
+}
+
+verticals = list(vertical_map.keys())
+
+products = ["mx", "mr", "ms", "mv", "mt", "sm", "mg"]
+lengths = ["30min", "60min"]
+
+base_path = Path("demo_flows")
+
+def build_prompt(audience, vertical, product, length):
+    time_scope = "two to three" if length == "30min" else "four to six"
+    vertical_label = vertical_map[vertical]
+    persona_instructions = audiences[audience]
+
+    # Define tailored FAQ seed prompts (with answers)
+    faq_tailoring = {
+        "customer": f"""End the script with 2–3 frequently asked questions that a customer in the {vertical_label} sector might ask about {product.upper()}, along with short, clear answers. For example:
+    Q: How does this solution reduce IT workload in our {vertical_label.lower()} environment?  
+    A: Meraki simplifies management through one dashboard and automates many tasks like updates and troubleshooting.
+
+    Q: What kind of ROI or cost reduction can we expect?  
+    A: Customers often report major time savings and reduced downtime, especially for remote sites.
+
+    Q: Can we integrate this with our existing systems and security policies?  
+    A: Yes — Meraki supports APIs, SAML, and integration with existing firewalls, Active Directory, and SIEM tools.""",
+
+        "partner": f"""End the script with 2–3 common questions a partner might ask when positioning {product.upper()} in the {vertical_label} space, each with a helpful answer. For example:
+    Q: What are the top {vertical_label.lower()} pain points this addresses?  
+    A: Usually lack of visibility, slow troubleshooting, and complexity managing multiple sites.
+
+    Q: How do we best position {product.upper()} during the pitch?  
+    A: Emphasise Meraki’s ease of use, single dashboard, and fast deployment with built-in security.
+
+    Q: What installation or deployment concerns should we be ready for?  
+    A: It’s typically plug-and-play, but partners should ensure licensing is pre-applied and templates are ready.""",
+
+        "internal": f"""End the script with 2–3 internal enablement FAQs to support partners selling {product.upper()} in the {vertical_label} space. Each answer should be practical. For example:
+    Q: What objections might the partner hear in {vertical_label.lower()}?  
+    A: Cost vs legacy vendors, and skepticism over cloud-managed security — arm them with TCO comparisons.
+
+    Q: What enablement do we provide for partners?  
+    A: Access to demo kits, dashboards, playbooks, and partner-exclusive webinars.
+
+    Q: How do we support onboarding post-sale?  
+    A: We offer co-delivery workshops, pre-built config templates, and Meraki support handles escalations fast."""
+    }
+
+
+    return f"""
+You are building a {length} demo script for Cisco Meraki.
+
+Product: **{product.upper()}**  
+Audience: **{audience.title()}**  
+Sector: **{vertical_label}**
+
+{persona_instructions}
+
+Start with a short, friendly intro that reminds the presenter of:
+- Who they are speaking to (e.g. partner reseller, customer IT admin, or internal SE)
+- What the purpose of this demo is
+- 1–2 warm-up questions tailored to the audience type:
+    - For partners: What trends or challenges are you seeing with customers in this sector? What do you find unique or tricky about positioning solutions in this space?
+    - For customers: What does your current network setup look like? Where are your biggest IT headaches today?
+    - For internal: What common questions do our customers ask in the {vertical_label} sector? What objections or misconceptions do we frequently encounter?
+
+Your script should:
+- Focus on the specific needs of the **{vertical_label}** sector
+- Include {time_scope} strong, specific use cases
+- Use natural, spoken-style language — not formal marketing text
+- Highlight the Meraki Dashboard as the central platform (single pane of glass)
+- Emphasise how this enables visibility, simplified troubleshooting, and unified management
+- Include at least {'2–3' if length == '30min' else '4–6'} UI interactions where the presenter would click or navigate the dashboard
+- Format all UI actions with bold syntax (e.g., **click 'Configure > Switch ports'**)
+
+{faq_tailoring[audience]}
+
+Only return the demo script. No headings or extra intro text.
+"""
+
+def write_demo_flow(path, content):
+    path.write_text(content.strip())
+
+def call_openai_with_retries(prompt, retries=3):
+    for attempt in range(retries):
+        try:
+            response = openai.chat.completions.create(
+                model="gpt-3.5-turbo",
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.7,
+            )
+            return response.choices[0].message.content
+        except Exception as e:
+            print(f"[RETRY {attempt + 1}] Error: {e}")
+            time.sleep(2)
+    return None
+
+audiences_to_run = list(audiences.keys())
+verticals_to_run = list(vertical_map.keys())
+products_to_run = ["mx", "mr", "ms", "mv", "mt", "sm", "mg"]
+lengths_to_run = ["30min", "60min"]
+total = len(audiences_to_run) * len(verticals_to_run) * len(products_to_run) * len(lengths_to_run)
+written = 0
+
+for audience in audiences_to_run:
+    for vertical in verticals_to_run:
+        if audience == "customer" and vertical not in [
+            "federal_gov", "finance", "healthcare", "higher_ed", "hospitality",
+            "k12", "manufacturing", "professional_services", "retail", "service_provider",
+            "small_business", "state_local_gov"
+        ]:
+            continue
+        if audience != "customer":
+            continue
+        for product in products_to_run:
+            for length in lengths_to_run:
+                if written >= MAX_WRITES_PER_RUN:
+                    print(f"\n🛑 Reached batch limit of {MAX_WRITES_PER_RUN}. Run again to continue.")
+                    exit()
+
+                folder = base_path / audience / vertical / product
+                folder.mkdir(parents=True, exist_ok=True)
+                path = folder / f"{length}.md"
+
+                print(f"[OVERWRITE] {path}")
+
+                prompt = build_prompt(audience, vertical, product, length)
+                result = call_openai_with_retries(prompt)
+
+                if not result:
+                    print(f"[FAIL] {path}")
+                    continue
+
+                write_demo_flow(path, result)
+                written += 1
+                print(f"[{written}/{total}] ✅ Wrote → {path}")
+
+print(f"\n✅ Session complete. {written} files written.")
+
+===== FILE: top3_generator.py =====
+
+from sentence_transformers import SentenceTransformer, util
+import json
+from itertools import product
+import torch
+from cards.options_selector import VERTICAL_CHOICES, PRODUCT_LINE_CHOICES
+
+VERTICALS = VERTICAL_CHOICES
+PRODUCT_LINES = PRODUCT_LINE_CHOICES
+
+# Load data
+with open("case_studies.json", "r") as f:
+    case_studies = json.load(f)
+
+print(f"✅ Loaded {len(case_studies)} case studies.")
+
+# Use case study 'text' field for embedding
+case_texts = [case.get("text", "") for case in case_studies]
+if not any(case_texts):
+    print("⚠️ Warning: All case study texts are empty!")
+
+# Load model
+model = SentenceTransformer("all-MiniLM-L6-v2")
+embedding_tensor = model.encode(case_texts, convert_to_tensor=True)
+print("✅ Encoded all case study texts into embeddings.")
+
+# Build top matches
+top_case_studies = {}
+combo_count = 0
+
+for vertical, product in product(VERTICALS, PRODUCT_LINES):
+    query = f"{vertical} {product}"
+    query_embedding = model.encode(query, convert_to_tensor=True)
+    similarities = util.cos_sim(query_embedding, embedding_tensor)[0]
+    top_indices = similarities.argsort(descending=True)[:3]
+
+    key = f"{vertical}|{product}"
+    top_case_studies[key] = []
+
+    for i in top_indices:
+        case = case_studies[i]
+        url = case.get("url", "")
+        title = url.rstrip("/").split("/")[-1].replace("-", " ").title()
+        top_case_studies[key].append({
+            "title": title,
+            "url": url,
+            "score": float(similarities[i])
+        })
+
+    print(f"🔹 Matched top 3 for: {key}")
+    combo_count += 1
+
+print(f"\n✅ Finished generating top case studies for {combo_count} vertical/product combinations.")
+
+# Save result
+with open("top_case_studies.json", "w") as f:
+    json.dump(top_case_studies, f, indent=2)
+
+print("✅ Saved top case studies to top_case_studies.json")
+
+===== FILE: app.py =====
+
+from flask import Flask, request
+from dotenv import load_dotenv
+from cards.homepage import get_homepage_card
+from cards.feedback_card import get_feedback_card
+from cards.options_selector import get_options_selector_card_with_defaults
+from cards.case_study_card import get_case_study_card
+from utils.webex import send_card
+import os, requests, sys
+from cards.demo_length_selector import get_demo_length_card
+from cards.demo_done_selector     import get_demo_done_card
+from cards.case_study_follow_up import get_follow_up_card
+from utils.demo_loader            import get_demo_flow
+from utils.label_maps import audience_map, vertical_map, product_map
+from cards.sizing_selector import get_sizing_entry_card
+from cards.filters.mr_filters import get_mr_filter_card
+from cards.filters.ms_filters import get_ms_filter_card
+from cards.filters.mx_filters import get_mx_filter_card
+from cards.filters.mv_filters import get_mv_filter_card
+from cards.sizing_follow_up import get_sizing_follow_up_card
+from utils.filter_engine import filter_mx_models, filter_mr_models, filter_ms_models, filter_mv_models
+from cards.feedback_follow_up_card import get_feedback_follow_up_card
+from models.feedback import Feedback
+from database import SessionLocal
+
+load_dotenv()
+WEBEX_TOKEN = os.getenv("WEBEX_BOT_TOKEN")
+OPENAI_KEY = os.getenv("OPENAI_API_KEY")
+
+if not WEBEX_TOKEN or not OPENAI_KEY:
+    print("missing token")
+    sys.exit(1)
+
+bot_info = requests.get("https://webexapis.com/v1/people/me",
+                        headers={"Authorization": f"Bearer {WEBEX_TOKEN}"}).json()
+BOT_ID = bot_info["id"]
+
+app = Flask(__name__)
+room_state = {}
+user_contexts = {}
+
+def get_user_context(user_id):
+    return user_contexts.get(user_id, {})
+
+def set_user_context(user_id, key, value):
+    if user_id not in user_contexts:
+        user_contexts[user_id] = {}
+    user_contexts[user_id][key] = value
+
+@app.route("/messages", methods=["POST"])
+def messages():
+    db = SessionLocal()
+    data = request.json
+    print("⟳ Incoming webhook:", data)
+    print("⚙️  BOT_ID is", BOT_ID)
+    if data["resource"] == "messages" and data["event"] == "created":
+        room_id = data["data"]["roomId"]
+        sender = data["data"]["personId"]
+        if sender == BOT_ID:
+            return "OK"
+        else:
+            room_state.pop(room_id, None)
+            send_card(room_id, get_homepage_card(), markdown="Meraki Demo Bridge")
+    elif data["resource"] == "attachmentActions" and data["event"] == "created":
+        room_id = data["data"]["roomId"]
+        action_id = data["data"]["id"]
+        action_detail = requests.get(f"https://webexapis.com/v1/attachment/actions/{action_id}",
+                                     headers={"Authorization": f"Bearer {WEBEX_TOKEN}"}).json()
+        action = action_detail.get("inputs", {}).get("action")
+        if action == "start_demo":
+            room_state[room_id] = {"mode": "demo"}
+            context = get_user_context(room_id)
+            if context.get("audience") and context.get("vertical") and context.get("product_line"):
+                msg = f"""You last selected:
+
+                **• Audience:** {audience_map.get(context['audience'], context['audience'])}  
+                **• Vertical:** {vertical_map.get(context['vertical'], context['vertical'])}  
+                **• Product Line:** {product_map.get(context['product_line'], context['product_line'])}
+
+                Would you like to change any of these?"""
+                send_card(room_id, {
+                    "type": "AdaptiveCard",
+                    "version": "1.3",
+                    "body": [{"type": "TextBlock", "text": msg, "wrap": True}],
+                    "actions": [
+                        {"type": "Action.Submit", "title": "Change", "data": {"action": "change_options"}},
+                        {"type": "Action.Submit", "title": "Continue", "data": {"action": "use_previous_options"}}
+                    ]
+                }, markdown="Previous selections found.")
+            else:
+                send_card(
+                    room_id,
+                    get_options_selector_card_with_defaults(audience="", vertical="", product_line=""),
+                    markdown="Select your options"
+                )
+        elif action == "use_previous_options":
+            context = get_user_context(room_id)
+            room_state[room_id] = {
+                "stage": "awaiting_demo_length",
+                "audience": context["audience"],
+                "vertical": context["vertical"],
+                "product_line": context["product_line"]
+            }
+            send_card(room_id, get_demo_length_card(), markdown="Using your last selections. How much time do you have for the demo?")
+        elif action == "use_previous_case_study_options":
+            context = get_user_context(room_id)
+            vertical = context.get("vertical")
+            product_line = context.get("product_line")
+
+            from utils.static_case_study_lookup import get_static_case_studies
+            matches = get_static_case_studies(vertical, product_line)
+            set_user_context(room_id, "last_top3_matches", matches)
+            send_card(room_id, get_case_study_card(matches), markdown="📚 Here are relevant case studies based on your selection.")
+        elif action == "change_options":
+            context = get_user_context(room_id)
+            send_card(
+                room_id,
+                get_options_selector_card_with_defaults(
+                    audience=context.get("audience"),
+                    vertical=context.get("vertical"),
+                    product_line=context.get("product_line")
+                ),
+                markdown="No problem! Let’s pick new options."
+            )
+        elif action == "select_options":
+            inputs = action_detail.get("inputs", {})
+            audience     = inputs.get("audience")
+            vertical     = inputs.get("vertical")
+            product_line = inputs.get("product_line")
+            missing = []
+            if audience == "":      missing.append("audience")
+            if vertical == "":      missing.append("vertical")
+            if product_line == "":  missing.append("product line")
+            if missing:
+                # send plain‑text warning
+                requests.post(
+                "https://webexapis.com/v1/messages",
+                headers={
+                    "Authorization": f"Bearer {WEBEX_TOKEN}",
+                    "Content-Type": "application/json"
+                },
+                json={
+                    "roomId": room_id,
+                    "markdown": f"\n\n⚠️ You still have not selected: {', '.join(missing)}.\n🔁 Please select a value, then press 'Continue' again.\n\n"
+                }
+                )
+                # resend the card
+                send_card(
+                    room_id,
+                    get_options_selector_card_with_defaults(
+                        audience=audience or "",
+                        vertical=vertical or "",
+                        product_line=product_line or ""
+                    ),
+                    markdown=""
+                )
+            else:
+                set_user_context(room_id, "audience", audience)
+                set_user_context(room_id, "vertical", vertical)
+                set_user_context(room_id, "product_line", product_line)
+
+                mode = room_state.get(room_id, {}).get("mode", "demo")
+
+                if mode == "case_study":
+                    from utils.static_case_study_lookup import get_static_case_studies
+                    matches = get_static_case_studies(vertical, product_line)
+                    set_user_context(room_id, "last_top3_matches", matches)
+                    send_card(room_id, get_case_study_card(matches), markdown="📚 Here are relevant case studies based on your selection.")
+                else:
+                    room_state[room_id] = {
+                        "stage": "awaiting_demo_length",
+                        "audience": audience,
+                        "vertical": vertical,
+                        "product_line": product_line
+                    }
+                    send_card(room_id, get_demo_length_card(), markdown="Got it! Now, choose how much time you have for the demo.")
+        elif action == "case_study_selected":
+            index = int(action_detail.get("inputs", {}).get("index", 0))
+            context = get_user_context(room_id)
+            vertical = context.get("vertical")
+            product_line = context.get("product_line")
+
+            from utils.static_case_study_lookup import get_static_case_studies
+            from cards.case_study_card import get_case_study_detail_card
+
+            matches = get_static_case_studies(vertical, product_line)
+            set_user_context(room_id, "last_top3_matches", matches)
+            if index < len(matches):
+                case = matches[index]
+                send_card(room_id, get_case_study_detail_card(case, index), markdown=f"🔍 Here's more info about **{case['title']}**.")
+            else:
+                send_card(room_id, get_homepage_card(), markdown="⚠️ Could not find that case study. Returning home.")
+        elif action == "select_demo_length":
+            inputs = action_detail.get("inputs", {})
+            length = inputs.get("duration")
+            state = room_state.get(room_id, {})
+            script = get_demo_flow(
+                state["audience"],
+                state["vertical"],
+                state["product_line"],
+                length
+            )
+            requests.post(
+                "https://webexapis.com/v1/messages",
+                headers={
+                    "Authorization": f"Bearer {WEBEX_TOKEN}",
+                    "Content-Type": "application/json"
+                },
+                json={
+                    "roomId": room_id,
+                    "markdown": script
+                }
+            )
+            send_card(room_id, get_demo_done_card(), markdown="What would you like to do next?")
+        elif action == "show_summary":
+            context = get_user_context(room_id)
+            vertical = context.get("vertical")
+            product_line = context.get("product_line")
+            from utils.static_case_study_lookup import get_static_case_studies
+            matches = get_static_case_studies(vertical, product_line)
+            set_user_context(room_id, "last_top3_matches", matches)
+            index = int(action_detail.get("inputs", {}).get("index", 0))  # fallback index
+            if index < len(matches):
+                summary = matches[index].get("summary", "⚠️ No summary available.")
+
+                # First send plain summary text
+                requests.post(
+                    "https://webexapis.com/v1/messages",
+                    headers={
+                        "Authorization": f"Bearer {WEBEX_TOKEN}",
+                        "Content-Type": "application/json"
+                    },
+                    json={
+                        "roomId": room_id,
+                        "markdown": f"📝 **Summary:**\n\n{summary}"
+                    }
+                )
+
+                # Then send a follow-up card
+                send_card(room_id, get_follow_up_card(), markdown="ℹ️ Please choose what to do next:")
+            else:
+                send_card(room_id, get_homepage_card(), markdown="⚠️ Summary not found. Returning home.")
+        elif action == "restart":
+            room_state.pop(room_id, None)
+            send_card(room_id, get_homepage_card(), markdown="Restarted")
+        elif action == "show_top_3_again":
+            matches = get_user_context(room_id).get("last_top3_matches", [])
+            if matches:
+                text_lines = [
+                    f"**Top 3 Case Studies:**\n"
+                ]
+                for i, match in enumerate(matches[:3]):
+                    text_lines.append(f"{i+1}. {match['title']} — Score: {match['score']:.2f}")
+                markdown_text = "\n".join(text_lines)
+
+                # Send plain text top 3 list
+                send_card(
+                    room_id,
+                    get_case_study_card(matches),
+                    markdown="📚 Here are your top 3 recommended case studies again."
+                )
+
+                # Send follow-up card with buttons
+                send_card(room_id, get_follow_up_card(), markdown="ℹ️ Please choose what to do next:")
+        elif action == "sizing":
+            send_card(room_id, get_sizing_entry_card(), markdown="📏 Let’s begin the sizing process. Select a product family to begin.")
+        elif action == "sizing_select_family":
+            selected_family = action_detail.get("inputs", {}).get("product_family", "")
+            if not selected_family:
+                requests.post(
+                    "https://webexapis.com/v1/messages",
+                    headers={
+                        "Authorization": f"Bearer {WEBEX_TOKEN}",
+                        "Content-Type": "application/json"
+                    },
+                    json={
+                        "roomId": room_id,
+                        "markdown": "⚠️ Please select a product family before continuing."
+                    }
+                )
+                send_card(room_id, get_sizing_entry_card(), markdown="🔁 Please choose a valid option to continue.")
+                return "OK"
+
+
+            set_user_context(room_id, "sizing_family", selected_family)
+            room_state[room_id] = {"stage": "awaiting_sizing_filters", "sizing_family": selected_family}
+
+            context = get_user_context(room_id)
+            if selected_family == "MX":
+                defaults = get_user_context(room_id).get("last_filters_MX", {})
+                send_card(room_id, get_mx_filter_card(defaults), markdown="🔍 Let’s narrow down your MX options.")
+            elif selected_family == "MR":
+                defaults = get_user_context(room_id).get("last_filters_MR", {})
+                send_card(room_id, get_mr_filter_card(defaults), markdown="🔍 Let’s narrow down your MR options.")
+            elif selected_family == "MS":
+                defaults = get_user_context(room_id).get("last_filters_MS", {})
+                send_card(room_id, get_ms_filter_card(defaults), markdown="🔍 Let’s narrow down your MS options.")
+            elif selected_family == "MV":
+                defaults = get_user_context(room_id).get("last_filters_MV", {})
+                send_card(room_id, get_mv_filter_card(defaults), markdown="🔍 Let’s narrow down your MV options.")
+
+                
+        elif action == "filter_mx_models":
+            filters = action_detail.get("inputs", {})
+            set_user_context(room_id, "last_filters_MX", filters)
+            results, error = filter_mx_models(filters)
+            if error:
+                requests.post(
+                    "https://webexapis.com/v1/messages",
+                    headers={
+                        "Authorization": f"Bearer {WEBEX_TOKEN}",
+                        "Content-Type": "application/json"
+                    },
+                    json={
+                        "roomId": room_id,
+                        "markdown": "⚠️ Please apply at least one MX filter and press **Show Matching Models** on the card above again."
+                    }
+                )
+            else:
+                formatted = "\n".join(f"- {r.model}" for r in results) or "No models matched."
+                requests.post(
+                    "https://webexapis.com/v1/messages",
+                    headers={
+                        "Authorization": f"Bearer {WEBEX_TOKEN}",
+                        "Content-Type": "application/json"
+                    },
+                    json={
+                        "roomId": room_id,
+                        "markdown": f"🔎 **Matching MX Models:**\n\n{formatted}"
+                    }
+                )
+                send_card(room_id, get_sizing_follow_up_card("MX"), markdown="✅ You’ve completed MX sizing.")
+
+        elif action == "filter_mr_models":
+            filters = action_detail.get("inputs", {})
+            set_user_context(room_id, "last_filters_MR", filters)
+            results, error = filter_mr_models(filters)
+            if error:
+                requests.post(
+                    "https://webexapis.com/v1/messages",
+                    headers={
+                        "Authorization": f"Bearer {WEBEX_TOKEN}",
+                        "Content-Type": "application/json"
+                    },
+                    json={
+                        "roomId": room_id,
+                        "markdown": "⚠️ Please apply at least one MR filter and press **Show Matching Models** on the card above again."
+                    }
+                )
+            else:
+                formatted = "\n".join(f"- {r.model}" for r in results) or "No models matched."
+                requests.post(
+                    "https://webexapis.com/v1/messages",
+                    headers={
+                        "Authorization": f"Bearer {WEBEX_TOKEN}",
+                        "Content-Type": "application/json"
+                    },
+                    json={
+                        "roomId": room_id,
+                        "markdown": f"🔎 **Matching MR Models:**\n\n{formatted}"
+                    }
+                )
+                send_card(room_id, get_sizing_follow_up_card("MR"), markdown="✅ You’ve completed MX sizing.")
+
+
+        elif action == "filter_ms_models":
+            filters = action_detail.get("inputs", {})
+            set_user_context(room_id, "last_filters_MS", filters)
+            results, error = filter_ms_models(filters)
+            if error:
+                requests.post(
+                    "https://webexapis.com/v1/messages",
+                    headers={
+                        "Authorization": f"Bearer {WEBEX_TOKEN}",
+                        "Content-Type": "application/json"
+                    },
+                    json={
+                        "roomId": room_id,
+                        "markdown": "⚠️ Please apply at least one MS filter and press **Show Matching Models** on the card above again."
+                    }
+                )
+            else:
+                formatted = "\n".join(f"- {r.model}" for r in results) or "No models matched."
+                requests.post(
+                    "https://webexapis.com/v1/messages",
+                    headers={
+                        "Authorization": f"Bearer {WEBEX_TOKEN}",
+                        "Content-Type": "application/json"
+                    },
+                    json={
+                        "roomId": room_id,
+                        "markdown": f"🔎 **Matching MS Models:**\n\n{formatted}"
+                    }
+                )
+                send_card(room_id, get_sizing_follow_up_card("MS"), markdown="✅ You’ve completed MX sizing.")
+
+
+        elif action == "filter_mv_models":
+            filters = action_detail.get("inputs", {})
+            set_user_context(room_id, "last_filters_MV", filters)
+            results, error = filter_mv_models(filters)
+            if error:
+                requests.post(
+                    "https://webexapis.com/v1/messages",
+                    headers={
+                        "Authorization": f"Bearer {WEBEX_TOKEN}",
+                        "Content-Type": "application/json"
+                    },
+                    json={
+                        "roomId": room_id,
+                        "markdown": "⚠️ Please apply at least one MV filter and press **Show Matching Models** on the card above again."
+                    }
+                )
+            else:
+                formatted = "\n".join(f"- {r.model}" for r in results) or "No models matched."
+                requests.post(
+                    "https://webexapis.com/v1/messages",
+                    headers={
+                        "Authorization": f"Bearer {WEBEX_TOKEN}",
+                        "Content-Type": "application/json"
+                    },
+                    json={
+                        "roomId": room_id,
+                        "markdown": f"🔎 **Matching MV Models:**\n\n{formatted}"
+                    }
+                )
+                send_card(room_id, get_sizing_follow_up_card("MV"), markdown="✅ You’ve completed MX sizing.")
+
+
+        elif action == "case_study":
+            room_state[room_id] = {"mode": "case_study"}
+            context = get_user_context(room_id)
+            if context.get("audience") and context.get("vertical") and context.get("product_line"):
+                msg = f"""You last selected:
+
+                **• Audience:** {audience_map.get(context['audience'], context['audience'])}  
+                **• Vertical:** {vertical_map.get(context['vertical'], context['vertical'])}  
+                **• Product Line:** {product_map.get(context['product_line'], context['product_line'])}
+
+                Would you like to change any of these?"""
+                send_card(room_id, {
+                    "type": "AdaptiveCard",
+                    "version": "1.3",
+                    "body": [{"type": "TextBlock", "text": msg, "wrap": True}],
+                    "actions": [
+                        {"type": "Action.Submit", "title": "Change", "data": {"action": "change_options"}},
+                        {"type": "Action.Submit", "title": "Continue", "data": {"action": "use_previous_case_study_options"}}
+                    ]
+                }, markdown="Previous selections found.")
+            else:
+                send_card(
+                    room_id,
+                    get_options_selector_card_with_defaults(audience="", vertical="", product_line=""),
+                    markdown="Select your options"
+                )
+        elif action == "submit_feedback":
+            inputs = action_detail.get("inputs", {})
+
+            def is_blank(value):
+                return value in ("", None)
+
+            required_fields = {
+                "role": "role",
+                "audience": "audience",
+                "product_line": "product line",
+                "industry": "industry",
+                "used_tool": "tool used",
+                "usual_minutes": "time without tool",
+                "bridge_minutes": "time using tool",
+                "quality_rating": "quality rating"
+            }
+
+            missing = [
+                label for key, label in required_fields.items()
+                if is_blank(inputs.get(key))
+            ]
+
+            # Save current inputs to re-populate the form
+            user_context = {
+                "role": inputs.get("role", ""),
+                "audience": inputs.get("audience", ""),
+                "product_line": inputs.get("product_line", ""),
+                "industry": inputs.get("industry", ""),
+                "used_tool": inputs.get("used_tool", ""),
+                "usual_minutes": inputs.get("usual_minutes", ""),
+                "bridge_minutes": inputs.get("bridge_minutes", ""),
+                "quality_rating": inputs.get("quality_rating", ""),
+                "extra_feedback": inputs.get("extra_feedback", "")
+            }
+            for k, v in user_context.items():
+                set_user_context(room_id, k, v)
+
+            if missing:
+                requests.post(
+                    "https://webexapis.com/v1/messages",
+                    headers={
+                        "Authorization": f"Bearer {WEBEX_TOKEN}",
+                        "Content-Type": "application/json"
+                    },
+                    json={
+                        "roomId": room_id,
+                        "markdown": f"⚠️ Please select a value for: {', '.join(missing)}.\n\n🔁 Update your selections and press **Submit Feedback** again."
+                    }
+                )
+                send_card(room_id, get_feedback_card(defaults=user_context), markdown="Please review your selections.")
+                return "OK"
+
+            # Save feedback to DB
+            new_entry = Feedback(
+                room_id         = room_id,
+                role            = inputs.get("role"),
+                audience        = inputs.get("audience"),
+                product_line    = inputs.get("product_line"),
+                industry        = inputs.get("industry"),
+                tool_used       = inputs.get("used_tool"),
+                usual_minutes   = int(inputs.get("usual_minutes") or 0),
+                bridge_minutes  = int(inputs.get("bridge_minutes") or 0),
+                quality_rating  = int(inputs.get("quality_rating") or 0),
+                extra_feedback  = inputs.get("extra_feedback", "")
+            )
+            db.add(new_entry)
+            db.commit()
+
+            from utils.google_sheets import push_feedback_to_sheets
+            try:
+                push_feedback_to_sheets({
+                    "room_id": room_id,
+                    "tool_used": inputs.get("used_tool"),
+                    "usual_minutes": int(inputs.get("usual_minutes") or 0),
+                    "bridge_minutes": int(inputs.get("bridge_minutes") or 0),
+                    "quality_rating": int(inputs.get("quality_rating") or 0),
+                    "extra_feedback": inputs.get("extra_feedback", ""),
+                    "role": inputs.get("role", ""),
+                    "audience": inputs.get("audience", ""),
+                    "product_line": inputs.get("product_line", ""),
+                    "industry": inputs.get("industry", "")
+                })
+            except Exception as e:
+                print(f"⚠️ Failed to push to Google Sheets: {e}")
+
+            requests.post(
+                "https://webexapis.com/v1/messages",
+                headers={
+                    "Authorization": f"Bearer {WEBEX_TOKEN}",
+                    "Content-Type": "application/json"
+                },
+                json={
+                    "roomId": room_id,
+                    "markdown": "✅ Thanks for your feedback! It’s been saved to our database.\nOur developers take all feedback into consideration for future versions!"
+                }
+            )
+        elif action == "give_feedback":
+            room_state[room_id] = {"stage": "giving_feedback"}
+            previous = get_user_context(room_id)
+            send_card(room_id, get_feedback_card(defaults=previous), markdown="📝 We'd love your feedback.")
+        else:
+            send_card(room_id, get_homepage_card(), markdown="⚠️ Couldn’t find your previous top 3. Returning home.")
+    return "OK"
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5099)
+
+===== FILE: file_structure.txt =====
+
+.
+├── app.py
+├── cards
+│   ├── __init__.py
+│   ├── base_card.py
+│   ├── case_study_card.py
+│   ├── case_study_follow_up.py
+│   ├── datasheet_link_helper.py
+│   ├── demo_done_selector.py
+│   ├── demo_length_selector.py
+│   ├── feedback_card.py
+│   ├── feedback_follow_up_card.py
+│   ├── filters
+│   │   ├── mr_filters.py
+│   │   ├── ms_filters.py
+│   │   ├── mv_filters.py
+│   │   └── mx_filters.py
+│   ├── homepage.py
+│   ├── options_selector.py
+│   ├── sizing_follow_up.py
+│   └── sizing_selector.py
+├── case_studies.json
+├── case_study_embeddings.json
+├── database.py
+├── demo_flows
+│   ├── customer
+│   │   ├── federal_gov
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── finance
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── healthcare
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── higher_ed
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── hospitality
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── k12
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── manufacturing
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── professional_services
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── retail
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── service_provider
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── small_business
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   └── state_local_gov
+│   │       ├── mg
+│   │       │   ├── 30min.md
+│   │       │   └── 60min.md
+│   │       ├── mr
+│   │       │   ├── 30min.md
+│   │       │   └── 60min.md
+│   │       ├── ms
+│   │       │   ├── 30min.md
+│   │       │   └── 60min.md
+│   │       ├── mt
+│   │       │   ├── 30min.md
+│   │       │   └── 60min.md
+│   │       ├── mv
+│   │       │   ├── 30min.md
+│   │       │   └── 60min.md
+│   │       ├── mx
+│   │       │   ├── 30min.md
+│   │       │   └── 60min.md
+│   │       └── sm
+│   │           ├── 30min.md
+│   │           └── 60min.md
+│   ├── internal
+│   │   ├── federal_gov
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── finance
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── healthcare
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── higher_ed
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── hospitality
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── k12
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── manufacturing
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── professional_services
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── retail
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── service_provider
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   ├── small_business
+│   │   │   ├── mg
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mr
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── ms
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mt
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mv
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   ├── mx
+│   │   │   │   ├── 30min.md
+│   │   │   │   └── 60min.md
+│   │   │   └── sm
+│   │   │       ├── 30min.md
+│   │   │       └── 60min.md
+│   │   └── state_local_gov
+│   │       ├── mg
+│   │       │   ├── 30min.md
+│   │       │   └── 60min.md
+│   │       ├── mr
+│   │       │   ├── 30min.md
+│   │       │   └── 60min.md
+│   │       ├── ms
+│   │       │   ├── 30min.md
+│   │       │   └── 60min.md
+│   │       ├── mt
+│   │       │   ├── 30min.md
+│   │       │   └── 60min.md
+│   │       ├── mv
+│   │       │   ├── 30min.md
+│   │       │   └── 60min.md
+│   │       ├── mx
+│   │       │   ├── 30min.md
+│   │       │   └── 60min.md
+│   │       └── sm
+│   │           ├── 30min.md
+│   │           └── 60min.md
+│   └── partner
+│       ├── federal_gov
+│       │   ├── mg
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mr
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── ms
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mt
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mv
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mx
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   └── sm
+│       │       ├── 30min.md
+│       │       └── 60min.md
+│       ├── finance
+│       │   ├── mg
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mr
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── ms
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mt
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mv
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mx
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   └── sm
+│       │       ├── 30min.md
+│       │       └── 60min.md
+│       ├── healthcare
+│       │   ├── mg
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mr
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── ms
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mt
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mv
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mx
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   └── sm
+│       │       ├── 30min.md
+│       │       └── 60min.md
+│       ├── higher_ed
+│       │   ├── mg
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mr
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── ms
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mt
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mv
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mx
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   └── sm
+│       │       ├── 30min.md
+│       │       └── 60min.md
+│       ├── hospitality
+│       │   ├── mg
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mr
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── ms
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mt
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mv
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mx
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   └── sm
+│       │       ├── 30min.md
+│       │       └── 60min.md
+│       ├── k12
+│       │   ├── mg
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mr
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── ms
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mt
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mv
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mx
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   └── sm
+│       │       ├── 30min.md
+│       │       └── 60min.md
+│       ├── manufacturing
+│       │   ├── mg
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mr
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── ms
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mt
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mv
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mx
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   └── sm
+│       │       ├── 30min.md
+│       │       └── 60min.md
+│       ├── professional_services
+│       │   ├── mg
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mr
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── ms
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mt
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mv
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mx
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   └── sm
+│       │       ├── 30min.md
+│       │       └── 60min.md
+│       ├── retail
+│       │   ├── mg
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mr
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── ms
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mt
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mv
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mx
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   └── sm
+│       │       ├── 30min.md
+│       │       └── 60min.md
+│       ├── service_provider
+│       │   ├── mg
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mr
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── ms
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mt
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mv
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mx
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   └── sm
+│       │       ├── 30min.md
+│       │       └── 60min.md
+│       ├── small_business
+│       │   ├── mg
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mr
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── ms
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mt
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mv
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   ├── mx
+│       │   │   ├── 30min.md
+│       │   │   └── 60min.md
+│       │   └── sm
+│       │       ├── 30min.md
+│       │       └── 60min.md
+│       └── state_local_gov
+│           ├── mg
+│           │   ├── 30min.md
+│           │   └── 60min.md
+│           ├── mr
+│           │   ├── 30min.md
+│           │   └── 60min.md
+│           ├── ms
+│           │   ├── 30min.md
+│           │   └── 60min.md
+│           ├── mt
+│           │   ├── 30min.md
+│           │   └── 60min.md
+│           ├── mv
+│           │   ├── 30min.md
+│           │   └── 60min.md
+│           ├── mx
+│           │   ├── 30min.md
+│           │   └── 60min.md
+│           └── sm
+│               ├── 30min.md
+│               └── 60min.md
+├── demo_writer.py
+├── file_structure.txt
+├── fill_summaries.py
+├── generate_case_study_embeddings.py
+├── generate_summaries.py
+├── init_db.py
+├── match_case_studies.py
+├── models
+│   ├── feedback.py
+│   ├── mr.py
+│   ├── ms.py
+│   ├── mv.py
+│   └── mx.py
+├── README.md
+├── requirements.txt
+├── seed_data.py
+├── top_case_studies.json
+├── top3_generator.py
+└── utils
+    ├── __init__.py
+    ├── case_study_matcher.py
+    ├── demo_loader.py
+    ├── filter_engine.py
+    ├── google_sheets.py
+    ├── label_maps.py
+    ├── static_case_study_lookup.py
+    └── webex.py
+
+297 directories, 550 files
+
+
+===== FILE: seed_data.py =====
+
+
+from sqlalchemy.orm import Session
+from models.ms import MSSwitch
+from models.mx import MXAppliance
+from models.mr import MRAccessPoint
+from models.mv import MVCamera
+from database import SessionLocal
+
+def seed_data():
+    db: Session = SessionLocal()
+
+    ms_switches = [
+        # MS120 Series
+        MSSwitch(model="MS120-8LP-HW", use_case="compact", ports_1gbe=8, ports_mgig=0, uplinks="2x 1G SFP", poe_support="PoE", stackable=False, routing="dhcp relay", catalyst=False),
+        MSSwitch(model="MS120-8FP-HW", use_case="compact", ports_1gbe=8, ports_mgig=0, uplinks="2x 1G SFP", poe_support="PoE+", stackable=False, routing="dhcp relay", catalyst=False),
+        MSSwitch(model="MS120-24P-HW", use_case="branch", ports_1gbe=24, ports_mgig=0, uplinks="4x 1G SFP", poe_support="PoE+", stackable=False, routing="dhcp relay", catalyst=False),
+        MSSwitch(model="MS120-48FP-HW", use_case="branch", ports_1gbe=48, ports_mgig=0, uplinks="4x 1G SFP", poe_support="PoE+", stackable=False, routing="dhcp relay", catalyst=False),
+
+        # MS130 Series
+        MSSwitch(model="MS130-8X-HW", use_case="compact", ports_1gbe=6, ports_mgig=2, uplinks="2x 10G SFP+", poe_support="PoE+", stackable=False, routing="dhcp relay", catalyst=False),
+        MSSwitch(model="MS130-24X-HW", use_case="branch", ports_1gbe=18, ports_mgig=6, uplinks="4x 10G SFP+", poe_support="PoE+", stackable=False, routing="dhcp relay", catalyst=False),
+        MSSwitch(model="MS130-48X-HW", use_case="branch", ports_1gbe=40, ports_mgig=8, uplinks="4x 10G SFP+", poe_support="PoE+", stackable=False, routing="dhcp relay", catalyst=False),
+
+        # MS210/MS225/MS250
+        MSSwitch(model="MS210-24P-HW", use_case="branch", ports_1gbe=24, ports_mgig=0, uplinks="4x 1G SFP", poe_support="PoE+", stackable=True, routing="dhcp relay", catalyst=False),
+        MSSwitch(model="MS225-48LP-HW", use_case="branch", ports_1gbe=48, ports_mgig=0, uplinks="4x 10G SFP+", poe_support="PoE", stackable=True, routing="dhcp relay", catalyst=False),
+        MSSwitch(model="MS250-48FP-HW", use_case="branch", ports_1gbe=48, ports_mgig=0, uplinks="4x 10G SFP+", poe_support="PoE+", stackable=True, routing="dynamic", catalyst=False),
+
+        # MS350/MS355/MS390
+        MSSwitch(model="MS355-24X2-HW", use_case="campus", ports_1gbe=8, ports_mgig=16, uplinks="4x 10G SFP+", poe_support="UPOE", stackable=True, routing="dynamic", catalyst=False),
+        MSSwitch(model="MS390-48UX2-HW", use_case="campus", ports_1gbe=0, ports_mgig=48, uplinks="8x 10G SFP+, 2x 40G QSFP+", poe_support="UPOE+", stackable=True, routing="dynamic", catalyst=False),
+
+        # MS410/MS425/MS450
+        MSSwitch(model="MS410-16-HW", use_case="aggregation", ports_1gbe=0, ports_mgig=0, uplinks="2x 10G SFP+", poe_support="none", stackable=True, routing="dynamic", catalyst=False),
+        MSSwitch(model="MS425-32-HW", use_case="aggregation", ports_1gbe=0, ports_mgig=0, uplinks="2x 100G QSFP28", poe_support="none", stackable=True, routing="dynamic", catalyst=False),
+
+        # Catalyst 9300 Series (Meraki-managed)
+        # C9300-M (1G RJ45)
+        MSSwitch(model="C9300-24T-M", use_case="secure wi-fi 6/7", ports_1gbe=24, ports_mgig=0, uplinks="4x 1G/10G SFP/SFP+", poe_support="none", stackable=True, routing="dynamic", catalyst=True),
+        MSSwitch(model="C9300-24P-M", use_case="secure wi-fi 6/7", ports_1gbe=24, ports_mgig=0, uplinks="4x 1G/10G SFP/SFP+", poe_support="PoE+", stackable=True, routing="dynamic", catalyst=True),
+        MSSwitch(model="C9300-24U-M", use_case="secure wi-fi 6/7", ports_1gbe=24, ports_mgig=0, uplinks="4x 1G/10G SFP/SFP+", poe_support="UPOE", stackable=True, routing="dynamic", catalyst=True),
+        MSSwitch(model="C9300-48T-M", use_case="secure wi-fi 6/7", ports_1gbe=48, ports_mgig=0, uplinks="4x 1G/10G SFP/SFP+", poe_support="none", stackable=True, routing="dynamic", catalyst=True),
+        MSSwitch(model="C9300-48P-M", use_case="secure wi-fi 6/7", ports_1gbe=48, ports_mgig=0, uplinks="4x 1G/10G SFP/SFP+", poe_support="PoE+", stackable=True, routing="dynamic", catalyst=True),
+        MSSwitch(model="C9300-48U-M", use_case="secure wi-fi 6/7", ports_1gbe=48, ports_mgig=0, uplinks="4x 1G/10G SFP/SFP+", poe_support="UPOE", stackable=True, routing="dynamic", catalyst=True),
+
+        # C9300L-M (1G RJ45)
+        MSSwitch(model="C9300L-24T-4X-M", use_case="secure wi-fi 6/7", ports_1gbe=24, ports_mgig=0, uplinks="4x 10G SFP+", poe_support="none", stackable=True, routing="dynamic", catalyst=True),
+        MSSwitch(model="C9300L-24P-4X-M", use_case="secure wi-fi 6/7", ports_1gbe=24, ports_mgig=0, uplinks="4x 10G SFP+", poe_support="PoE+", stackable=True, routing="dynamic", catalyst=True),
+        MSSwitch(model="C9300L-48T-4X-M", use_case="secure wi-fi 6/7", ports_1gbe=48, ports_mgig=0, uplinks="4x 10G SFP+", poe_support="none", stackable=True, routing="dynamic", catalyst=True),
+        MSSwitch(model="C9300L-48P-4X-M", use_case="secure wi-fi 6/7", ports_1gbe=48, ports_mgig=0, uplinks="4x 10G SFP+", poe_support="PoE+", stackable=True, routing="dynamic", catalyst=True),
+        MSSwitch(model="C9300L-48PF-4X-M", use_case="secure wi-fi 6/7", ports_1gbe=48, ports_mgig=0, uplinks="4x 10G SFP+", poe_support="UPOE", stackable=True, routing="dynamic", catalyst=True),
+
+        # C9300-M (multigig)
+        MSSwitch(model="C9300-24UX-M", use_case="secure wi-fi 7", ports_1gbe=0, ports_mgig=24, uplinks="4x 10G SFP+", poe_support="UPOE", stackable=True, routing="dynamic", catalyst=True),
+        MSSwitch(model="C9300-48UXM-M", use_case="secure wi-fi 7", ports_1gbe=0, ports_mgig=48, uplinks="8x 10G SFP+, 2x 40G QSFP", poe_support="UPOE", stackable=True, routing="dynamic", catalyst=True),
+        MSSwitch(model="C9300-48UN-M", use_case="secure wi-fi 7", ports_1gbe=0, ports_mgig=48, uplinks="8x 10G SFP+, 2x 40G QSFP", poe_support="UPOE+", stackable=True, routing="dynamic", catalyst=True),
+
+        # C9300L-M (multigig)
+        MSSwitch(model="C9300L-24UXG-4X-M", use_case="secure wi-fi 7", ports_1gbe=0, ports_mgig=24, uplinks="4x 10G SFP+", poe_support="UPOE", stackable=True, routing="dynamic", catalyst=True),
+        MSSwitch(model="C9300L-48UXG-4X-M", use_case="secure wi-fi 7", ports_1gbe=0, ports_mgig=48, uplinks="4x 10G SFP+", poe_support="UPOE", stackable=True, routing="dynamic", catalyst=True),
+
+        # C9300X-M (multigig)
+        MSSwitch(model="C9300X-24HX-M", use_case="secure wi-fi 7", ports_1gbe=0, ports_mgig=24, uplinks="8x 10/25G SFP28, 2x 40G/100G QSFP28", poe_support="UPOE+", stackable=True, routing="dynamic", catalyst=True),
+        MSSwitch(model="C9300X-48HX-M", use_case="secure wi-fi 7", ports_1gbe=0, ports_mgig=48, uplinks="8x 10/25G SFP28, 2x 40G/100G QSFP28", poe_support="UPOE+", stackable=True, routing="dynamic", catalyst=True),
+        MSSwitch(model="C9300X-48HXN-M", use_case="secure wi-fi 7", ports_1gbe=0, ports_mgig=48, uplinks="8x 10/25G SFP28, 2x 40G/100G QSFP28", poe_support="UPOE+", stackable=True, routing="dynamic", catalyst=True),
+
+        # C9300-M (fiber)
+        MSSwitch(model="C9300-24S-M", use_case="aggregation", ports_1gbe=0, ports_mgig=0, uplinks="8x 10G SFP+, 2x 40G QSFP", poe_support="none", stackable=True, routing="dynamic", catalyst=True),
+        MSSwitch(model="C9300-48S-M", use_case="aggregation", ports_1gbe=0, ports_mgig=0, uplinks="8x 10G SFP+, 2x 40G QSFP", poe_support="none", stackable=True, routing="dynamic", catalyst=True),
+
+        # C9300X-M (fiber)
+        MSSwitch(model="C9300X-12Y-M", use_case="aggregation", ports_1gbe=0, ports_mgig=0, uplinks="8x 25G SFP28, 2x 100G QSFP28", poe_support="none", stackable=True, routing="dynamic", catalyst=True),
+        MSSwitch(model="C9300X-24Y-M", use_case="aggregation", ports_1gbe=0, ports_mgig=0, uplinks="8x 25G SFP28, 2x 100G QSFP28", poe_support="none", stackable=True, routing="dynamic", catalyst=True),
+    ]
+
+    mx_appliances = [
+        # Desktop/small branch models
+        MXAppliance(model="MX67", use_case="small branch", throughput_mbps=700, max_users=50, uplink_ports=["1x GbE RJ45"], has_wireless=False, has_cellular=False),
+        MXAppliance(model="MX67W", use_case="small branch", throughput_mbps=700, max_users=50, uplink_ports=["1x GbE RJ45"], has_wireless=True, has_cellular=False),
+        MXAppliance(model="MX67C", use_case="small branch", throughput_mbps=700, max_users=50, uplink_ports=["1x GbE RJ45", "Cat 6 LTE"], has_wireless=False, has_cellular=True),
+        MXAppliance(model="MX68", use_case="small branch", throughput_mbps=700, max_users=50, uplink_ports=["2x GbE RJ45"], has_wireless=False, has_cellular=False),
+        MXAppliance(model="MX68W", use_case="small branch", throughput_mbps=700, max_users=50, uplink_ports=["2x GbE RJ45"], has_wireless=True, has_cellular=False),
+        MXAppliance(model="MX68CW", use_case="small branch", throughput_mbps=700, max_users=50, uplink_ports=["2x GbE RJ45", "Cat 6 LTE"], has_wireless=True, has_cellular=True),
+
+        # Medium branch
+        MXAppliance(model="MX75", use_case="medium branch", throughput_mbps=1000, max_users=200, uplink_ports=["2x GbE RJ45", "1x GbE SFP"], has_wireless=False, has_cellular=False),
+        MXAppliance(model="MX85", use_case="medium branch", throughput_mbps=1000, max_users=200, uplink_ports=["2x GbE RJ45", "2x GbE SFP"], has_wireless=False, has_cellular=False),
+
+        # Large branch
+        MXAppliance(model="MX95", use_case="large branch", throughput_mbps=2500, max_users=500, uplink_ports=["2x 10G SFP+"], has_wireless=False, has_cellular=False),
+        MXAppliance(model="MX105", use_case="large branch", throughput_mbps=5000, max_users=750, uplink_ports=["2x 10G SFP+", "2x 2.5G RJ45"], has_wireless=False, has_cellular=False),
+
+        # Campus and VPN Concentrators
+        MXAppliance(model="MX250", use_case="campus or VPN concentrator", throughput_mbps=7500, max_users=2000, uplink_ports=["8x RJ45", "8x SFP", "8x 10G SFP+"], has_wireless=False, has_cellular=False),
+        MXAppliance(model="MX450", use_case="campus or VPN concentrator", throughput_mbps=10000, max_users=10000, uplink_ports=["8x RJ45", "8x SFP", "8x 10G SFP+"], has_wireless=False, has_cellular=False),
+
+        # Virtual appliances
+        MXAppliance(model="vMX Small", use_case="cloud VPN", throughput_mbps=250, max_users=50, uplink_ports=["virtual"], has_wireless=False, has_cellular=False),
+        MXAppliance(model="vMX Medium", use_case="cloud VPN", throughput_mbps=500, max_users=250, uplink_ports=["virtual"], has_wireless=False, has_cellular=False),
+        MXAppliance(model="vMX Large", use_case="cloud VPN", throughput_mbps=1000, max_users=1000, uplink_ports=["virtual"], has_wireless=False, has_cellular=False),
+    ]
+
+    mr_access_points = [
+        # Wi-Fi 6
+        MRAccessPoint(model="MR28", wifi_standard="Wi-Fi 6", radios=2, antenna_type="internal", poe=True, catalyst=False),
+        MRAccessPoint(model="MR36", wifi_standard="Wi-Fi 6", radios=2, antenna_type="internal", poe=True, catalyst=False),
+        MRAccessPoint(model="MR36H", wifi_standard="Wi-Fi 6", radios=2, antenna_type="internal", poe=True, catalyst=False),
+        MRAccessPoint(model="MR44", wifi_standard="Wi-Fi 6", radios=2, antenna_type="internal", poe=True, catalyst=False),
+        MRAccessPoint(model="MR46", wifi_standard="Wi-Fi 6", radios=3, antenna_type="internal", poe=True, catalyst=False),
+        MRAccessPoint(model="MR46E", wifi_standard="Wi-Fi 6", radios=3, antenna_type="external", poe=True, catalyst=False),
+        MRAccessPoint(model="MR55", wifi_standard="Wi-Fi 6", radios=3, antenna_type="internal", poe=True, catalyst=False),
+        MRAccessPoint(model="MR56", wifi_standard="Wi-Fi 6", radios=3, antenna_type="internal", poe=True, catalyst=False),
+        MRAccessPoint(model="MR70", wifi_standard="Wi-Fi 5", radios=2, antenna_type="internal", poe=True, catalyst=False),
+        MRAccessPoint(model="MR76", wifi_standard="Wi-Fi 6", radios=2, antenna_type="external", poe=True, catalyst=False),
+        MRAccessPoint(model="MR78", wifi_standard="Wi-Fi 6", radios=2, antenna_type="internal", poe=True, catalyst=False),
+        MRAccessPoint(model="MR86", wifi_standard="Wi-Fi 6", radios=2, antenna_type="external", poe=True, catalyst=False),
+
+        # Wi-Fi 6E Catalyst
+        MRAccessPoint(model="MR57", wifi_standard="Wi-Fi 6E", radios=3, antenna_type="internal", poe=True, catalyst=False),
+        MRAccessPoint(model="CW9162", wifi_standard="Wi-Fi 6E", radios=3, antenna_type="internal", poe=True, catalyst=True),
+        MRAccessPoint(model="CW9163E", wifi_standard="Wi-Fi 6E", radios=3, antenna_type="external", poe=True, catalyst=True),
+        MRAccessPoint(model="CW9164", wifi_standard="Wi-Fi 6E", radios=3, antenna_type="internal", poe=True, catalyst=True),
+        MRAccessPoint(model="CW9166", wifi_standard="Wi-Fi 6E", radios=3, antenna_type="internal", poe=True, catalyst=True),
+        MRAccessPoint(model="CW9166D1", wifi_standard="Wi-Fi 6E", radios=3, antenna_type="internal", poe=True, catalyst=True),
+
+        # Wi-Fi 7 Catalyst
+        MRAccessPoint(model="CW9172H", wifi_standard="Wi-Fi 7", radios=3, antenna_type="internal", poe=True, catalyst=True),
+        MRAccessPoint(model="CW9172I", wifi_standard="Wi-Fi 7", radios=3, antenna_type="internal", poe=True, catalyst=True),
+        MRAccessPoint(model="CW9176I", wifi_standard="Wi-Fi 7", radios=3, antenna_type="internal", poe=True, catalyst=True),
+        MRAccessPoint(model="CW9176D1", wifi_standard="Wi-Fi 7", radios=3, antenna_type="internal", poe=True, catalyst=True),
+        MRAccessPoint(model="CW9178I", wifi_standard="Wi-Fi 7", radios=3, antenna_type="internal", poe=True, catalyst=True),
+    ]    
+
+    mv_cameras = [
+        MVCamera(model="MV2-HW", use_case="indoor compact", resolution="4mp", onboard_storage=False, location="indoor", fov="wide", max_fps=15),
+        MVCamera(model="MV12WE-HW", use_case="indoor mini dome", resolution="1080p", onboard_storage=True, location="indoor", fov="wide", max_fps=15),
+        MVCamera(model="MV12W-HW", use_case="indoor mini dome", resolution="1080p", onboard_storage=True, location="indoor", fov="wide", max_fps=15),
+        MVCamera(model="MV12N-HW", use_case="indoor narrow dome", resolution="1080p", onboard_storage=True, location="indoor", fov="narrow", max_fps=15),
+        MVCamera(model="MV13-HW", use_case="indoor fixed dome", resolution="4k", onboard_storage=True, location="indoor", fov="wide", max_fps=24),
+        MVCamera(model="MV13M-HW", use_case="indoor fixed dome", resolution="4k", onboard_storage=True, location="indoor", fov="wide", max_fps=24),
+        MVCamera(model="MV22-HW", use_case="indoor varifocal dome", resolution="4mp", onboard_storage=True, location="indoor", fov="wide", max_fps=15),
+        MVCamera(model="MV22X-HW", use_case="indoor varifocal dome", resolution="4mp", onboard_storage=True, location="indoor", fov="wide", max_fps=15),
+        MVCamera(model="MV23M-HW", use_case="indoor varifocal dome", resolution="4k", onboard_storage=True, location="indoor", fov="wide", max_fps=24),
+        MVCamera(model="MV23X-HW", use_case="indoor varifocal dome", resolution="4k", onboard_storage=True, location="indoor", fov="wide", max_fps=24),
+        MVCamera(model="MV32-HW", use_case="indoor fisheye", resolution="4.2mp", onboard_storage=True, location="indoor", fov="fisheye", max_fps=15),
+        MVCamera(model="MV33-HW", use_case="indoor fisheye", resolution="8mp", onboard_storage=True, location="indoor", fov="fisheye", max_fps=24),
+        MVCamera(model="MV33M-HW", use_case="indoor fisheye", resolution="8mp", onboard_storage=True, location="indoor", fov="fisheye", max_fps=24),
+
+        MVCamera(model="MV52-HW", use_case="outdoor telephoto bullet", resolution="4k", onboard_storage=True, location="outdoor", fov="narrow", max_fps=24),
+        MVCamera(model="MV53X", use_case="outdoor telephoto bullet", resolution="4k", onboard_storage=True, location="outdoor", fov="narrow", max_fps=24),
+        MVCamera(model="MV63-HW", use_case="outdoor fixed dome", resolution="4k", onboard_storage=True, location="outdoor", fov="wide", max_fps=24),
+        MVCamera(model="MV63M-HW", use_case="outdoor fixed dome", resolution="4k", onboard_storage=True, location="outdoor", fov="wide", max_fps=24),
+        MVCamera(model="MV63X-HW", use_case="outdoor fixed dome", resolution="4k", onboard_storage=True, location="outdoor", fov="wide", max_fps=24),
+        MVCamera(model="MV72-HW", use_case="outdoor dome", resolution="4mp", onboard_storage=True, location="outdoor", fov="wide", max_fps=15),
+        MVCamera(model="MV72X-HW", use_case="outdoor dome", resolution="4mp", onboard_storage=True, location="outdoor", fov="wide", max_fps=15),
+        MVCamera(model="MV73M-HW", use_case="outdoor varifocal dome", resolution="4k", onboard_storage=True, location="outdoor", fov="wide", max_fps=24),
+        MVCamera(model="MV73X-HW", use_case="outdoor varifocal dome", resolution="4k", onboard_storage=True, location="outdoor", fov="wide", max_fps=24),
+        MVCamera(model="MV84X", use_case="outdoor multi-imager", resolution="4x5mp", onboard_storage=True, location="outdoor", fov="wide", max_fps=24),
+        MVCamera(model="MV93-HW", use_case="outdoor fisheye", resolution="8mp", onboard_storage=True, location="outdoor", fov="fisheye", max_fps=24),
+        MVCamera(model="MV93M-HW", use_case="outdoor fisheye", resolution="8mp", onboard_storage=True, location="outdoor", fov="fisheye", max_fps=24),
+        MVCamera(model="MV93X-HW", use_case="outdoor fisheye", resolution="8mp", onboard_storage=True, location="outdoor", fov="fisheye", max_fps=24),
+    ]
+
+    db.add_all(ms_switches + mx_appliances + mr_access_points + mv_cameras)
+    db.commit()
+    db.close()
+
+if __name__ == "__main__":
+    seed_data()
+
+===== FILE: project_snapshot.py =====
+
+import os
+
+# Set the root of your project
+project_root = os.path.abspath(os.getcwd())
+snapshot_path = os.path.join(project_root, "project_snapshot.txt")
+
+# File extensions to include
+code_extensions = [".py", ".js", ".ts", ".html", ".css", ".sh", ".txt", ".yml", ".yaml"]
+
+# Folders to exclude (case-sensitive)
+excluded_dirs = {"demo_flows", "md", "__pycache__", "venv", "node_modules"}
+
+# Files to exclude
+excluded_extensions = {".md"}
+
+with open(snapshot_path, "w", encoding="utf-8") as snapshot:
+    snapshot.write(f"📁 Project Root: {project_root}\n\n")
+
+    for foldername, subdirs, filenames in os.walk(project_root):
+        # Skip any folder that is in excluded_dirs
+        if any(excluded in foldername.split(os.sep) for excluded in excluded_dirs):
+            continue
+
+        for filename in filenames:
+            filepath = os.path.join(foldername, filename)
+            ext = os.path.splitext(filename)[1]
+
+            if ext in code_extensions and ext not in excluded_extensions:
+                rel_path = os.path.relpath(filepath, project_root)
+                snapshot.write(f"===== FILE: {rel_path} =====\n\n")
+                try:
+                    with open(filepath, "r", encoding="utf-8") as f:
+                        snapshot.write(f.read())
+                except Exception as e:
+                    snapshot.write(f"[Error reading file: {e}]\n")
+                snapshot.write("\n\n")
+
+===== FILE: match_case_studies.py =====
+
+import json
+import torch
+from sentence_transformers import SentenceTransformer, util
+
+model = SentenceTransformer("all-MiniLM-L6-v2")
+
+with open("case_studies.json") as f:
+    case_studies = json.load(f)
+
+with open("case_study_embeddings.json") as f:
+    case_embeddings = json.load(f)
+
+def match_case_studies(query, top_k=3):
+    query_embedding = model.encode(query, convert_to_tensor=True)
+
+    # Convert list of lists to tensor
+    embedding_tensor = torch.tensor(case_embeddings)
+
+    hits = util.semantic_search(query_embedding, embedding_tensor, top_k=top_k)[0]
+    matches = [case_studies[hit["corpus_id"]] for hit in hits]
+
+    return matches
+
+===== FILE: init_db.py =====
+
+from database import engine, Base
+from models.ms import MSSwitch
+from models.mr import MRAccessPoint
+from models.mv import MVCamera
+from models.mx import MXAppliance  # ✅ Fixed import
+
+# ✅ Create all tables defined by the Base metadata
+Base.metadata.create_all(bind=engine)
+
+===== FILE: cards/sizing_follow_up.py =====
+
+def get_sizing_follow_up_card(product_family: str):
+    return {
+        "type": "AdaptiveCard",
+        "version": "1.3",
+        "body": [
+            {
+                "type": "TextBlock",
+                "text": "What would you like to do next?",
+                "wrap": True,
+                "weight": "Bolder",
+                "size": "Medium"
+            }
+        ],
+        "actions": [
+            {
+                "type": "Action.Submit",
+                "title": "🔁 Reapply Filters",
+                "data": {"action": "sizing_select_family", "product_family": product_family}
+            },
+            {
+                "type": "Action.Submit",
+                "title": "🧭 Choose Different Product Family",
+                "data": {"action": "sizing"}
+            },
+            {
+                "type": "Action.Submit",
+                "title": "🏠 Return Home",
+                "data": {"action": "restart"}
+            }
+        ]
+    }
+
+===== FILE: cards/options_selector.py =====
+
+VERTICAL_CHOICES = [
+    "k12", "healthcare", "manufacturing", "higher_ed", "hospitality", "retail",
+    "federal_gov", "service_provider", "finance", "small_business",
+    "state_local_gov", "professional_services"
+]
+
+PRODUCT_LINE_CHOICES = [
+    "mx", "mr", "ms", "mv", "mt", "sm", "mg"
+]
+
+def get_options_selector_card_with_defaults(audience=None, vertical=None, product_line=None):
+    return {
+        "type": "AdaptiveCard",
+        "version": "1.2",
+        "body": [
+            {"type": "TextBlock", "text": "Tailor your demo or case study", "weight": "Bolder", "size": "Medium"},
+            {
+                "type": "Input.ChoiceSet",
+                "id": "audience",
+                "style": "compact",
+                "isRequired": True,
+                "errorMessage": "Select audience",
+                "value": audience,
+                "choices": [
+                    {"title": "---SELECT AUDIENCE TYPE---", "value": ""},
+                    {"title": "Customer", "value": "customer"},
+                    {"title": "Partner", "value": "partner"},
+                    {"title": "Internal", "value": "internal"}
+                ]
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "vertical",
+                "style": "compact",
+                "isRequired": True,
+                "errorMessage": "Select vertical",
+                "value": vertical,
+                "choices": [
+                    {"title": "---SELECT A VERTICAL---", "value": ""},
+                    {"title": "K-12 Education/Primary Education", "value": "k12"},
+                    {"title": "Healthcare", "value": "healthcare"},
+                    {"title": "Manufacturing", "value": "manufacturing"},
+                    {"title": "Higher Education", "value": "higher_ed"},
+                    {"title": "Hospitality", "value": "hospitality"},
+                    {"title": "Retail", "value": "retail"},
+                    {"title": "Federal Government", "value": "federal_gov"},
+                    {"title": "Service Provider", "value": "service_provider"},
+                    {"title": "Financial Services", "value": "finance"},
+                    {"title": "Small Business", "value": "small_business"},
+                    {"title": "State And Local Government", "value": "state_local_gov"},
+                    {"title": "Professional Services", "value": "professional_services"}
+                ]
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "product_line",
+                "style": "compact",
+                "isRequired": True,
+                "errorMessage": "Select product line",
+                "value": product_line,
+                "choices": [
+                    {"title": "---SELECT A PRODUCT---", "value": ""},
+                    {"title": "MX (Security & SD‑WAN)", "value": "mx"},
+                    {"title": "MR (Wireless)", "value": "mr"},
+                    {"title": "MS (Switching)", "value": "ms"},
+                    {"title": "MV (Cameras)", "value": "mv"},
+                    {"title": "MT (Sensors)", "value": "mt"},
+                    {"title": "SM (Endpoint Mgmt)", "value": "sm"},
+                    {"title": "MG (Cellular)", "value": "mg"}
+                ]
+            }
+        ],
+        "actions": [
+            {"type": "Action.Submit", "title": "Continue", "data": {"action": "select_options"}},
+            {"type": "Action.Submit", "title": "Return Home 🏠", "data": {"action": "restart"}}
+        ]
+    }
+
+===== FILE: cards/case_study_card.py =====
+
+def get_case_study_card(matches):
+    return {
+        "type": "AdaptiveCard",
+        "version": "1.3",
+        "body": [
+            {"type": "TextBlock", "text": "Recommended Case Studies", "weight": "Bolder", "size": "Medium"},
+            {"type": "TextBlock", "text": "Here are the top 3 case studies most relevant to the vertical and product line you've selected.", "wrap": True},
+        ],
+        "actions": [
+            {
+                "type": "Action.Submit",
+                "title": match["title"],
+                "data": {"action": "case_study_selected", "index": i}
+            }
+            for i, match in enumerate(matches)
+        ] + [
+            {
+                "type": "Action.Submit",
+                "title": "Return Home 🏠",
+                "data": {"action": "restart"}
+            }
+        ],
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+    }
+
+def get_case_study_detail_card(case, index):
+    return {
+        "type": "AdaptiveCard",
+        "version": "1.3",
+        "body": [
+            {"type": "TextBlock", "text": f"You selected: {case['title']}", "weight": "Bolder", "size": "Medium"},
+        ],
+        "actions": [
+            {
+                "type": "Action.OpenUrl",
+                "title": "View Full Case Study",
+                "url": case["url"]
+            },
+            {
+                "type": "Action.Submit",
+                "title": "Show Summary",
+                "data": {"action": "show_summary", "index": index}
+            },
+            {
+                "type": "Action.Submit",
+                "title": "Return to Top 3 List",
+                "data": {"action": "show_top_3_again"}
+            },
+            {
+                "type": "Action.Submit",
+                "title": "Return Home 🏠",
+                "data": {"action": "restart"}
+            }
+        ],
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+    }
+
+
+===== FILE: cards/demo_length_selector.py =====
+
+def get_demo_length_card():
+    return {
+        "type": "AdaptiveCard",
+        "version": "1.2",
+        "body": [
+            {
+                "type": "TextBlock",
+                "text": "⏱️ How much time do you have for the demo?",
+                "weight": "Bolder",
+                "size": "Medium"
+            }
+        ],
+        "actions": [
+            {
+                "type": "Action.Submit",
+                "title": "30 minutes (Quick Overview)",
+                "data": {
+                    "action": "select_demo_length",
+                    "duration": "30"
+                }
+            },
+            {
+                "type": "Action.Submit",
+                "title": "60 minutes (Deep Dive)",
+                "data": {
+                    "action": "select_demo_length",
+                    "duration": "60"
+                }
+            },
+            {
+                "type": "Action.Submit",
+                "title": "Return Home 🏠",
+                "data": {
+                    "action": "restart"
+                }
+            }
+        ]
+    }
+
+===== FILE: cards/case_study_follow_up.py =====
+
+# cards/follow_up_card.py
+
+def get_follow_up_card():
+    return {
+        "type": "AdaptiveCard",
+        "version": "1.3",
+        "body": [
+            {"type": "TextBlock", "text": "What would you like to do next?", "weight": "Bolder", "size": "Medium", "wrap": True}
+        ],
+        "actions": [
+            {"type": "Action.Submit", "title": "Return to Top 3 List", "data": {"action": "show_top_3_again"}},
+            {"type": "Action.Submit", "title": "Return Home", "data": {"action": "restart"}}
+        ],
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+    }
+
+===== FILE: cards/sizing_selector.py =====
+
+def get_sizing_entry_card():
+    return {
+        "type": "AdaptiveCard",
+        "version": "1.3",
+        "body": [
+            {
+                "type": "TextBlock",
+                "text": "📏 Product Sizing",
+                "wrap": True,
+                "weight": "Bolder",
+                "size": "Medium"
+            },
+            {
+                "type": "TextBlock",
+                "text": "Select a product family to begin sizing:",
+                "wrap": True
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "product_family",
+                "style": "compact",
+                "value": "",
+                "choices": [
+                    {"title": "--- Select a product family ---", "value": ""},
+                    {"title": "MR (Access Points)", "value": "MR"},
+                    {"title": "MS (Switches)", "value": "MS"},
+                    {"title": "MX (Security & SD-WAN)", "value": "MX"},
+                    {"title": "MV (Cameras)", "value": "MV"}
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "type": "Action.Submit",
+                "title": "Continue",
+                "data": {"action": "sizing_select_family"}
+            },
+            {
+                "type": "Action.Submit",
+                "title": "Return Home 🏠",
+                "data": {"action": "restart"}
+            }
+        ]
+    }
+
+===== FILE: cards/__init__.py =====
+
+
+
+===== FILE: cards/feedback_follow_up_card.py =====
+
+def get_feedback_follow_up_card():
+    return {
+        "type": "AdaptiveCard",
+        "version": "1.2",
+        "body": [
+            {"type": "TextBlock", "text": "✅ Feedback saved!", "weight": "Bolder", "size": "Medium"},
+            {"type": "TextBlock", "text": "Would you like to give more feedback or return to the homepage?"}
+        ],
+        "actions": [
+            {"type": "Action.Submit", "title": "Give more feedback", "data": {"action": "give_feedback"}},
+            {"type": "Action.Submit", "title": "Return home", "data": {"action": "restart"}}
+        ]
+    }
+
+===== FILE: cards/homepage.py =====
+
+def get_homepage_card():
+    return {
+        "type": "AdaptiveCard",
+        "version": "1.2",
+        "body": [
+            {"type": "TextBlock", "text": "Meraki Demo Bridge (Homepage 🏠)", "weight": "Bolder", "size": "Large"},
+            {"type": "TextBlock", "text": "Pick a path to craft the right Meraki demo and upsell story."}
+        ],
+    "actions": [
+    {"type": "Action.Submit", "title": "Tailored demo + FAQs 🧠", "data": {"action": "start_demo"}},
+    {"type": "Action.Submit", "title": "Case study finder 📈", "data": {"action": "case_study"}},
+    {"type": "Action.Submit", "title": "Sizing wizard 🧙", "data": {"action": "sizing"}},
+    {"type": "Action.Submit", "title": "Give feedback 💬", "data": {"action": "give_feedback"}}
+        ]
+    }
+
+===== FILE: cards/demo_done_selector.py =====
+
+from cards.base_card import create_card
+
+def get_demo_done_card():
+    return create_card(
+        title="What’s next?",
+        text="Choose an action below:",
+        buttons=[
+            {"title": "Build another Demo + FAQ", "value": "start_demo", "type": "action"},
+            {"title": "Return Home 🏠",        "value": "restart",    "type": "action"},
+        ]
+    )
+
+===== FILE: cards/datasheet_link_helper.py =====
+
+from webexteamssdk.models.cards import AdaptiveCard, CardElement, TextBlock, ActionOpenUrl, ActionSubmit
+
+def generate_device_buttons_card(devices, last_filter=None):
+    """
+    devices: List of dicts like {"model": "MX67", "datasheet_url": "..."}
+    last_filter: Optional string to return to previous context
+    """
+
+    if not devices or len(devices) < 1:
+        return {"type": "AdaptiveCard", "body": [{"type": "TextBlock", "text": "No matching devices."}], "actions": []}
+
+    elements = [
+        {
+            "type": "TextBlock",
+            "text": f"{len(devices)} matching device(s) found:",
+            "weight": "Bolder",
+            "wrap": True
+        }
+    ]
+
+    for device in devices:
+        elements.append({
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.OpenUrl",
+                    "title": device["model"],
+                    "url": device["datasheet_url"]
+                }
+            ]
+        })
+
+    # Navigation actions
+    nav_buttons = [
+        {
+            "type": "Action.Submit",
+            "title": "Return to last filter",
+            "data": {"action": "return_last_filter", "last_filter": last_filter}
+        },
+        {
+            "type": "Action.Submit",
+            "title": "Return to product family selection",
+            "data": {"action": "return_family_selection"}
+        },
+        {
+            "type": "Action.Submit",
+            "title": "Return home",
+            "data": {"action": "return_home"}
+        },
+    ]
+
+    return {
+        "type": "AdaptiveCard",
+        "version": "1.3",
+        "body": elements,
+        "actions": nav_buttons
+    }
+
+===== FILE: cards/feedback_card.py =====
+
+def get_feedback_card(defaults=None):
+    defaults = defaults or {}
+
+    def safe_number(value):
+        return int(value) if str(value).isdigit() else None
+
+    return {
+        "type": "AdaptiveCard",
+        "version": "1.3",
+        "body": [
+            {
+                "type": "TextBlock",
+                "text": "📝 Help us improve",
+                "weight": "Bolder",
+                "size": "Medium"
+            },
+            {
+                "type": "TextBlock",
+                "text": "What is your role?",
+                "wrap": True
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "role",
+                "style": "compact",
+                "value": defaults.get("role", ""),
+                "choices": [
+                    {"title": "-- Select a role --", "value": ""},
+                    {"title": "Account Executive", "value": "Account Executive"},
+                    {"title": "Systems Engineer", "value": "Systems Engineer"},
+                    {"title": "Technical Solutions Architect", "value": "Technical Solutions Architect"},
+                    {"title": "Sales Leader", "value": "Sales Leader"},
+                    {"title": "Other", "value": "Other"}
+                ]
+            },
+            {
+                "type": "TextBlock",
+                "text": "Who was the audience?",
+                "wrap": True
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "audience",
+                "style": "compact",
+                "value": defaults.get("audience", ""),
+                "choices": [
+                    {"title": "-- Select an audience --", "value": ""},
+                    {"title": "Partner", "value": "partner"},
+                    {"title": "Customer", "value": "customer"},
+                    {"title": "Internal", "value": "internal"}
+                ]
+            },
+            {
+                "type": "TextBlock",
+                "text": "Which product line did you use it for?",
+                "wrap": True
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "product_line",
+                "style": "compact",
+                "value": defaults.get("product_line", ""),
+                "choices": [
+                    {"title": "-- Select a product --", "value": ""},
+                    {"title": "MX (Security & SD‑WAN)", "value": "mx"},
+                    {"title": "MR (Wireless)", "value": "mr"},
+                    {"title": "MS (Switching)", "value": "ms"},
+                    {"title": "MV (Cameras)", "value": "mv"},
+                    {"title": "MT (Sensors)", "value": "mt"},
+                    {"title": "SM (Endpoint Mgmt)", "value": "sm"},
+                    {"title": "MG (Cellular)", "value": "mg"}
+                ]
+            },
+            {
+                "type": "TextBlock",
+                "text": "Which industry was it used for?",
+                "wrap": True
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "industry",
+                "style": "compact",
+                "value": defaults.get("industry", ""),
+                "choices": [
+                    {"title": "-- Select an industry --", "value": ""},
+                    {"title": "Finance", "value": "finance"},
+                    {"title": "Healthcare", "value": "healthcare"},
+                    {"title": "Retail", "value": "retail"},
+                    {"title": "K-12", "value": "k12"},
+                    {"title": "Higher Education", "value": "higher_ed"},
+                    {"title": "Hospitality", "value": "hospitality"},
+                    {"title": "Manufacturing", "value": "manufacturing"},
+                    {"title": "Professional Services", "value": "professional_services"},
+                    {"title": "Service Provider", "value": "service_provider"},
+                    {"title": "Small Business", "value": "small_business"},
+                    {"title": "State/Local Government", "value": "state_local_gov"},
+                    {"title": "Federal Government", "value": "federal_gov"}
+                ]
+            },
+            {
+                "type": "TextBlock",
+                "text": "Which part of the Meraki Demo Bridge did you use?",
+                "wrap": True
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "used_tool",
+                "style": "compact",
+                "value": defaults.get("used_tool", ""),
+                "choices": [
+                    {"title": "-- Select a tool --", "value": ""},
+                    {"title": "Demo flow + FAQs", "value": "demo_flow"},
+                    {"title": "Sizing wizard", "value": "sizing"},
+                    {"title": "Case study finder", "value": "case_study"}
+                ]
+            },
+            {
+                "type": "TextBlock",
+                "text": "How long does this task normally take you without the tool? (minutes)",
+                "wrap": True
+            },
+            {
+                "type": "Input.Number",
+                "id": "usual_minutes",
+                "placeholder": "e.g. 30",
+                "min": 0,
+                "max": 180,
+                "value": safe_number(defaults.get("usual_minutes"))
+            },
+            {
+                "type": "TextBlock",
+                "text": "How long did it take you using this tool? (minutes)",
+                "wrap": True
+            },
+            {
+                "type": "Input.Number",
+                "id": "bridge_minutes",
+                "placeholder": "e.g. 20",
+                "min": 0,
+                "max": 180,
+                "value": safe_number(defaults.get("bridge_minutes"))
+            },
+            {
+                "type": "TextBlock",
+                "text": "How would you rate the quality of the tool’s output? (especially technical accuracy!)",
+                "wrap": True
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "quality_rating",
+                "style": "compact",
+                "value": defaults.get("quality_rating", ""),
+                "choices": [
+                    {"title": "-- Select a quality rating --", "value": ""},
+                    {"title": "1 – Poor (doing this task is much better WITHOUT the demo bridge)", "value": "1"},
+                    {"title": "2 – Fair (doing this task is not much better regardless of if I use the demo bridge)", "value": "2"},
+                    {"title": "3 – Good (doing this task is slightly better WITH the demo bridge than without it)", "value": "3"},
+                    {"title": "4 – Very Good (doing this task is NOTICEABLY better WITH the demo bridge)", "value": "4"},
+                    {"title": "5 – Excellent (Now that I've used the demo bridge, I'm unlikely to return to the OLD way)", "value": "5"}
+                ]
+            },
+            {
+                "type": "TextBlock",
+                "text": "Any additional feedback for us (feature requests or how to make existing features better??",
+                "wrap": True
+            },
+            {
+                "type": "Input.Text",
+                "id": "extra_feedback",
+                "placeholder": "Optional",
+                "isMultiline": True,
+                "value": defaults.get("extra_feedback", "")
+            }
+        ],
+        "actions": [
+            {
+                "type": "Action.Submit",
+                "title": "Submit Feedback",
+                "data": {"action": "submit_feedback"}
+            },
+            {
+                "type": "Action.Submit",
+                "title": "Return Home 🏠",
+                "data": {"action": "restart"}
+            }
+        ]
+    }
+
+
+===== FILE: cards/base_card.py =====
+
+def create_card(title: str, text: str, buttons: list[dict]) -> dict:
+    return {
+        "type": "AdaptiveCard",
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "version": "1.2",
+        "body": [
+            {"type": "TextBlock", "size": "Large", "weight": "Bolder", "text": title},
+            {"type": "TextBlock", "text": text, "wrap": True}
+        ],
+        "actions": [
+            {
+                "type": "Action.Submit",
+                "title": btn["title"],
+                "data": {"action": btn["value"]}
+            }
+            for btn in buttons
+        ]
+    }
+
+===== FILE: cards/filters/ms_filters.py =====
+
+def get_ms_filter_card(defaults=None):
+    defaults = defaults or {}
+    return {
+        "type": "AdaptiveCard",
+        "version": "1.3",
+        "body": [
+            {
+                "type": "TextBlock",
+                "text": "🔌 MS Switch Filters",
+                "wrap": True,
+                "weight": "Bolder",
+                "size": "Medium"
+            },
+            {
+                "type": "TextBlock",
+                "text": "Set at least one filter to narrow down MS models:",
+                "wrap": True
+            },
+            {
+                "type": "TextBlock",
+                "text": "PoE Support",
+                "wrap": True,
+                "weight": "Bolder"
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "poe_support",
+                "style": "compact",
+                "value": defaults.get("poe_support", ""),
+                "choices": [
+                    {"title": "--- Show all ---", "value": ""},
+                    {"title": "PoE", "value": "poe"},
+                    {"title": "PoE+", "value": "poe+"},
+                    {"title": "UPOE", "value": "upoe"},
+                    {"title": "UPOE+", "value": "upoe+"}
+                ]
+            },
+            {
+                "type": "TextBlock",
+                "text": "Routing Capabilities",
+                "wrap": True,
+                "weight": "Bolder"
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "routing",
+                "style": "compact",
+                "value": defaults.get("routing", ""),
+                "choices": [
+                    {"title": "--- Select Routing ---", "value": ""},
+                    {"title": "Layer 2 only", "value": "layer 2 only"},
+                    {"title": "DHCP Relay", "value": "dhcp relay"},
+                    {"title": "Dynamic Routing", "value": "dynamic routing"}
+                ]
+            },
+            {
+                "type": "TextBlock",
+                "text": "1G Port Count",
+                "wrap": True,
+                "weight": "Bolder"
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "min_ports_1gbe",
+                "style": "compact",
+                "value": defaults.get("min_ports_1gbe", ""),
+                "choices": [
+                    {"title": "--- Show all ---", "value": ""},
+                    {"title": "8+", "value": "8"},
+                    {"title": "16+", "value": "16"},
+                    {"title": "24+", "value": "24"},
+                    {"title": "48+", "value": "48"}
+                ]
+            },
+            {
+                "type": "TextBlock",
+                "text": "mGig Port Count",
+                "wrap": True,
+                "weight": "Bolder"
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "min_ports_mgig",
+                "style": "compact",
+                "value": defaults.get("min_ports_mgig", ""),
+                "choices": [
+                    {"title": "--- Show all ---", "value": ""},
+                    {"title": "1+", "value": "1"},
+                    {"title": "2+", "value": "2"},
+                    {"title": "4+", "value": "4"}
+                ]
+            },
+            {
+                "type": "Input.Toggle",
+                "id": "stackable",
+                "title": "Only show stackable models",
+                "valueOn": "true",
+                "valueOff": "false",
+                "value": defaults.get("stackable", "false")
+            },
+            {
+                "type": "Input.Toggle",
+                "id": "catalyst",
+                "title": "Only show Catalyst models",
+                "valueOn": "true",
+                "valueOff": "false",
+                "value": defaults.get("catalyst", "false")
+            }
+        ],
+        "actions": [
+            {
+                "type": "Action.Submit",
+                "title": "Show Matching Models",
+                "data": {"action": "filter_ms_models"}
+            },
+            {
+                "type": "Action.Submit",
+                "title": "Back",
+                "data": {"action": "sizing"}
+            }
+        ]
+    }
+
+
+===== FILE: cards/filters/mv_filters.py =====
+
+def get_mv_filter_card(defaults=None):
+    defaults = defaults or {}
+    return {
+        "type": "AdaptiveCard",
+        "version": "1.3",
+        "body": [
+            {
+                "type": "TextBlock",
+                "text": "📷 MV Camera Filters",
+                "wrap": True,
+                "weight": "Bolder",
+                "size": "Medium"
+            },
+            {
+                "type": "TextBlock",
+                "text": "Set at least one filter to narrow down MV models:",
+                "wrap": True
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "location",
+                "label": "Location",
+                "style": "compact",
+                "choices": [
+                    {"title": "--- Show all ---", "value": ""},
+                    {"title": "Indoor", "value": "indoor"},
+                    {"title": "Outdoor", "value": "outdoor"}
+                ],
+                "value": defaults.get("location", "")
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "fov",
+                "label": "Field of View",
+                "style": "compact",
+                "choices": [
+                    {"title": "--- Show all ---", "value": ""},
+                    {"title": "Wide", "value": "wide"},
+                    {"title": "Narrow", "value": "narrow"},
+                    {"title": "Fisheye", "value": "fisheye"}
+                ],
+                "value": defaults.get("fov", "")
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "max_fps",
+                "label": "Maximum FPS",
+                "style": "compact",
+                "choices": [
+                    {"title": "--- Show all ---", "value": ""},
+                    {"title": "15 FPS", "value": "15"},
+                    {"title": "24 FPS", "value": "24"}
+                ],
+                "value": defaults.get("max_fps", "")
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "resolution",
+                "label": "Resolution",
+                "style": "compact",
+                "choices": [
+                    {"title": "--- Show all ---", "value": ""},
+                    {"title": "1080p", "value": "1080p"},
+                    {"title": "4K", "value": "4K"}
+                ],
+                "value": defaults.get("resolution", "")
+            }
+        ],
+        "actions": [
+            {
+                "type": "Action.Submit",
+                "title": "Show Matching Models",
+                "data": {"action": "filter_mv_models"}
+            },
+            {
+                "type": "Action.Submit",
+                "title": "Back",
+                "data": {"action": "sizing"}
+            }
+        ]
+    }
+
+
+===== FILE: cards/filters/mx_filters.py =====
+
+def get_mx_filter_card(defaults=None):
+    defaults = defaults or {}
+    return {
+        "type": "AdaptiveCard",
+        "version": "1.3",
+        "body": [
+            {
+                "type": "TextBlock",
+                "text": "🛡️ MX Appliance Filters",
+                "wrap": True,
+                "weight": "Bolder",
+                "size": "Medium"
+            },
+            {
+                "type": "TextBlock",
+                "text": "Set at least one filter to narrow down MX models:",
+                "wrap": True
+            },
+            {
+                "type": "TextBlock",
+                "text": "Use Case",
+                "wrap": True,
+                "weight": "Bolder"
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "use_case",
+                "style": "compact",
+                "value": defaults.get("use_case", ""),
+                "choices": [
+                    {"title": "--- Show all ---", "value": ""},
+                    {"title": "Branch", "value": "branch"},
+                    {"title": "Small Office", "value": "small office"},
+                    {"title": "Data Center", "value": "data center"},
+                    {"title": "SD-WAN", "value": "sd-wan"}
+                ]
+            },
+            {
+                "type": "TextBlock",
+                "text": "Minimum Throughput (Mbps)",
+                "wrap": True,
+                "weight": "Bolder"
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "min_throughput",
+                "style": "compact",
+                "value": defaults.get("min_throughput", ""),
+                "choices": [
+                    {"title": "--- Show all ---", "value": ""},
+                    {"title": "200+", "value": "200"},
+                    {"title": "500+", "value": "500"},
+                    {"title": "1000+", "value": "1000"},
+                    {"title": "2000+", "value": "2000"}
+                ]
+            },
+            {
+                "type": "TextBlock",
+                "text": "Minimum User Count",
+                "wrap": True,
+                "weight": "Bolder"
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "min_users",
+                "style": "compact",
+                "value": defaults.get("min_users", ""),
+                "choices": [
+                    {"title": "--- Show all ---", "value": ""},
+                    {"title": "50+", "value": "50"},
+                    {"title": "100+", "value": "100"},
+                    {"title": "250+", "value": "250"},
+                    {"title": "500+", "value": "500"}
+                ]
+            },
+            {
+                "type": "TextBlock",
+                "text": "Uplink Ports",
+                "wrap": True,
+                "weight": "Bolder"
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "uplink_ports",
+                "style": "compact",
+                "value": defaults.get("uplink_ports", ""),
+                "choices": [
+                    {"title": "--- Show all ---", "value": ""},
+                    {"title": "1G", "value": "1g"},
+                    {"title": "10G", "value": "10g"},
+                    {"title": "SFP", "value": "sfp"},
+                    {"title": "SFP+", "value": "sfp+"}
+                ]
+            },
+            {
+                "type": "Input.Toggle",
+                "id": "has_wireless",
+                "title": "Only show models with wireless support",
+                "valueOn": "true",
+                "valueOff": "false",
+                "value": defaults.get("has_wireless", "false")
+            },
+            {
+                "type": "Input.Toggle",
+                "id": "has_cellular",
+                "title": "Only show models with cellular support",
+                "valueOn": "true",
+                "valueOff": "false",
+                "value": defaults.get("has_cellular", "false")
+            }
+        ],
+        "actions": [
+            {
+                "type": "Action.Submit",
+                "title": "Show Matching Models",
+                "data": {"action": "filter_mx_models"}
+            },
+            {
+                "type": "Action.Submit",
+                "title": "Back",
+                "data": {"action": "sizing"}
+            }
+        ]
+    }
+
+===== FILE: cards/filters/mr_filters.py =====
+
+def get_mr_filter_card(defaults=None):
+    defaults = defaults or {}
+    return {
+        "type": "AdaptiveCard",
+        "version": "1.3",
+        "body": [
+            {
+                "type": "TextBlock",
+                "text": "🔍 Filter MR Access Points",
+                "weight": "Bolder",
+                "size": "Medium"
+            },
+            {
+                "type": "TextBlock",
+                "text": "Set at least one filter to narrow down MR models",
+                "wrap": True
+            },
+
+            {
+                "type": "TextBlock",
+                "text": "Wi-Fi Standard",
+                "weight": "Bolder",
+                "wrap": True
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "wifi_standard",
+                "style": "compact",
+                "value": defaults.get("wifi_standard", ""),
+                "choices": [
+                    {"title": "--- Select Wi-Fi Standard ---", "value": ""},
+                    {"title": "Wi-Fi 5", "value": "wi-fi 5"},
+                    {"title": "Wi-Fi 6", "value": "wi-fi 6"},
+                    {"title": "Wi-Fi 6E", "value": "wi-fi 6e"},
+                    {"title": "Wi-Fi 7", "value": "wi-fi 7"}
+                ]
+            },
+
+            {
+                "type": "TextBlock",
+                "text": "Number of Radios",
+                "weight": "Bolder",
+                "wrap": True
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "radios",
+                "style": "compact",
+                "value": defaults.get("radios", ""),
+                "choices": [
+                    {"title": "--- Show all ---", "value": ""},
+                    {"title": "2", "value": "2"},
+                    {"title": "3", "value": "3"}
+                ]
+            },
+
+            {
+                "type": "TextBlock",
+                "text": "Antenna Type",
+                "weight": "Bolder",
+                "wrap": True
+            },
+            {
+                "type": "Input.ChoiceSet",
+                "id": "antenna_type",
+                "style": "compact",
+                "value": defaults.get("antenna_type", ""),
+                "choices": [
+                    {"title": "--- Show all ---", "value": ""},
+                    {"title": "Internal", "value": "internal"},
+                    {"title": "External", "value": "external"}
+                ]
+            },
+
+            {
+                "type": "Input.Toggle",
+                "id": "poe",
+                "title": "Only show models with PoE support",
+                "valueOn": "true",
+                "valueOff": "false",
+                "value": defaults.get("poe", "false")
+            },
+
+            {
+                "type": "Input.Toggle",
+                "id": "catalyst",
+                "title": "Only show Catalyst models",
+                "valueOn": "true",
+                "valueOff": "false",
+                "value": defaults.get("catalyst", "false")
+            }
+        ],
+        "actions": [
+            {
+                "type": "Action.Submit",
+                "title": "Find Matching Models",
+                "data": {"action": "filter_mr_models"}
+            },
+            {
+                "type": "Action.Submit",
+                "title": "Return to Category Selection",
+                "data": {"action": "sizing"}
+            }
+        ]
+    }
+
+===== FILE: utils/static_case_study_lookup.py =====
+
+import json
+
+# Load once at import
+with open("top_case_studies.json", "r") as f:
+    STATIC_CASE_STUDIES = json.load(f)
+
+def get_static_case_studies(vertical: str, product_line: str):
+    key = f"{vertical}|{product_line}"
+    return STATIC_CASE_STUDIES.get(key, [])
+
+===== FILE: utils/label_maps.py =====
+
+audience_map = {
+    "customer": "Customer",
+    "partner": "Partner",
+    "internal": "Internal"
+}
+
+vertical_map = {
+    "k12": "K-12 Education/Primary Education",
+    "healthcare": "Healthcare",
+    "manufacturing": "Manufacturing",
+    "higher_ed": "Higher Education",
+    "hospitality": "Hospitality",
+    "retail": "Retail",
+    "federal_gov": "Federal Government",
+    "service_provider": "Service Provider",
+    "finance": "Financial Services",
+    "small_business": "Small Business",
+    "state_local_gov": "State And Local Government",
+    "professional_services": "Professional Services"
+}
+
+product_map = {
+    "mx": "MX (Security & SD‑WAN)",
+    "mr": "MR (Wireless)",
+    "ms": "MS (Switching)",
+    "mv": "MV (Cameras)",
+    "mt": "MT (Sensors)",
+    "sm": "SM (Endpoint Mgmt)",
+    "mg": "MG (Cellular)"
+}
+
+===== FILE: utils/filter_engine.py =====
+
+from sqlalchemy.orm import Session
+from sqlalchemy import func
+from database import SessionLocal
+from models.mx import MXAppliance
+from models.ms import MSSwitch
+from models.mr import MRAccessPoint
+from models.mv import MVCamera
+
+def at_least_one_filter_applied(filters: dict) -> bool:
+    return any(v not in [None, "", "false"] for v in filters.values())
+
+def filter_mx_models(filters):
+    mx_keys = ["has_cellular", "has_wireless", "use_case", "min_throughput", "min_users", "uplink_ports"]
+    mx_filters = {k: filters.get(k) for k in mx_keys}
+    if not at_least_one_filter_applied(mx_filters):
+        return None, "Please select at least one filter to continue."
+
+    db: Session = SessionLocal()
+    query = db.query(MXAppliance)
+
+    if filters.get("has_cellular") == "true":
+        query = query.filter(MXAppliance.has_cellular.is_(True))
+    if filters.get("has_wireless") == "true":
+        query = query.filter(MXAppliance.has_wireless.is_(True))
+    if filters.get("use_case"):
+        query = query.filter(func.lower(MXAppliance.use_case) == filters["use_case"].lower())
+    if filters.get("min_throughput"):
+        query = query.filter(MXAppliance.throughput_mbps >= int(filters["min_throughput"]))
+    if filters.get("min_users"):
+        query = query.filter(MXAppliance.max_users >= int(filters["min_users"]))
+    if filters.get("uplink_ports"):
+        query = query.filter(func.lower(MXAppliance.uplink_ports).like(f"%{filters['uplink_ports'].lower()}%"))
+
+    results = query.all()
+    db.close()
+    return results, None
+
+def filter_ms_models(filters):
+    ms_keys = ["poe_support", "routing", "min_ports_1gbe", "min_ports_mgig", "stackable", "catalyst"]
+    ms_filters = {k: filters.get(k) for k in ms_keys}
+    if not at_least_one_filter_applied(ms_filters):
+        return None, "Please select at least one filter to continue."
+
+    db: Session = SessionLocal()
+    query = db.query(MSSwitch)
+
+    if filters.get("poe_support"):
+        query = query.filter(func.lower(MSSwitch.poe_support) == filters["poe_support"].lower())
+    if filters.get("routing"):
+        query = query.filter(func.lower(MSSwitch.routing) == filters["routing"].lower())
+    if filters.get("min_ports_1gbe"):
+        query = query.filter(MSSwitch.ports_1gbe >= int(filters["min_ports_1gbe"]))
+    if filters.get("min_ports_mgig"):
+        query = query.filter(MSSwitch.ports_mgig >= int(filters["min_ports_mgig"]))
+    if filters.get("stackable") == "true":
+        query = query.filter(MSSwitch.stackable.is_(True))
+    if filters.get("catalyst") == "true":
+        query = query.filter(MSSwitch.catalyst.is_(True))
+
+    results = query.all()
+    db.close()
+    return results, None
+
+def filter_mr_models(filters):
+    mr_keys = ["wifi_standard", "radios", "antenna_type", "poe", "catalyst"]
+    mr_filters = {k: filters.get(k) for k in mr_keys}
+    if not at_least_one_filter_applied(mr_filters):
+        return None, "Please select at least one filter to continue."
+
+    db: Session = SessionLocal()
+    query = db.query(MRAccessPoint)
+
+    if filters.get("wifi_standard"):
+        query = query.filter(func.lower(MRAccessPoint.wifi_standard) == filters["wifi_standard"].lower())
+    if filters.get("radios"):
+        query = query.filter(MRAccessPoint.radios == int(filters["radios"]))
+    if filters.get("antenna_type"):
+        query = query.filter(func.lower(MRAccessPoint.antenna_type) == filters["antenna_type"].lower())
+    if filters.get("poe") == "true":
+        query = query.filter(MRAccessPoint.poe.is_(True))
+    if filters.get("catalyst") == "true":
+        query = query.filter(MRAccessPoint.catalyst.is_(True))
+
+    results = query.all()
+    db.close()
+    return results, None
+
+def filter_mv_models(filters):
+    mv_keys = ["location", "fov", "max_fps", "resolution"]
+    mv_filters = {k: filters.get(k) for k in mv_keys}
+    if not at_least_one_filter_applied(mv_filters):
+        return None, "Please select at least one filter to continue."
+
+    db: Session = SessionLocal()
+    query = db.query(MVCamera)
+
+    if filters.get("location"):
+        query = query.filter(func.lower(MVCamera.location) == filters["location"].lower())
+    if filters.get("fov"):
+        query = query.filter(func.lower(MVCamera.fov) == filters["fov"].lower())
+    if filters.get("max_fps"):
+        query = query.filter(MVCamera.max_fps == int(filters["max_fps"]))
+    if filters.get("resolution"):
+        query = query.filter(func.lower(MVCamera.resolution) == filters["resolution"].lower())
+
+    results = query.all()
+    db.close()
+    return results, None
+
+===== FILE: utils/case_study_matcher.py =====
+
+import json
+import torch
+from sentence_transformers import SentenceTransformer, util
+
+model = SentenceTransformer("all-MiniLM-L6-v2")
+
+with open("case_studies.json") as f:
+    case_studies = json.load(f)
+
+with open("case_study_embeddings.json") as f:
+    case_embeddings = json.load(f)
+
+embedding_tensor = torch.tensor(case_embeddings)
+
+def match_case_studies(query, top_k=3):
+    query_embedding = model.encode(query, convert_to_tensor=True)
+    hits = util.semantic_search(query_embedding, embedding_tensor, top_k=top_k)[0]
+    matches = [case_studies[hit["corpus_id"]] for hit in hits]
+    return matches
+
+===== FILE: utils/__init__.py =====
+
+
+
+===== FILE: utils/demo_loader.py =====
+
+from pathlib import Path
+
+base_path = Path("demo_flows")
+
+def get_demo_flow(audience, vertical, product, length):
+    path = base_path / audience / vertical / product / f"{length}min.md"
+    return path.read_text()
+
+===== FILE: utils/webex.py =====
+
+from dotenv import load_dotenv
+import requests, os
+load_dotenv()
+token = os.getenv("WEBEX_BOT_TOKEN")
+
+headers = {
+    "Authorization": f"Bearer {token}",
+    "Content-Type": "application/json"
+}
+
+def send_card(room_id, card_json, markdown=""):
+    payload = {
+        "roomId": room_id,
+        "markdown": markdown,
+        "attachments": [{
+            "contentType": "application/vnd.microsoft.card.adaptive",
+            "content": card_json
+        }]
+    }
+    r = requests.post("https://webexapis.com/v1/messages",
+                      headers=headers,
+                      json=payload)
+    print("⇢ send_card →", r.status_code, r.text)
+    return r
+
+===== FILE: utils/google_sheets.py =====
+
+import os
+import gspread
+from dotenv import load_dotenv
+from datetime import datetime
+from oauth2client.service_account import ServiceAccountCredentials
+from pytz import timezone
+
+load_dotenv()
+
+def push_feedback_to_sheets(data):
+    scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
+    creds = ServiceAccountCredentials.from_json_keyfile_name("google_creds.json", scope)
+    client = gspread.authorize(creds)
+
+    sheet_id = os.getenv("GOOGLE_SHEET_ID")
+    if not sheet_id:
+        raise ValueError("Missing GOOGLE_SHEET_ID in environment variables.")
+
+    tab_name = "All Feedback"
+    sheet = client.open_by_key(sheet_id)
+
+    try:
+        worksheet = sheet.worksheet(tab_name)
+    except gspread.WorksheetNotFound:
+        worksheet = sheet.add_worksheet(title=tab_name, rows="1000", cols="20")
+        worksheet.append_row([
+            "Room ID", "Tool Used", "Usual Minutes", "Bridge Minutes",
+            "Quality Rating", "Extra Feedback", "Timestamp", "Role",
+            "Audience", "Product Line", "Industry"
+        ])
+
+    row = [
+        data.get("room_id", ""),
+        data.get("tool_used", ""),
+        data.get("usual_minutes", ""),
+        data.get("bridge_minutes", ""),
+        data.get("quality_rating", ""),
+        data.get("extra_feedback", ""),
+        datetime.now(timezone("Europe/London")).strftime("%Y-%m-%d %H:%M:%S"),
+        data.get("role", ""),
+        data.get("audience", ""),
+        data.get("product_line", ""),
+        data.get("industry", "")
+    ]
+    worksheet.append_row(row)
+    print(f"✅ Pushed feedback row to '{tab_name}' tab.")
+
+===== FILE: models/mx.py =====
+
+from sqlalchemy import Column, Integer, String, Boolean
+from database import Base
+
+class MXAppliance(Base):
+    __tablename__ = "mx_appliances"
+
+    id = Column(Integer, primary_key=True, index=True)
+    model = Column(String, unique=True, index=True)
+    use_case = Column(String)
+    throughput_mbps = Column(Integer)
+    max_users = Column(Integer)
+    uplink_ports = Column(String)  # Comma-separated list
+    has_wireless = Column(Boolean)
+    has_cellular = Column(Boolean)
+
+
+===== FILE: models/feedback.py =====
+
+from sqlalchemy import Column, Integer, String, Text, DateTime
+from sqlalchemy.ext.declarative import declarative_base
+from datetime import datetime
+
+Base = declarative_base()
+
+class Feedback(Base):
+    __tablename__ = "feedback"
+
+    id = Column(Integer, primary_key=True, index=True)
+    created_at = Column(DateTime, default=datetime.utcnow)
+    room_id = Column(String)
+    
+    # New fields
+    role = Column(String)           # AE, SE, etc.
+    audience = Column(String)       # partner, customer, internal
+    product_line = Column(String)   # mx, mr, etc.
+    industry = Column(String)      # e.g., healthcare
+    tool_used = Column(String)
+    usual_minutes = Column(Integer)
+    bridge_minutes = Column(Integer)
+    quality_rating = Column(Integer)
+    extra_feedback = Column(Text)
+    timestamp = Column(DateTime, default=datetime.utcnow)
+
+===== FILE: models/mr.py =====
+
+from sqlalchemy import Column, Integer, String, Boolean
+from database import Base
+
+class MRAccessPoint(Base):
+    __tablename__ = "mr_access_points"
+
+    id = Column(Integer, primary_key=True, index=True)
+    model = Column(String, unique=True, nullable=False)
+    wifi_standard = Column(String, nullable=False)
+    radios = Column(Integer, nullable=False)
+    antenna_type = Column(String, nullable=False)
+    poe = Column(Boolean, nullable=False)
+    catalyst = Column(Boolean, nullable=False)
+
+
+===== FILE: models/mv.py =====
+
+from sqlalchemy import Column, Integer, String, Boolean
+from database import Base
+
+class MVCamera(Base):
+    __tablename__ = "mv_cameras"
+
+    id = Column(Integer, primary_key=True, index=True)
+    model = Column(String, unique=True, index=True)
+    onboard_storage = Column(Boolean)
+    location = Column(String)
+    fov = Column(String)
+    max_fps = Column(Integer)
+    resolution = Column(String)
+    use_case = Column(String)
+
+
+===== FILE: models/ms.py =====
+
+from sqlalchemy import Column, Integer, String, Boolean
+from database import Base
+
+class MSSwitch(Base):
+    __tablename__ = "ms_switches"
+
+    id = Column(Integer, primary_key=True, index=True)
+    model = Column(String, unique=True, index=True)
+    use_case = Column(String)
+    ports_1gbe = Column(Integer)
+    ports_mgig = Column(Integer)
+    uplinks = Column(String)  # Comma-separated string like "2x 10G SFP+, 4x 1G SFP"
+    poe_support = Column(String)
+    stackable = Column(Boolean)
+    routing = Column(String)  # e.g., "L2", "DHCP relay", "Dynamic"
+    catalyst = Column(Boolean)
+
+

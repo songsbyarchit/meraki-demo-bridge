@@ -21,6 +21,7 @@ from utils.filter_engine import filter_mx_models, filter_mr_models, filter_ms_mo
 from cards.feedback_follow_up_card import get_feedback_follow_up_card
 from models.feedback import Feedback
 from database import SessionLocal
+from datetime import datetime
 
 load_dotenv()
 WEBEX_TOKEN = os.getenv("WEBEX_BOT_TOKEN")
@@ -83,7 +84,8 @@ def messages():
                     "body": [{"type": "TextBlock", "text": msg, "wrap": True}],
                     "actions": [
                         {"type": "Action.Submit", "title": "Change", "data": {"action": "change_options"}},
-                        {"type": "Action.Submit", "title": "Continue", "data": {"action": "use_previous_options"}}
+                        {"type": "Action.Submit", "title": "Continue", "data": {"action": "use_previous_options"}},
+                        {"type": "Action.Submit", "title": "Return Home 🏠", "data": {"action": "restart"}}
                     ]
                 }, markdown="Previous selections found.")
             else:
@@ -515,7 +517,11 @@ def messages():
                 usual_minutes   = int(inputs.get("usual_minutes") or 0),
                 bridge_minutes  = int(inputs.get("bridge_minutes") or 0),
                 quality_rating  = int(inputs.get("quality_rating") or 0),
-                extra_feedback  = inputs.get("extra_feedback", "")
+                extra_feedback  = inputs.get("extra_feedback", ""),
+                percentage_time_saved = round(
+                    (int(inputs.get("usual_minutes") or 0) - int(inputs.get("bridge_minutes") or 0)) 
+                    / max(int(inputs.get("usual_minutes") or 1), 1) * 100
+                )
             )
             db.add(new_entry)
             db.commit()
@@ -527,6 +533,10 @@ def messages():
                     "tool_used": inputs.get("used_tool"),
                     "usual_minutes": int(inputs.get("usual_minutes") or 0),
                     "bridge_minutes": int(inputs.get("bridge_minutes") or 0),
+                    "percentage_time_saved": round(
+                        (int(inputs.get("usual_minutes") or 0) - int(inputs.get("bridge_minutes") or 0)) 
+                        / max(int(inputs.get("usual_minutes") or 1), 1) * 100
+                    ),
                     "quality_rating": int(inputs.get("quality_rating") or 0),
                     "extra_feedback": inputs.get("extra_feedback", ""),
                     "role": inputs.get("role", ""),
@@ -548,6 +558,7 @@ def messages():
                     "markdown": "✅ Thanks for your feedback! It’s been saved to our database.\nOur developers take all feedback into consideration for future versions!"
                 }
             )
+            send_card(room_id, get_feedback_follow_up_card(), markdown="What would you like to do next?")
         elif action == "give_feedback":
             room_state[room_id] = {"stage": "giving_feedback"}
             previous = get_user_context(room_id)

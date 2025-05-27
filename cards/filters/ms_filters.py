@@ -110,13 +110,18 @@ def get_ms_filter_card(defaults=None):
         "actions": [
             {
                 "type": "Action.Submit",
-                "title": "Show Matching Models",
+                "title": "Find Matching Models",
                 "data": {"action": "filter_ms_models"}
             },
             {
                 "type": "Action.Submit",
-                "title": "Back",
+                "title": "Return to Category Selection",
                 "data": {"action": "sizing"}
+            },
+            {
+                "type": "Action.Submit",
+                "title": "Return Home 🏠",
+                "data": {"action": "restart"}
             }
         ]
     }

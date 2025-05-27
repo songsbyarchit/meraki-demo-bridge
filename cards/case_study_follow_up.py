@@ -9,7 +9,7 @@ def get_follow_up_card():
         ],
         "actions": [
             {"type": "Action.Submit", "title": "Return to Top 3 List", "data": {"action": "show_top_3_again"}},
-            {"type": "Action.Submit", "title": "Return Home", "data": {"action": "restart"}}
+            {"type": "Action.Submit", "title": "Return Home 🏠", "data": {"action": "restart"}}
         ],
         "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
     }

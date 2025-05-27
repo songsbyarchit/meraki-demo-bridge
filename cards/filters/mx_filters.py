@@ -109,16 +109,21 @@ def get_mx_filter_card(defaults=None):
                 "value": defaults.get("has_cellular", "false")
             }
         ],
-        "actions": [
-            {
-                "type": "Action.Submit",
-                "title": "Show Matching Models",
-                "data": {"action": "filter_mx_models"}
-            },
-            {
-                "type": "Action.Submit",
-                "title": "Back",
-                "data": {"action": "sizing"}
-            }
-        ]
+            "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Find Matching Models",
+            "data": {"action": "filter_mx_models"}
+        },
+        {
+            "type": "Action.Submit",
+            "title": "Return to Category Selection",
+            "data": {"action": "sizing"}
+        },
+        {
+            "type": "Action.Submit",
+            "title": "Return Home 🏠",
+            "data": {"action": "restart"}
+        }
+    ]
     }
